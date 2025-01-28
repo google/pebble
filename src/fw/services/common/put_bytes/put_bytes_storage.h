@@ -80,7 +80,7 @@ bool pb_storage_init(PutBytesStorage *storage, PutBytesObjectType object_type,
 //! Deinitialize and free a storage struct after a transaction is over
 //! @param storage a pointer-to-pointer to where the reference to the storage is currently held
 //! @param is_success whether the putbyte transfer succeeded or not
-//! @note if putbytes is unsuccesful, the data will be deleted
+//! @note if putbytes is unsuccessful, the data will be deleted
 void pb_storage_deinit(PutBytesStorage *storage, bool is_success);
 
 //! Some types of storage allow the state of a partial installation to be recovered (today, just

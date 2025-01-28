@@ -99,7 +99,7 @@ void test_mbuf__length(void) {
 }
 
 void test_mbuf__iter_empty(void) {
-  // test iteratoring over empty mbuf chains
+  // test iterating over empty mbuf chains
   MBuf mbuf1 = MBUF_EMPTY;
   MBuf mbuf2 = MBUF_EMPTY;
   MBufIterator iter;

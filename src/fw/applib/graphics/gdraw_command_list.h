@@ -123,7 +123,7 @@ size_t gdraw_command_list_get_data_size(GDrawCommandList *command_list);
 //! The order is guaranteed to be the definition order of the points
 //! @param command_list \ref GDrawCommandList from which to collect points
 //! @param is_precise true to convert to GPointPrecise, otherwise points are converted to GPoint
-//! @param num_points_out Optinal pointer to uint16_t to receive the num points
+//! @param num_points_out Optional pointer to uint16_t to receive the num points
 GPoint *gdraw_command_list_collect_points(GDrawCommandList *command_list, bool is_precise,
     uint16_t *num_points_out);
 

@@ -606,7 +606,7 @@ void test_rocky_api_graphics__fill_text_aligned(void) {
 void test_rocky_api_graphics__text_align(void) {
   prv_global_init_and_set_ctx();
 
-  // intial value
+  // initial value
   cl_assert_equal_i(GTextAlignmentLeft, s_rocky_text_state.alignment);
 
   s_rocky_text_state.alignment = (GTextAlignment)-1;

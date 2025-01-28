@@ -283,12 +283,12 @@ static ALWAYS_INLINE GRect prv_menu_cell_basic_draw_custom_one_column_round(
 
   const bool can_use_two_lines_for_title = !(render_subtitle || render_icon);
   const bool can_use_many_lines_for_title = (config->overflow_mode == GTextOverflowModeWordWrap);
-  const int16_t intitial_title_text_lines = can_use_two_lines_for_title ? 2 : 1;
+  const int16_t initial_title_text_lines = can_use_two_lines_for_title ? 2 : 1;
   int16_t title_text_frame_height = can_use_many_lines_for_title
       ? graphics_text_layout_get_text_height(ctx, config->title, title_font,
                                              cell_layer_bounds_size.w, config->overflow_mode,
                                              text_alignment)
-      : title_font_height * intitial_title_text_lines;
+      : title_font_height * initial_title_text_lines;
   const int title_text_cap_offset = (config->title) ? fonts_get_font_cap_offset(title_font) : 0;
 
   int16_t container_height = title_text_frame_height + subtitle_text_frame_height;

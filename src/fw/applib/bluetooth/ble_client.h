@@ -184,7 +184,7 @@ uint16_t ble_client_get_maximum_value_length(BTDevice device);
 //! @return BTErrnoOK if the operation was successfully started, or ... TODO
 BTErrno ble_client_read(BLECharacteristic characteristic);
 
-//! Write the value of a characterstic.
+//! Write the value of a characteristic.
 //! A call to this function will result in a callback to the registered
 //! BLEClientWriteHandler handler. @see ble_client_set_write_response_handler.
 //! @param characteristic The characteristic for which to write the value
@@ -196,7 +196,7 @@ BTErrno ble_client_write(BLECharacteristic characteristic,
                          const uint8_t *value,
                          size_t value_length);
 
-//! Write the value of a characterstic without response.
+//! Write the value of a characteristic without response.
 //! @param characteristic The characteristic for which to write the value
 //! @param value Buffer with the value to write
 //! @param value_length Number of bytes to write

@@ -301,7 +301,7 @@ void test_reminder_db__find_by_timestamp_title(void) {
   cl_assert_equal_b(reminder_db_find_by_timestamp_title(0, "nonexistent title", NULL, &reminder),
                     false);
 
-  // Test matching timstamp, but not title
+  // Test matching timestamp, but not title
   cl_assert_equal_b(reminder_db_find_by_timestamp_title(title_item1.header.timestamp,
       "nonexistent title", NULL, &reminder), false);
 

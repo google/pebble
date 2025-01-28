@@ -703,7 +703,7 @@ void NOINLINE activity_sessions_prv_minute_handler(time_t utc_sec) {
   prv_update_sleep_metrics(utc_sec, last_sleep_utc_of_day,
                                              last_sleep_processed_utc);
 
-  // Log any new activites we detected to the phone
+  // Log any new activities we detected to the phone
   prv_log_activities(utc_sec);
 }
 

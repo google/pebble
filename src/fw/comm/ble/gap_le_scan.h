@@ -79,6 +79,6 @@ bool gap_le_consume_scan_results(uint8_t *buffer, uint16_t *size_in_out);
 void gap_le_scan_init(void);
 
 //! @internal
-//! Stops any ongoing scanning and related activitie and cleans up anything that
+//! Stops any ongoing scanning and related activities and cleans up anything that
 //! had been created by gap_le_scan_init()
 void gap_le_scan_deinit(void);

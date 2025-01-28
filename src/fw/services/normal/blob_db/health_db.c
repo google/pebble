@@ -356,7 +356,7 @@ status_t health_db_insert(const uint8_t *key, int key_len, const uint8_t *val, i
   // Only store typicals / averages in this settings file. "Current" values are stored in the
   // activity settings file.
   // Sleep data contains a mix of current and typical values. The current values are just stored
-  // for convience and can't be accessed from this settings file.
+  // for convenience and can't be accessed from this settings file.
   status_t rv = S_SUCCESS;
   if (!strstr((char *)key, MOVEMENT_DATA_KEY_SUFFIX)) {
     SettingsFile file;

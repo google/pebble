@@ -516,7 +516,7 @@ void graphics_draw_circle(GContext* ctx, GPoint p, uint16_t radius) {
   }
 
   if (radius == 0) {
-    // Special case radius 0 to fill a circle with radius eqaul to half the stroke width
+    // Special case radius 0 to fill a circle with radius equal to half the stroke width
     // Backup the fill color and set that to the current stroke color since the fill color
     // is what is used for fill circle. Restore the fill color afterwards.
     GColor backup_fill_color = ctx->draw_state.fill_color;

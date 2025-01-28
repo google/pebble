@@ -22,7 +22,7 @@ NUM_SUBREGIONS = 8
 
 
 def round_up_to_power_of_two(x):
-    """ Find the next power of two that is eqaul to or greater than x
+    """ Find the next power of two that is equal to or greater than x
 
     >>> round_up_to_power_of_two(4)
     4

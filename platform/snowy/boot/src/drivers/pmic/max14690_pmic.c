@@ -144,7 +144,7 @@ bool pmic_init(void) {
     return false;
   }
 
-  // If not written to whithin 5 seconds of power-on the PMIC will shut down.
+  // If not written to within 5 seconds of power-on the PMIC will shut down.
   //i2c_write_register(I2C_DEVICE_MAX14690, MAX14690_ADDR, PmicRegisters_HAND_SHK, 0x01);
 
   // Power up 3.2V rail

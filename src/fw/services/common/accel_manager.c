@@ -171,7 +171,7 @@ static void prv_double_tap_remove_subscriber_cb(PebbleTask task) {
 //! 200ms, and subscriber B at 250ms, new samples will become available every
 //! 200ms, so subscriber B's data buffer would not fill until 400ms, resulting
 //! in a 150ms latency. This is how the legacy implementation worked as well
-//! but is potentionally something we could improve in the future if it becomes
+//! but is potentially something we could improve in the future if it becomes
 //! a problem.
 static uint32_t prv_get_sample_interval_info(uint32_t *lowest_interval_us,
                                              uint32_t *max_n_samples) {

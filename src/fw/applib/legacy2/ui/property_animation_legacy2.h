@@ -35,7 +35,7 @@
 //! Actually, property animations do more than just moving a Layer around over time.
 //! PropertyAnimationLegacy2 is a concrete class of animations and is built around the Animation
 //! subsystem, which covers anything timing related, but does not move anything around.
-//! A ProperyAnimation animates a "property" of a "subject".
+//! A PropertyAnimation animates a "property" of a "subject".
 //!
 //! <h3>Animating a Layer's frame property</h3>
 //! Currently there is only one specific type of property animation offered off-the-shelf, namely

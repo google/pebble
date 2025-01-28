@@ -29,7 +29,7 @@
 //!   @addtogroup Animation
 //!   @{
 //!     @addtogroup PropertyAnimation
-//! \brief A ProperyAnimation animates the value of a "property" of a "subject" over time.
+//! \brief A PropertyAnimation animates the value of a "property" of a "subject" over time.
 //!
 //! <h3>Animating a Layer's frame property</h3>
 //! Currently there is only one specific type of property animation offered off-the-shelf, namely

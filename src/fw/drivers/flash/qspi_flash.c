@@ -656,7 +656,7 @@ void command_flash_apicheck(const char *len_str) {
   }
 
   if (failures == 0) {
-    prompt_send_response_fmt(buf, buf_size, "SUCCESS: run %d tests and all passeed", passes);
+    prompt_send_response_fmt(buf, buf_size, "SUCCESS: run %d tests and all passed", passes);
   }
   else {
     prompt_send_response_fmt(buf, buf_size, "FAILED: run %d tests and %d failed",

@@ -31,7 +31,7 @@ class ResourceGeneratorMetaclass(type):
         if cls.type:
             _ResourceGenerators[cls.type] = cls
 
-# Instatiate the metaclass into a baseclass we can use elsewhere.
+# Instantiate the metaclass into a baseclass we can use elsewhere.
 ResourceGeneratorBase = ResourceGeneratorMetaclass('ResourceGenerator', (object,), {})
 
 

@@ -701,7 +701,7 @@ bool bt_persistent_storage_update_ble_device_name(BTBondingID bonding, const cha
   GapBondingFileSetStatus status;
   status = prv_file_set(&bonding, sizeof(bonding), &data, sizeof(data));
 
-  // If this is the gateway, update SPRF so our pairing info betwen PRF and normal
+  // If this is the gateway, update SPRF so our pairing info between PRF and normal
   // FW is in sync
   if (data.ble_data.is_gateway && (status == GapBondingFileSetUpdated)) {
     prv_update_bondings(bonding, BtPersistBondingTypeBLE);

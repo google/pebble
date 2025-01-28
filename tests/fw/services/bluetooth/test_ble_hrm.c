@@ -380,7 +380,7 @@ void test_ble_hrm__grant_after_disconnection(void) {
   // Fake disconnection:
   s_connections[0] = NULL;
 
-  // Grabt permission after disconnection.
+  // Grab permission after disconnection.
   // Request object should be freed and thing shouldn't crash.
   prv_assert_permissions_ui_and_respond(true /* is_granted */);
 

@@ -780,7 +780,7 @@ cleanup:
 }
 
 // --------------------------------------------------------------------------------------------------
-// Used by unit tests in to cause fw/apps/demo_apps/test_core_dump_app to encounter a bus fault during the core dump
+// Used by unit tests to cause fw/apps/demo_apps/test_core_dump_app to encounter a bus fault during the core dump
 void core_dump_test_force_bus_fault(void) {
   s_test_force_bus_fault = true;
 }

@@ -38,7 +38,7 @@ size_t comm_session_send_buffer_get_max_payload_length(const CommSession *sessio
 //! the function returns with `true`, the amount of space (or more) is guaranteed to be available.
 //! @param timeout_ms The maximum duration to wait for the send buffer to become available with the
 //! required number of bytes of free space.
-//! @return True if the "writer access" was sucessfully acquired, false otherwise.
+//! @return True if the "writer access" was successfully acquired, false otherwise.
 SendBuffer * comm_session_send_buffer_begin_write(CommSession *session, uint16_t endpoint_id,
                                                   size_t required_free_length,
                                                   uint32_t timeout_ms);

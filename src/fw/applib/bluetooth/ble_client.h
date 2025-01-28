@@ -234,7 +234,7 @@ BTErrno ble_client_write_without_response(BLECharacteristic characteristic,
 //! @note Under the hood, this API writes to the Client Characteristic
 //! Configuration Descriptor's Notifications or Indications enabled/disabled
 //! bit.
-//! @return BTErrnoOK if the subscription request was sent sucessfully, or
+//! @return BTErrnoOK if the subscription request was sent successfully, or
 //! TODO...
 BTErrno ble_client_subscribe(BLECharacteristic characteristic,
                              BLESubscription subscription_type);

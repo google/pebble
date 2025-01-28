@@ -1065,7 +1065,7 @@ GBitmap *gbitmap_create_with_resource_system(ResAppNum app_num, uint32_t resourc
 //! @internal
 //! @see gbitmap_init_with_resource
 //! @param app_num The app's resource bank number
-//! @return true if we were sucessful, false otherwise
+//! @return true if we were successful, false otherwise
 bool gbitmap_init_with_resource_system(GBitmap* bitmap, ResAppNum app_num, uint32_t resource_id);
 
 //! @internal

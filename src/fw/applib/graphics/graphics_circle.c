@@ -179,7 +179,7 @@ static void prv_plot4(GBitmap *fb, GRect *clip_box, GPoint center, GPoint offset
    *        |
    *
    *    +  center point
-   *    -  x coordiante mirror line
+   *    -  x coordinate mirror line
    *    |  y coordinate mirror line
    *    x  given offset point
    *    xn mirrored points
@@ -209,7 +209,7 @@ static void prv_plot8(GBitmap *fb, GRect *clip_box, GPoint center, GPoint offset
    *   /  x5| x4 \
    *
    *    +  center point
-   *    -  x coordiante mirror line
+   *    -  x coordinate mirror line
    *    |  y coordinate mirror line
    *    /  45 degree mirror line
    *    \  135 degree mirror line

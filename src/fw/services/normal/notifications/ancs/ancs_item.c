@@ -336,7 +336,7 @@ TimelineItem *ancs_item_create_and_populate(ANCSAttribute *notif_attributes[],
     }
 
     // Hide display name if we have custom app metadata for this app.
-    // If the app_metadata, not not have a name, then we have the generic app metadata.
+    // If the app_metadata, does not have a name, then we have the generic app metadata.
     if (app_metadata->app_id) {
       display_name = NULL;
     }

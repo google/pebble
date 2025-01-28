@@ -91,7 +91,7 @@ void analytics_set_entire_array(AnalyticsMetric metric, const void *value, Analy
   AnalyticsHeartbeat *heartbeat = analytics_storage_find(metric, NULL, client);
   if (heartbeat) {
     // We allow only a limited number of app heartbeats to accumulate. A NULL means we reached the
-    // limite
+    // limit
     analytics_heartbeat_set_entire_array(heartbeat, metric, value);
   }
 

@@ -191,7 +191,7 @@ void graphics_private_draw_horizontal_line_prepared(GContext *ctx, GBitmap *fram
 
 void graphics_private_draw_horizontal_line_integral(GContext *ctx, GBitmap *framebuffer, int16_t y,
                                                     int16_t x1, int16_t x2, GColor color) {
-  // This is a wrapper for prv_draw_horizontal_line_raw for integral coordintaes
+  // This is a wrapper for prv_draw_horizontal_line_raw for integral coordinates
 
   // End of the line is inclusive so we subtract one
   x2--;

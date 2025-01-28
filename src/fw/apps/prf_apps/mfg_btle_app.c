@@ -174,7 +174,7 @@ static void prv_response_cb(HciStatusCode status, const uint8_t *payload) {
     // RX Test, need to keep track of received packets
     // Payload is as follows:
     // | 1 byte  | 2 bytes          |
-    // | success | recieved packets |
+    // | success | received packets |
     // So we want grab a uint16_t from 1 byte into the payload
     const uint16_t *received_packets = (uint16_t *)(payload + 1);
     data->rx_test_received_packets = *received_packets;

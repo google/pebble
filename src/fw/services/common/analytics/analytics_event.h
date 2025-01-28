@@ -469,7 +469,7 @@ void analytics_event_health_insight_response(time_t timestamp, ActivityInsightTy
                                              ActivitySessionType activity_type,
                                              ActivityInsightResponseType response_id);
 
-//! Tracks duration of time it takes to recieve byte transfers over putbytes
+//! Tracks duration of time it takes to receive byte transfers over putbytes
 //! and statistics on the type of transfer and whether the data stored was valid
 //! @param session the session used to transfer the data
 //! @param crc_good whether or not the CRC for the blob transferred is valid

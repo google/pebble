@@ -77,7 +77,7 @@ static void prv_timer_callback(void *context) {
 }
 
 static void prv_schedule_call_watchdog(int poll_interval_ms) {
-  // The Android app currently crashes if it recieves the get_state event. It currently doesn't
+  // The Android app currently crashes if it receives the get_state event. It currently doesn't
   // respond either so don't bother sending messages we don't need to. We also don't need to poll
   // iOS 9 since we can rely on ANCS to tell us when the phone stops ringing
   if (s_call_source == PhoneCallSource_ANCS_Legacy) {

@@ -136,7 +136,7 @@ void test_ams__discover_of_ams_should_subscribe_to_entity_update_characteristic(
   // Assert ams.c can handle the characteristic reference for the first instance:
   prv_assert_can_handle_characteristics(0, true /* expect_can_handle */);
 
-  // Assert ams.c can not handle the characteristic reference for the second instance:
+  // Assert ams.c cannot handle the characteristic reference for the second instance:
   prv_assert_can_handle_characteristics(1, false /* expect_can_handle */);
 
   // The first instance is expected to be used.

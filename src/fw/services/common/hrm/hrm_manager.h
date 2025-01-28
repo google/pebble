@@ -99,7 +99,7 @@ void hrm_manager_handle_prefs_changed(void);
 HRMSessionRef sys_hrm_manager_app_subscribe(AppInstallId app_id, uint32_t update_interval_s,
                                             uint16_t expire_s, HRMFeature features);
 
-//! Return the HRMSessionRef for an app or worker subscription, if it exists. This call can not
+//! Return the HRMSessionRef for an app or worker subscription, if it exists. This call cannot
 //! be used for KernelBG subscriptions
 //! @param app_id the application's AppInstallId
 //! @return the HRMSessionRef for this subscription, or NULL if no subscription exists

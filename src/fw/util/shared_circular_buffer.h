@@ -59,7 +59,7 @@ bool shared_circular_buffer_write(SharedCircularBuffer* buffer, const uint8_t* d
 
 //! Add a read client
 //! @param buffer The buffer to add the client to
-//! @param client Pointer to a client structure. This structure must be allocated by the caller and can not
+//! @param client Pointer to a client structure. This structure must be allocated by the caller and cannot
 //!   be freed until the client is removed
 //! @return true if successfully added
 bool shared_circular_buffer_add_client(SharedCircularBuffer* buffer, SharedCircularBufferClient *client);
@@ -130,7 +130,7 @@ typedef struct SubsampledSharedCircularBufferClient {
 //!
 //! @param buffer The buffer to add the client to
 //! @param client Pointer to a client structure. This structure must be
-//!     allocated by the caller and can not be freed until the client is
+//!     allocated by the caller and cannot be freed until the client is
 //!     removed.
 //! @param subsample_numerator The numerator of the client's initial subsampling
 //!     ratio.

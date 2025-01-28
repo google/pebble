@@ -490,7 +490,7 @@ typedef struct {
 //!      exit, the UTC time of the end of the last record actually returned (i.e. start time of last
 //!      record + 60). If `time_end` on entry is somewhere in the middle of a minute interval, this
 //!      function behaves as if the caller passed in the end of that minute.
-//! @return Actual number of records returned. May be less then the maximum requested.
+//! @return Actual number of records returned. May be less than the maximum requested.
 //! @note If the return value is zero, `time_start` and `time_end` are meaningless.
 //!      It's not guaranteed that all records contain valid data, even if the return value is
 //!      greater than zero. Check `HealthMinuteData.is_invalid` to see if a given record contains

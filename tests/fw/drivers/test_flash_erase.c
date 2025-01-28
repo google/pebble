@@ -236,7 +236,7 @@ void test_flash_erase__96k_app_banks_1(void) {
 }
 
 void test_flash_erase__96k_app_banks_2(void) {
-  // App that's in an aligned bank but larger than than 64k
+  // App that's in an aligned bank but larger than 64k
   prv_test_erase_optimal_range(
       0, 0, 69 * 1024, 96 * 1024,
       (EraseCommand[]) {
@@ -262,7 +262,7 @@ void test_flash_erase__96k_app_banks_3(void) {
 }
 
 void test_flash_erase__96k_app_banks_4(void) {
-  // App that's in an unaligned bank but larger than than 64k
+  // App that's in an unaligned bank but larger than 64k
   prv_test_erase_optimal_range(
       32 * 1024, 32 * 1024, (32 + 71) * 1024, (32 + 96) * 1024,
       (EraseCommand[]) {

@@ -375,7 +375,7 @@ void flash_read_bytes(uint8_t* buffer, uint32_t start_addr, uint32_t buffer_size
   flash_send_24b_address(start_addr);
 
   // There is delay associated with setting up the stm32 dma, using FreeRTOS
-  // sempahores, handling ISRs, etc. Thus for short reads, the cost of using
+  // semaphores, handling ISRs, etc. Thus for short reads, the cost of using
   // DMA is far more expensive than the read being performed. Reads greater
   // than 34 was empirically determined to be the point at which using the DMA
   // engine is advantageous

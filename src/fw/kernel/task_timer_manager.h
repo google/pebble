@@ -40,8 +40,8 @@ typedef struct TaskTimerManager {
 
 
 //! Initialize a passed in manager object.
-//! @param[in] semaphore a sempahore the TaskTimerManager should give if the next expiring timer
-//!                      has changed. The task event loop should block on this same semphore to
+//! @param[in] semaphore a semaphore the TaskTimerManager should give if the next expiring timer
+//!                      has changed. The task event loop should block on this same semaphore to
 //!                      handle timer updates in a timely fashion.
 void task_timer_manager_init(TaskTimerManager *manager, SemaphoreHandle_t semaphore);
 

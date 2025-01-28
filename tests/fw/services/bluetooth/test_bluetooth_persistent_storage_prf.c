@@ -440,7 +440,7 @@ void test_bluetooth_persistent_storage_prf__bt_classic_store_and_get(void) {
   cl_assert_equal_s(name_2, name_out);
   cl_assert_equal_i(platform_bits_2, platform_bits_out);
 
-  // Add a thrid pairing
+  // Add a third pairing
   BTDeviceAddress addr_3 = {.octets = {0x31, 0x32, 0x33, 0x34, 0x35, 0x36}};
   SM128BitKey link_key_3 = {
     .data = {

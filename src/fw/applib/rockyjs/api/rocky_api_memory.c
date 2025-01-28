@@ -153,7 +153,7 @@ static void prv_memory_callback(jmem_free_unused_memory_severity_t severity,
     return;
   }
 
-  // Trigger agressive garbage collection, force property hashmaps to be dropped:
+  // Trigger aggressive garbage collection, force property hashmaps to be dropped:
   prv_collect_all_garbage();
   jmem_heap_stats_t stats = {};
   jmem_heap_get_stats(&stats);

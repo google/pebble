@@ -256,7 +256,7 @@ void test_session__last_system_session_wins(void) {
   comm_session_close(system_session2, CommSessionCloseReason_UnderlyingDisconnection);
 
   // The transport's .close is supposed to call this.
-  // The stub in this test doens't, so clean up manually:
+  // The stub in this test doesn't, so clean up manually:
   comm_session_close(system_session, CommSessionCloseReason_UnderlyingDisconnection);
 }
 

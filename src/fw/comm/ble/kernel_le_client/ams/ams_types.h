@@ -122,7 +122,7 @@ typedef enum {
   //! A string containing the integer value of the shuffle mode. See AMSShuffleMode.
   AMSQueueAttributeIDShuffleMode = 2,
 
-  //! A string containing the integer value value of the repeat mode. See AMSRepeatMode.
+  //! A string containing the integer value of the repeat mode. See AMSRepeatMode.
   AMSQueueAttributeIDRepeatMode = 3,
 
   NumAMSQueueAttributeID,

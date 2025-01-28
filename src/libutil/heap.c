@@ -369,11 +369,11 @@ void heap_free(Heap* const heap, void *ptr, uintptr_t client_pc) {
         heap_info_ptr->Size += next_block->Size;
 
         /* Since we merged the next segment, we have to update*/
-        /* the next next segment's PrevSize field.            */
+        /* the next segment's PrevSize field.                 */
         HeapInfo_t *next_next_block = get_next_block(heap, heap_info_ptr);
 
         /* If we are pointing at the end of the heap, then use*/
-        /* the begin as the next next segment.                 */
+        /* the begin as the next segment.                     */
         if(next_next_block == heap->end) {
           heap->begin->PrevSize = heap_info_ptr->Size;
         }

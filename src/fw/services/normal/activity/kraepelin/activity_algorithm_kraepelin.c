@@ -584,7 +584,7 @@ static bool NOINLINE prv_prepare_minute_data(uint16_t uncertain_m, time_t sleep_
 
     // See if we need to zero out steps in this record. We check that the start of the minute
     // is within the sleep bounds. The WITHIN macro returns true if the test value is
-    // <= end_value, so we need to subract one minute from the end to see if the start of this
+    // <= end_value, so we need to subtract one minute from the end to see if the start of this
     // test minute is entirely within the sleep range.
     bool was_sleeping =  WITHIN(cbuf_record->utc_sec, sleep_start_utc,
                                 sleep_end_utc - SECONDS_PER_MINUTE);

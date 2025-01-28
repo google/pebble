@@ -419,7 +419,7 @@ def configure(conf):
     conf.env.NOJS = conf.options.nojs
 
     # The BT controller is the only thing different between robert_es and robert_evt, so just
-    # retend robert_es is robert_evt. We'll be removing robert_es fairly soon anyways.
+    # pretend robert_es is robert_evt. We'll be removing robert_es fairly soon anyways.
     bt_board = None
     if conf.options.board == 'robert_es':
         bt_board = 'robert_es'

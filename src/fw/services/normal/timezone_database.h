@@ -42,7 +42,7 @@ typedef struct {
   char ds_label;
   //! Which day of the week this rule is observed.
   //! 0-indexed, starting with Sunday (ie Monday is 1, Tuesday is 2...).
-  //! A value of 255 indiciates that this rule applies to any day of the week.
+  //! A value of 255 indicates that this rule applies to any day of the week.
   uint8_t wday;
   //! A bitset of flags, see DSTRuleFlags.
   uint8_t flag;

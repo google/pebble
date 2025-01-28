@@ -883,7 +883,7 @@ static void prv_fill_oval_precise(GContext *ctx, GPointPrecise center,
     prv_swap_precise_points(&end_top, &end_bottom);
   }
 
-  // Range for scanline, since scanlines are mirred from the middle of the circle this is also
+  // Range for scanline, since scanlines are mirrored from the middle of the circle this is also
   //   indicated from the middle, therefore initialised with 0 (as middle) and
   //   radius_y (as scalines are on y axis)
   int draw_min = 0;

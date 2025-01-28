@@ -24,7 +24,7 @@
 
 
 // -------------------------------------------------------------------------------------------------
-// Returns the amount of data available for the given clien
+// Returns the amount of data available for the given client
 static uint32_t prv_get_data_length(const SharedCircularBuffer* buffer, SharedCircularBufferClient *client) {
 
   uint32_t  len;

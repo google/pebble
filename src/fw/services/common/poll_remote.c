@@ -110,7 +110,7 @@ static void prv_send_request(PollRemoteContext *ctx) {
     return;
   }
   // [MT]: comm_session_send_data() doesn't make the link active,
-  // which is what we want here. If this this changes in the future
+  // which is what we want here. If this changes in the future
   // we need to take measures here to make sure we don't pull the link active.
   const PollRemoteMessage msg = {
     .cmd = CMD_POLL,

@@ -71,7 +71,7 @@ static void prv_add_notification(int32_t delta_time_s) {
       "Angela Tam", "Liron Damir", "Heiko Behrens", "Kevin Conley", "Matt Hungerford",
   };
   char *bodies[] = {
-      "Late again? Can you be on time ever? Seriosly? Dude!!!",
+      "Late again? Can you be on time ever? Seriously? Dude!!!",
       "Late again. Sorry, I'll be there a few minutes. Meanwhile, I am just texting long messages.",
       "What's up for lunch?",
       "\xF0\x9F\x98\x83 \xF0\x9F\x92\xA9",

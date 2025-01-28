@@ -471,7 +471,7 @@ void test_graphics_draw_text_flow__no_infinite_loop2(void) {
       }
     },
   };
-  char text[] = "Late again? Can you be on time ever? Seriosly? Dude!!!";
+  char text[] = "Late again? Can you be on time ever? Seriously? Dude!!!";
   prv_prepare_fb_steps_xy(GSize(180, 360), 1, 1);
   ctx.draw_state.avoid_text_orphans = true;
 

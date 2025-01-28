@@ -164,7 +164,7 @@ static void prv_click_handler(ClickRecognizerRef recognizer, void *context) {
 }
 
 static void prv_config_provider(void *context) {
-  // Simple dialogs are dimissed when any button is pushed.
+  // Simple dialogs are dismissed when any button is pushed.
   window_single_click_subscribe(BUTTON_ID_SELECT, prv_click_handler);
   window_single_click_subscribe(BUTTON_ID_UP, prv_click_handler);
   window_single_click_subscribe(BUTTON_ID_DOWN, prv_click_handler);

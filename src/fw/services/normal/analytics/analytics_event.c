@@ -217,8 +217,8 @@ void analytics_event_canned_response(const char *response, bool successfully_sen
   // Format the event specific info in the blob. The analytics_logging_log_event() method will fill
   // in the common fields
   AnalyticsEventBlob event_blob = {
-    .event = successfully_sent ? AnalyticsEvent_CannedReponseSent
-                               : AnalyticsEvent_CannedReponseFailed,
+    .event = successfully_sent ? AnalyticsEvent_CannedResponseSent
+                               : AnalyticsEvent_CannedResponseFailed,
   };
 
   if (!response) {

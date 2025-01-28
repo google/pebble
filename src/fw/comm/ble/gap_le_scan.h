@@ -22,7 +22,7 @@
 
 //! @internal
 //! The number of reports that the circular reports buffer can contain.
-//! Accomodate for 4 reports with advertisement and scan reponse data:
+//! Accomodate for 4 reports with advertisement and scan response data:
 #define GAP_LE_SCAN_REPORTS_BUFFER_SIZE (4 * (sizeof(GAPLERawAdReport) + \
 (2 * GAP_LE_AD_REPORT_DATA_MAX_LENGTH)))
 

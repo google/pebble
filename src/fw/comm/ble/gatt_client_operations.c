@@ -91,7 +91,7 @@ static void prv_internal_write_cccd_response_cb(GattClientOpResponseHdr *event) 
   gatt_client_subscriptions_handle_write_cccd_response(cccd, error);
 }
 
-static BLEGATTError prv_handle_response(const GattClientOpReadReponse *resp,
+static BLEGATTError prv_handle_response(const GattClientOpReadResponse *resp,
                                         const GattClientEventContext *data,
                                         uint16_t *gatt_value_length) {
   uint16_t val_len = resp->value_length;
@@ -154,7 +154,7 @@ void bt_driver_cb_gatt_client_operations_handle_response(GattClientOpResponseHdr
     } else {
       switch (event->type) {
         case GattClientOpResponseRead: {
-          const GattClientOpReadReponse *resp = (GattClientOpReadReponse *)event;
+          const GattClientOpReadResponse *resp = (GattClientOpReadResponse *)event;
           PBL_ASSERTN(data->subtype == PebbleBLEGATTClientEventTypeCharacteristicRead ||
                       data->subtype == PebbleBLEGATTClientEventTypeDescriptorRead);
             gatt_err_code = prv_handle_response(resp, data, &gatt_value_length);

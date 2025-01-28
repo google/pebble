@@ -66,7 +66,7 @@ typedef void (*BlobDBInitImpl)(void);
 
 //! Implements the insert API. Note that this function should be blocking.
 //! \param key a pointer to the key data
-//! \param key_len the lenght of the key, in bytes
+//! \param key_len the length of the key, in bytes
 //! \param val a pointer to the value data
 //! \param val_len the length of the value, in bytes
 //! \returns S_SUCCESS if the key/val pair was succesfully inserted
@@ -76,7 +76,7 @@ typedef status_t (*BlobDBInsertImpl)
 
 //! Implements the get length API.
 //! \param key a pointer to the key data
-//! \param key_len the lenght of the key, in bytes
+//! \param key_len the length of the key, in bytes
 //! \returns the length in bytes of the value for key on success
 //! and an error code otherwise (See \ref StatusCode)
 typedef int (*BlobDBGetLenImpl)
@@ -84,7 +84,7 @@ typedef int (*BlobDBGetLenImpl)
 
 //! Implements the read API. Note that this function should be blocking.
 //! \param key a pointer to the key data
-//! \param key_len the lenght of the key, in bytes
+//! \param key_len the length of the key, in bytes
 //! \param[out] val_out a pointer to a buffer of size val_len
 //! \param val_len the length of the value to be copied, in bytes
 //! \returns S_SUCCESS if the value for key was succesfully read,
@@ -94,7 +94,7 @@ typedef status_t (*BlobDBReadImpl)
 
 //! Implements the delete API. Note that this function should be blocking.
 //! \param key a pointer to the key data
-//! \param key_len the lenght of the key, in bytes
+//! \param key_len the length of the key, in bytes
 //! \returns S_SUCCESS if the key/val pair was succesfully deleted
 //! and an error code otherwise (See \ref StatusCode)
 typedef status_t (*BlobDBDeleteImpl)
@@ -118,7 +118,7 @@ typedef BlobDBDirtyItem *(*BlobDBGetDirtyListImpl)(void);
 
 //! Implements the MarkSynced API.
 //! \param key a pointer to the key data
-//! \param key_len the lenght of the key, in bytes
+//! \param key_len the length of the key, in bytes
 //! \returns S_SUCCESS if the item was marked synced, an error code otherwise
 typedef status_t (*BlobDBMarkSyncedImpl)(const uint8_t *key, int key_len);
 
@@ -143,7 +143,7 @@ void blob_db_get_dirty_dbs(uint8_t *ids, uint8_t *num_ids);
 //! See \ref BlobDBReadImpl
 //! \param db_id the ID of the blob DB
 //! \param key a pointer to the key data
-//! \param key_len the lenght of the key, in bytes
+//! \param key_len the length of the key, in bytes
 status_t blob_db_insert(BlobDBId db_id,
     const uint8_t *key, int key_len, const uint8_t *val, int val_len);
 
@@ -151,7 +151,7 @@ status_t blob_db_insert(BlobDBId db_id,
 //! See \ref BlobDBGetLenImpl
 //! \param db_id the ID of the blob DB
 //! \param key a pointer to the key data
-//! \param key_len the lenght of the key, in bytes
+//! \param key_len the length of the key, in bytes
 int blob_db_get_len(BlobDBId db_id,
     const uint8_t *key, int key_len);
 

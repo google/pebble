@@ -71,7 +71,7 @@ typedef struct {
 
 typedef const SmartstrapProfileInfo *(*SmartstrapProfileGetInfoFunc)(void);
 
-// generate funciton prototypes for profile info functions
+// generate function prototypes for profile info functions
 #define REGISTER_SMARTSTRAP_PROFILE(f) const SmartstrapProfileInfo *f(void);
 #include "services/normal/accessory/smartstrap_profile_registry.def"
 #undef REGISTER_SMARTSTRAP_PROFILE

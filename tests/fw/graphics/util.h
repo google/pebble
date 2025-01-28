@@ -98,7 +98,7 @@ static char get_terminal_color(uint8_t c) {
   }
 }
 
-// A simple functon for printing 8-bit gbitmaps to the console.
+// A simple function for printing 8-bit gbitmaps to the console.
 // Makes it easy to quickly review failing test cases.
 void print_bitmap(const GBitmap *bmp) {
   printf("Row Size Bytes: %d\n", bmp->row_size_bytes);

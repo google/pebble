@@ -68,7 +68,7 @@
 //! __type__ value);`
 //! See \ref Int16Getter, \ref Int16Setter, \ref GPointGetter, \ref GPointSetter, \ref GRectGetter,
 //! \ref GRectSetter
-//! for the typedefs that accompany the update fuctions.
+//! for the typedefs that accompany the update functions.
 //!
 //! \code{.c}
 //! static const PropertyAnimationLegacy2Implementation my_implementation = {

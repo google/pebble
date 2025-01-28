@@ -57,7 +57,7 @@
 //! Any setter needs to have to following function signature: `void setter(void *subject,
 //! __type__ value);`
 //! See \ref Int16Getter, \ref Int16Setter, \ref GPointGetter, \ref GPointSetter,
-//! \ref GRectGetter, \ref GRectSetter for the typedefs that accompany the update fuctions.
+//! \ref GRectGetter, \ref GRectSetter for the typedefs that accompany the update functions.
 //!
 //! \code{.c}
 //! static const PropertyAnimationImplementation my_implementation = {

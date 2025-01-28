@@ -1250,7 +1250,7 @@ void notification_window_add_notification_by_id(Uuid *id) {
   prv_notification_window_add_notification(id, NotificationMobile);
 }
 
-//! The animate mode slides the notificaiton in from the top as if it was a new notification.
+//! The animate mode slides the notification in from the top as if it was a new notification.
 void notification_window_focus_notification(Uuid *id, bool animated) {
   NotificationWindowData *data = &s_notification_window_data;
 

@@ -89,7 +89,7 @@ static const  struct tm s_init_time_tm = {
 
 #define ACTIVITY_FIXTURE_PATH "activity"
 
-// The expected resting kcalories is determined empirically from a known good commmit and
+// The expected resting kcalories is determined empirically from a known good commit and
 // is based on the current time of day and the user's weight, age etc.
 const int s_exp_5pm_resting_kcalories = 1031;
 const int s_exp_full_day_resting_kcalories = 1455;

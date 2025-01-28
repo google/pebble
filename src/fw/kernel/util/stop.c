@@ -74,7 +74,7 @@ void enter_stop_mode(void) {
   //PWR_EnterSTOPMode(PWR_Regulator_LowPower, PWR_STOPEntry_WFI);
   // We don't use ^^ the above function because of a silicon bug which
   // causes the processor to skip some instructions upon wake from STOP
-  // in certain sitations. See the STM32F20x and STM32F21x Errata sheet
+  // in certain situations. See the STM32F20x and STM32F21x Errata sheet
   // section 2.1.3 "Debugging Stop mode with WFE entry", or the erratum
   // of the same name in section 2.1.2 of the STM32F42x and STM32F43x
   // Errata sheet, for (misleading) details.

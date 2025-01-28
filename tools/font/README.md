@@ -1,7 +1,7 @@
 Pebble Font Renderer Script
 ===========================
 
-These Python scripts take TrueType font files, renders a set of glyps and outputs them into .h files in the appropriate structure for consumption by Pebble's text rendering routines.
+These Python scripts take TrueType font files, renders a set of glyphs and outputs them into .h files in the appropriate structure for consumption by Pebble's text rendering routines.
 
 Requirements:
 -------------

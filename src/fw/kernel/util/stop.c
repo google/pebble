@@ -93,7 +93,7 @@ void enter_stop_mode(void) {
   temp &= ~PWR_CR_PDDS;
   temp |= PWR_CR_LPDS;
 #if STM32F412xG
-  // STM32F412xG suports a new "low-power regulator low voltage in deep sleep" mode.
+  // STM32F412xG supports a new "low-power regulator low voltage in deep sleep" mode.
   temp |= PWR_CR_LPLVDS;
 #endif
   PWR->CR = temp;

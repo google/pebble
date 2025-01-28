@@ -505,7 +505,7 @@ class ParseMinuteStatsFile(object):
                 print("  // The unit tests parse the //> TEST_.* lines below for test values")
                 print("  //> TEST_NAME %s" % (self.sample_prefix))
                 print(SLEEP_DEFAULT_EXPECTED_TEXT)
-                print("  // list of: {steps, orientation, vmc, ligh}")
+                print("  // list of: {steps, orientation, vmc, light}")
                 print("  static AlgDlsMinuteData samples[] = {")
 
             else:

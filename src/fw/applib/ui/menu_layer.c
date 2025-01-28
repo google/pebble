@@ -471,7 +471,7 @@ static void prv_menu_layer_walk_upward_from_iterator(MenuIterator *it) {
         const int16_t total_height = it->cursor.h + it->cursor.sep;
         if (total_height > it->cursor.y) {
           // If the total height is greater than the cursor y, don't
-          // add in space to accodomate the separator as the downwards callback
+          // add in space to accommodate the separator as the downwards callback
           // will add it for us.
           it->cursor.y -= it->cursor.h;
         } else {

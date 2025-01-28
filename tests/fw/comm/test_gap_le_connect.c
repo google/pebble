@@ -678,7 +678,7 @@ void test_gap_le_connect__slave_disconnection_event_upon_cancel_connect_by_bondi
 // -------------------------------------------------------------------------------------------------
 // Pairing
 
-void __disabled_test_gap_le_connect__one_shot_intent_removed_when_disconnected_before_encrpt(void) {
+void __disabled_test_gap_le_connect__one_shot_intent_removed_when_disconnected_before_encrypt(void) {
   BTDeviceInternal device = prv_dummy_device(1);
 
   // Register connection one-shot intent, with pairing required:

@@ -46,7 +46,7 @@ void rtc_init(void) {
 
   clocksource_lse_configure();
 
-  // Only initialize the RTC periphieral if it's not already enabled.
+  // Only initialize the RTC peripheral if it's not already enabled.
   if (!(RCC->BDCR & RCC_BDCR_RTCEN)) {
     RCC_RTCCLKConfig(RCC_RTCCLKSource_LSE);
     RCC_RTCCLKCmd(ENABLE);

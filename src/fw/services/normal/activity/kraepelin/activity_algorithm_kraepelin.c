@@ -1351,7 +1351,7 @@ bool activity_algorithm_test_fill_minute_file(void) {
   AlgMinuteFileRecord record = { };
   prv_init_minute_record(&record.hdr, utc_sec, true /*for_file*/);
 
-  // Delete old file so this doesn't take forver, in case it's already got a lot of data in it
+  // Delete old file so this doesn't take forever, in case it's already got a lot of data in it
   pfs_remove(ALG_MINUTE_DATA_FILE_NAME);
   s_alg_state->num_minute_records = 0;
 

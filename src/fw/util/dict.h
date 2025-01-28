@@ -322,7 +322,7 @@ Tuple * dict_read_first(DictionaryIterator *iter);
 //! See also \ref Tuple, with is the header of a serialized key/value pair.
 typedef struct Tuplet {
   //! The type of the Tuplet. This determines which of the struct fields in the
-  //! anonymomous union are valid.
+  //! anonymous union are valid.
   TupleType type;
   //! The key.
   uint32_t key;

@@ -757,7 +757,7 @@ static status_t find_free_page(uint16_t *free_page, bool use_gc_allocator,
 
 //! Note: expects that the caller does _not_ hold the pfs mutex
 //! Note: If pages are already pre-erased on the FS, this routine will return
-//!  very quickly. If we need to do erases, it will take longer becauses this
+//!  very quickly. If we need to do erases, it will take longer because this
 //!  operation can take seconds to complete on certain flash parts
 //!
 //! @param file_size - The amount of file space to erase

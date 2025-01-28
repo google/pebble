@@ -1352,7 +1352,7 @@ typedef struct PACKED {
 typedef Fixed_S32_16 GTransformNumber;
 
 //! @internal
-//! Data structure that contains the internal representation of a 3x3 tranformation matrix
+//! Data structure that contains the internal representation of a 3x3 transformation matrix
 //! The transformation matrix will be expressed as follows:
 //! [ a  b  0 ]
 //! [ c  d  0 ]

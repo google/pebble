@@ -229,7 +229,7 @@ static void set_text_layers(AppData *data) {
   } else if (data->alpha == ALPHA_66) {
     alpha_percent = 50; // FIXME: Currently don't support 66
   } else if (data->alpha == ALPHA_33) {
-    alpha_percent = 25; // FIXME: Currenlty don't support 33
+    alpha_percent = 25; // FIXME: Currently don't support 33
   } else if (data->alpha == ALPHA_0) {
     alpha_percent = 0;
   }

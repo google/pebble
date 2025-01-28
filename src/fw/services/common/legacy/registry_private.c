@@ -327,7 +327,7 @@ void registry_private_init(Registry* registry) {
   // active registry can be found when `registry_init()` is called, an empty registry
   // is written.
   //
-  // The flash cursor starts at the begining of the registry's SPIFlash
+  // The flash cursor starts at the beginning of the registry's SPIFlash
   // address (`REGISTRY_FLASH_BEGIN`), and is incremented to the next completely
   // empty subsector every time the registry is written to flash.
   memset(registry->records, 0, registry->registry_size_bytes);

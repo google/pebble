@@ -560,7 +560,7 @@ void menu_layer_set_selected_next(MenuLayer *menu_layer,
 //! @param scroll_align The alignment of the new selection
 //! @param animated Supply `true` to animate changing the selection, or `false`
 //! to change the selection instantly.
-//! @note If the section and/or row index exceeds the avaible number of sections
+//! @note If the section and/or row index exceeds the available number of sections
 //! or resp. rows, the exceeding index/indices will be capped, effectively
 //! selecting the last section and/or row, resp.
 void menu_layer_set_selected_index(MenuLayer *menu_layer,

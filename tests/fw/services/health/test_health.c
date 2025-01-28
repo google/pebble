@@ -1308,7 +1308,7 @@ void test_health__avg_full_days(void) {
                                        time_util_get_midnight_of(now), HealthServiceTimeScopeDaily);
   cl_assert_equal_i(result, exp_daily);
 
-  // All of our tests set "now" to Mon, 28 Dec 2015 09:12:22 GMT, so yesteday was a Sunday
+  // All of our tests set "now" to Mon, 28 Dec 2015 09:12:22 GMT, so yesterday was a Sunday
   result = health_service_sum_averaged(HealthMetricStepCount,
                                        time_util_get_midnight_of(now) - SECONDS_PER_DAY,
                                        time_util_get_midnight_of(now),
@@ -1536,13 +1536,13 @@ static void prv_update_stats(HealthServiceStats *stats, HealthValue value) {
 void DISABLED_test_health__min_max_avg_full_days(void) {
   // Get the current time and day
   const time_t now = rtc_get_time();
-  const time_t yeserday_utc = now - SECONDS_PER_DAY;
+  const time_t yesterday_utc = now - SECONDS_PER_DAY;
 
   struct tm local_tm;
   localtime_r(&now, &local_tm);
   DayInWeek todays_day_in_week = local_tm.tm_wday;
 
-  localtime_r(&yeserday_utc, &local_tm);
+  localtime_r(&yesterday_utc, &local_tm);
   DayInWeek yesterday_day_in_week = local_tm.tm_wday;
   bool yesterday_was_weekend = (yesterday_day_in_week == Sunday)
                                || (yesterday_day_in_week == Saturday);

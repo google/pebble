@@ -32,7 +32,7 @@
 //! operations are atomic, so a reboot in the middle of changing the value for a
 //! key will always either complete, returning the new value upon reboot, or
 //! will just return the old value.
-//! It also supports bidirectional syncronization between the phone & watch,
+//! It also supports bidirectional synchronization between the phone & watch,
 //! using timestamps to resolve conflicts.
 //! Note that although all operations are atomic, they are not thread-safe. If
 //! you will be accessing a SettingsFile from multiple threads, make sure you

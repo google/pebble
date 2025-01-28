@@ -18,7 +18,7 @@
  * This module contains the core dump logic which writes the core dump to SPI flash. It operates
  *  under a very limited set of constraints:
  *   1.) It can NOT use most FreeRTOS functions
- *   2.) It can not use the regular flash driver (because that uses FreeRTOS mutexes)
+ *   2.) It can NOT use the regular flash driver (because that uses FreeRTOS mutexes)
  *
  * There is a separate module, core_dump_protocol.c which implements the session endpoint logic for
  * fetching the core dump over bluetooth. That module is free to use FreeRTOS, regular flash

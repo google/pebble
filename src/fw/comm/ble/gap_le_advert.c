@@ -321,7 +321,7 @@ static void prv_timer_stop(void) {
 //! connectability mode has changed.
 static void prv_perform_next_job(bool force_refresh) {
 
-  // Part of work-around for CC2564 bug (see comment with prv_work_around_should_not_cycle).
+  // Part of workaround for CC2564 bug (see comment with prv_work_around_should_not_cycle).
   // When forced, we've just connected or disconnected, in that case cycle as well, because
   // otherwise we'll continue to advertise non-connectable if we've just disconnected and there
   // was already a job being advertised.

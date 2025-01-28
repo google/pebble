@@ -83,7 +83,7 @@ typedef struct PACKED {
   //! @note Not available in Bluetopia/cc2564x implementation
   //! Flag to indicate that when re-pairing this device, the re-pairing should be accepted
   //! automatically for this remote device (matching IRK or matching identity address).
-  //! @note This is a work-around for an Android 4.4.x bug. This opens up a security hole :( where
+  //! @note This is a workaround for an Android 4.4.x bug. This opens up a security hole :( where
   //! a phone could pretend to be the "trusted" phone and pair w/o the user even knowing about it.
   //! @see https://pebbletechnology.atlassian.net/browse/PBL-39369
   bool should_auto_accept_re_pairing:1;

@@ -102,7 +102,7 @@ typedef struct LayoutLayer *(*LayoutLayerConstructor)(const LayoutLayerConfig *c
 typedef bool (*LayoutVerifier)(bool existing_attributes[]);
 
 #pragma push_macro("GSize")
-#undef GSize // [FBO] ugly work around for rogue macro
+#undef GSize // [FBO] ugly workaround for rogue macro
 //! Get the size of the content of a layout. This is defined by the length of the text and
 //! the size of the icons contained within the attributes.
 //! @param ctx a pointer to the GContext in which the layout is rendered

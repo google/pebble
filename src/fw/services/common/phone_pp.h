@@ -27,6 +27,6 @@ void pp_decline_call(uint32_t cookie);
 void pp_get_phone_state(void);
 
 //! Enables or disables handling the Get Phone State responses.
-//! This is part of a work-around to ignore for stray requests that can be in flight after the phone
+//! This is part of a workaround to ignore for stray requests that can be in flight after the phone
 //! call has been declined by the user from the Pebble.
 void pp_get_phone_state_set_enabled(bool enabled);

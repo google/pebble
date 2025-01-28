@@ -658,7 +658,7 @@ static void prv_enable_shake_detection(void) {
   bma255_write_register(BMA255Register_INT_MAP_0, BMA255_INT_MAP_0_INT1_SLOPE);
 
   // configure the anymotion interrupt to fire after 4 successive
-  // samples are over the threhold specified
+  // samples are over the threshold specified
   accel_set_shake_sensitivity_high(false /* sensitivity_high */);
   bma255_write_register(BMA255Register_INT_5,
                         BMA255_INT_5_SLOPE_DUR_MASK << BMA255_INT_5_SLOPE_DUR_SHIFT);

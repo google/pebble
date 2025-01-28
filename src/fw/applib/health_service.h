@@ -443,7 +443,7 @@ uint16_t health_service_get_heart_rate_sample_period_expiration_sec(void);
 //! \endcode
 //!
 //! In the current implementation, only one alert per metric can be registered at a time. Future
-//! implementations may support two or more simulataneous alert registrations per metric. To change
+//! implementations may support two or more simultaneous alert registrations per metric. To change
 //! the alert threshold in the current implementation, cancel the original registration
 //! using `health_service_cancel_metric_alert` before registering the new threshold.
 //! @param metric Which \ref HealthMetric to query.

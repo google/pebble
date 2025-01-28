@@ -374,7 +374,7 @@ typedef struct MenuLayer {
     MenuCellSpan cursor;
   } cache;
   //! @internal
-  //! Selected cell index + geometery cache of the selected cell
+  //! Selected cell index + geometry cache of the selected cell
   MenuCellSpan selection;
   MenuLayerCallbacks callbacks;
   void *callback_context;

@@ -54,7 +54,7 @@
 //!   ![](pixel_bit_values.png)
 //!
 //! - \ref GBitmapFormat8Bit:
-//!   Each pixel in the bitmap is represented by 1 byte. The color value of that byte correspends to
+//!   Each pixel in the bitmap is represented by 1 byte. The color value of that byte corresponds to
 //!   a GColor.argb value.
 //!   There is no restriction on row_size_bytes / stride.
 //!

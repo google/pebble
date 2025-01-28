@@ -155,7 +155,7 @@ static void prv_txrx_menu_update(AppData *data);
 // and use that to know how to proceed through.
 //
 // A BTLE test gets started, and needs to be manually stopped.
-// This means that setup setup goes like this:
+// This means that setup goes like this:
 //
 // 1. User Signals "RUN"
 // 2. bt_test_start()

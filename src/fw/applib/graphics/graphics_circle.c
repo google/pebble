@@ -228,7 +228,7 @@ T_STATIC void graphics_circle_quadrant_draw_1px_aa(GContext* ctx, GPoint p, uint
                                                    GCornerMask quadrant) {
   /* This will draw antialiased circle with width of 1px, can be drawn in quadrants
    * Based on wu-xiang line drawing, will draw circle in two steps
-   * 1. Calculate point on the edge of eighth of the cricle and plot it around by mirroring
+   * 1. Calculate point on the edge of eighth of the circle and plot it around by mirroring
    *    - if point is matching pixel perfectly thats going to be on fully colored pixel
    *    - if theres fraction, two pixels will be colored accordingly
    * 2. Fill special case pixels (pixels that are between mirrored eighths)

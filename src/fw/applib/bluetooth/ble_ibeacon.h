@@ -90,7 +90,7 @@ void ble_ibeacon_destroy(BLEiBeacon *ibeacon);
 //! @param rssi The RSSI of the advertisement
 //! @param[out] ibeacon_out Will contain the parsed iBeacon data if the call
 //! returns true.
-//! @return true if the data element was succesfully parsed as iBeacon,
+//! @return true if the data element was successfully parsed as iBeacon,
 //! false if the data element could not be parsed as iBeacon.
 bool ble_ibeacon_parse(const BLEAdData *ad, int8_t rssi,
                        BLEiBeacon *ibeacon_out);

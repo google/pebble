@@ -899,7 +899,7 @@ static status_t create_flash_file(File *f) {
     }
   }
 
-  // we have succesfully allocated space for the file, so add file specific info
+  // we have successfully allocated space for the file, so add file specific info
   f->start_page = f->curr_page = start_page;
 
   FileHeader file_hdr;

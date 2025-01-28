@@ -26,7 +26,7 @@
 //! @param number_str_length The length of the number_str buffer.
 //! @param multiplier The factor by which to multiply the parsed number.
 //! @param[out] number_out If the parsing was successful, the result will be stored here.
-//! @return True if the string was parsed succesfully.
+//! @return True if the string was parsed successfully.
 //! @note The first comma or period found is treated as decimal separator. Any subsequent comma or
 //! period that is found will cause parsing to be aborted and return false.
 //! @note An empty / zero-length string still will fail to parse and return false.

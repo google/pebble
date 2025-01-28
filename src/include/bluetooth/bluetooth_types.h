@@ -27,7 +27,7 @@ typedef enum {
   //! The operation was successful.
   BTErrnoOK = 0,
 
-  //! Connection established succesfully.
+  //! Connection established successfully.
   BTErrnoConnected = BTErrnoOK,
 
   //! One or more parameters were invalid.

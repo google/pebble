@@ -52,12 +52,12 @@ typedef struct {
 //! reports and scan responses will be buffered. A PEBBLE_BLE_SCAN_EVENT will
 //! be generated when there is data to be collected.
 //! @see gap_le_consume_scan_results
-//! @return 0 if scanning started succesfully or an error code otherwise.
+//! @return 0 if scanning started successfully or an error code otherwise.
 bool gap_le_start_scan(void);
 
 //! @internal
 //! Stops scanning.
-//! @return 0 if scanning stopped succesfully or an error code otherwise.
+//! @return 0 if scanning stopped successfully or an error code otherwise.
 bool gap_le_stop_scan(void);
 
 //! @internal

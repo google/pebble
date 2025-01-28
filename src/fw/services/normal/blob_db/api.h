@@ -69,7 +69,7 @@ typedef void (*BlobDBInitImpl)(void);
 //! \param key_len the length of the key, in bytes
 //! \param val a pointer to the value data
 //! \param val_len the length of the value, in bytes
-//! \returns S_SUCCESS if the key/val pair was succesfully inserted
+//! \returns S_SUCCESS if the key/val pair was successfully inserted
 //! and an error code otherwise (See \ref StatusCode)
 typedef status_t (*BlobDBInsertImpl)
     (const uint8_t *key, int key_len, const uint8_t *val, int val_len);
@@ -87,7 +87,7 @@ typedef int (*BlobDBGetLenImpl)
 //! \param key_len the length of the key, in bytes
 //! \param[out] val_out a pointer to a buffer of size val_len
 //! \param val_len the length of the value to be copied, in bytes
-//! \returns S_SUCCESS if the value for key was succesfully read,
+//! \returns S_SUCCESS if the value for key was successfully read,
 //! and an error code otherwise (See \ref StatusCode)
 typedef status_t (*BlobDBReadImpl)
     (const uint8_t *key, int key_len, uint8_t *val_out, int val_len);
@@ -95,13 +95,13 @@ typedef status_t (*BlobDBReadImpl)
 //! Implements the delete API. Note that this function should be blocking.
 //! \param key a pointer to the key data
 //! \param key_len the length of the key, in bytes
-//! \returns S_SUCCESS if the key/val pair was succesfully deleted
+//! \returns S_SUCCESS if the key/val pair was successfully deleted
 //! and an error code otherwise (See \ref StatusCode)
 typedef status_t (*BlobDBDeleteImpl)
     (const uint8_t *key, int key_len);
 
 //! Implements the flush API. Note that this function should be blocking.
-//! \returns S_SUCCESS if all key/val pairs were succesfully deleted
+//! \returns S_SUCCESS if all key/val pairs were successfully deleted
 //! and an error code otherwise (See \ref StatusCode)
 typedef status_t (*BlobDBFlushImpl)(void);
 

@@ -47,7 +47,7 @@ void bt_driver_handle_host_added_bonding(const BleBonding *bonding);
 //! Called by the FW when a bonding is removed (i.e. user "Forgot" a bonding from Settings).
 void bt_driver_handle_host_removed_bonding(const BleBonding *bonding);
 
-//! Called by the BT driver after succesfully pairing a new device.
+//! Called by the BT driver after successfully pairing a new device.
 //! @param addr The address that is used to refer to the connection. This is used to associate
 //! the bonding with the GAPLEConnection.
 extern void bt_driver_cb_handle_create_bonding(const BleBonding *bonding,

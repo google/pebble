@@ -1429,7 +1429,7 @@ class gdb_prf(BuildContext):
 
 def openocd(ctx):
     """ Starts openocd and leaves it running. It will reset the board to
-        increase the chances of attaching succesfully. """
+        increase the chances of attaching successfully. """
     waftools.openocd.run_command(ctx, 'init; reset', shutdown=False)
 
 

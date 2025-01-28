@@ -534,7 +534,7 @@ bool property_animation_to(PropertyAnimation *property_animation, void *to, size
 // Implementing custom Property Animations
 //
 
-//! Creates a new PropertyAnimation on the heap and and initializes it with the specified values.
+//! Creates a new PropertyAnimation on the heap and initializes it with the specified values.
 //! The same defaults are used as with \ref animation_create().
 //! If the `from_value` or the `to_value` is `NULL`, the getter accessor will be called to get the
 //! current value of the property and be used instead.

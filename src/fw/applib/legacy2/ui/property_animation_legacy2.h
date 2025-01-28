@@ -127,7 +127,7 @@ void property_animation_legacy2_init(struct PropertyAnimationLegacy2 *property_a
       const struct PropertyAnimationLegacy2Implementation *implementation, void *subject,
       void *from_value, void *to_value);
 
-//! Creates a new PropertyAnimationLegacy2 on the heap and and initializes it with the specified
+//! Creates a new PropertyAnimationLegacy2 on the heap and initializes it with the specified
 //! values. The same defaults are used as with \ref animation_create().
 //! If the `from_value` or the `to_value` is `NULL`, the getter accessor will be called to get the
 //! current value of the property and be used instead.

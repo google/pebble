@@ -40,7 +40,7 @@ typedef struct GDrawCommandProcessor GDrawCommandProcessor;
 
 //! Callback for iterating over GDrawCommands
 //! @param processor GDrawCommandProcessor that is currently iterating over the GDrawCommandList.
-//! @param proccessed_command Copy of the current GDrawCommand that can be modified
+//! @param processed_command Copy of the current GDrawCommand that can be modified
 //! @param processed_command_max_size Size of GDrawCommand being processed
 //! @param list list of GDrawCommands that will be modified by the processor
 //! @param command Current GDrawCommand being processed

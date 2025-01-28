@@ -352,7 +352,7 @@ static void NOINLINE prv_update_storage(time_t utc_sec) {
     SettingsFile *file = activity_private_settings_open();
 
     if (file && (s_activity_state.update_settings_counter <= 0)) {
-      // Peridocically save current stats into settings, so that if watch resets or crashes we
+      // Periodically save current stats into settings, so that if watch resets or crashes we
       // don't lose too much info
       ACTIVITY_LOG_DEBUG("updating current stats in settings");
 

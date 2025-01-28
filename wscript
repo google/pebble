@@ -145,7 +145,7 @@ def options(opt):
     opt.add_option('--file', action='store', help='Specify a file to use with the flash_fw command')
     opt.add_option('--tty',
         help='Selects a tty to use for serial imaging. Must be specified for all image commands')
-    opt.add_option('--baudrate', action='store', type=int, help='Optional: specifies the baudrate to run the targetted uart at')
+    opt.add_option('--baudrate', action='store', type=int, help='Optional: specifies the baudrate to run the targeted uart at')
     opt.add_option('--onlysdk', action='store_true', help="only build the sdk")
     opt.add_option('--qemu_host', default='localhost:12345',
         help='host:port for the emulator console connection')

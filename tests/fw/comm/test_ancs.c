@@ -353,7 +353,7 @@ void test_ancs__should_handle_small_and_large_messages(void) {
   cl_assert_equal_i(fake_kernel_services_notifications_ancs_notifications_count(), 4 + 4 + 4);
 }
 
-void test_ancs__should_handle_message_size_attribtue(void) {
+void test_ancs__should_handle_message_size_attribute(void) {
   prv_send_notification((uint8_t *)&s_message_size_attr_dict);
   cl_assert_equal_i(s_num_requested_notif_attributes, 1);
   cl_assert_equal_i(s_num_ds_notifications_received, 1);

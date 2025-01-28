@@ -317,7 +317,7 @@ void bt_driver_handle_le_connection_handle_update_address_and_irk(const BleAddre
     GAPLEConnection *connection = gap_le_connection_by_device(&e->device);
     if (!connection) {
       PBL_LOG(LOG_LEVEL_ERROR,
-              "Got address & IRK update for non-existent connection. "
+              "Got address & IRK update for nonexistent connection. "
               "Old addr:"BT_DEVICE_ADDRESS_FMT, BT_DEVICE_ADDRESS_XPLODE(e->device.address));
       goto unlock;
     }

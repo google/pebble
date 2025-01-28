@@ -283,7 +283,7 @@ void test_reminder_db__bad_item(void) {
   cl_assert(S_SUCCESS != reminder_db_insert((uint8_t *)&bad_item.common.id, UUID_SIZE, (uint8_t *)&bad_item, sizeof(bad_item)));
 }
 
-void test_reminder_db__read_nonexistant(void) {
+void test_reminder_db__read_nonexistent(void) {
   TimelineItem item = {{{0}}};
   cl_assert_equal_i(E_DOES_NOT_EXIST, reminder_db_read_item(&item, &bad_item.common.id));
 }

@@ -506,7 +506,7 @@ void test_voice_endpoint__handle_nlp_result(void) {
   cl_assert_equal_i(s_session_result, VoiceEndpointResultSuccess);
   cl_assert_equal_i(s_session_id, 0x2211);
 
-  // test non nexistent timestamp msg
+  // test nonexistent timestamp msg
   nlp_result[8] = 1;
   s_session_id = 0;
   voice_endpoint_protocol_msg_callback(NULL, nlp_result,  sizeof(nlp_result) - 7);

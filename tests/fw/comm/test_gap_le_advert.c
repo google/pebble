@@ -827,7 +827,7 @@ void test_gap_le_advert__invalid_params(void) {
 }
 
 void test_gap_le_advert__unschedule_non_existent(void) {
-  // Unscheduling non-existent job should be fine, should not crash:
+  // Unscheduling nonexistent job should be fine, should not crash:
   gap_le_advert_unschedule((GAPLEAdvertisingJobRef)(uintptr_t) 0x1234);
 
   // Unschedule callback should not have been called:

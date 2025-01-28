@@ -973,7 +973,7 @@ void ancs_handle_write_response(BLECharacteristic characteristic, BLEGATTError e
       prv_ancs_is_alive();
     }
 
-    // We asked for a non-existent notification, go to the next one
+    // We asked for a nonexistent notification, go to the next one
     prv_reset_and_next();
     return;
   }

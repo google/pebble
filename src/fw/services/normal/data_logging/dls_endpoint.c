@@ -325,7 +325,7 @@ bool dls_endpoint_send_data(DataLoggingSession *logging_session, const uint8_t *
 static void prv_dls_endpoint_handle_ack(uint8_t session_id) {
   DataLoggingSession *session = dls_list_find_by_session_id(session_id);
   if (session == NULL) {
-    PBL_LOG_D(LOG_DOMAIN_DATA_LOGGING, LOG_LEVEL_WARNING, "Received ack for non-existent session id: %"PRIu8, session_id);
+    PBL_LOG_D(LOG_DOMAIN_DATA_LOGGING, LOG_LEVEL_WARNING, "Received ack for nonexistent session id: %"PRIu8, session_id);
     return;
   }
 
@@ -363,7 +363,7 @@ static void prv_dls_endpoint_handle_nack(uint8_t session_id) {
 
   DataLoggingSession *logging_session = dls_list_find_by_session_id(session_id);
   if (!logging_session) {
-    PBL_LOG_D(LOG_DOMAIN_DATA_LOGGING, LOG_LEVEL_WARNING, "Received nack for non-existent session id: %"PRIu8, session_id);
+    PBL_LOG_D(LOG_DOMAIN_DATA_LOGGING, LOG_LEVEL_WARNING, "Received nack for nonexistent session id: %"PRIu8, session_id);
     return;
   }
 

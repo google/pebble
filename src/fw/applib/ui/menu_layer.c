@@ -393,7 +393,7 @@ static void prv_menu_layer_walk_downward_from_iterator(MenuIterator *it) {
       it->cursor.sep = prv_menu_layer_get_separator_height(it->menu_layer, &it->cursor.index);
       it->cursor.y = it->cell_bottom_y; // Bottom of previous cell is y of the next cell
 
-      // Don't leave space for the seperator for the (non-existent) row after the last row.
+      // Don't leave space for the seperator for the (nonexistent) row after the last row.
       // This doesn't impact cell drawing in this loop (this condition will only trip on the last run).
       // But, other parts of the system rely on the cursor being set properly at the end of this iteration.
       if (it->cursor.index.row < num_rows_in_section - 1 || it->cursor.index.section < num_sections - 1) {

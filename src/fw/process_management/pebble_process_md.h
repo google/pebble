@@ -84,7 +84,7 @@ typedef struct PebbleProcessMd {
   //! Can this process call kernel functionality directly or does it need to go through syscalls?
   bool is_unprivileged;
 
-  //! Allow Javascript applications to access this process
+  //! Allow JavaScript applications to access this process
   bool allow_js;
 
   //! This process has a sister worker process in flash.

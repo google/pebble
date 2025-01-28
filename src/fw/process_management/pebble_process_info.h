@@ -38,7 +38,7 @@ typedef enum {
   //! Use to hide the process, unless there is ongoing communication with
   //! the companion smartphone application.
   PROCESS_INFO_VISIBILITY_SHOWN_ON_COMMUNICATION = 1 << 2,
-  //! Use to indicate the process allows Javascript API access
+  //! Use to indicate the process allows JavaScript API access
   PROCESS_INFO_ALLOW_JS = 1 << 3,
   //! Use to indicate the process should have a worker.bin installed as well.
   PROCESS_INFO_HAS_WORKER = 1 << 4,

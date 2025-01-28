@@ -76,7 +76,7 @@ bool accessory_send_stream(AccessoryDataStreamCallback stream_callback, void *co
 void accessory_send_stream_stop(void);
 
 //! Stop the driver from reading any input on the accessory port. When input is disabled we can
-//! write out the accessory port at higher rates as we don't have to worry about supressing
+//! write out the accessory port at higher rates as we don't have to worry about suppressing
 //! reading back our own output.
 void accessory_disable_input(void);
 

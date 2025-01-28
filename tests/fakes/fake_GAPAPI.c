@@ -114,7 +114,7 @@ static unsigned long s_le_create_connection_callback_param;
 int GAP_LE_Create_Connection(unsigned int BluetoothStackID,
                              unsigned int ScanInterval,
                              unsigned int ScanWindow,
-                             GAP_LE_Filter_Policy_t InitatorFilterPolicy,
+                             GAP_LE_Filter_Policy_t InitiatorFilterPolicy,
                              GAP_LE_Address_Type_t RemoteAddressType,
                              BD_ADDR_t *RemoteDevice,
                              GAP_LE_Address_Type_t LocalAddressType,

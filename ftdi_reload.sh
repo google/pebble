@@ -13,7 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-# This script works around an issue in MacOS 10.9 (Mavericks) that causes
+# This script works around an issue in macOS 10.9 (Mavericks) that causes
 #  it to go back to the original Apple USB FTDI drivers after a reboot.
 sudo kextunload /System/Library/Extensions/IOUSBFamily.kext/Contents/PlugIns/AppleUSBFTDI.kext
 sudo kextcache -system-prelinked-kernel

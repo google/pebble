@@ -191,7 +191,7 @@ This function affects subsequent calls to \ref rand() to produce a sequence of n
 `setlocale` can be used to:
   - set the app's locale to a specific locale: `setlocale(LC_ALL, "en_CA")`
   - set the app's locale to the system locale: `setlocale(LC_ALL, "")`
-  - get the app's curent locale: `setlocale(LC_ALL, NULL)`
+  - get the app's current locale: `setlocale(LC_ALL, NULL)`
 
 \param category The category of routines for which to set the locale
 \param locale The ISO formatted locale to use, or "" for the system locale

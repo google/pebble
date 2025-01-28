@@ -125,10 +125,10 @@ void data_logging_finish(DataLoggingSessionRef logging_session);
 //! DATA_LOGGING_NOT_FOUND if the logging session is invalid
 //!
 //! @return
-//! DATA_LOGGING_CLOSED if the sesion is not active
+//! DATA_LOGGING_CLOSED if the session is not active
 //!
 //! @return
-//! DATA_LOGGING_BUSY if the sesion is not available for writing
+//! DATA_LOGGING_BUSY if the session is not available for writing
 //!
 //! @return
 //! DATA_LOGGING_INVALID_PARAMS if num_items is 0 or data is NULL

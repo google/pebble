@@ -441,7 +441,7 @@ static void prv_reopen_next_session_system_task_cb(void* data) {
   }
 }
 
-//! For use with dls_list_for_each_session. Appends this session to our list of sesions we need to open.
+//! For use with dls_list_for_each_session. Appends this session to our list of sessions we need to open.
 //! On entry, 'data' points to the variable holding the head of the list.
 static bool dls_endpoint_add_reopen_sessions_cb(DataLoggingSession *session, void *data) {
   DataLoggingReopenEntry **head_ptr = (DataLoggingReopenEntry **)data;

@@ -380,7 +380,7 @@ typedef struct MenuLayer {
   void *callback_context;
 
   //! Default colors to be used for \ref MenuLayer.
-  //! Use MenuLayerColorNormal and MenuLayerColorHightlight for indexing.
+  //! Use MenuLayerColorNormal and MenuLayerColorHighlight for indexing.
   GColor normal_colors[MenuLayerColor_Count];
   GColor highlight_colors[MenuLayerColor_Count];
 

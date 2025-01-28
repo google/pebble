@@ -283,7 +283,7 @@ static bool prv_read_complete(bool success, uint32_t length) {
   } else if (success && (header->error != GenericServiceResultOk)) {
     // The response was completely valid, but there was a non-Ok error returned
     success = false;
-    // translate the error code to the appropraite SmartstrapResult
+    // translate the error code to the appropriate SmartstrapResult
     if (header->error == GenericServiceResultNotSupported) {
       result = SmartstrapResultAttributeUnsupported;
     } else {

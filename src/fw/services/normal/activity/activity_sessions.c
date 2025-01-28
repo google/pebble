@@ -323,7 +323,7 @@ void activity_sessions_prv_send_activity_session_to_data_logging(ActivitySession
 }
 
 
-// This structre holds stats we collected from going through a list of sleep sessions. It is
+// This structure holds stats we collected from going through a list of sleep sessions. It is
 // filled in by prv_compute_sleep_stats
 typedef struct {
   ActivityScalarStore total_minutes;

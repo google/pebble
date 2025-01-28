@@ -69,7 +69,7 @@ int timezone_database_get_region_count(void);
 //! the .dst_start and .dst_end members in tz_info uninitialized.
 //!
 //! @param The region ID to look up
-//! @param tz_info[out] The TimezoneInfo strcuture to populate with the region
+//! @param tz_info[out] The TimezoneInfo structure to populate with the region
 bool timezone_database_load_region_info(uint16_t region_id, TimezoneInfo *tz_info);
 
 //! Load a timezone name for a given region ID.

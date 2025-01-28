@@ -26,7 +26,7 @@ The spectral density of that same walk sample, showing the amount of energy pres
 
 _Note that the y axis on this plot is not simply Power, but rather “Power / Average Power”, where “Average Power” is the average power of that particular signal._
 
-![Spectral Density](spectial_density.png)
+![Spectral Density](spectral_density.png)
 
 You can see in the above spectral density plot that the dominant frequency in this example is 1Hz, corresponding to the 5 arm swings that occurred in these 5 seconds. 
 

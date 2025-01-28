@@ -48,7 +48,7 @@ void regular_timer_add_multiminute_callback(RegularTimerInfo* cb, uint16_t minut
 
 //! Remove a callback already registered for either seconds or minutes.
 //! WARNING: If you call this from your callback procedure, you are NOT allowed to free up the memory used for
-//!  the RegulartTimerInfo structure until after your callback exits!
+//!  the RegularTimerInfo structure until after your callback exits!
 //! @return true iff the timer was successfully stopped (false may indicate no timer was
 //!  scheduled at all or the cb is currently executing)
 bool regular_timer_remove_callback(RegularTimerInfo* cb);

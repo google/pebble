@@ -530,7 +530,7 @@ void process_manager_process_cleanup(PebbleTask task) {
 
   PBL_LOG(LOG_LEVEL_DEBUG, "%s is getting cleaned up", pebble_task_get_name(task));
 
-  // Shutdown services that may be running. Do this before we destory the task and clear the queue
+  // Shutdown services that may be running. Do this before we destroy the task and clear the queue
   // just in case other services are still in flight.
   accel_service_cleanup_task_session(task);
   animation_service_cleanup(task);

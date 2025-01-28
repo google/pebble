@@ -496,7 +496,7 @@ bool activity_algorithm_deinit(void) {
 }
 
 void activity_algorithm_handle_accel(AccelRawData *data, uint32_t num_samples, uint64_t timestamp) {
-  // For testing purposes, we'll use the x movment as the steps and y as the sleep state
+  // For testing purposes, we'll use the x movement as the steps and y as the sleep state
   ActivitySleepState prior_state = s_test_alg_state.minute_data.sleep_state;
   time_t now_secs = rtc_get_time();
   s_test_alg_state.minute_data.last_captured_utc = now_secs;

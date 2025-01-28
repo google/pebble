@@ -281,7 +281,7 @@ clar_usage(const char *arg)
   printf("  -q  \t\tOnly report tests that had an error\n");
   printf("  -Q  \t\tQuit as soon as a test fails\n");
   printf("  -l  \t\tPrint suite, category, and test names\n");
-  printf("  -tXX\t\tRun a specifc test by name\n");
+  printf("  -tXX\t\tRun a specific test by name\n");
   exit(-1);
 }
 

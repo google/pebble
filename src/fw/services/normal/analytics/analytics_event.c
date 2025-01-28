@@ -100,7 +100,7 @@ void analytics_event_app_launch(const Uuid *uuid) {
     return;
   }
 
-  // Format the event specifc info in the blob. The analytics_logging_log_event() method will fill
+  // Format the event specific info in the blob. The analytics_logging_log_event() method will fill
   // in the common fields
   AnalyticsEventBlob event_blob = {
     .event = AnalyticsEvent_AppLaunch,
@@ -121,7 +121,7 @@ void analytics_event_app_launch(const Uuid *uuid) {
 // Log a pin open/create/update event.
 static void prv_simple_pin_event(time_t timestamp, const Uuid *parent_id,
                                  AnalyticsEvent event_enum, const char *verb) {
-  // Format the event specifc info in the blob. The analytics_logging_log_event() method will fill
+  // Format the event specific info in the blob. The analytics_logging_log_event() method will fill
   // in the common fields
   AnalyticsEventBlob event_blob = {
     .event = event_enum,
@@ -165,7 +165,7 @@ void analytics_event_pin_updated(time_t timestamp, const Uuid *parent_id) {
 // Log a pin action event.
 void analytics_event_pin_action(time_t timestamp, const Uuid *parent_id,
                                 TimelineItemActionType action_type) {
-  // Format the event specifc info in the blob. The analytics_logging_log_event() method will fill
+  // Format the event specific info in the blob. The analytics_logging_log_event() method will fill
   // in the common fields
   AnalyticsEventBlob event_blob = {
     .event = AnalyticsEvent_PinAction,
@@ -192,7 +192,7 @@ void analytics_event_pin_app_launch(time_t timestamp, const Uuid *parent_id) {
     return;
   }
 
-  // Format the event specifc info in the blob. The analytics_logging_log_event() method will fill
+  // Format the event specific info in the blob. The analytics_logging_log_event() method will fill
   // in the common fields
   AnalyticsEventBlob event_blob = {
     .event = AnalyticsEvent_PinAppLaunch,
@@ -461,7 +461,7 @@ void analytics_event_stationary_state_change(time_t timestamp, uint8_t state_cha
 void analytics_event_health_insight_created(time_t timestamp,
                                             ActivityInsightType insight_type,
                                             PercentTier pct_tier) {
-  // Format the event specifc info in the blob. The analytics_logging_log_event() method will fill
+  // Format the event specific info in the blob. The analytics_logging_log_event() method will fill
   // in the common fields
   AnalyticsEventBlob event_blob = {
     .event = AnalyticsEvent_HealthInsightCreated,
@@ -486,7 +486,7 @@ void analytics_event_health_insight_created(time_t timestamp,
 void analytics_event_health_insight_response(time_t timestamp, ActivityInsightType insight_type,
                                              ActivitySessionType activity_type,
                                              ActivityInsightResponseType response_id) {
-  // Format the event specifc info in the blob. The analytics_logging_log_event() method will fill
+  // Format the event specific info in the blob. The analytics_logging_log_event() method will fill
   // in the common fields
   AnalyticsEventBlob event_blob = {
     .event = AnalyticsEvent_HealthInsightResponse,

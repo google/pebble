@@ -51,7 +51,7 @@ typedef struct {
   SmartstrapProfile profile;
   //! The maximum number of services which a smartstrap may support for this profile
   uint8_t max_services;
-  //! The loweest service id which this profile supports
+  //! The lowest service id which this profile supports
   uint16_t min_service_id;
   //! Optional handler for initialization
   SmartstrapProfileInitHandler init;

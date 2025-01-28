@@ -405,8 +405,8 @@ static void prv_is_ancs_alive_cb(void *data) {
 }
 
 // -----------------------------------------------------------------------------
-//! With iOS 8.2 the pre-existing flag seems to be broken. Don't allow notifications for a bit after
-//! reconnection so that all the "real" pre-existing notification don't come through again.
+//! With iOS 8.2 the preexisting flag seems to be broken. Don't allow notifications for a bit after
+//! reconnection so that all the "real" preexisting notification don't come through again.
 static RegularTimerInfo s_notification_connection_delay_timer;
 static bool s_just_connected = false;
 
@@ -893,9 +893,9 @@ static void prv_handle_ns_notification(uint32_t length, const uint8_t *notificat
   // Handle the EventID
   switch (nsnotification->event_id) {
     case EventIDNotificationAdded:
-      // In iOS 8.2 several apps (especially mail.app) seem to be setting the pre-existing flag
+      // In iOS 8.2 several apps (especially mail.app) seem to be setting the preexisting flag
       // when they shouldn't. This appeared to be fixed in iOS 9 beta 1.
-      // By skipping the pre-existing check we will re-recieve all the notifications
+      // By skipping the preexisting check we will re-recieve all the notifications
       // we got in the past 2 hours. To get past this ignore notifications for the first couple
       // seconds after connecting
       if (s_just_connected && (nsnotification->event_flags & EventFlagPreExisting)) {

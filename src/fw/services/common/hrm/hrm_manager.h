@@ -90,7 +90,7 @@ void hrm_manager_handle_prefs_changed(void);
 //! This should not be used by KernelBG or KernelMain clients. For KernelBG client subscriptions,
 //! please see \ref hrm_manager_subscribe_with_callback. KernelMain clients are not yet supported.
 //! If the app/worker is already subscribed, this will update the subscription based on the passed
-//! in arguments and return the pre-existing HRMSessionRef.
+//! in arguments and return the preexisting HRMSessionRef.
 //! @param app_id the application's AppInstallId
 //! @param update_interval_s requested update interval
 //! @param expire_s after this many seconds, this subscription will automatically expire

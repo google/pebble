@@ -145,7 +145,7 @@ DEFINE_SYSCALL(bool, sys_app_inbox_service_register, uint8_t *storage, size_t st
 }
 
 DEFINE_SYSCALL(uint32_t, sys_app_inbox_service_unregister, uint8_t *storage) {
-  // No check is needed on the value of `storage `, we're not going to derefence it.
+  // No check is needed on the value of `storage `, we're not going to dereference it.
   return app_inbox_service_unregister_by_storage(storage);
 }
 

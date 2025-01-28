@@ -379,7 +379,7 @@ inline void prv_hline_quadrant(GCornerMask quadrant, GCornerMask desired, GConte
 
 static void prv_stroke_circle_quadrant_full(GContext* ctx, GPoint p, uint16_t radius,
                                             uint8_t stroke_width, GCornerMask quadrant) {
-  // This algorithm will draw stroked circle with vairable width (only odd numbers for now)
+  // This algorithm will draw stroked circle with variable width (only odd numbers for now)
   const uint8_t half_stroke_width = stroke_width / 2;
   const int16_t inner_radius = radius - half_stroke_width;
   const uint8_t outer_radius = radius + half_stroke_width;

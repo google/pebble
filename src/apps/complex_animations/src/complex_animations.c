@@ -142,7 +142,7 @@ static void click_handler(ClickRecognizerRef recognizer, Window *window) {
   }
 
   /*
-   // Exmple animation parameters:
+   // Example animation parameters:
 
    // Duration defaults to 250 ms
    animation_set_duration(&prop_animation->animation, 1000);

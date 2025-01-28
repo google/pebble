@@ -673,7 +673,7 @@ typedef struct {
 #define GEdgeInsets(...) \
   GEdgeInsetsN(__VA_ARGS__, GEdgeInsets4, GEdgeInsets3, GEdgeInsets2, GEdgeInsets1)(__VA_ARGS__)
 
-//! Returns a rectangle that is shrinked or expanded by the given edge insets.
+//! Returns a rectangle that is shrunk or expanded by the given edge insets.
 //! @note The rectangle is standardized and then the inset parameters are applied.
 //! If the resulting rectangle would have a negative height or width, a GRectZero is returned.
 //! @param rect The rectangle that will be inset

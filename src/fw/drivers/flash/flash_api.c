@@ -187,7 +187,7 @@ TimerID flash_api_get_erase_poll_timer_for_test(void) {
 //! Assumes that s_flash_lock is held.
 static void prv_erase_pause(void) {
   if (s_erase.in_progress && !s_erase.suspended) {
-    // If an erase is in progress, make sure it gets at least a mininum time slice to progress.
+    // If an erase is in progress, make sure it gets at least a minimum time slice to progress.
     // If not, the successive kicking of the suspend timer could starve it out completely
     psleep(100);
     task_watchdog_bit_set(s_erase.task);

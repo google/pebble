@@ -92,7 +92,7 @@ typedef void (*GAPLEAdvertisingJobUnscheduleCallback)(GAPLEAdvertisingJobRef job
 //! payload.
 //! @param terms A combination of minimum advertisement interval, maximum advertisement
 //! interval and duration. Each term is run in the order that they appear in the terms array.
-//! The minimum advertisement interval for each term must be at minumum 32 slots (20ms), or
+//! The minimum advertisement interval for each term must be at minimum 32 slots (20ms), or
 //! 160 slots (100ms) when there is a scan response. The maximum advertisement interval must
 //! be larger than or equal to its corresponding min_interval_slots. The duration is the
 //! minimum number of seconds that the term will be active. The sum of all the durations is

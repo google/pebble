@@ -424,7 +424,7 @@ void test_shared_prf_storage_v3__write_in_loop_getting_started_confirm_data_stil
 }
 
 // Sets the getting started field, then corrupts the getting_started crc
-void test_shared_prf_storage_v3__handle_currupt_field_same(void) {
+void test_shared_prf_storage_v3__handle_corrupt_field_same(void) {
   bool GETTING_STARTED_COMPLETE = true;
   shared_prf_storage_set_getting_started_complete(GETTING_STARTED_COMPLETE);
   cl_assert_equal_i(shared_prf_storage_get_valid_page_number(), 0);
@@ -470,7 +470,7 @@ void test_shared_prf_storage_v3__handle_currupt_field_same(void) {
 
 // Sets the getting started field, then corrupts the ble_pairing_data crc
 // This tests that when setting a value, all fields in the struct must be valid.
-void test_shared_prf_storage_v3__handle_currupt_field_during_setting(void) {
+void test_shared_prf_storage_v3__handle_corrupt_field_during_setting(void) {
   bool GETTING_STARTED_COMPLETE = true;
   shared_prf_storage_set_getting_started_complete(GETTING_STARTED_COMPLETE);
   cl_assert_equal_i(shared_prf_storage_get_valid_page_number(), 0);

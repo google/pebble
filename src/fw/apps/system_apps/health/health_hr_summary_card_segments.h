@@ -19,7 +19,7 @@
 #include "health_progress.h"
 
 //! 4 main segments + 4 real corners
-//! Each of the 4 non-corener segments get 25% of the total
+//! Each of the 4 non-corner segments get 25% of the total
 #define AMOUNT_PER_SEGMENT (HEALTH_PROGRESS_BAR_MAX_VALUE * 25 / 100)
 
 // The shape is the same, but the offsets are different

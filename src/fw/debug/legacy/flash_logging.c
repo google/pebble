@@ -33,7 +33,7 @@
 #include <inttypes.h>
 
 //! @file flash_logging.c
-//! Logs messages to SPI flash for later retreival.
+//! Logs messages to SPI flash for later retrieval.
 //!
 //! The different chunks allow us to implement a rolling log, where if we fill up all the chunks, we can erase the oldest
 //! chunk to find us some more space. Each chunk gets its own header at the top of the chunk to indicate the order in

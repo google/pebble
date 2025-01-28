@@ -42,7 +42,7 @@ static PebbleMutex *s_mutex;
 
 #define MOVEMENT_DATA_KEY_SUFFIX "_movementData"
 #define SLEEP_DATA_KEY_SUFFIX "_sleepData"
-#define STEP_TYPICALS_KEY_SUFFIX "_steps" // Not the best suffix, but we are stuck with it now...
+#define STEP_TYPICAL_KEY_SUFFIX "_steps" // Not the best suffix, but we are stuck with it now...
 #define STEP_AVERAGE_KEY_SUFFIX "_dailySteps"
 #define SLEEP_AVERAGE_KEY_SUFFIX "_sleepDuration"
 #define HR_ZONE_DATA_KEY_SUFFIX "_heartRateZoneData"
@@ -144,7 +144,7 @@ static bool prv_is_last_processed_timestamp_valid(time_t timestamp) {
 }
 
 
-//! Tell the activity service that it needs to update its "current" values (non typicals / averages)
+//! Tell the activity service that it needs to update its "current" values (non typical / averages)
 static void prv_notify_health_listeners(const char *key,
                                         int key_len,
                                         const uint8_t *val,
@@ -306,7 +306,7 @@ bool health_db_get_typical_step_averages(DayInWeek day, ActivityMetricAverages *
   }
 
   char key[HEALTH_DB_MAX_KEY_LEN];
-  snprintf(key, HEALTH_DB_MAX_KEY_LEN, "%s%s", WEEKDAY_NAMES[day], STEP_TYPICALS_KEY_SUFFIX);
+  snprintf(key, HEALTH_DB_MAX_KEY_LEN, "%s%s", WEEKDAY_NAMES[day], STEP_TYPICAL_KEY_SUFFIX);
   const int key_len = strlen(key);
 
   status_t s = settings_file_get(&file, key, key_len, averages->average, sizeof(averages->average));
@@ -321,7 +321,7 @@ bool health_db_set_typical_values(ActivityMetric metric,
                                   uint16_t *values,
                                   int num_values) {
   char key[HEALTH_DB_MAX_KEY_LEN];
-  snprintf(key, HEALTH_DB_MAX_KEY_LEN, "%s%s", WEEKDAY_NAMES[day], STEP_TYPICALS_KEY_SUFFIX);
+  snprintf(key, HEALTH_DB_MAX_KEY_LEN, "%s%s", WEEKDAY_NAMES[day], STEP_TYPICAL_KEY_SUFFIX);
   const int key_len = strlen(key);
 
   return health_db_insert((uint8_t *)key, key_len, (uint8_t*)values, num_values * sizeof(uint16_t));
@@ -353,7 +353,7 @@ status_t health_db_insert(const uint8_t *key, int key_len, const uint8_t *val, i
   PBL_HEXDUMP(LOG_LEVEL_DEBUG, val, val_len);
 #endif
 
-  // Only store typicals / averages in this settings file. "Current" values are stored in the
+  // Only store typical / averages in this settings file. "Current" values are stored in the
   // activity settings file.
   // Sleep data contains a mix of current and typical values. The current values are just stored
   // for convenience and can't be accessed from this settings file.

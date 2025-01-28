@@ -517,7 +517,7 @@ void prv_draw_stroked_line_precise(GContext* ctx, GPointPrecise p0, GPointPrecis
       Fixed_S16_3 left_margin = {.raw_value = INT16_MAX};
       Fixed_S16_3 right_margin = {.raw_value = INT16_MIN};
 
-      // Find edges of the line's straigth part
+      // Find edges of the line's straight part
       if (y >= far_top.y.integer && y <= far_bottom.y.integer) {
         // TODO: possible performance optimization: PBL-14744
         // TODO: ^^ also possible avoid of following logic to avoid division by zero
@@ -645,7 +645,7 @@ void prv_draw_stroked_line_precise(GContext* ctx, GPointPrecise p0, GPointPrecis
       Fixed_S16_3 top_margin = {.raw_value = INT16_MAX};
       Fixed_S16_3 bottom_margin = {.raw_value = INT16_MIN};
 
-      // Find edges of the line's straigth part
+      // Find edges of the line's straight part
       if (x >= far_left.x.integer && x <= far_right.x.integer) {
         // Main part of the stroked line
         if (tm_p1.x.raw_value != tm_p0.x.raw_value) {

@@ -138,7 +138,7 @@ void graphics_text_init(void);
 
 //! Draw text into the current graphics context, using the context's current text color.
 //! The text will be drawn inside a box with the specified dimensions and
-//! configuration, with clipping occuring automatically.
+//! configuration, with clipping occurring automatically.
 //! @param ctx The destination graphics context in which to draw
 //! @param text The zero terminated UTF-8 string to draw
 //! @param font The font in which the text should be set

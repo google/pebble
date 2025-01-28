@@ -302,7 +302,7 @@ void accessory_send_byte(uint8_t data) {
   portENTER_CRITICAL();
   if (s_send_history.has_data) {
     // The send buffer is full. This means that the receive interrupt hasn't fired to clear the
-    // buffer which indicates that there is bus contention preventing a stop bit from occuring.
+    // buffer which indicates that there is bus contention preventing a stop bit from occurring.
     s_bus_contention_detected = true;
   } else {
     s_send_history.data = data;

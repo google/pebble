@@ -288,7 +288,7 @@ bool gbitmap_sequence_update_bitmap_next_frame(GBitmapSequence *bitmap_sequence,
   const bool bitmap_supports_transparency = (bitmap_format != GBitmapFormat1Bit);
 
   // DISPOSE_OP_BACKGROUND sets the background to black with transparency (0x00)
-  // If we don't support tranparency, just do nothing.
+  // If we don't support transparency, just do nothing.
   if (bitmap_supports_transparency &&
       (png_decoder_data->last_dispose_op == APNG_DISPOSE_OP_BACKGROUND)) {
     const uint32_t y_origin = bitmap->bounds.origin.y + png_decoder_data->previous_yoffset;

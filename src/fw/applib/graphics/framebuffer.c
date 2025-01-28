@@ -16,7 +16,7 @@
 
 //! @file framebuffer.c
 //! Bitdepth independant routines for framebuffer.h
-//! Bitdepth depenedant routines can be found in the 1_bit & 8_bit folders in their
+//! Bitdepth dependent routines can be found in the 1_bit & 8_bit folders in their
 //! respective framebuffer.c files.
 
 #include "applib/graphics/framebuffer.h"

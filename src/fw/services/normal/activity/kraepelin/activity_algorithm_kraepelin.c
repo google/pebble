@@ -1240,7 +1240,7 @@ bool activity_algorithm_get_minute_history(HealthMinuteData *minute_data, uint32
   // Init for missing records
   memset(minute_data, 0xFF, array_size * sizeof(HealthMinuteData));
 
-  // Figure out the lowest key value for for chunks that go into this buffer
+  // Figure out the lowest key value for chunks that go into this buffer
   time_t utc_now = rtc_get_time();
   const time_t oldest_possible = utc_now
       - ALG_MINUTE_FILE_MAX_ENTRIES * ALG_MINUTES_PER_FILE_RECORD * SECONDS_PER_MINUTE;

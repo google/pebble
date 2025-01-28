@@ -459,7 +459,7 @@ static void prv_status_window_init(AppData *data) {
 //--------------------------------------------------------------------------------
 // TX/RX Menus & Windows
 //--------------------------------------------------------------------------------
-// The same menu layer is reused for TX / RX, we just handle it differentely
+// The same menu layer is reused for TX / RX, we just handle it differently
 // based on whether we are currently executing a TX or RX test.
 
 #define TX_MENU_NUM_PAYLOAD_ROWS (2)

@@ -835,7 +835,7 @@ static void prv_fill_oval_precise(GContext *ctx, GPointPrecise center,
   radius_inner_y.raw_value = MAX(radius_inner_y.raw_value, 0);
 
   // This flag prevents from calculation of the inner circle (and bugs related to it)
-  const bool no_innner_ellipsis = (radius_inner_x.raw_value == 0 || radius_inner_y.raw_value == 0);
+  const bool no_inner_ellipsis = (radius_inner_x.raw_value == 0 || radius_inner_y.raw_value == 0);
 
   // Squared radiuses values - they're used a lot in some cases
   const uint32_t radius_outer_x_sq =
@@ -857,11 +857,11 @@ static void prv_fill_oval_precise(GContext *ctx, GPointPrecise center,
                                                  radius_outer_x.raw_value, radius_outer_y.raw_value,
                                                  config.end_quadrant.angle);
 
-  GPointPrecise start_bottom = (no_innner_ellipsis) ? center :
+  GPointPrecise start_bottom = (no_inner_ellipsis) ? center :
       prv_get_rotated_precise_point_for_ellipsis(center,
                                                  radius_inner_x.raw_value, radius_inner_y.raw_value,
                                                  config.start_quadrant.angle);
-  GPointPrecise end_bottom = (no_innner_ellipsis) ? center :
+  GPointPrecise end_bottom = (no_inner_ellipsis) ? center :
       prv_get_rotated_precise_point_for_ellipsis(center,
                                                  radius_inner_x.raw_value, radius_inner_y.raw_value,
                                                  config.end_quadrant.angle);
@@ -970,7 +970,7 @@ static void prv_fill_oval_precise(GContext *ctx, GPointPrecise center,
     int16_t left = center.x.raw_value - outer_edge;
     int16_t right = center.x.raw_value + outer_edge;
 
-    if (!no_innner_ellipsis && radius_inner_y.integer != 0) {
+    if (!no_inner_ellipsis && radius_inner_y.integer != 0) {
       // This complicates the situation
       int16_t inner_edge =
           prv_get_ellipsis_border(y, radius_inner_y_sq, radius_inner_x_sq).raw_value;
@@ -1018,7 +1018,7 @@ static void prv_fill_oval_precise(GContext *ctx, GPointPrecise center,
     int16_t right = center.x.raw_value + outer_edge;
 
     // If theres circle in the middle - calculate it:
-    if (!no_innner_ellipsis && i < radius_inner_y.integer) {
+    if (!no_inner_ellipsis && i < radius_inner_y.integer) {
       int16_t inner_edge =
           prv_get_ellipsis_border(y, radius_inner_y_sq, radius_inner_x_sq).raw_value;
 

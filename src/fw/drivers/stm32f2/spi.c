@@ -291,7 +291,7 @@ static void prv_spi_slave_deinit(const SPISlavePort *slave) {
 //! The assertion and deassertion of the SCS line is automatic
 //
 
-static bool prv_is_bidrectional(const SPISlavePort *slave) {
+static bool prv_is_bidirectional(const SPISlavePort *slave) {
     bool is_bidirectional = (slave->spi_direction == SpiDirection_2LinesFullDuplex) ||
         (slave->spi_direction == SpiDirection_2LinesRxOnly);
 
@@ -304,7 +304,7 @@ void spi_slave_port_deinit(const SPISlavePort *slave) {
     return;
   }
   prv_spi_slave_deinit(slave);
-  prv_spi_bus_deinit(slave->spi_bus, prv_is_bidrectional(slave));
+  prv_spi_bus_deinit(slave->spi_bus, prv_is_bidirectional(slave));
   slave->slave_state->initialized = false;
 }
 
@@ -316,7 +316,7 @@ void spi_slave_port_init(const SPISlavePort *slave) {
   slave->slave_state->initialized = true;
   slave->slave_state->acquired = false;
   slave->slave_state->scs_selected = false;
-  prv_spi_bus_init(slave->spi_bus, prv_is_bidrectional(slave));
+  prv_spi_bus_init(slave->spi_bus, prv_is_bidirectional(slave));
 
   // SCS
   gpio_output_init(&slave->spi_scs, GPIO_OType_PP, slave->spi_bus->spi_sclk_speed);

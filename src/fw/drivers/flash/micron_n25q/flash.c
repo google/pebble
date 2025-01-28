@@ -646,7 +646,7 @@ size_t flash_get_size(void) {
     return 0;
   }
 
-  // capcity_megabytes = 2^(capacity in whoami)
+  // capacity_megabytes = 2^(capacity in whoami)
   uint32_t capacity = spi_flash_id & 0x000000FF;
   // get the capacity of the flash in bytes
   return 1 << capacity;

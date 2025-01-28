@@ -109,7 +109,7 @@ def process_binary_header(self):
     sparse length encoding (see waftools/sparse_length_encoding.py).
 
     The name of the array variable defaults to the source file name with all
-    characters that are invaid C identifiers replaced with underscores. The name
+    characters that are invalid C identifiers replaced with underscores. The name
     can be explicitly specified by setting the *array_name* parameter.
 
     This method overrides the processing by

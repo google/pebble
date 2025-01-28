@@ -169,7 +169,7 @@ ALWAYS_INLINE static uint32_t LOG_SECTION_OFFSET(const uint8_t level, const char
   }
 
   // Search for an 's' character succeeding the % characters in fmt. s1-s7 point to the first 's'
-  // charactres in fmt after the previously found % characters (or NULL if there aren't 7 's'
+  // characters in fmt after the previously found % characters (or NULL if there aren't 7 's'
   // characters in fmt).
   if (p1) s1 = __builtin_strchr(p1, 's');
   if (p2) s2 = __builtin_strchr(p2, 's');

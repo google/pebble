@@ -266,7 +266,7 @@ void test_reminder_db__delete_parent(void) {
   prv_insert_default_reminders();
 
   const TimelineItemId *parent_id = &item1.header.parent_id;
-  // cnfirm the two are here
+  // confirm the two are here
   cl_assert(reminder_db_get_len((uint8_t *)&item1.header.id, sizeof(Uuid)) > 0);
   cl_assert(reminder_db_get_len((uint8_t *)&item2.header.id, sizeof(Uuid)) > 0);
   // remove the two that share a parent

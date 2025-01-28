@@ -160,7 +160,7 @@ static int s_pattern_timer = TIMER_INVALID_ID;
 static bool s_pattern_in_progress = false;
 // s_vibe_strength is the current vibration strength setting of the motor
 static int32_t s_vibe_strength = VIBE_STRENGTH_OFF;
-// s_vibe_strength_default is the vibrations trength of the motor used when one is not specified
+// s_vibe_strength_default is the vibrations strength of the motor used when one is not specified
 // explicitly, and can be changed in the notification vibration strength setting.
 static int32_t s_vibe_strength_default = VIBE_STRENGTH_MAX;
 

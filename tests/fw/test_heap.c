@@ -331,7 +331,7 @@ static void prv_alloc_and_test_fuzz_on_free(bool enabled) {
   heap_free(heap, test, 0);
 
   if (enabled) {
-    // the memory was fuzz'ed, better not match
+    // the memory was fuzzed, better not match
     cl_assert(memcmp(test, test_string, strlen(test_string)) != 0);
   } else {
     // free'd data should match what was already there

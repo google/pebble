@@ -593,7 +593,7 @@ static FlashTestErrorType prv_run_stress_addr_test(uint32_t iterations) {
   uint32_t stress_addr1 = FLASH_TEST_STRESS_ADDR1;
   uint16_t stress_data1 = FLASH_TEST_STRESS_DATA1;
 
-  // Read/Write from adress 2
+  // Read/Write from address 2
   uint32_t stress_addr2 = FLASH_TEST_STRESS_ADDR2;
   uint16_t stress_data2 = FLASH_TEST_STRESS_DATA2;
 

@@ -78,7 +78,7 @@ def find_subregions_for_region(address, size):
             # This region fits in the provided region and both the start and end are aligned with
             # subregion boundries. This will work!
 
-            block_start_addresss = address - start_in_block
+            block_start_address = address - start_in_block
 
             start_enabled_subregion = start_in_block / subregion_size
             end_enabled_subregion = end_in_block / subregion_size
@@ -90,7 +90,7 @@ def find_subregions_for_region(address, size):
             disabled_subregions_bytes = disabled_subregions.tobytes()
             disabled_subregions_int, = struct.unpack('B', disabled_subregions_bytes)
 
-            return MpuRegion(block_start_addresss, current_block_size, disabled_subregions_int)
+            return MpuRegion(block_start_address, current_block_size, disabled_subregions_int)
 
         current_block_size *= 2
     else:

@@ -101,7 +101,7 @@ bool accessory_manager_handle_break_from_isr(void);
 //! was last called.
 bool accessory_bus_contention_detected(void);
 
-//! Checks if the pull-up resistor which is required for smarstraps is present
+//! Checks if the pull-up resistor which is required for smartstraps is present
 bool accessory_is_present(void);
 
 //! Uses DMA for receiving from the peripheral

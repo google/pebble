@@ -380,7 +380,7 @@ static bool prv_calc_far_points(GPointPrecise *p0, GPointPrecise *p1, Fixed_S16_
   }
 
   // Since we already rotated the vector by 90 degrees, delta x is actually delta y
-  // therefore if x is bigger than y we have have vertical dominance
+  // therefore if x is bigger than y we have vertical dominance
   if (ABS(dx_fixed) > ABS(dy_fixed)) {
     return true;
   }

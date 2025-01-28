@@ -1434,7 +1434,7 @@ void test_health__avg_partial_days(void) {
 
   // ---
   // Compute weekend HealthMetricActiveSeconds average from 4am to 9am. This should use the
-  // daily totals since we don't havce 15-minute averages maintained for this metric
+  // daily totals since we don't have 15-minute averages maintained for this metric
   exp_value = (k_daily_total * 5 * MINUTES_PER_HOUR) / MINUTES_PER_DAY;
 
   // Since "today" is Monday, going back 24 hours puts us on a weekend

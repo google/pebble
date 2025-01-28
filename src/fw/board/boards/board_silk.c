@@ -61,7 +61,7 @@ CREATE_DMA_STREAM(2, 6); // DMA2_STREAM4_DEVICE - DFSDM
 CREATE_DMA_STREAM(2, 7); // DMA2_STREAM7_DEVICE - QSPI
 
 // DMA Requests
-// - On DMA1 we just have have "Sharp SPI TX" so just set its priority to "High" since it doesn't
+// - On DMA1 we just have "Sharp SPI TX" so just set its priority to "High" since it doesn't
 //   matter.
 // - On DMA2 we have "Accessory UART RX", "Debug UART RX", "Dialog SPI RX", "DIALOG SPI TX",
 //   "DFSDM", and "QSPI". We want "DFSDM", "Accessory UART RX", "Debug UART RX", and "Dialog SPI RX"

@@ -20,7 +20,7 @@
 
 // Deleted records have their key stick around for at least DELETED_LIFETIME
 // before they can be garbage collected from the file in which they are
-// contained, that way they have time to propegate to all devices we end up
+// contained, that way they have time to propagate to all devices we end up
 // syncronizing with. For more information, refer to the sync protocol proposal:
 // https://pebbletechnology.atlassian.net/wiki/pages/viewpage.action?pageId=26837564
 //

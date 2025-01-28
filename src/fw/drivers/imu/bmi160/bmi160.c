@@ -262,7 +262,7 @@ static bool prv_new_sample_collected(uint8_t sensor_timestamp_before[3],
 
   uint32_t sample_time_bit = prv_get_sample_collection_bit();
 
-  // see if the upper bits oveflowed
+  // see if the upper bits overflowed
   uint32_t upper_bits_mask = ~((0x1 << sample_time_bit) - 1);
   start_time &= upper_bits_mask;
   end_time &= upper_bits_mask;

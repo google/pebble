@@ -1532,7 +1532,7 @@ static void prv_update_stats(HealthServiceStats *stats, HealthValue value) {
 // valid aggregation functions. The sum function is only applicable to cumulative metrics and is
 // tested above in test_health__sum_full_days().
 
-// DISBLAED because the firmware doesn't actually store daily history of HRM values.
+// DISABLED because the firmware doesn't actually store daily history of HRM values.
 void DISABLED_test_health__min_max_avg_full_days(void) {
   // Get the current time and day
   const time_t now = rtc_get_time();

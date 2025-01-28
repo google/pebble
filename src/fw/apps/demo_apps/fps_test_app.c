@@ -164,7 +164,7 @@ static void prv_window_update_proc(struct Layer *layer, GContext *ctx) {
   data->rendered_frames++;
 }
 
-static void prv_window_disapper(Window *window) {
+static void prv_window_disappear(Window *window) {
 }
 
 void prv_syncing_content_offset_changed(struct ScrollLayer *scroll_layer, void *context) {
@@ -256,7 +256,7 @@ static void s_main(void) {
   window_set_window_handlers(window, &(WindowHandlers) {
     .load = prv_window_load,
     .unload = prv_window_unload,
-    .disappear = prv_window_disapper,
+    .disappear = prv_window_disappear,
   });
 
   app_window_stack_push(window, true);

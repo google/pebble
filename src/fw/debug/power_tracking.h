@@ -24,7 +24,7 @@
 /** Power Profiling
  *  ===============
  *  There are two main types of power consumers on the Pebble Smartwatch:
- *  - Discrete systems   (one more more independent power states).
+ *  - Discrete systems   (one or more independent power states).
  *  - Continuous systems (a continuum of power draw eg. the PWM-ed backlight).
  *
  *  The discrete systems will have their power profiled in a time-binned manner

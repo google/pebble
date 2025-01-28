@@ -66,7 +66,7 @@ void conn_mgr_set_ble_conn_response_time(
 //! Informs the BT manager module that we want to run the provided classic
 //! connection at the requested rate.
 //!
-//! Note: This currently supports two modes. ResponseTimeMax maps to BT clasic sniff mode
+//! Note: This currently supports two modes. ResponseTimeMax maps to BT classic sniff mode
 //!       and anything fatser maps to BT classic active mode
 //!
 //! @param[in] remote          The BT Classic connection requesting the rate change

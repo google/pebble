@@ -75,7 +75,7 @@ typedef struct BitmapLayer {
 //!
 //! The bitmap layer is automatically marked dirty after this operation.
 //! @param bitmap_layer The BitmapLayer to initialize
-//! @param frame The frame with which to initialze the BitmapLayer
+//! @param frame The frame with which to initialize the BitmapLayer
 void bitmap_layer_init(BitmapLayer *bitmap_layer, const GRect *frame);
 
 //! Creates a new bitmap layer on the heap and initalizes it the default values.

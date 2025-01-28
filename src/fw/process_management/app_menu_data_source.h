@@ -93,7 +93,7 @@ typedef struct AppMenuDataSource {
   bool is_list_loaded;
 } AppMenuDataSource;
 
-//! Initalize the AppMenuDataSource
+//! Initialize the AppMenuDataSource
 void app_menu_data_source_init(AppMenuDataSource *source,
                                const AppMenuDataSourceCallbacks *handlers,
                                void *callback_context);

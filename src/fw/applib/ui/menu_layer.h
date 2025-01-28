@@ -435,7 +435,7 @@ typedef struct MenuLayer {
 //!   will be selected initially.
 //! The layer is marked dirty automatically.
 //! @param menu_layer The \ref MenuLayer to initialize
-//! @param frame The frame with which to initialze the \ref MenuLayer
+//! @param frame The frame with which to initialize the \ref MenuLayer
 void menu_layer_init(MenuLayer *menu_layer, const GRect *frame);
 
 //! Creates a new \ref MenuLayer on the heap and initalizes it with the default values.

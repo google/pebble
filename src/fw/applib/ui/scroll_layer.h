@@ -156,7 +156,7 @@ _Static_assert(offsetof(struct ScrollPaging, flags) == offsetof(Layer, flags),
 //! * Callback context: `NULL`
 //! The layer is marked dirty automatically.
 //! @param scroll_layer The ScrollLayer to initialize
-//! @param frame The frame with which to initialze the ScrollLayer
+//! @param frame The frame with which to initialize the ScrollLayer
 void scroll_layer_init(ScrollLayer *scroll_layer, const GRect *frame);
 
 //! Creates a new ScrollLayer on the heap and initalizes it with the default values:

@@ -71,7 +71,7 @@ typedef struct TextLayerLegacy2 {
 //!
 //! The text layer is automatically marked dirty after this operation.
 //! @param text_layer The TextLayerLegacy2 to initialize
-//! @param frame The frame with which to initialze the TextLayerLegacy2
+//! @param frame The frame with which to initialize the TextLayerLegacy2
 void text_layer_legacy2_init(TextLayerLegacy2 *text_layer, const GRect *frame);
 
 //! Creates a new TextLayerLegacy2 on the heap and initializes it with the default values.
@@ -85,7 +85,7 @@ void text_layer_legacy2_init(TextLayerLegacy2 *text_layer, const GRect *frame);
 //! * Caching: `false`
 //!
 //! The text layer is automatically marked dirty after this operation.
-//! @param frame The frame with which to initialze the TextLayerLegacy2
+//! @param frame The frame with which to initialize the TextLayerLegacy2
 //! @return A pointer to the TextLayerLegacy2. `NULL` if the TextLayerLegacy2 could not
 //! be created
 TextLayerLegacy2* text_layer_legacy2_create(GRect frame);

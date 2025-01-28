@@ -89,7 +89,7 @@ static void prv_app_fetch_launch_app(AppFetchUIData *data) {
     vibes_short_pulse();
   }
 
-  // Allocate and inialize the data that would have been sent to the app originally before the
+  // Allocate and initialize the data that would have been sent to the app originally before the
   // fetch request.
   PebbleLaunchAppEventExtended *ext = kernel_malloc_check(sizeof(PebbleLaunchAppEventExtended));
   *ext = (PebbleLaunchAppEventExtended) {

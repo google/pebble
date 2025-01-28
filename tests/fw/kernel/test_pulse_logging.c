@@ -131,7 +131,7 @@ void test_pulse_logging__simple(void) {
   cl_assert_equal_s(s_log_message_buffer, "TestTestTestTestTest");
 }
 
-void test_pulse_logging__simple_trucate(void) {
+void test_pulse_logging__simple_truncate(void) {
   pulse_logging_log(LOG_LEVEL_DEBUG, "", 0, "TestTestTestTestTestTestTestTestTestTest"
                                             "TestTestTestTestTestTestTestTestTestTest"
                                             "TestTestTestTestTestTestTestTestTestTest"
@@ -169,7 +169,7 @@ void test_pulse_logging__isr_simple(void) {
   cl_assert_equal_s(s_log_message_buffer, "TestTestTestTestTest");
 }
 
-void test_pulse_logging__isr_trucate(void) {
+void test_pulse_logging__isr_truncate(void) {
   s_in_critical_section = true;
 
   pulse_logging_log(LOG_LEVEL_DEBUG, "", 0, "TestTestTestTestTestTestTestTestTestTest"

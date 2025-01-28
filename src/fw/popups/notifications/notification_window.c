@@ -1289,7 +1289,7 @@ void notification_window_service_init(void) {
 
 
 //////////////////
-// Event Handers
+// Event Handlers
 //////////////////
 
 static void prv_handle_action_result(PebbleSysNotificationActionResult *action_result) {

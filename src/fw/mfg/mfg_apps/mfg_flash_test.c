@@ -581,7 +581,7 @@ static FlashTestErrorType setup_stress_addr_test(void) {
   return FLASH_TEST_SUCCESS;
 }
 
-// Run address read/write stess test - if iterations is 0, then stop only when button is pushed; 
+// Run address read/write stress test - if iterations is 0, then stop only when button is pushed; 
 //   else go until iterations hit
 static FlashTestErrorType prv_run_stress_addr_test(uint32_t iterations) {
   PBL_LOG(LOG_LEVEL_DEBUG, ">START - STRESS TEST 1");

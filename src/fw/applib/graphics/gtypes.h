@@ -350,7 +350,7 @@ void gpoint_sort(GPoint *points, size_t num_points, GPointComparator comparator,
 #define GPOINT_PRECISE_PRECISION  FIXED_S16_3_PRECISION
 #define GPOINT_PRECISE_FACTOR     FIXED_S16_3_FACTOR
 
-//! Internal respresentation of a point
+//! Internal representation of a point
 //! 1 bit for sign, 12 bits represent the coordinate, 3 bits represent the precision
 //! Supports -4096.000 px to 4095.875 px resolution
 typedef struct __attribute__ ((__packed__)) GPointPrecise {

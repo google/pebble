@@ -421,7 +421,7 @@ original allocation or the new size into the newly allocated buffer.
 \return The destination buffer dest
 
 \fn char *strncat(char *dest, const char *src, size_t n)
-\brief Concatenates up to n bytes from the string in src to the end of the string pointed by dest and null terminates dest. There should be no overlap of dest and src in memeory.
+\brief Concatenates up to n bytes from the string in src to the end of the string pointed by dest and null terminates dest. There should be no overlap of dest and src in memory.
 \param dest The destination buffer with enough space for src beyond the null character
 \param src The source string
 \param n The maximum number of bytes to copy

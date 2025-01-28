@@ -59,7 +59,7 @@ uint16_t circular_buffer_write_prepare(CircularBuffer *buffer, uint8_t **data_ou
 
 //! To be used after circular_buffer_write_prepare(), to make the CircularBuffer update the length
 //! of the data it contains.
-//! @param written_length The length that has just been writted at the pointer provided by
+//! @param written_length The length that has just been written at the pointer provided by
 //! circular_buffer_write_prepare().
 void circular_buffer_write_finish(CircularBuffer *buffer, uint16_t written_length);
 

@@ -171,7 +171,7 @@ static void prv_read_complete_system_task_cb(void *context_ptr) {
     }
     PBL_ASSERTN(s_read_info.length >= FRAME_MIN_LENGTH);
     read_length = s_read_info.length - FRAME_MIN_LENGTH;
-    // don't care if the timeout is alreay queued as the FSM state will make it a noop
+    // don't care if the timeout is already queued as the FSM state will make it a noop
     new_timer_stop(s_read_timer);
   }
 

@@ -540,7 +540,7 @@ static void prv_app_show_crash_ui(AppInstallId install_id) {
 //! Switch to the app stored in the s_next_app global. The gracefully flag tells us whether to attempt a graceful
 //! exit or not.
 //!
-//! For a graceful exit, if the app has not alreeady finished it's de-init, we post a de_init event to the app, set
+//! For a graceful exit, if the app has not already finished it's de-init, we post a de_init event to the app, set
 //! a 3 second timer, and return immediately to the caller. If/when the app finally finishes deinit, it will post a
 //! PEBBLE_PROCESS_KILL_EVENT (graceful=true), which results in this method being again with graceful=true. We will then
 //! see that the de_init already finished in that second invocation.

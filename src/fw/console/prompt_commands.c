@@ -918,7 +918,7 @@ void command_audit_delay_us(void) {
 }
 
 // Simply parks the chip permanently in stop mode in whatever state it's currently in. This can be
-// pretty handy when trying to profile power of the chip under certains states
+// pretty handy when trying to profile power of the chip under certain states
 // NOTE: If you did not configure with `--nowatchdog`, the HW watchdog will reboot you in ~8s
 void command_enter_stop(void) {
   dbgserial_putstr("Entering stop mode indefinitely ... reboot your board to get out!!");

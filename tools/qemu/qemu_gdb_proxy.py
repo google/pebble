@@ -23,7 +23,7 @@ created in the Pebble.
 This proxy talks to the QEMU gdb server using primitive gdb remote commands and inspects the 
 FreeRTOS task structures to figure out which threads have been created, their saved registers, etc. 
 and then returns that information to gdb when it asks for thread info from the target system. For 
-most other requests recevied from gdb, this proxy simply acts as a passive pass thru to the QEMU gdb
+most other requests received from gdb, this proxy simply acts as a passive pass thru to the QEMU gdb
 server.
 
 This module is designed to be run as a separate process from both QEMU and gdb. It connects to the

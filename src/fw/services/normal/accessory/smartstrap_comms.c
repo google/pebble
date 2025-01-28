@@ -230,7 +230,7 @@ static void prv_handle_complete_frame(bool *should_context_switch) {
   bool is_notify = header->flags.is_notify;
   if ((is_notify && (smartstrap_fsm_state_get() != SmartstrapStateNotifyInProgress)) ||
       (!is_notify && (s_read_consumer.profile != header->profile))) {
-    // We weither got a notify frame in response to a normal read, or we got a response for a
+    // We either got a notify frame in response to a normal read, or we got a response for a
     // different frame than we requested.
     s_read_info.should_drop = true;
   }

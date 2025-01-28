@@ -55,7 +55,7 @@ bool workout_service_is_workout_ongoing(void);
 bool workout_service_is_workout_type_supported(ActivitySessionType type);
 
 //! Start a new workout
-//! This stops / saves all onoing automatically detected activity sessions
+//! This stops / saves all ongoing automatically detected activity sessions
 //! All workouts must eventually get stopped
 bool workout_service_start_workout(ActivitySessionType type);
 

@@ -583,7 +583,7 @@ static void prv_log_activities(time_t now_utc) {
     }
     PBL_ASSERTN(params);
 
-    // If this is an event we already logged, or it's still onging, don't log it
+    // If this is an event we already logged, or it's still ongoing, don't log it
     if (session->ongoing || (session_exit_utc <= *params->exit_utc)) {
       continue;
     }

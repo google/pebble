@@ -25,14 +25,14 @@
 #include "applib/graphics/graphics.h"
 #include "applib/ui/animation_private.h"
 
-static GContext s_kernel_grahics_context;
+static GContext s_kernel_graphics_context;
 
 T_STATIC ContentIndicatorsBuffer s_kernel_content_indicators_buffer;
 
 static TimelineItemActionSource s_kernel_current_timeline_item_action_source;
 
 void kernel_ui_init(void) {
-  graphics_context_init(&s_kernel_grahics_context, compositor_get_framebuffer(),
+  graphics_context_init(&s_kernel_graphics_context, compositor_get_framebuffer(),
                         GContextInitializationMode_System);
   animation_private_state_init(kernel_applib_get_animation_state());
   content_indicator_init_buffer(&s_kernel_content_indicators_buffer);
@@ -42,7 +42,7 @@ void kernel_ui_init(void) {
 GContext* kernel_ui_get_graphics_context(void) {
   PBL_ASSERT_TASK(PebbleTask_KernelMain);
 
-  return &s_kernel_grahics_context;
+  return &s_kernel_graphics_context;
 }
 
 GContext *graphics_context_get_current_context(void) {

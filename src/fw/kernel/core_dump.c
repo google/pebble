@@ -63,7 +63,7 @@
 #define STM32F7_COMPATIBLE
 #include <mcu.h>
 
-#include "FreeRTOS.h"       /* FreeRTOS Kernal Prototypes/Constants.          */
+#include "FreeRTOS.h"       /* FreeRTOS Kernel Prototypes/Constants.          */
 #include "task.h"           /* FreeRTOS Task Prototypes/Constants.            */
 
 #include <inttypes.h>

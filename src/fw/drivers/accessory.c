@@ -39,7 +39,7 @@
 #include "util/likely.h"
 #include "util/size.h"
 
-#include "FreeRTOS.h"       /* FreeRTOS Kernal Prototypes/Constants.          */
+#include "FreeRTOS.h"       /* FreeRTOS Kernel Prototypes/Constants.          */
 #include "semphr.h"
 
 #define STM32F4_COMPATIBLE

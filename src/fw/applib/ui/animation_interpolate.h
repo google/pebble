@@ -111,7 +111,7 @@ int64_t interpolate_moook_in_only(int32_t normalized, int64_t from, int64_t to);
 //! @param from Starting point in space of the animation
 //! @param to Ending point in space of the animation
 //! @param bounce_back Whether to lead up to the end point from the opposite direction if we were
-//! to lead up from the start poing, which a normal Moook curve would do.
+//! to lead up from the start point, which a normal Moook curve would do.
 int64_t interpolate_moook_out(int32_t normalized, int64_t from, int64_t to,
                               int32_t num_frames_from, bool bounce_back);
 

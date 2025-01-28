@@ -3466,7 +3466,7 @@ void test_animation__sequence_of_already_completed(void) {
 
 
 // --------------------------------------------------------------------------------------
-// Test creating a spawn where where some children are already scheduled and some have
+// Test creating a spawn where some children are already scheduled and some have
 // already completed.
 //
 // Here's a graph of what we are doing

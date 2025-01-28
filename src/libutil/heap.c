@@ -53,7 +53,7 @@ typedef union _tagAlignmentStruct_t
 /* The following defines the minimum size (in alignment units) of a  */
 /* fragment that is considered useful.  The value is used when trying*/
 /* to determine if a fragment that is larger than the requested size */
-/* can be broken into 2 framents leaving a fragment that is of the   */
+/* can be broken into 2 fragments leaving a fragment that is of the   */
 /* requested size and one that is at least as larger as the          */
 /* MINIMUM_MEMORY_SIZE.                                              */
 #define MINIMUM_MEMORY_SIZE     1

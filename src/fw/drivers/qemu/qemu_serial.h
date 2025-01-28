@@ -61,7 +61,7 @@ typedef struct PACKED {
 
 // QemuProtocol_Compass
 typedef struct PACKED {
-  uint32_t magnetic_heading;      // 0x10000 represents 360 degress
+  uint32_t magnetic_heading;      // 0x10000 represents 360 degrees
   CompassStatus calib_status:8;   // CompassStatus enum
 } QemuProtocolCompassHeader;
 

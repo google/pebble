@@ -213,7 +213,7 @@ void test_circular_buffer__read_or_copy_returns_false_when_length_is_too_long(vo
                                                         malloc, &caller_should_free));
 }
 
-void test_circular_buffer__read_or_copy_doesnt_copy_when_already_continguously_stored(void) {
+void test_circular_buffer__read_or_copy_doesnt_copy_when_already_contiguously_stored(void) {
   CircularBuffer buffer;
   uint8_t storage[8];
   circular_buffer_init(&buffer, storage, sizeof(storage));
@@ -230,7 +230,7 @@ static void *prv_oom_malloc(size_t length) {
   return NULL;
 }
 
-void test_circular_buffer__read_or_copy_does_copy_when_not_continguously_stored(void) {
+void test_circular_buffer__read_or_copy_does_copy_when_not_contiguously_stored(void) {
   CircularBuffer buffer;
   uint8_t storage[8];
   circular_buffer_init(&buffer, storage, sizeof(storage));

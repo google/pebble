@@ -22,7 +22,7 @@
 
 #include "resource/resource.h"
 
-// transformed to int to avoid surpises between C->JS
+// transformed to int to avoid surprises between C->JS
 typedef int (*ResourceReadCb)(int offset, uint8_t *buf, int num_bytes);
 typedef int (*ResourceGetSizeCb)(void);
 

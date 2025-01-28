@@ -114,7 +114,7 @@ bool gtransform_is_equal(const GTransform * const t1, const GTransform * const t
 //////////////////////////////////////
 /// Modifying Transforms
 //////////////////////////////////////
-// Note that t_new can be set to either of t1 or t2 safely to do in place muliplication
+// Note that t_new can be set to either of t1 or t2 safely to do in place multiplication
 // Note this operation is not commutative. The operation is as follows t_new = t1 * t2
 void gtransform_concat(GTransform *t_new, const GTransform *t1, const GTransform * t2) {
   if ((!t_new) || (!t1) || (!t2)) {

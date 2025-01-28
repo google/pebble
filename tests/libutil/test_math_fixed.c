@@ -444,7 +444,7 @@ void test_math_fixed__S32_16_mul(void) {
   Fixed_S32_16 num1, num2;
   Fixed_S32_16 mul, mul_c;
 
-  // Test number muliplication
+  // Test number multiplication
   num1 = FIXED_S32_16_ONE;
   num2 = FIXED_S32_16_ONE;
   mul = Fixed_S32_16_mul(num1, num2);

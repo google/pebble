@@ -274,7 +274,7 @@ static void prv_draw_steps_and_shoe(GContext *ctx, const char *steps_buffer, GFo
   icon_bounds.origin.x += 23; // icon left offset
   icon_bounds.origin.y += 9; // icon top offset
 #elif ROBERT_SCREEN_RES
-  icon_bounds.origin.y += (46 - icon_bounds.size.h); // icon top offest
+  icon_bounds.origin.y += (46 - icon_bounds.size.h); // icon top offset
 #elif SNOWY_SCREEN_RES
   icon_bounds.origin.x = screen_is_obstructed ? bounds.origin.x // icon_left offset
                                               : (bounds.size.w / 2) - (icon_bounds.size.w / 2);

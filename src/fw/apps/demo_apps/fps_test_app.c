@@ -183,7 +183,7 @@ static void prv_window_load(Window *window) {
   // one image at the top left .topleft_layer,
   // and two menu layers .action_list1 and .action_list2 that overlay each other
 
-  // some hackery with the two menu layers goes on to keep their scroll offest in sync
+  // some hackery with the two menu layers goes on to keep their scroll offset in sync
   // and to have the inverter layer rendered only once
 
   const int16_t navbar_width = s_fps_topleft_bitmap.bounds.size.w;

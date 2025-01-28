@@ -169,13 +169,13 @@ void test_bitblt_palette_1bit__2bit_palette_to_1bit_wrap(void) {
 //     The top right half will be alternating between dithered gray and black lines
 //     The bottom right half consists of a diagonal white line  on a black background
 //     The left half will be completely white
-void test_bitblt_palette_1bit__2bit_palette_to_1bit_offest(void) {
+void test_bitblt_palette_1bit__2bit_palette_to_1bit_offset(void) {
   GBitmap *src_bitmap =
     get_gbitmap_from_pbi("test_bitblt_palette_1bit__2bit_palette_to_1bit.pbi");
 
   bitblt_bitmap_into_bitmap(&s_dest_bitmap, src_bitmap, GPoint(20,20), GCompOpAssign, GColorWhite);
   cl_assert(gbitmap_pbi_eq(&s_dest_bitmap,
-                  "test_bitblt_palette_1bit__2bit_palette_to_1bit_offest-expect.pbi"));
+                  "test_bitblt_palette_1bit__2bit_palette_to_1bit_offset-expect.pbi"));
 
   gbitmap_destroy(src_bitmap);
 }

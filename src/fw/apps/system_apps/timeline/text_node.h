@@ -102,7 +102,7 @@ struct GTextNode {
   //! adjusts the bottom-right margin, causing extra space to be between this node and nodes to the
   //! bottom and/or right.
   //!
-  //! Used in-conjunction with offset, many of the normal layout position behavior in tradditional
+  //! Used in-conjunction with offset, many of the normal layout position behavior in traditional
   //! systems can be achieved. Below are diagrams of a node (denoted with Xs) with its boundary
   //! increased by `a`, a certain length.
   //!

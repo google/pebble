@@ -23,7 +23,7 @@
 /*
  * Generally, an mbuf is a header for a buffer which adds some useful functionality with regards to
  * grouping multiple distinct buffers together into a single packet. They are primarily used for
- * networking. As you go down a tradditional network stack, headers need to be added to the data.
+ * networking. As you go down a traditional network stack, headers need to be added to the data.
  * Rather than having to allocate and copy every time a new header needs to be added, or forcing the
  * upper layer to leave room for the header, mbufs allows for buffers to be chained together into an
  * mbuf chain. With mbufs, as you go down the stack, you simply add the headers as new mbufs at the

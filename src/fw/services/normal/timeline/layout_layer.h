@@ -40,7 +40,7 @@ typedef enum {
 //! content within the layout as well as a generic constructor/destructor:
 //!  \ref layout_create / \ref layout_destroy.
 //! 3) LayoutLayers are constructed from a set of Attributes which they are meant to display.
-//! 4) Sub-types of LayoutLayer are instanciated by summoning the correct type ID rather than by
+//! 4) Sub-types of LayoutLayer are instantiated by summoning the correct type ID rather than by
 //! calling a specialized constructor / destructor as per the Layer API.
 
 //! LayoutIds identify the type of a LayoutLayer. They are passed to the constructor to

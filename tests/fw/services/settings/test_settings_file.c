@@ -320,7 +320,7 @@ void test_settings_file__used_space_tracking(void) {
     set_and_verify(&file, key, key_len, val, val_len);
   }
 
-  // Then, write to the same key many many times. This should only use up 16
+  // Then, write to the same key many, many, times. This should only use up 16
   // more bytes of the file if our used/free space tracking is working
   // correctly, but may end up being counted as more if it's broken.
   snprintf((char *)key, sizeof(key), "k%03d", 128);

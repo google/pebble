@@ -195,7 +195,7 @@ This function affects subsequent calls to \ref rand() to produce a sequence of n
 
 \param category The category of routines for which to set the locale
 \param locale The ISO formatted locale to use, or "" for the system locale
-\return the locale after the change is applied, NULL on failure (e.g. unsuported category)
+\return the locale after the change is applied, NULL on failure (e.g. unsupported category)
 \note Currently, we only support two categories: LC_ALL and LC_TIME
 
 @}

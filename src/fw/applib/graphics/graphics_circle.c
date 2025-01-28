@@ -459,7 +459,7 @@ void graphics_circle_quadrant_draw(GContext* ctx, GPoint p, uint16_t radius, GCo
       graphics_circle_quadrant_draw_stroked_aa(ctx, p, radius, stroke_width, quadrant);
       return;
     } else {
-      // Antialiased and Stroke Width == 1 (not suppported on 1-bit color)
+      // Antialiased and Stroke Width == 1 (not supported on 1-bit color)
       graphics_circle_quadrant_draw_1px_aa(ctx, p, radius, quadrant);
       return;
     }

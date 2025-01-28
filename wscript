@@ -1186,7 +1186,7 @@ def mfg_image_spi(ctx):
         prf_begin = 0x200000
         image_size = 0x800000
     else:
-        ctx.fatal("MFG Image not suppored for board: {}".format(ctx.env.BOARD))
+        ctx.fatal("MFG Image not supported for board: {}".format(ctx.env.BOARD))
 
     spi_flash_path = _create_spi_flash_image(ctx, 'mfg_prf_image.bin')
     mfg_spi_img_file = open(spi_flash_path, 'wb')

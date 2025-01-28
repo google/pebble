@@ -774,7 +774,7 @@ void graphics_draw_line(GContext* ctx, GPoint p0, GPoint p1) {
       graphics_line_draw_stroked_aa(ctx, p0, p1, ctx->draw_state.stroke_width);
       return;
     } else {
-      // Antialiased and Stroke Width == 1 (not suppported on 1-bit color)
+      // Antialiased and Stroke Width == 1 (not supported on 1-bit color)
       graphics_line_draw_1px_aa(ctx, p0, p1);
       return;
     }

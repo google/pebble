@@ -239,7 +239,7 @@ void graphics_fill_round_rect(GContext* ctx, const GRect *rect, uint16_t radius,
 
 #if PBL_COLOR
   if (ctx->draw_state.antialiased) {
-    // Antialiased (not suppported on 1-bit color)
+    // Antialiased (not supported on 1-bit color)
     prv_fill_rect_aa(ctx, rect, radius, corner_mask, ctx->draw_state.fill_color);
     return;
   }
@@ -437,7 +437,7 @@ void graphics_draw_round_rect(GContext* ctx, const GRect *rect, uint16_t radius)
         prv_draw_round_rect_aa_stroked(ctx, rect, radius, ctx->draw_state.stroke_width);
         return;
       } else {
-        // Antialiased and Stroke Width == 1 (not suppported on 1-bit color)
+        // Antialiased and Stroke Width == 1 (not supported on 1-bit color)
         // Note: stroke width == 2 is rounded down to stroke width of 1
         prv_draw_round_rect_aa(ctx, rect, radius);
         return;

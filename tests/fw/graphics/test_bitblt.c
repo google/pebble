@@ -251,7 +251,7 @@ void test_bitblt__8bit_comptint_blend(void) {
     (GColor8){.a = 3, .r = 2, .g = 1, .b = 0}
   };
 
-  // Test image with four pixels of all our suported alpha values
+  // Test image with four pixels of all our supported alpha values
   GBitmap test_bmp = (GBitmap){
     .addr = test_blend_colors,
     .row_size_bytes = 4,

@@ -449,7 +449,7 @@ static HeapInfo_t *find_segment(Heap* const heap, unsigned long n_units) {
       /* If the requested size is larger than the limit then*/
       /* search backwards for an available buffer, else go  */
       /* forward.  This will hopefully help to reduce       */
-      /* fragmentataion problems.                           */
+      /* fragmentation problems.                           */
       if (n_units >= LARGE_SIZE) {
         heap_info_ptr = get_previous_block(heap, heap_info_ptr);
       } else {

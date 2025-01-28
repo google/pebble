@@ -803,7 +803,7 @@ static const char *prv_get_app_id(const char *number, PhoneCallSource source) {
   return NULL;
 }
 
-// Checks for the existance of a call reply action in the notif pref db and loads it into
+// Checks for the existence of a call reply action in the notif pref db and loads it into
 // a timeline item
 static bool prv_load_sms_reply_action(const char *number, PhoneCallSource source) {
   const char *app_id = prv_get_app_id(number, source);

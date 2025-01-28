@@ -135,7 +135,7 @@ void modal_manager_handle_button_event(PebbleEvent *event);
 void modal_manager_pop_all(void);
 
 //! Pops all windows from modal stacks with priorities less than the given priority
-//! @param the max priorirty stack to pop all windows from
+//! @param the max priority stack to pop all windows from
 void modal_manager_pop_all_below_priority(ModalPriority priority);
 
 //! Called from the kernel event loop between events to handle any changes that have been made

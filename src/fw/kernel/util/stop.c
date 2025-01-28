@@ -108,7 +108,7 @@ void enter_stop_mode(void) {
   do_wfi(); // Wait for Interrupt (enter sleep mode). Work around F2/F4 errata.
   __ISB(); // Let the pipeline catch up (force the WFI to activate before moving on).
 
-  // Tell the processor not to emter deepsleep mode for future WFIs.
+  // Tell the processor not to enter deepsleep mode for future WFIs.
   SCB->SCR &= ~SCB_SCR_SLEEPDEEP_Msk;
 
   // Stop mode will change our system clock to the HSI. Move it back to the PLL.

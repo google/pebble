@@ -154,10 +154,10 @@ static bool flag_is_set(SettingsRecordHeader *hdr, uint8_t flags) {
 //     the entire record has not been completely written yet. Records in this
 //     state are removed on bootup, since they are in an indeterminate state.
 // - written: The typical state for a record. == !partially_written
-// - partially_overwritten: This record has been superceeded by another, which
+// - partially_overwritten: This record has been superseded by another, which
 //     we are currently in the process of writing out to flash. Records in
 //     this state are restored on bootup.
-// - overwritten: This record has been superceeded by another, which has been
+// - overwritten: This record has been superseded by another, which has been
 //     completely written out to flash. We skip over and ignore overwritten
 //     records.
 static bool partially_written(SettingsRecordHeader *hdr) {

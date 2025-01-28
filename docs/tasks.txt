@@ -1,4 +1,4 @@
-FreeRTOS lets us create tasks, which are independant threads of execution. We create a few ourselves, and more are created internally by FreeRTOS. We have pre-emption enabled in our FreeRTOS configuration, so we must be mindful of which other tasks are mucking with the same data. This document describes the tasks that exist in our system.
+FreeRTOS lets us create tasks, which are independent threads of execution. We create a few ourselves, and more are created internally by FreeRTOS. We have pre-emption enabled in our FreeRTOS configuration, so we must be mindful of which other tasks are mucking with the same data. This document describes the tasks that exist in our system.
 
 FreeRTOS Tasks
 ==============

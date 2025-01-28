@@ -33,7 +33,7 @@
 //! registering a long click handler for a combination of buttons like up+down.
 //!
 //! I tried to split this out from a seperate file from the recovery_first_use.c file so I could
-//! test this behaviour in a unit test independant in the UI. I think it turned out /okay/. The
+//! test this behaviour in a unit test independent in the UI. I think it turned out /okay/. The
 //! callback specification is a little odd (only for select but not for the other ones, should we
 //! be blowing memory on static behaviour like this?) but it was worth a shot.
 

@@ -147,7 +147,7 @@ void test_smartstrap_comms__send_receive_data(void) {
   // faked on-the-wire data for response
   uint8_t response_raw[] = {0x7E, 0x01, 0x00, 0x00, 0x00, 0x00, 0x02, 0x00, 0x00, 0x01, 0x43, 0x7E};
 
-  // send the rquest
+  // send the request
   prv_do_send(&write_mbuf, &read_mbuf, expected, sizeof(expected));
   // process the fake response
   prv_do_read(response_raw, sizeof(response_raw), &read_mbuf, test_data, sizeof(test_data));

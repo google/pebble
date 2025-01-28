@@ -958,7 +958,7 @@ static void prv_enable_shake_detection(void) {
       BMI160_INT_EN_0_ANYMOTION_Y_EN | BMI160_INT_EN_0_ANYMOTION_X_EN);
   prv_read_modify_write(BMI160_REG_INT_EN_0, int_en, int_en);
 
-  // configure the anymotion interrupt to fire after 4 successcive
+  // configure the anymotion interrupt to fire after 4 successive
   // samples are over the threhold specified
   accel_set_shake_sensitivity_high(false /* sensitivity_high */);
   prv_write_reg(BMI160_REG_INT_MOTION_0,

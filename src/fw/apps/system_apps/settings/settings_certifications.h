@@ -62,7 +62,7 @@ typedef struct CertificationIds {
 static const RegulatoryFlags s_regulatory_flags_fallback = {
 };
 
-// Certifiation ID strings used for bigboards and such.
+// Certification ID strings used for bigboards and such.
 static const CertificationIds s_certification_ids_fallback = {
   .canada_ic_id = "XXXXXX-YYY",
   .china_cmiit_id = "ABCDEFGHIJ",

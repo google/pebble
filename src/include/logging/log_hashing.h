@@ -34,7 +34,7 @@
  *      19: reserved
  *   18- 0: Offset info .log_strings section. This allows 512 KB of strings.
  *
- * Note: it might not be necessary to use so many bits for the log level. Dynamic flitering might
+ * Note: it might not be necessary to use so many bits for the log level. Dynamic filtering might
  * not be so important, and 'log to flash' could be 1 bit, or Curried to a set of function calls.
  * These changes would require more work in the logging infrastructure.
  *

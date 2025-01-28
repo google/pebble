@@ -51,7 +51,7 @@ bool circular_buffer_write(CircularBuffer* buffer, const void* data, uint16_t le
 //! @note After the client is done writing data, it _must_ call circular_buffer_write_finish()
 //! so that the CircularBuffer can update the length of the data it contains and update its internal
 //! bookkeeping
-//! @param[out] data_out Pointer to storage for the pointer that is set the the start of the
+//! @param[out] data_out Pointer to storage for the pointer that is set the start of the
 //! writable area when the function returns, or NULL if there is no space available.
 //! @return The maximum number of bytes that can be written starting at the returned the pointer.
 //! Zero is returned when there is no space available.

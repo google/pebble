@@ -41,7 +41,7 @@ template to the app's ClickRecognizers.
 
 <p/>
 
-Whenever a the head of the window stack changes, the OS is responsible
+Whenever the head of the window stack changes, the OS is responsible
 for ensuring that all of its registered click recognizers are reset
 and reconfigured using the new visible window's
 ClickConfigProvider. This happens in the window_stack_private_push &

@@ -76,7 +76,7 @@ typedef struct ScrollLayerCallbacks {
   //! scrolling behavior.
   ClickConfigProvider click_config_provider;
 
-  //! Called every time the the content offset changes. During a scrolling
+  //! Called every time the content offset changes. During a scrolling
   //! animation, it will be called for each intermediary offset as well
   ScrollLayerCallback content_offset_changed_handler;
 

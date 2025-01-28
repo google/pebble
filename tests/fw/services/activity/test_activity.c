@@ -1566,7 +1566,7 @@ void test_activity__sleep_history(void) {
   prv_feed_canned_accel_data(30 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
 
   // Another 2 hour sleep session starting at 9pm. This will leave us at 11pm. Since this
-  // session ends after the the cutoff, it should be registered for the next day
+  // session ends after the cutoff, it should be registered for the next day
   prv_feed_canned_accel_data(120 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
 
   // Awake for 2 hours which puts us at 1am

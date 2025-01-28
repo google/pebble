@@ -51,7 +51,7 @@ typedef struct {
 
 // There is a slight delay (lag) between the animation stopping and starting it again. To minimize
 // this, make the animation contain multiple loops (360 degree rotations) instead of 1.
-// This means that the the lag occurs once less frequently and is less noticable
+// This means that the lag occurs once less frequently and is less noticable
 #define LOOPS_PER_ANIMATION 10
 #define LOOP_DURATION_MS 1500
 

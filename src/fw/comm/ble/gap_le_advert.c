@@ -56,7 +56,7 @@
 //! To-Do's:
 //! --------
 //! - ble_discoverability/pairability.c
-//! - Use private addresses for privacy / harder tracebility.
+//! - Use private addresses for privacy / harder traceability.
 
 #define GAP_LE_ADVERT_LOG_LEVEL LOG_LEVEL_DEBUG
 

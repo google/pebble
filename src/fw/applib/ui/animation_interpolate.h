@@ -48,7 +48,7 @@ int64_t interpolate_int64_linear(int32_t normalized, int64_t from, int64_t to);
 
 //! Interpolation between two int64_t.
 //! In most cases, this is a linear interpolation but the behavior can vary if this function
-//! is called from within an animation's update handdler that uses
+//! is called from within an animation's update handler that uses
 //! AnimationCurveCustomInterpolationFunction. This allows clients to transparently implement
 //! effects such as spatial easing. See \ref animation_set_custom_interpolation().
 int64_t interpolate_int64(int32_t normalized, int64_t from, int64_t to);

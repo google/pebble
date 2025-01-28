@@ -1252,7 +1252,7 @@ def ble_console(ctx):
     """Starts miniterm with the serial console for the BLE chip."""
     ctx.recurse('platform', mandatory=False)
 
-    # FIXME: We have the ability to progam PIDs into the new round of Big Boards. TTY
+    # FIXME: We have the ability to program PIDs into the new round of Big Boards. TTY
     # path discovery should be able to use that (PBL-31111). For now, just make a best
     # guess at what the path should be
 

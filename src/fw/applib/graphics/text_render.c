@@ -130,9 +130,9 @@ void render_glyph(GContext* const ctx, const uint32_t codepoint, FontInfo* const
 
   // The number of bits between the beginning of dest_block and glyph_block.
   // If x is negative we need to be fancy to get the rounded down remainder. This
-  // is the number of bits to the right of the next 32-bit boundry to the left.
+  // is the number of bits to the right of the next 32-bit boundary to the left.
   // For example, if x is -5 we want this shift to be 27, since -32 (the nearest
-  // boundry) + 27 = -5
+  // boundary) + 27 = -5
   const uint8_t dest_shift_at_line_begin = (x >= 0) ?
       x % 32 :
       (x - ((x / 32) * 32));

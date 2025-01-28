@@ -71,7 +71,7 @@ void circular_buffer_write_finish(CircularBuffer *buffer, uint16_t written_lengt
 //! than length. A second read call can be made with the remaining smaller length to retreive the rest.
 //!
 //! The reason this read doesn't consume is to avoid having to copy out the data. The data_out pointer should be
-//! stable until you explicitely ask for it to be consumed with circular_buffer_consume.
+//! stable until you explicitly ask for it to be consumed with circular_buffer_consume.
 //!
 //! @param buffer The buffer to read from
 //! @param length How many bytes to read

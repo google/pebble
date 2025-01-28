@@ -17,7 +17,7 @@
 #pragma once
 
 //! @file gap_le_slave_discovery.h
-//! This sub-module is responsible for advertising explicitely for device
+//! This sub-module is responsible for advertising explicitly for device
 //! discovery purposes. The advertisement will contain the device name,
 //! transmit power level (to be able to order devices by estimated proximity),
 //! Pebble Service UUID and discoverability flags.
@@ -28,11 +28,11 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-//! @return True is Pebble is currently explicitely discoverable as BLE slave
+//! @return True is Pebble is currently explicitly discoverable as BLE slave
 //! or false if not.
 bool gap_le_slave_is_discoverable(void);
 
-//! @param discoverable True to make Pebble currently explicitely discoverable
+//! @param discoverable True to make Pebble currently explicitly discoverable
 //! as BLE slave. Initially, Pebble will advertise at a relatively high rate for
 //! a few seconds. After this, the rate will drop to save battery life.
 void gap_le_slave_set_discoverable(bool discoverable);

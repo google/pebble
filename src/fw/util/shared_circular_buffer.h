@@ -77,7 +77,7 @@ void shared_circular_buffer_remove_client(SharedCircularBuffer* buffer, SharedCi
 //! than length. A second read call can be made with the remaining smaller length to retreive the rest.
 //!
 //! The reason this read doesn't consume is to avoid having to copy out the data. The data_out pointer should be
-//! stable until you explicitely ask for it to be consumed with circular_buffer_consume.
+//! stable until you explicitly ask for it to be consumed with circular_buffer_consume.
 //!
 //! @param buffer The buffer to read from
 //! @param client pointer to the client struct originally passed to circular_buffer_add_client

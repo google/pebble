@@ -66,7 +66,7 @@ def wrap_cprogram_task_class():
         self.env.env = {}
         self.env.env.update(os.environ)
         for key in ['EMCC_DEBUG', 'EMCC_CORES', 'EM_CACHE']:
-            if self.env[key]:  # If not explicitely set, empty list is returned
+            if self.env[key]:  # If not explicitly set, empty list is returned
                 self.env.env[key] = str(self.env[key])
     emx_cls.__init__ = init
 

@@ -103,7 +103,7 @@ static int prv_get_next_card_idx(Card current, bool up) {
   if (next == Card_HrSummary && !activity_is_hrm_present()) {
     next = next + direction;
   }
-  // if heart rate is diabled, change the order of cards to Activiy <-> Sleep <-> HR
+  // if heart rate is diabled, change the order of cards to Activity <-> Sleep <-> HR
   else if (activity_is_hrm_present() && !activity_prefs_heart_rate_is_enabled()) {
     if (current == Card_ActivitySummary) {
       next = up ? Card_SleepSummary : BACK_TO_WATCHFACE;

@@ -112,7 +112,7 @@ static void prv_write_reg(uint8_t reg, uint8_t value) {
   // Wait 2 us (active mode) or 450 us (suspend mode)
   // before issuing the next read or write command.
   //
-  // TODO: I'm pretty sure if commands are specifically targetting
+  // TODO: I'm pretty sure if commands are specifically targeting
   // a unit in suspend mode, we will need to delay for 450us even if
   // the other unit is powered up in Normal mode
   if (s_accel_power_mode == BMI160_Accel_Mode_Normal

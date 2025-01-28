@@ -831,7 +831,7 @@ void test_graphics_context_${BIT_DEPTH_NAME}__lock_framebuffer_fails_from_8BitCi
 };
 
 void test_graphics_context_${BIT_DEPTH_NAME}__lock_framebuffer_1Bit_on_8BitCircular_must_fail(void) {
-  // Test for locking of 1Bit framebuffer when frambuffer is 8Bit Circular
+  // Test for locking of 1Bit framebuffer when framebuffer is 8Bit Circular
   GContext ctx = {.dest_bitmap.info.format = GBitmapFormat8BitCircular};
   GBitmap *bmp = graphics_capture_frame_buffer_format(&ctx, GBitmapFormat1Bit);
   cl_assert(ctx.lock == false);

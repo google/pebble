@@ -864,7 +864,7 @@ static void prv_activity_update_states(time_t utc_sec, AlgMinuteRecord *record_o
 
 // ------------------------------------------------------------------------------------
 // This is called when the activity services is doing down. This tells all of our state machines
-// that are are going to be shut down, and to save off any unsaved data/sleep/step sessions.
+// that are going to be shut down, and to save off any unsaved data/sleep/step sessions.
 void activity_algorithm_early_deinit(void) {
   if (!prv_lock()) {
     return;

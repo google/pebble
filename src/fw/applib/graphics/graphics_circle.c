@@ -80,7 +80,7 @@ static GPointPrecise prv_get_rotated_precise_point_for_ellipsis(GPointPrecise ce
     }
   }
 
-  // This algorthm operates on angle starting at our 90° mark, so we add 90°
+  // This algorithm operates on angle starting at our 90° mark, so we add 90°
   // and flip x/y coordinates (see last line of this function)
   angle = (angle + (TRIG_MAX_ANGLE / 4)) % TRIG_MAX_ANGLE;
 

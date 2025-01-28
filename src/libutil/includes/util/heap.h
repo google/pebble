@@ -43,9 +43,9 @@ typedef struct Heap {
   HeapInfo_t *begin;
   HeapInfo_t *end;
 
-  //! Number of allocated bytes, including beginers
+  //! Number of allocated bytes, including headers
   unsigned int current_size;
-  //! Peak number of allocated bytes, including beginers
+  //! Peak number of allocated bytes, including headers
   unsigned int high_water_mark;
 
   HeapLockImpl lock_impl;

@@ -182,7 +182,7 @@ void check_update_fw(void) {
   if (boot_bit_test(BOOT_BIT_NEW_FW_UPDATE_IN_PROGRESS)) {
     dbgserial_putstr("Our previous firmware update failed, aborting update.");
 
-    // Pretend like the new firmware bit wasn't set afterall. We'll just run the
+    // Pretend like the new firmware bit wasn't set after all. We'll just run the
     // previous code, whether that was normal firmware or the recovery firmware.
     boot_bit_clear(BOOT_BIT_NEW_FW_UPDATE_IN_PROGRESS);
     boot_bit_clear(BOOT_BIT_NEW_FW_AVAILABLE);

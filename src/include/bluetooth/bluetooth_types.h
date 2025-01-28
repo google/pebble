@@ -109,7 +109,7 @@ typedef enum {
   BLEGATTErrorPrepareQueueFull = 0x09,
   BLEGATTErrorAttributeNotFound = 0x0A,
   BLEGATTErrorAttributeNotLong = 0x0B,
-  BLEGATTErrorInsufficientEncrpytionKeySize = 0x0C,
+  BLEGATTErrorInsufficientEncryptionKeySize = 0x0C,
   BLEGATTErrorInvalidAttributeValueLength = 0x0D,
   BLEGATTErrorUnlikelyError = 0x0E,
   BLEGATTErrorInsufficientEncryption = 0x0F,

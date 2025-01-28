@@ -100,7 +100,7 @@ with the target address and data. The receiver performs the write and
 sends an acknowledgement with the address. If the sender doesn't receive
 an acknowledgement within some timeout, it re-sends the write command.
 Any number of write commands and acknowledgements can be in-flight
-simulatneously. If a write completes but the acknowledgement is lost in
+simultaneously. If a write completes but the acknowledgement is lost in
 transit, the sender can re-send the same write command and the receiver
 can naively overwrite the data without issue due to the idempotence of
 flash writes.

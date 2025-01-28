@@ -93,7 +93,7 @@ bool bt_persistent_storage_has_ble_ancs_bonding(void);
 bool bt_persistent_storage_has_active_ble_gateway_bonding(void);
 
 //! Runs the callback for each BLE pairing
-//! The callback is NOT allowed to aquire the bt_lock() (or we could deadlock).
+//! The callback is NOT allowed to acquire the bt_lock() (or we could deadlock).
 void bt_persistent_storage_for_each_ble_pairing(BtPersistBondingDBEachBLE cb, void *context);
 
 //! Registers all the existing BLE bondings with the BT driver lib.
@@ -125,7 +125,7 @@ BTBondingID bt_persistent_storage_get_bt_classic_pairing_by_addr(BTDeviceAddress
 bool bt_persistent_storage_has_active_bt_classic_gateway_bonding(void);
 
 //! Runs the callback for each BT Classic pairing
-//! The callback is NOT allowed to aquire the bt_lock() (or we could deadlock).
+//! The callback is NOT allowed to acquire the bt_lock() (or we could deadlock).
 void bt_persistent_storage_for_each_bt_classic_pairing(BtPersistBondingDBEachBTClassic cb,
                                                        void *context);
 

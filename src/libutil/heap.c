@@ -33,7 +33,7 @@ typedef unsigned long Alignment_t;
 /* specified size if the alignment data.                             */
 #define ALIGNMENT_SIZE          sizeof(Alignment_t)
 
-/* The following structure is used to allign data fragments on a     */
+/* The following structure is used to align data fragments on a     */
 /* specified memory boundary.                                        */
 typedef union _tagAlignmentStruct_t
 {

@@ -293,7 +293,7 @@ static void prv_draw_text(SelectionLayer *selection_layer, GContext *ctx) {
           height += prv_get_pixels_for_bump_settle(selection_layer->bump_settle_anim_progress);
         }
         // The text should be be vertically centered, unless we are performing an increment /
-        // decrment animation.
+        // decrement animation.
         int y_offset =
             prv_get_y_offset_which_vertically_centers_font(selection_layer->font, height);
 

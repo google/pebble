@@ -391,7 +391,7 @@ static void prv_handle_app_stop_analytics(const ProcessContext *const context,
 //! this time it will see the safe to kill is set and return true
 //!
 //! If the task does not exit by itself before the timer expires, then the timer will post another KILL event
-//! with graceful set to false. This will result in this method being alled again with gracefully = false. When
+//! with graceful set to false. This will result in this method being called again with gracefully = false. When
 //! we see this, we just try and make sure the app is not stuck in privilege code. If it's not, we return true
 //! and allow the caller to kill the task.
 //!

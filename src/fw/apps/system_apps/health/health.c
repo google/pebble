@@ -87,7 +87,7 @@ static void prv_health_service_event_handler(HealthEventType event, void *contex
 //
 
 //! Initialize application
-static void prv_finish_initilization_cb(bool in_focus) {
+static void prv_finish_initialization_cb(bool in_focus) {
   if (in_focus) {
     HealthAppData *health_app_data = app_state_get_user_data();
 
@@ -128,7 +128,7 @@ static void prv_initialize(void) {
 
   // Finish up initializing the app a bit later. This helps reduce lag when opening the app
   app_focus_service_subscribe_handlers((AppFocusHandlers){
-    .did_focus = prv_finish_initilization_cb,
+    .did_focus = prv_finish_initialization_cb,
   });
 }
 

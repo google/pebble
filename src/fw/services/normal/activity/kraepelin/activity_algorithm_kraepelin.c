@@ -747,7 +747,7 @@ void activity_algorithm_post_process_sleep_sessions(uint16_t num_input_sessions,
     const time_t end_utc = session->start_utc + (session->length_min * SECONDS_PER_MINUTE);
     const unsigned end_minute = time_util_get_minute_of_day(end_utc);
 
-    ACTIVITY_LOG_DEBUG("procesing activity %d, start_min: %u, len: %"PRIu16"",
+    ACTIVITY_LOG_DEBUG("processing activity %d, start_min: %u, len: %"PRIu16"",
                        (int)session->type, start_minute, session->length_min);
 
     // Skip if not a sleep session

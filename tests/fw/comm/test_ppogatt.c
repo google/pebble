@@ -1101,6 +1101,6 @@ void test_ppogatt__mtu_zero_due_to_service_rediscovery_while_resetting(void) {
   // No crash nor DUMA failures
 }
 
-void test_ppogatt__unsubcribe_when_no_memory_for_comm_session(void) {
+void test_ppogatt__unsubscribe_when_no_memory_for_comm_session(void) {
   // TODO
 }

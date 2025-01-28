@@ -211,7 +211,7 @@ void command_version_info(void) {
 
   char build_id_string[64];
   version_copy_current_build_id_hex_string(build_id_string, sizeof(build_id_string));
-  prompt_send_response_fmt(buffer, sizeof(buffer), "Build Id:%s", build_id_string);
+  prompt_send_response_fmt(buffer, sizeof(buffer), "Build ID:%s", build_id_string);
 
   char serial_number[MFG_SERIAL_NUMBER_SIZE + 1];
   mfg_info_get_serialnumber(serial_number, sizeof(serial_number));
@@ -239,7 +239,7 @@ void command_version_info(void) {
   pmic_read_chip_info(&chip_id, &chip_revision, &buck1_vset);
   prompt_send_response_fmt(buffer,
                            sizeof(buffer),
-                           "PMIC Chip Id: 0x%"PRIx8" Chip Rev: 0x%"PRIx8" Buck1 VSET: 0x%"PRIx8,
+                           "PMIC Chip ID: 0x%"PRIx8" Chip Rev: 0x%"PRIx8" Buck1 VSET: 0x%"PRIx8,
                            chip_id, chip_revision, buck1_vset);
 #endif // CAPABILITY_HAS_PMIC
 

@@ -290,7 +290,7 @@ status_t blob_db_flush(BlobDBId db_id) {
   if (db->flush) {
     status_t rv = db->flush();
     if (rv == S_SUCCESS) {
-      PBL_LOG(LOG_LEVEL_INFO, "Flushing BlobDB with Id %d", db_id);
+      PBL_LOG(LOG_LEVEL_INFO, "Flushing BlobDB with ID %d", db_id);
       blob_db_event_put(BlobDBEventTypeFlush, db_id, NULL, 0);
     }
     return rv;

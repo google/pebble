@@ -27,7 +27,7 @@ typedef enum {
   NotificationReminder  = (1 << 3)
 } NotificationType;
 
-//! Type and Id for the notification or reminder.
+//! Type and ID for the notification or reminder.
 typedef struct {
   NotificationType type;
   Uuid id;

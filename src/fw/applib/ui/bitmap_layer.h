@@ -78,7 +78,7 @@ typedef struct BitmapLayer {
 //! @param frame The frame with which to initialize the BitmapLayer
 void bitmap_layer_init(BitmapLayer *bitmap_layer, const GRect *frame);
 
-//! Creates a new bitmap layer on the heap and initalizes it the default values.
+//! Creates a new bitmap layer on the heap and initializes it the default values.
 //!
 //! * Bitmap: `NULL` (none)
 //! * Background color: \ref GColorClear

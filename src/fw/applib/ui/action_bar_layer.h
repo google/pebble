@@ -155,7 +155,7 @@ typedef struct {
 //! @param action_bar The action bar to initialize
 void action_bar_layer_init(ActionBarLayer *action_bar);
 
-//! Creates a new ActionBarLayer on the heap and initalizes it with the default values.
+//! Creates a new ActionBarLayer on the heap and initializes it with the default values.
 //! * Background color: \ref GColorBlack
 //! * No click configuration provider (`NULL`)
 //! * No icons

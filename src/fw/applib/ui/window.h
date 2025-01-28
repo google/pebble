@@ -178,7 +178,7 @@ typedef struct Window {
 //! @param debug_name The window's debug name
 void window_init(Window *window, const char* debug_name);
 
-//! Creates a new Window on the heap and initalizes it with the default values.
+//! Creates a new Window on the heap and initializes it with the default values.
 //!
 //! * Background color : `GColorWhite`
 //! * Root layer's `update_proc` : function that fills the window's background using `background_color`.

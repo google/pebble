@@ -89,7 +89,7 @@ typedef struct NumberWindow {
 //! See code fragment here: NumberWindow
 void number_window_init(NumberWindow *numberwindow, const char *label, NumberWindowCallbacks callbacks, void *callback_context);
 
-//! Creates a new NumberWindow on the heap and initalizes it with the default values.
+//! Creates a new NumberWindow on the heap and initializes it with the default values.
 //!
 //! @param label The title or prompt to display in the NumberWindow. Must be long-lived and cannot be stack-allocated.
 //! @param callbacks The callbacks

@@ -438,7 +438,7 @@ typedef struct MenuLayer {
 //! @param frame The frame with which to initialize the \ref MenuLayer
 void menu_layer_init(MenuLayer *menu_layer, const GRect *frame);
 
-//! Creates a new \ref MenuLayer on the heap and initalizes it with the default values.
+//! Creates a new \ref MenuLayer on the heap and initializes it with the default values.
 //!
 //! * Clips: `true`
 //! * Hidden: `false`

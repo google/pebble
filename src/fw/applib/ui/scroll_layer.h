@@ -159,7 +159,7 @@ _Static_assert(offsetof(struct ScrollPaging, flags) == offsetof(Layer, flags),
 //! @param frame The frame with which to initialize the ScrollLayer
 void scroll_layer_init(ScrollLayer *scroll_layer, const GRect *frame);
 
-//! Creates a new ScrollLayer on the heap and initalizes it with the default values:
+//! Creates a new ScrollLayer on the heap and initializes it with the default values:
 //! * Clips: `true`
 //! * Hidden: `false`
 //! * Content size: `frame.size`

@@ -136,7 +136,7 @@ typedef struct ActionBarLayerLegacy2 {
 //! @param action_bar The action bar to initialize
 void action_bar_layer_legacy2_init(ActionBarLayerLegacy2 *action_bar);
 
-//! Creates a new ActionBarLayerLegacy2 on the heap and initalizes it with the default values.
+//! Creates a new ActionBarLayerLegacy2 on the heap and initializes it with the default values.
 //! * Background color: \ref GColorBlack
 //! * No click configuration provider (`NULL`)
 //! * No icons

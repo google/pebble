@@ -459,7 +459,7 @@ void prv_draw_stroked_line_precise(GContext* ctx, GPointPrecise p0, GPointPrecis
 
     // Drawing loop: Iterates over horizontal lines
     // As part of optimisation, this algorithm is moving between drawing boundaries,
-    // so drawing box has to be substracted from its clipping extremes
+    // so drawing box has to be subtracted from its clipping extremes
     const int16_t clip_min_y = ctx->draw_state.clip_box.origin.y
                                - ctx->draw_state.drawing_box.origin.y;
     const int16_t clip_max_y = clip_min_y + ctx->draw_state.clip_box.size.h;
@@ -585,7 +585,7 @@ void prv_draw_stroked_line_precise(GContext* ctx, GPointPrecise p0, GPointPrecis
 
     // Drawing loop: Iterates over vertical lines from left to right
     // As part of optimisation, this algorithm is moving between drawing boundaries,
-    // so drawing box has to be substracted from its clipping extremes
+    // so drawing box has to be subtracted from its clipping extremes
     const int16_t clip_min_x = ctx->draw_state.clip_box.origin.x
                                - ctx->draw_state.drawing_box.origin.x;
     const int16_t clip_max_x = clip_min_x + ctx->draw_state.clip_box.size.w;

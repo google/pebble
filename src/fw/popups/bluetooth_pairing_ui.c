@@ -145,7 +145,7 @@ static void prv_update_prf_info_text_layers_text(BTPairingUIData *data) {
     { "Associare?",  font_key_default }, // Italian
     { "Emparelhar?", font_key_default }, // Portuguese
     { "ペアリング",  font_key_japanese }, // Japanese
-    { "配对",        font_key_default }, // Chinese (traditional?)
+    { "配对",        font_key_default }, // Chinese (tradditional?)
     { "配對",        font_key_default }  // Chinese (simplified?)
   };
 

@@ -31,7 +31,7 @@ typedef enum {
 
 //! LayoutLayer is a type of Layer that is used to display templated 3.0 content
 //! including \ref TimelineItem (pins, reminders, notifications) as well as AppFaces.
-//! LayoutLayers depart from traditional Layers in a few meaningful way.
+//! LayoutLayers depart from tradditional Layers in a few meaningful way.
 //! 1) LayoutLayers are modulated by a "mode", which is the context in which the LayoutLayer
 //! is displayed. Examples of modes are the "card" mode which displays detailed pin info
 //! and the "minimzed" mode which is used to display a "toast" like mode of a pin.

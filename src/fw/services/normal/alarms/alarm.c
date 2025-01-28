@@ -596,7 +596,7 @@ static int prv_get_day_for_just_once_alarm(int hour, int minute) {
     // The time is before or equal to the current time. Sechedule the alarm for tomorrow
     return (local_time.tm_wday + 1) % DAYS_PER_WEEK;
   } else {
-    // The time hasn't happend yet today. Schedule it for today
+    // The time hasn't happened yet today. Schedule it for today
     return local_time.tm_wday;
   }
 }

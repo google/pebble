@@ -127,13 +127,13 @@ T_STATIC GColor get_bitmap_color(GBitmap *bmp, int x, int y) {
                                                     0,  // y = 0 when using data_row
                                                     bmp->row_size_bytes,
                                                     src_bpp);
-  // Default color to be the raw color index - update only if palletized
+  // Default color to be the raw color index - update only if palettized
   GColor src_color = (GColor){.argb = cindex};
-  bool palletized = ((format == GBitmapFormat1BitPalette) ||
+  bool palettized = ((format == GBitmapFormat1BitPalette) ||
                      (format == GBitmapFormat2BitPalette) ||
                      (format == GBitmapFormat4BitPalette));
-  if (palletized) {
-    // Look up color in palette if palletized
+  if (palettized) {
+    // Look up color in palette if palettized
     const GColor *palette = bmp->palette;
     src_color = palette[cindex];
   }

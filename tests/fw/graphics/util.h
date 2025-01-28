@@ -238,7 +238,7 @@ static void prv_write_diff_to_file(const char *filename, GBitmap *expected_bmp,
     strncpy(ext, EXPECTED_PBI_FILE_EXTENSION, strlen(EXPECTED_PBI_FILE_EXTENSION) + 1);
     cl_assert(tests_write_gbitmap_to_pbi(expected_bmp, bmp_filename));
 
-    // TODO: PBL-20932 Add 1-bit and palletized support
+    // TODO: PBL-20932 Add 1-bit and palettized support
     if (actual_bmp->info.format == GBitmapFormat8Bit && diff_bmp) {
       // Only write the diff file if there is an expected image
       strncpy(bmp_filename, filename, PATH_STRING_LENGTH - strlen(DIFF_PBI_FILE_EXTENSION) - 1);
@@ -306,7 +306,7 @@ bool gbitmap_eq(GBitmap *actual_bmp, GBitmap *expected_bmp, const char *filename
   for (int y = start_y; y < end_y; ++y) {
     uint8_t *line = ((uint8_t*)diff_bmp->addr) + (diff_bmp->row_size_bytes * y);
 
-    // TODO: PBL-20932 Add 1-bit and palletized support
+    // TODO: PBL-20932 Add 1-bit and palettized support
     if (actual_bmp->info.format == GBitmapFormat8Bit) {
       line[(diff_bmp->row_size_bytes / 3) + 1] = GColorClear.argb;     // Separator pixel between images
       line[(2 * diff_bmp->row_size_bytes / 3) + 1] = GColorClear.argb; // Separator pixel between images
@@ -346,7 +346,7 @@ bool gbitmap_eq(GBitmap *actual_bmp, GBitmap *expected_bmp, const char *filename
         rc = false;
       }
 
-      // TODO: PBL-20932 Add 1-bit and palletized support
+      // TODO: PBL-20932 Add 1-bit and palettized support
       if (actual_bmp->info.format == GBitmapFormat8Bit) {
         if (actual_bmp_color.argb != expected_bmp_color.argb) {
           GColor8 diff_bmp_color = DIFF_COLOR;

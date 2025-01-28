@@ -72,7 +72,7 @@ class ELFFileHeader(ELFObjectBase):
     osabi = None  # The OS- or ABI-specific extensios used in this ELF file
     abi_version = None  # The version of the ABI this file is targeted for
     type = None  # The object file type
-    machine = None  # The machine artictecture
+    machine = None  # The machine architecture
     entry = None  # The program entry point
     ph_offset = None  # The offset of the program header table in bytes
     sh_offset = None  # The offset of the section header table in bytes

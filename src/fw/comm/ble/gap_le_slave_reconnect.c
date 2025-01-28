@@ -109,7 +109,7 @@ static void prv_evaluate(ReconnectType prev_type) {
       // done this (ignorance) and gotten by, by using a "random" address (the
       // public address, but then inverted) as a work-around for the problems
       // leaving out these flags caused with Android.
-      // I intend to use use the "Peripheral privacy feature" some time in the
+      // I intend to use the "Peripheral privacy feature" some time in the
       // near future. With this, these flags and the issues on Android become
       // a non-issue (because addresses will be private). Therefore I decided to
       // still leave out the flags.

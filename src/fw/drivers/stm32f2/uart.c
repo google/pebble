@@ -138,7 +138,7 @@ void uart_set_baud_rate(UARTDevice *dev, uint32_t baud_rate) {
 
   // We need to calculate the divider to get from the clock frequency down to the sampling
   // frequency (samples * baud_rate) and store it in USART_BBR as a fixed-point number with a
-  // franctional component equal to the number of samples per symbol. In other words, if OVER8=0,
+  // fractional component equal to the number of samples per symbol. In other words, if OVER8=0,
   // the fractional component will be 4 bits, and if OVER8=1, it will be 3 bits.
   // The formula works out to: DIV = f_clk / (samples * BAUD)
 

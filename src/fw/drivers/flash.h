@@ -35,7 +35,7 @@ void flash_init(void);
 void flash_stop(void);
 
 /**
- * Retreieve the first 3 bytes of the flash's device id. This ID
+ * Retrieve the first 3 bytes of the flash's device id. This ID
  * should remain fixed across all chips.
  */
 uint32_t flash_whoami(void);

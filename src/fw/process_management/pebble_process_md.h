@@ -64,7 +64,7 @@ typedef enum {
 //! This structure is used internally to describe the process. This struct here is actually a polymorphic base
 //! class, and can be casted to either \ref PebbleProcessMdSystem or \ref PebbleProcessMdFlash depending on the value
 //! of \ref is_flash_based. Clients shouldn't do this casting themselves though, and instead should use the
-//! process_metadata_get_* functions to safely retreive values from this struct.
+//! process_metadata_get_* functions to safely retrieve values from this struct.
 typedef struct PebbleProcessMd {
   Uuid uuid;
 

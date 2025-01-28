@@ -405,7 +405,7 @@ static RecordResult write_and_change_record_aborting_after_bytes(int after_n_byt
       return RecordResultNew;
     }
     // Should not get here! This means that neither the old nor the new value
-    // could be retreived, and thus the atomicity is broken! Aaaaaaaaaaaaaah!!
+    // could be retrieved, and thus the atomicity is broken! Aaaaaaaaaaaaaah!!
     cl_assert(false);
   }
   fake_spi_flash_force_future_failure(after_n_bytes, &jmp);

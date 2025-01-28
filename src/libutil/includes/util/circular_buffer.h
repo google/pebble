@@ -68,7 +68,7 @@ void circular_buffer_write_finish(CircularBuffer *buffer, uint16_t written_lengt
 //!
 //! If the circular buffer wraps in the middle of the requested data, this function call will return true but will
 //! provide fewer bytes that requested. When this happens, the length_out parameter will be set to a value smaller
-//! than length. A second read call can be made with the remaining smaller length to retreive the rest.
+//! than length. A second read call can be made with the remaining smaller length to retrieve the rest.
 //!
 //! The reason this read doesn't consume is to avoid having to copy out the data. The data_out pointer should be
 //! stable until you explicitly ask for it to be consumed with circular_buffer_consume.

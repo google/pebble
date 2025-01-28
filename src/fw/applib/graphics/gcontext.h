@@ -231,7 +231,7 @@ GSize graphics_context_get_framebuffer_size(GContext *ctx);
 
 //! @internal
 //! Retreives the destination bitmap for the graphics context.
-//! @param ctx The graphics context to retreive the bitmap for.
+//! @param ctx The graphics context to retrieve the bitmap for.
 GBitmap* graphics_context_get_bitmap(GContext* ctx);
 
 //! @internal

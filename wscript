@@ -1129,7 +1129,7 @@ def _create_qemu_image_micro(ctx, path_to_firmware_hex):
     img = IntelHex(ctx.env.BOOTLOADER_HEX)
     img.merge(IntelHex(path_to_firmware_hex), overlap='replace')
 
-    # Write firwmare image and pad up to next 512 byte multiple. This is because QEMU
+    # Write firmware image and pad up to next 512 byte multiple. This is because QEMU
     # assumes all block devices are multiples of 512 byte sectors
     img.padding = 0xff
     flash_end = ((img.maxaddr() + 511) // 512) * 512

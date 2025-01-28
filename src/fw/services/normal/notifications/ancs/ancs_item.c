@@ -399,7 +399,7 @@ TimelineItem *ancs_item_create_and_populate(ANCSAttribute *notif_attributes[],
   int num_native_actions = (positive_action ? 1 : 0) + (negative_action ? 1 : 0);
   int num_actions = num_native_actions + num_pebble_actions;
 
-  const int max_num_actions = 8; // Arbitratily chosen
+  const int max_num_actions = 8; // Arbitrarily chosen
   uint8_t attributes_per_action[max_num_actions];
   int action_idx = 0;
 

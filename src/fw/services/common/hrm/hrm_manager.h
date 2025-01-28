@@ -128,7 +128,7 @@ bool sys_hrm_manager_set_update_interval(HRMSessionRef session, uint32_t update_
 //! @param[in] session the HRMSessionRef returned by sys_hrm_manager_app_subscribe
 //! @param[out] app_id if not NULL, the app_id belonging to this subscription is returned here
 //! @param[out] update_interval_s if not NULL, the requested update interval is returned here
-//! @param[out] expire_s if not NULL, the number of seconds that this subcription will expire in
+//! @param[out] expire_s if not NULL, the number of seconds that this subscription will expire in
 //! @return true if succss, false if subscription was not found
 bool sys_hrm_manager_get_subscription_info(HRMSessionRef session, AppInstallId *app_id,
                                            uint32_t *update_interval_s, uint16_t *expire_s,

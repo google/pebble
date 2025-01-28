@@ -34,7 +34,7 @@ typedef enum {
 //! LayoutLayers depart from tradditional Layers in a few meaningful way.
 //! 1) LayoutLayers are modulated by a "mode", which is the context in which the LayoutLayer
 //! is displayed. Examples of modes are the "card" mode which displays detailed pin info
-//! and the "minimzed" mode which is used to display a "toast" like mode of a pin.
+//! and the "minimized" mode which is used to display a "toast" like mode of a pin.
 //! 2) LayoutLayers expose three more generic APIs:
 //! \ref layout_get_size which returns the size of the
 //! content within the layout as well as a generic constructor/destructor:

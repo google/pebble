@@ -37,7 +37,7 @@ static const uint32_t FLASH_SPI_CLOCK = RCC_APB2Periph_SPI1;
 static const SpiPeriphClock FLASH_SPI_CLOCK_PERIPH = SpiPeriphClockAPB2;
 
 
-/* Pin Defintions */
+/* Pin Definitions */
 static const uint32_t FLASH_PIN_SCS = GPIO_Pin_4;
 static const uint32_t FLASH_PIN_SCLK = GPIO_Pin_5;
 static const uint32_t FLASH_PIN_MISO = GPIO_Pin_6;

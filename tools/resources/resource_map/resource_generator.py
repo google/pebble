@@ -46,7 +46,7 @@ class ResourceGenerator(ResourceGeneratorBase):
                     'filename': str(definition_dict['file'] if 'file' in definition_dict else None)}
         resources = [resource]
 
-        # Now generate ResourceDefintion objects for each resource
+        # Now generate ResourceDefinition objects for each resource
         target_platforms = definition_dict.get('targetPlatforms', None)
         aliases = definition_dict.get('aliases', [])
         builtin = False if bld.variant == 'applib' else definition_dict.get('builtin', False)

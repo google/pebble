@@ -265,7 +265,7 @@ void action_bar_layer_clear_icon(ActionBarLayer *action_bar, ButtonId button_id)
 //! @note It is advised to call this is in the window's `.load` or `.appear`
 //! handler. Make sure to call \ref action_bar_layer_remove_from_window() in the
 //! window's `.unload` or `.disappear` handler.
-//! @note Adding additional layers to the window's root layer after this calll
+//! @note Adding additional layers to the window's root layer after this call
 //! can occlude the action bar.
 //! @param action_bar The action bar to associate with the window
 //! @param window The window with which the action bar is to be associated

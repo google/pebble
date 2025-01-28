@@ -107,7 +107,7 @@ static void set_and_verify(SettingsFile *file, uint8_t *key, int key_len,
 }
 
 void test_settings_file__set_get_one(void) {
-  printf("\nTesting setting and retreiving a single key a single time...\n");
+  printf("\nTesting setting and retrieving a single key a single time...\n");
   SettingsFile file;
   cl_must_pass(settings_file_open(&file, "test_file_set_get_one", 4096));
   uint8_t key[4];
@@ -121,7 +121,7 @@ void test_settings_file__set_get_one(void) {
 }
 
 void test_settings_file__set_get_one_many_times(void) {
-  printf("\nTesting setting and retreiving a key several times...\n");
+  printf("\nTesting setting and retrieving a key several times...\n");
   SettingsFile file;
   cl_must_pass(settings_file_open(&file, "test_file_set_get_one_many_times", 4096));
   uint8_t key[4];

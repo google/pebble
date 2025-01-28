@@ -16,7 +16,7 @@ PROVIDE ( _Stack_Size = __Stack_Size ) ;
 
 __Stack_Init = _estack  - __Stack_Size ;
 
-/*"PROVIDE" allows to easily override these values from an object file or the commmand line.*/
+/*"PROVIDE" allows to easily override these values from an object file or the command line.*/
 PROVIDE ( _Stack_Init = __Stack_Init ) ;
 
 /*

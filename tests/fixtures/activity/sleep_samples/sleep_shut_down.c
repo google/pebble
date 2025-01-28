@@ -1780,7 +1780,7 @@
   // DESCRIPTION:
   // This test stops in the middle of a deep sleep session.
   // - Test that we have an overarching Sleep session that starts around 75-90 and lasts
-  //   until we shuwn activity down
+  //   until we shut activity down
   // - Test that we have 2 full deep sleep sessions, and cut off the one in progress at
   //   ~22 minutes into it. It should be saved. We judge this based on total time
   //   in deep sleep

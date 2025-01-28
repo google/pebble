@@ -34,7 +34,7 @@
 //! Guaranteed invalid IRQ priority
 #define IRQ_PRIORITY_INVALID (1 << __NVIC_PRIO_BITS)
 
-// This is generated in order to faciliate the check within the IRQ_MAP macro below
+// This is generated in order to facilitate the check within the IRQ_MAP macro below
 enum {
 #define IRQ_DEF(num, irq) IS_VALID_IRQ__##irq,
 #include "irq_stm32.def"

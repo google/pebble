@@ -671,7 +671,7 @@ void test_pfs__migration(void) {
   pfs_init(true);
   ftl_force_version(1);
 
-  // simulate a migration by leaving leaving files in various states
+  // simulate a migration by leaving files in various states
   // in the first region. Then try to add another region and confirm
   // none of the files have been corrupted
   char file_small[10];

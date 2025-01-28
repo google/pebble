@@ -216,7 +216,7 @@ void qemu_serial_init(void) {
 
 
 // -----------------------------------------------------------------------------------------
-// KernelMain callback triggred by our ISR handler when we detect a high water mark on our
+// KernelMain callback triggered by our ISR handler when we detect a high water mark on our
 //  receive buffer or a footer signature
 static void prv_process_receive_buffer(void *context) {
   uint32_t msg_bytes;

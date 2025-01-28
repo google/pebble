@@ -64,7 +64,7 @@ def write_compilation_database(ctx):
 
 
 def options(opt):
-        "opitions for clang_compilation_database"
+        "options for clang_compilation_database"
         pass
 
 

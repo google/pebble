@@ -46,7 +46,7 @@ typedef struct {
 
   //! Timer for how long the combination has been held for. We use new_timer instead of app_timer
   //! even though it's a little more dangerous (doesn't automatically get cleaned up by the app)
-  //! because the api is nicer for starting/stopping/resceduling the same timer over and over
+  //! because the api is nicer for starting/stopping/rescheduling the same timer over and over
   //! again with different callbacks.
   TimerID combo_timer;
 

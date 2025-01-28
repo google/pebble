@@ -256,7 +256,7 @@ T_STATIC void graphics_circle_quadrant_draw_1px_aa(GContext* ctx, GPoint p, uint
    *   x               -
    *
    *      |  original calculated pixels for plotting
-   *      -  mirrored eight of the circle (will mirror more of them if neccessary)
+   *      -  mirrored eight of the circle (will mirror more of them if necessary)
    *      o  special case pixels
    *      x  center of the circle
    */
@@ -866,7 +866,7 @@ static void prv_fill_oval_precise(GContext *ctx, GPointPrecise center,
                                                  radius_inner_x.raw_value, radius_inner_y.raw_value,
                                                  config.end_quadrant.angle);
 
-  // Swapping top/bottom offset points if neccesary
+  // Swapping top/bottom offset points if necessary
   if (start_top.y.raw_value > start_bottom.y.raw_value) {
     prv_swap_precise_points(&start_top, &start_bottom);
   } else if (start_top.y.raw_value == start_bottom.y.raw_value &&

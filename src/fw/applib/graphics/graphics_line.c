@@ -417,7 +417,7 @@ void prv_draw_stroked_line_precise(GContext* ctx, GPointPrecise p0, GPointPrecis
     // Finish color hack
     ctx->draw_state.fill_color = temp_color;
 
-    // Return without drawing the line since its not neccessary
+    // Return without drawing the line since its not necessary
     return;
   }
 

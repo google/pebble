@@ -216,7 +216,7 @@ typedef struct {
   const OutputConfig power_ctl_5v0;
 
   const uint8_t backlight_on_percent; // percent of max possible brightness
-  const uint8_t backlight_max_duty_cycle_percent; // Calibrated such that the preceived brightness
+  const uint8_t backlight_max_duty_cycle_percent; // Calibrated such that the perceived brightness
                     // of "backlight_on_percent = 100" (and all other values, to a reasonable
                     // tolerance) is identical across all platforms. >100% isn't possible, so
                     // future backlights must be at least as bright as Tintin's.

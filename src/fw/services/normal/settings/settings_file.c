@@ -41,7 +41,7 @@ static status_t prv_open(SettingsFile *file, const char *name, uint8_t flags, in
   // max_space_total == max_used_space, then if the file is full, changing a
   // single value would force the whole file to be rewritten- every single
   // time! It's probably worth it to "waste" a bit of flash space to avoid
-  // this pathalogical case.
+  // this pathological case.
   int max_space_total = pfs_sector_optimal_size(max_used_space * 12 / 10, strlen(name));
 
   // TODO: Dynamically sized files?

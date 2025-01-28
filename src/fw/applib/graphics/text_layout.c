@@ -823,7 +823,7 @@ render_line: {} // this {} is just an empty statement that both C and our linter
         if (is_orphan) {
           *current_word_ref = prev_line_word;
           prv_apply_orphan_state(&orphan_state, line);
-          avoiding_orphans = false; // prevent infinte loops
+          avoiding_orphans = false; // prevent infinite loops
           goto render_line;
         }
       }

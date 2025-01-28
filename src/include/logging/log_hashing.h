@@ -96,11 +96,11 @@
 
 #define PACKED_NUM_FMT_OFFSET 29     // 3 bits - Number format conversions
 #define PACKED_NUM_FMT_MASK 0x07
-#define PACKED_STR1FMT_OFFSET 26     // 3 bits - indicies of string parameter 1 format conversion
+#define PACKED_STR1FMT_OFFSET 26     // 3 bits - indices of string parameter 1 format conversion
 #define PACKED_STR1FMT_MASK 0x07
-#define PACKED_STR2FMT_OFFSET 23     // 3 bits - indicies of string parameter 2 format conversion
+#define PACKED_STR2FMT_OFFSET 23     // 3 bits - indices of string parameter 2 format conversion
 #define PACKED_STR2FMT_MASK 0x07
-#define PACKED_STRFMTS_OFFSET 23     // 6 bits - indicies of string parameters 1 & 2.
+#define PACKED_STRFMTS_OFFSET 23     // 6 bits - indices of string parameters 1 & 2.
 #define PACKED_STRFMTS_MASK 0x3f
 #define PACKED_LEVEL_OFFSET 20       // 3 bits  - log level
 #define PACKED_LEVEL_MASK 0x07
@@ -196,7 +196,7 @@ ALWAYS_INLINE static uint32_t LOG_SECTION_OFFSET(const uint8_t level, const char
     return 0;
   }
 
-  // Format the (maximum) two string parameter indicies as:
+  // Format the (maximum) two string parameter indices as:
   // (1-based index of first %s << 3) | (1-based index of second %s << 0)
   // If there is only one %s parameter, the index will be formatted as:
   // (1-based index of first %s << 0)
@@ -207,7 +207,7 @@ ALWAYS_INLINE static uint32_t LOG_SECTION_OFFSET(const uint8_t level, const char
   const int a5 = ps5 ? (a4 << 3) + 5 : a4;
   const int a6 = ps6 ? (a5 << 3) + 6 : a5;
   const int a7 = ps7 ? (a6 << 3) + 7 : a6;
-  const int string_indicies = a7;
+  const int string_indices = a7;
 
 
   // Convert level to packed_level
@@ -226,7 +226,7 @@ ALWAYS_INLINE static uint32_t LOG_SECTION_OFFSET(const uint8_t level, const char
 
   const uint32_t offset =  (((num_params & PACKED_NUM_FMT_MASK) << PACKED_NUM_FMT_OFFSET) |
                             ((packed_level & PACKED_LEVEL_MASK) << PACKED_LEVEL_OFFSET) |
-                            ((string_indicies & PACKED_STRFMTS_MASK) << PACKED_STRFMTS_OFFSET));
+                            ((string_indices & PACKED_STRFMTS_MASK) << PACKED_STRFMTS_OFFSET));
 
   return (offset - LOG_STRINGS_SECTION_ADDRESS);
 }

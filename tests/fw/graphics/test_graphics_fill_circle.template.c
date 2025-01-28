@@ -605,7 +605,7 @@ void test_graphics_fill_circle_${BIT_DEPTH_NAME}__radial_precise(void){
   // Drawing
   setup_test_aa_sw(&ctx, fb, ORIGIN_RECT_NO_CLIP, ORIGIN_RECT_NO_CLIP, true, 1);
   graphics_fill_radial_precise_internal(&ctx, center, radius_inner, radius_outer, angle_start, angle_end);
-  cl_check(gbitmap_pbi_eq(&ctx.dest_bitmap, "fill_radial_origin_aa_precise_halfs_letter_c.${BIT_DEPTH_NAME}.pbi"));
+  cl_check(gbitmap_pbi_eq(&ctx.dest_bitmap, "fill_radial_origin_aa_precise_halves_letter_c.${BIT_DEPTH_NAME}.pbi"));
 }
 
 typedef struct {

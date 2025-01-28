@@ -140,7 +140,7 @@ class ELFSectionHeader(ELFObjectBase):
     size = None  # The size of the section in bytes
     link = None  # The section header table link (interpretation various based on type)
     info = None  # Extra info
-    addr_align = None  # Address alignment contraint for the section
+    addr_align = None  # Address alignment constraint for the section
     entry_size = None  # The size of entries within the section in bytes (if applicable)
 
     def unpack(self, data, offset=0):

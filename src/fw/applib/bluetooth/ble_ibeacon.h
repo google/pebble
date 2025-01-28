@@ -45,7 +45,7 @@ typedef struct {
 
   //! The calibrated power of the iBeacon. This is the RSSI measured at 1 meter
   //! distance from the iBeacon. The iBeacon transmits this information in its
-  //! advertisment. Using this and the actual RSSI, the distance is estimated.
+  //! advertisement. Using this and the actual RSSI, the distance is estimated.
   int8_t calibrated_tx_power;
 } BLEiBeacon;
 

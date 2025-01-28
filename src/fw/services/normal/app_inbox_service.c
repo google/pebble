@@ -46,7 +46,7 @@ typedef struct AppInboxNode {
     //! The size of `storage`.
     size_t size;
 
-    //! The positive offset relative relative to write_index, up until which the current
+    //! The positive offset relative to write_index, up until which the current
     //! (incomplete) message has been written.
     size_t current_offset;
 

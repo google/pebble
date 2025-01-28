@@ -8,7 +8,7 @@
         "",
         "Types are defined below with the following parameters:                                  ",
         " name: The name of the type as it appears in our codebase. This type definition must    ",
-        "       be visibile in one of the headers in the headers list below.                     ",
+        "       be visible in one of the headers in the headers list below.                     ",
         " size_2x: The size in bytes that should be used for legacy2 apps                        ",
         " size_3x: The size in bytes that should be used for 3.x apps                            ",
         " size_3x_padding: The amount of padding to add directly to this particular struct.      ",

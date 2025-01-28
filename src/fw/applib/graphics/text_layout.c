@@ -267,7 +267,7 @@ static bool prv_line_iter_is_vertical_overflow(const LineIterState* const line_i
   // if we're not rendering the first line.
   //    - This, because the user does not expect to see more text drawn below, after the '...'.
   //    - The first-line exception means that text, and therefore the telltale
-  //      ellipsis, will always be visisble.
+  //      ellipsis, will always be visible.
   if ((text_box_params->overflow_mode == GTextOverflowModeTrailingEllipsis ||
        text_box_params->overflow_mode == GTextOverflowModeFill) &&
       line_iter_state->current->origin.y != text_box_params->box.origin.y) {

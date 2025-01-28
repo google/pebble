@@ -160,7 +160,7 @@ static void prv_stationary_check_launcher_task_cb(void *unused_data) {
   }
 }
 
-//! Called every minute to determine whether any motion has occured since the last time
+//! Called every minute to determine whether any motion has occurred since the last time
 //! the call was made. The current position is updated at this time
 static void prv_stationary_check_timer_cb(void *unused_data) {
   //! All stationary events need to be handled by kernel main

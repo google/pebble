@@ -214,7 +214,7 @@ typedef void (*MenuLayerDrawSeparatorCallback)(GContext* ctx,
 
 //! Function signature for the callback to handle the event that a user hits
 //! the SELECT button.
-//! @param menu_layer The \ref MenuLayer for which the selection event occured
+//! @param menu_layer The \ref MenuLayer for which the selection event occurred
 //! @param cell_index The MenuIndex of the cell that is selected
 //! @param callback_context The callback context
 //! @see \ref menu_layer_set_callbacks()
@@ -225,7 +225,7 @@ typedef void (*MenuLayerSelectCallback)(struct MenuLayer *menu_layer,
 
 //! Function signature for the callback to handle a change in the current
 //! selected item in the menu.
-//! @param menu_layer The \ref MenuLayer for which the selection event occured
+//! @param menu_layer The \ref MenuLayer for which the selection event occurred
 //! @param new_index The MenuIndex of the new item that is selected now
 //! @param old_index The MenuIndex of the old item that was selected before
 //! @param callback_context The callback context
@@ -239,7 +239,7 @@ typedef void (*MenuLayerSelectionChangedCallback)(struct MenuLayer *menu_layer,
 //! Function signature for the callback which allows or changes selection behavior of the menu.
 //! In order to change the cell that should be selected, modify the passed in new_index.
 //! Preventing the selection from changing, new_index can be assigned the value of old_index.
-//! @param menu_layer The \ref MenuLayer for which the selection event that occured
+//! @param menu_layer The \ref MenuLayer for which the selection event that occurred
 //! @param new_index Pointer to the index that the MenuLayer is going to change selection to.
 //! @param old_index The index that is being unselected.
 //! @param callback_context The callback context

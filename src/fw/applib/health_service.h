@@ -379,7 +379,7 @@ typedef enum {
 
 //! Developer-supplied event handler, called when a health-related event occurs after subscribing
 //! via \ref health_service_events_subscribe();
-//! @param event The type of health-related event that occured.
+//! @param event The type of health-related event that occurred.
 //! @param context The developer-supplied context pointer.
 typedef void (*HealthEventHandler)(HealthEventType event, void *context);
 

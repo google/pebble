@@ -220,7 +220,7 @@ _Static_assert(sizeof(PebblePairingServiceConnectivityStatus) <= 20, "Larger tha
 
 typedef struct GAPLEConnection GAPLEConnection;
 
-//! Signals to the Pebble GATT service that status change has occured (pairing, encryption, ...),
+//! Signals to the Pebble GATT service that status change has occurred (pairing, encryption, ...),
 //! allowing it to notify any BLE devices that are subscribed to connectivity status updates of the
 //! change.
 //! @param connection The connection for which the status was changed.

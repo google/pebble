@@ -404,7 +404,7 @@ void analytics_event_crash(uint8_t crash_code, uint32_t link_register) {
     .crash_report.link_register = link_register
   };
 
-  ANALYTICS_LOG_DEBUG("Crash occured: Code %"PRIu8" / LR: %"PRIu32,
+  ANALYTICS_LOG_DEBUG("Crash occurred: Code %"PRIu8" / LR: %"PRIu32,
     event_blob.crash_report.crash_code, event_blob.crash_report.link_register);
 
   analytics_logging_log_event(&event_blob);

@@ -36,7 +36,7 @@ message Event {
   required bytes uuid = 1; /// 16-byte uuid for efficient message size
   optional User user = 2; /// can usually be omitted and included in Requests
   required Type type = 4; /// string types are more sanely extensible, but enum types would be more typo resistant and smaller message size
-  required uint32 time_utc = 5; /// when the event occured (unix epoch seconds)
+  required uint32 time_utc = 5; /// when the event occurred (unix epoch seconds)
   required sint32 utc_to_local = 6; /// time_utc + utc_to_local = time_local. sint32 stores neg number efficiently. need to recast before adding to time_utc, but saves storage
   optional uint32 created_time_utc = 7; /// events may be created at times other than their occurance
   optional uint32 duration = 8;  /// in same units as time_utc (sec)

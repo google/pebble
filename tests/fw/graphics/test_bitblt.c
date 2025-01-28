@@ -319,7 +319,7 @@ void test_bitblt__8bit_clipping(void) {
 
 // Test horizontal wrapping when dest_rect wider than src_bitmap.
 // Setup:
-//   - Source 15 x 10, each row has the folling pattern:
+//   - Source 15 x 10, each row has the following pattern:
 //       - 2px  Red
 //       - 13px Black
 //   - Dest Green 50x50

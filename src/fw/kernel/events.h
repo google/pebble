@@ -715,7 +715,7 @@ _Static_assert(sizeof(PebbleTimelinePeekEvent) == 8,
 typedef enum PebbleAppCacheEventType {
   PebbleAppCacheEvent_Removed,
 
-  PebbleAppCacehEventNum
+  PebbleAppCacheEventNum
 } PebbleAppCacheEventType;
 
 typedef struct PACKED PebbleAppCacheEvent {

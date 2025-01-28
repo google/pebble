@@ -10,7 +10,7 @@ Timers that are registered using our timer infrastructure are executed on this t
 
 "IDLE" - The idle task
 ----------------------
-This is a special task used by the FreeRTOS scheduler. It's defined at it's own priority level which is at the lowest priority. If no other task is ready to run, either due to waiting on a semaphore or waiting using vTaskDelay (or something like that), the idle task is chosen to run instead.
+This is a special task used by the FreeRTOS scheduler. It's defined at its own priority level which is at the lowest priority. If no other task is ready to run, either due to waiting on a semaphore or waiting using vTaskDelay (or something like that), the idle task is chosen to run instead.
 
 We have modified FreeRTOS such that if we're in the idle task, we enter a lower power mode, either sleep or stop. Stop mode is special in that peripheral clocks are shut down when we go into stop and are not automatically turned back on when we leave stop mode. This means we have to go through and turn them all back on. This is what the `register_stop_mode_resume_callback` function does. It allows individual drivers to register callbacks that are called when we leave stop from the idle thread. This comes with a caveat though. Since the idle thread only ever runs when there's nothing else to run, the scheduler assumes that there is always a task to run. This means that if the idle task is stopped or delayed for any reason, the scheduler will explode. Therefore you are not permitted to do operations that may stop the task's execution from within the resume callback.
 
@@ -34,4 +34,4 @@ This task is created for the currently running app. No task is created for the l
 Open Questions
 ==============
 
-Which tasks are allowed to manipulate the window state? What if the launcher wants to push a notification window at the same time as an app pushes it's own window?
+Which tasks are allowed to manipulate the window state? What if the launcher wants to push a notification window at the same time as an app pushes its own window?

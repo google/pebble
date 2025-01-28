@@ -17,7 +17,7 @@ Payloads are how data should be sent and collected from devices. A simple
 normal flow would be for a watch to generate Events and Measurements,
 bundle them into a Payload that is sent to mobile. Mobile would then take that
 payload, as well as events and measurements generated on the mobile device
-itself, and bundle them into it's own Payload message to send to the
+itself, and bundle them into its own Payload message to send to the
 Pipeline API
 
 More complex patterns occur when the watch sends mupltiple Payloads, at

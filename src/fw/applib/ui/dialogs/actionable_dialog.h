@@ -53,7 +53,7 @@ void actionable_dialog_set_action_bar_type(ActionableDialog *actionable_dialog,
                                            ActionBarLayer *action_bar);
 
 //! Sets the ClickConfigProvider of the action bar. If the dialog has a custom action bar then
-//! this function has no effect. The action bar is responsible for setting up it's own click
+//! this function has no effect. The action bar is responsible for setting up its own click
 //! config provider
 //! @param actionable_dialog Pointer to a \ref ActionableDialog to which to set the provider on
 //! @param click_config_provider The \ref ClickConfigProvider to set

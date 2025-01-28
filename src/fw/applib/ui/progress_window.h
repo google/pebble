@@ -27,7 +27,7 @@
 //!
 //! A UI component that is a window that contains a progress bar. The state of the progress bar
 //! is updated using progress_window_set_progress. When the window is first pushed, the progress
-//! bar will fill on it's own, faking progress until the max_fake_progress_percent threshold is
+//! bar will fill on its own, faking progress until the max_fake_progress_percent threshold is
 //! hit. Once the client wishes to indicate success or failure, calling
 //! progress_window_set_progress_success or progress_window_set_progress_failure will cause the
 //! UI to animate out to indicate the result, followed by calling the .finished callback if

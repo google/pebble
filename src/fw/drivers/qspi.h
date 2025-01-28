@@ -22,7 +22,7 @@
 //! Memory mapped region for the QSPI controller
 #define QSPI_MMAP_BASE_ADDRESS ((uintptr_t) 0x90000000)
 
-//! Timouts for qspi_poll_bit
+//! Timeouts for qspi_poll_bit
 #define QSPI_NO_TIMEOUT (0)
 
 typedef const struct QSPIPort QSPIPort;

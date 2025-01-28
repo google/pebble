@@ -28,7 +28,7 @@ namespace std {
 }
 
 /* This analyzer suffers from the major limitation that most of the mutexes in Pebble are globals,
- * so all symbols and MemRegions refering to the mutexes are invalidated every time an unknown
+ * so all symbols and MemRegions referring to the mutexes are invalidated every time an unknown
  * function is called. This analyzer instead associates mutexes with the declaration of their
  * variables, which has the obvious limitation of not catching when mutexes are passed as
  * arguments (which fortunately never? happens in pebble).

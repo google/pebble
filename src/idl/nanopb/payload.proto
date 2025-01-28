@@ -39,7 +39,7 @@ import "measurements.proto";
 
 message Payload {
   required Tier sender = 2; /// Tier info represents who is sending a message. Payloads are uniquely identified by sender and time
-  required uint32 send_time_utc = 3; /// latest send attmpt time
+  required uint32 send_time_utc = 3; /// latest send attempt time
   optional uint32 send_retry_count = 4;
   optional User user = 6;  /// User info apply to all sub-messages contained
   repeated bytes payloads = 10; /// recursive payloads form a tree structure to store arbitrary message history efficiently

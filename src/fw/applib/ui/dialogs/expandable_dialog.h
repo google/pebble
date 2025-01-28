@@ -88,7 +88,7 @@ void expandable_dialog_init(ExpandableDialog *expandable_dialog, const char *dia
 //! @return \ref Dialog
 Dialog *expandable_dialog_get_dialog(ExpandableDialog *expandable_dialog);
 
-//! Sets whether or not the expandable dialog should should show its action bar.
+//! Sets whether or not the expandable dialog should show its action bar.
 //! @param expandable_dialog Pointer to the \ref ExpandableDialog to set on
 //! @param show_action_bar Boolean indicating whether to show the action bar
 void expandable_dialog_show_action_bar(ExpandableDialog *expandable_dialog,

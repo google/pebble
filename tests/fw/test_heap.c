@@ -234,7 +234,7 @@ void test_heap___heap_bytes_free(void) {
 
   int after_available = heap_bytes_free();
 
-  // make sure the two values are within 16 bytes (usually shoule be 0-8, but 16 for safety)
+  // make sure the two values are within 16 bytes (usually should be 0-8, but 16 for safety)
   cl_assert(abs((before_available - malloc_size_bytes) - after_available) < 16);
 
   heap_free(heap, ptr, 0);
@@ -263,7 +263,7 @@ void test_heap__heap_bytes_used(void) {
 
   int after_used = heap_bytes_used();
 
-  // make sure the two values are within 16 bytes (usually shoule be 0-8, but 16 for safety)
+  // make sure the two values are within 16 bytes (usually should be 0-8, but 16 for safety)
   cl_assert(abs((before_used + malloc_size_bytes) - (after_used)) < 16);
 
   heap_free(heap, ptr, 0);

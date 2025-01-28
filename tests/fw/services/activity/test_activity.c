@@ -1793,10 +1793,10 @@ static uint16_t prv_step_avg_slot(int hour, int min) {
 // feed in for the given 15-minute time slot
 int prv_expected_steps_per_min(int slot, int multiplier) {
   if (multiplier == 1) {
-    // The slot % 50 was chosen so that the total # of steps per day does not exceeed 2^16
+    // The slot % 50 was chosen so that the total # of steps per day does not exceed 2^16
     return ((slot % 50) + 1);
   } else if (multiplier == 2) {
-    // The slot % 30 was chosen so that the total # of steps per day does not exceeed 2^16
+    // The slot % 30 was chosen so that the total # of steps per day does not exceed 2^16
     return 2 * ((slot % 30) + 1);
   } else {
     cl_assert(false);

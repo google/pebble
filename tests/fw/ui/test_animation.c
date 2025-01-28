@@ -1126,7 +1126,7 @@ void test_animation__property_gcolor8(void) {
 
 // --------------------------------------------------------------------------------------
 // Test that the schedule/unschedule calls work correctly.
-// We should be able to unschedule an animation parthway through
+// We should be able to unschedule an animation partway through
 void test_animation__unschedule(void) {
 #ifdef TEST_INCLUDE_BASIC
   PropertyAnimation *prop_h;

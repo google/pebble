@@ -411,7 +411,7 @@ void prv_draw_stroked_line_precise(GContext* ctx, GPointPrecise p0, GPointPrecis
 
     ctx->draw_state.fill_color = ctx->draw_state.stroke_color;
 
-    // If so, draw a circle with corrseponding radius
+    // If so, draw a circle with corresponding radius
     graphics_fill_circle(ctx, GPoint(p0.x.integer, p0.y.integer), radius.integer);
 
     // Finish color hack

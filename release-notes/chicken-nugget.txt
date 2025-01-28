@@ -11,4 +11,4 @@ This archive contains v1.3 firmware for the Pebble E-Paper Watch.
   - 2v5 I2C driver bugfixes.
   - iPhone ACP stability improvements.
   - Text rendering performance improvements.
-  - Support for entering shippiing-mode (standby) via a Bluetooth command.
+  - Support for entering shipping-mode (standby) via a Bluetooth command.

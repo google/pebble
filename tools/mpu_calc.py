@@ -76,7 +76,7 @@ def find_subregions_for_region(address, size):
                 end_in_block <= current_block_size):
 
             # This region fits in the provided region and both the start and end are aligned with
-            # subregion boundries. This will work!
+            # subregion boundaries. This will work!
 
             block_start_address = address - start_in_block
 

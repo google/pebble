@@ -42,7 +42,7 @@ bool applib_resource_munmap_all();
 //! or for a given resource if will try to allocate data and load it into RAM instead.
 //! Have a look at \ref resource_load_byte_range_system for the discussion of arguments
 //! @param used_aligned True, if you want this function to allocate 7 extra bytes if it cannot mmap
-//! @return NULL, if the resource coudln't be memory-mapped or allocated
+//! @return NULL, if the resource couldn't be memory-mapped or allocated
 void *applib_resource_mmap_or_load(ResAppNum app_num, uint32_t resource_id,
                                    size_t offset, size_t length, bool used_aligned);
 

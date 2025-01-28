@@ -53,7 +53,7 @@ typedef enum {
   GTextOverflowModeFill
 } GTextOverflowMode;
 
-//! Text aligment controls the way the text is aligned inside the box the text is drawn into.
+//! Text alignment controls the way the text is aligned inside the box the text is drawn into.
 //! @see graphics_draw_text
 //! @see text_layer_set_text_alignment
 typedef enum {

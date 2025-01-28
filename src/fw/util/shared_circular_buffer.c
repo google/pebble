@@ -238,7 +238,7 @@ void subsampled_shared_circular_buffer_client_set_ratio(
   PBL_ASSERTN(numerator > 0 && denominator >= numerator);
   if (client->numerator != numerator || client->denominator != denominator) {
     // The subsampling algorithm does not need the subsampling ratio to
-    // be normalied to reduced form.
+    // be normalized to reduced form.
     client->numerator = numerator;
     client->denominator = denominator;
     // Initialize the state so that the next item in the buffer is copied,

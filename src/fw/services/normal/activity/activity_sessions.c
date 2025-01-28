@@ -659,7 +659,7 @@ void activity_sessions_prv_init(SettingsFile *file, time_t utc_now) {
       // flash got corrupted, as in PBL-37848
       PBL_HEXDUMP(LOG_LEVEL_INFO, (void *)state->activity_sessions,
                   sizeof(state->activity_sessions));
-      PBL_LOG(LOG_LEVEL_ERROR, "Invalid activity session detected - could be flash corrruption");
+      PBL_LOG(LOG_LEVEL_ERROR, "Invalid activity session detected - could be flash corruption");
 
       // Zero out flash so that we don't get into a reboot loop
       memset(state->activity_sessions, 0, sizeof(state->activity_sessions));

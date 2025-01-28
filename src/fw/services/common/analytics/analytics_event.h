@@ -258,7 +258,7 @@ typedef enum VibePatternFeature {
 typedef struct PACKED {
   uint8_t feature;
   uint8_t vibe_pattern_id;
-} AnalyticsEvent_VibeAcessData;
+} AnalyticsEvent_VibeAccessData;
 
 typedef struct PACKED {
   uint16_t activity_type;       // activity type, one of ActivitySessionType
@@ -330,7 +330,7 @@ typedef struct PACKED {
     AnalyticsEvent_HealthInsightCreatedData health_insight_created;
     AnalyticsEvent_HealthInsightResponseData health_insight_response;
     AnalyticsEvent_AppCrashData app_crash_report;
-    AnalyticsEvent_VibeAcessData vibe_access_data;
+    AnalyticsEvent_VibeAccessData vibe_access_data;
     AnalyticsEvent_HealthActivitySessionData health_activity_session;
     AnalyticsEventPebbleProtocolCommonSessionClose pp_common_session_close;
     AnalyticsEventPebbleProtocolSystemSessionClose pp_system_session_close;

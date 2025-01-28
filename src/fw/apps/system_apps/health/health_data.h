@@ -60,7 +60,7 @@ void health_data_update_step_derived_metrics(HealthData *health_data);
 
 //! Update the number of steps the user has taken today
 //! @param health_data A pointer to the health data to use
-//! @param new_steps the new value of the steps for toaday
+//! @param new_steps the new value of the steps for today
 void health_data_update_steps(HealthData *health_data, uint32_t new_steps);
 
 //! Update the number of seconds the user has slept today

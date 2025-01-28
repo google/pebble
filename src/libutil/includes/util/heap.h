@@ -111,7 +111,7 @@ void* heap_realloc(Heap* const heap, void *ptr, unsigned long nbytes, uintptr_t 
 //! are zero'd.
 void* heap_zalloc(Heap* const heap, size_t size, uintptr_t client_pc);
 
-//! Allocate a buffer to hold an array of count elements, each of size size (in bytes)
+//! Allocate a buffer to hold an array of count elements, each of size (in bytes)
 //! and initializes all bits to zero.
 void* heap_calloc(Heap* const heap, size_t count, size_t size, uintptr_t client_pc);
 

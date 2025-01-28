@@ -21,7 +21,7 @@
 
 // Tests
 ///////////////////////////////////////////////////////////
-void test_mktime__bithdays(void) {
+void test_mktime__birthdays(void) {
   struct tm francois_birthday = {
     .tm_sec = 0,
     .tm_min = 44,

@@ -434,7 +434,7 @@ def obfuscate(src_path, dst_path, no_text):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='Pebble Firmware ELF Obfuscation')
-    parser.add_argument('input_elf', help='The source ELF file to be obfuscaated')
+    parser.add_argument('input_elf', help='The source ELF file to be obfuscated')
     parser.add_argument('output_elf', help='Output file path')
     parser.add_argument('--no-text', help='Removes the .text section', action='store_true')
     args = parser.parse_args()

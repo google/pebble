@@ -189,7 +189,7 @@ void graphics_draw_rotated_bitmap(GContext* ctx, GBitmap *src, GPoint src_ic, in
       background = GColorWhite;
       break;
     default:
-      PBL_ASSERT(0, "unknown coposting mode %d", compositing_mode);
+      PBL_ASSERT(0, "unknown compositing mode %d", compositing_mode);
       return;
   }
 #endif

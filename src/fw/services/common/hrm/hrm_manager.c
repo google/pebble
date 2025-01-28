@@ -237,9 +237,9 @@ static bool prv_is_sensor_stable(const HRMData *data) {
     s_manager_state.off_wrist_when_stable = false;
   } else {
     // We haven't yet received a good reading yet. Wait for a timeout...
-    RtcTicks elapased_ticks = rtc_get_ticks() - s_manager_state.sensor_start_ticks;
+    RtcTicks elapsed_ticks = rtc_get_ticks() - s_manager_state.sensor_start_ticks;
     RtcTicks max_startup_time = milliseconds_to_ticks(HRM_SENSOR_SPIN_UP_SEC * MS_PER_SECOND);
-    if (elapased_ticks >= max_startup_time) {
+    if (elapsed_ticks >= max_startup_time) {
       // If it's been past the tolerable startup time, we have a valid reading - even though it
       // may indicate off-wrist.
       s_manager_state.sensor_stable = true;

@@ -1211,7 +1211,7 @@ MOCKABLE void graphics_draw_arc_precise_internal(GContext *ctx, GPointPrecise ce
   center.x.raw_value -= center.x.raw_value % (FIXED_S16_3_ONE.raw_value / 2);
   center.y.raw_value -= center.y.raw_value % (FIXED_S16_3_ONE.raw_value / 2);
 
-  // To maintain compability we have to adjust from integral points where given point means
+  // To maintain compatibility we have to adjust from integral points where given point means
   //    center of the point
   center.x.raw_value += 4;
   center.y.raw_value += 4;

@@ -50,7 +50,7 @@ void task_timer_manager_init(TaskTimerManager *manager, SemaphoreHandle_t semaph
 //!         returns portMAX_DELAY.
 TickType_t task_timer_manager_execute_expired_timers(TaskTimerManager *manager);
 
-//! Debugging interface to help understand why the task_timer exuction is stuck and what
+//! Debugging interface to help understand why the task_timer execution is stuck and what
 //! its stuck on.
 //! @return A pointer to the current callback that's running, NULL if no callback
 //!         is currently running.

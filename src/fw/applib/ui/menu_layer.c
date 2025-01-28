@@ -1055,7 +1055,7 @@ void prv_center_focus_animation_update_in_and_out(Animation *animation,
 
 void prv_center_focus_animation_update_out_only(Animation *animation,
                                                 const AnimationProgress progress) {
-  // anwalys only render the bounce back
+  // anyways only render the bounce back
   prv_center_focus_animation_update_impl(animation, true, progress);
 }
 

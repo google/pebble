@@ -501,7 +501,7 @@ void activity_sessions_prv_get_sleep_bounds_utc(time_t now_utc, time_t *enter_ut
   int first_sleep_utc;
   if (minute_of_day < ACTIVITY_LAST_SLEEP_MINUTE_OF_DAY) {
     // It is before the ACTIVITY_LAST_SLEEP_MINUTE_OF_DAY (currently 9pm) cutoff, so use
-    // the previou day's cutoff
+    // the previous day's cutoff
     first_sleep_utc = start_of_today_utc - (SECONDS_PER_DAY - last_sleep_second_of_day);
   } else {
     // It is after 9pm, so use the 9pm cutoff

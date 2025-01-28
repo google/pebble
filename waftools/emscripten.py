@@ -41,7 +41,7 @@ import os
 from waflib import Logs, Task, TaskGen
 
 
-# Insipred on https://github.com/waf-project/waf/blob/4ff5b8b7a74dd2ad23600ed7af6a505b90235387/playground/strip/strip.py
+# Inspired by https://github.com/waf-project/waf/blob/4ff5b8b7a74dd2ad23600ed7af6a505b90235387/playground/strip/strip.py
 def wrap_cprogram_task_class():
     classname = 'cprogram'
     orig_cls = Task.classes[classname]

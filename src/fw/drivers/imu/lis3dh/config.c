@@ -340,7 +340,7 @@ void lis3dh_exit_self_test_mode(void) {
 //! factory. Useful as a sanity check to make sure everything came up properly.
 bool lis3dh_sanity_check(void) {
   uint8_t whoami = prv_read_reg(LIS3DH_WHO_AM_I);
-  PBL_LOG(LOG_LEVEL_DEBUG, "Read accel whomai byte 0x%x, expecting 0x%x", whoami, LIS3DH_WHOAMI_BYTE);
+  PBL_LOG(LOG_LEVEL_DEBUG, "Read accel whoami byte 0x%x, expecting 0x%x", whoami, LIS3DH_WHOAMI_BYTE);
   return (whoami == LIS3DH_WHOAMI_BYTE);
 }
 

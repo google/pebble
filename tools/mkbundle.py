@@ -414,7 +414,7 @@ def cmd_firmware(args):
     make_firmware_bundle(**vars(args))
 
 def cmd_watchapp(args):
-    args.sdk_verison = dict(zip(['major', 'minor'], [int(x) for x in args.sdk_version.split('.')]))
+    args.sdk_version = dict(zip(['major', 'minor'], [int(x) for x in args.sdk_version.split('.')]))
 
     make_watchapp_bundle(**vars(args))
 

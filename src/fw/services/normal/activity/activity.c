@@ -310,7 +310,7 @@ static SettingsFile *prv_settings_migrate(SettingsFile *file, uint16_t *written_
     return file;
   }
 
-  PBL_LOG(LOG_LEVEL_INFO, "Performing settings file migration from verison %"PRIu16"", version);
+  PBL_LOG(LOG_LEVEL_INFO, "Performing settings file migration from version %"PRIu16"", version);
 
   // Perform migration
   if (version == 1) {
@@ -322,7 +322,7 @@ static SettingsFile *prv_settings_migrate(SettingsFile *file, uint16_t *written_
     }
   } else {
     // If the version is totally unexpected, remove the file and create a new one
-    PBL_LOG(LOG_LEVEL_ERROR, "Unknown settings file verison %"PRIu16"", version);
+    PBL_LOG(LOG_LEVEL_ERROR, "Unknown settings file version %"PRIu16"", version);
   }
 
   if (result != S_SUCCESS) {

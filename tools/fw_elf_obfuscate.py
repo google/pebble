@@ -90,7 +90,7 @@ class ELFFileHeader(ELFObjectBase):
         assert(self.elf_class == self.CLASS_32_BIT)
         # we only support little-endian files
         assert(self.data == self.DATA_2_LSB)
-        # current ELF verison
+        # current ELF version
         assert(self.version == self.VERSION)
         assert(self.osabi == self.OS_ABI)
         assert(self.abi_version == self.ABI_VERSION)

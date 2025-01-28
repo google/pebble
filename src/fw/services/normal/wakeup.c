@@ -74,7 +74,7 @@ struct prv_missed_events_s {
 };
 
 struct prv_check_app_and_wakeup_event_s {
-  time_t wakeup_timestamp; //!< Timestamp of the WakupEntry
+  time_t wakeup_timestamp; //!< Timestamp of the WakeupEntry
   int wakeup_count; //!< wakeup event count for app, negative for error (StatusCode)
 };
 
@@ -302,7 +302,7 @@ static void prv_update_events_callback(SettingsFile *old_file, SettingsFile *new
   } else {
     if (entry.notify_if_missed) {
       if (missed_events->missed_app_ids == NULL) {
-        // This is allocated here, but free'd in the wakup_ui.h module
+        // This is allocated here, but free'd in the wakeup_ui.h module
         missed_events->missed_app_ids =
             kernel_malloc(NUM_APPS_ALERT_ON_BOOT * sizeof(AppInstallId));
       }

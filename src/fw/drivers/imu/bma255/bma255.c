@@ -76,7 +76,7 @@ static void prv_set_accel_power_mode(BMA255PowerMode mode);
 
 // The BMA255 reports each G in powers of 2 with full deflection at +-2^11
 // So scale all readings by (scale)/(2^11) to get G
-// And scale the result by 1000 to allow for easier interger math
+// And scale the result by 1000 to allow for easier integer math
 typedef enum {
   BMA255Scale_2G  = 980,  // 2000/2048
   BMA255Scale_4G  = 1953, // 4000/2048

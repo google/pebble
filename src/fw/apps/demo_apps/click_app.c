@@ -117,7 +117,7 @@ static void config_provider(Window *window) {
   // See ui/click.h for more information and default values.
 
   // single click / repeat-on-hold config:
-  window_single_repeating_click_subscribe(BUTTON_ID_SELECT, 1000, (ClickHandler)select_single_click_handler); // "hold-to-repeat" gets overriden if there's a long click handler configured!
+  window_single_repeating_click_subscribe(BUTTON_ID_SELECT, 1000, (ClickHandler)select_single_click_handler); // "hold-to-repeat" gets overridden if there's a long click handler configured!
 
   // multi click config:
   window_multi_click_subscribe(BUTTON_ID_SELECT, 2, 10, 0, false, (ClickHandler) select_multi_click_handler);
@@ -126,7 +126,7 @@ static void config_provider(Window *window) {
   window_long_click_subscribe(BUTTON_ID_SELECT, 700, (ClickHandler) select_long_click_handler, (ClickHandler) select_long_click_release_handler);
 
   // single click / repeat-on-hold config:
-  window_single_repeating_click_subscribe(BUTTON_ID_UP, 1000, (ClickHandler) select_single_click_handler); // "hold-to-repeat" gets overriden if there's a long click handler configured!
+  window_single_repeating_click_subscribe(BUTTON_ID_UP, 1000, (ClickHandler) select_single_click_handler); // "hold-to-repeat" gets overridden if there's a long click handler configured!
 
   // multi click config:
   window_multi_click_subscribe(BUTTON_ID_UP, 2, 10, 0, true, (ClickHandler) select_multi_click_handler);

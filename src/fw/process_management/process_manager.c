@@ -519,7 +519,7 @@ void process_manager_process_setup(PebbleTask task) {
 
 
 // ---------------------------------------------------------------------------------------------
-//! Kills the process, giving it no chance to clean things up or exit gracefully. The proces must already be in a
+//! Kills the process, giving it no chance to clean things up or exit gracefully. The process must already be in a
 //! state where it's safe to exit, so the caller must call process_manager_make_process_safe_to_kill() first and only
 //! call this method if process_manager_make_process_safe_to_kill() returns true;
 void process_manager_process_cleanup(PebbleTask task) {
@@ -575,7 +575,7 @@ void process_manager_process_cleanup(PebbleTask task) {
 
   if (context->to_process_event_queue &&
       pdFAIL == event_queue_cleanup_and_reset(context->to_process_event_queue)) {
-    PBL_LOG(LOG_LEVEL_ERROR, "The to processs queue could not be reset!");
+    PBL_LOG(LOG_LEVEL_ERROR, "The to process queue could not be reset!");
   }
   context->to_process_event_queue = NULL;
 }

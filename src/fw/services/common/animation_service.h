@@ -30,6 +30,6 @@ void animation_service_timer_schedule(uint32_t ms);
 //! Acknowledge that we received an event sent by the animation timer
 void animation_service_timer_event_received(void);
 
-//! Destroy the animation resoures used by the given task. Called by the process_manager when a
+//! Destroy the animation resources used by the given task. Called by the process_manager when a
 // process exits
 void animation_service_cleanup(PebbleTask task);

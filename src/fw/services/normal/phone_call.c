@@ -35,7 +35,7 @@
 //! - The watch gets PP messages (parsed in phone_pp.c), which come in as events happen.
 //! - The watch can decline / hangup the call by sending PP messages to the phone.
 //! On iOS:
-//! - The watch gets incomming calls from ANCS (parsed in ancs_notifications.c).
+//! - The watch gets incoming calls from ANCS (parsed in ancs_notifications.c).
 //! - After that the watch must poll the phone for its status if not iOS 9+ (using PP messages).
 //! - On iOS 9, ANCS tells us when the phone stops ringing
 //! - The watch can pickup / decline a call using ANCS actions
@@ -111,7 +111,7 @@ static bool prv_should_show_ongoing_call_ui(void) {
   return (s_call_source == PhoneCallSource_PP);
 }
 
-// hangup != decline. Decline == reject incomming call, Hangup == stop in progress call
+// hangup != decline. Decline == reject incoming call, Hangup == stop in progress call
 static bool prv_can_hangup(void) {
   // We can't hangup with iOS
   return !prv_call_is_ancs();

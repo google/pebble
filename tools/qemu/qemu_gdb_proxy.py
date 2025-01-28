@@ -694,7 +694,7 @@ if __name__ == '__main__':
     # Collect our command line arguments
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--port', type=int, default=1233,
-            help="Port to accept incomming connections on")
+            help="Port to accept incoming connections on")
     parser.add_argument('--target', default='localhost:1234',
             help="target to connect to ")
     parser.add_argument('--connect_timeout', type=float, default=1.0,

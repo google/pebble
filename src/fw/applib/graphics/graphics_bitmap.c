@@ -133,7 +133,7 @@ T_STATIC GColor get_bitmap_color(GBitmap *bmp, int x, int y) {
                      (format == GBitmapFormat2BitPalette) ||
                      (format == GBitmapFormat4BitPalette));
   if (palletized) {
-    // Look up color in pallete if palletized
+    // Look up color in palette if palletized
     const GColor *palette = bmp->palette;
     src_color = palette[cindex];
   }

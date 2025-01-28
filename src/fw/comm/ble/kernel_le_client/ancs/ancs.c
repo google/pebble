@@ -1068,7 +1068,7 @@ void ancs_handle_ios9_or_newer_detected(void) {
 }
 
 // -------------------------------------------------------------------------------------------------
-// Lifecyle
+// Lifecycle
 
 void ancs_create(void) {
   PBL_ASSERTN(s_ancs_client == NULL);

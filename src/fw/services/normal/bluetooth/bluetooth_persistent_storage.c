@@ -96,7 +96,7 @@ typedef struct PACKED {
 #define BT_PERSISTENT_STORAGE_FILE_SIZE (4096)
 
 //! All of the actual pairings use a BTBondingID as a key. This is because with BLE pairings an
-//! address is not alwaywas available, and it made it easier to have BT Classic and BLE pairings
+//! address is not always available, and it made it easier to have BT Classic and BLE pairings
 //! use the same type of key. When adding pairings there is no BTBondingID so a free key has to
 //! be found by iterating over all possible keys.
 

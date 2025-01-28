@@ -43,4 +43,4 @@ void rotbmp_pair_layer_increment_angle(RotBmpPairLayer *pair, int32_t angle_chan
 void rotbmp_pair_layer_set_src_ic(RotBmpPairLayer *pair, GPoint ic);
 
 //! exchanges black with white
-void rotbmp_pair_layer_inver_colors(RotBmpPairLayer *pair);
+void rotbmp_pair_layer_invert_colors(RotBmpPairLayer *pair);

@@ -65,7 +65,7 @@ void rotbmp_pair_layer_set_src_ic(RotBmpPairLayer *pair, GPoint ic) {
                                            pair->white_layer.layer.bounds.size });
 }
 
-void rotbmp_pair_layer_inver_colors(RotBmpPairLayer *pair) {
+void rotbmp_pair_layer_invert_colors(RotBmpPairLayer *pair) {
   RotBitmapLayer temp = pair->black_layer;
   pair->black_layer = pair->white_layer;
   pair->white_layer = temp;

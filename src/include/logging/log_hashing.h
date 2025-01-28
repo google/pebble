@@ -26,7 +26,7 @@
  * isn't compiled into the final firmware binary image.
  *
  * Token format:
- *   The token is acually a packed uint32_t. The format is as follows:
+ *   The token is actually a packed uint32_t. The format is as follows:
  *   31-29: num fmt conversions  [0-7]
  *   28-26: string index 2       [0-7], 1 based. 0 if no second string. 1-7 otherwise
  *   25-23: string index 1       [0-7], 1 based. 0 if no first string. 1-7 otherwise

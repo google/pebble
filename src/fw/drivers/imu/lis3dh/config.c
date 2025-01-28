@@ -353,7 +353,7 @@ bool lis3dh_config_set_defaults() {
     { LIS3DH_CTRL_REG4, (BDU | FS0 | HR) }, // Block Read, +/- 4g sensitivity
     { LIS3DH_CTRL_REG6, I2_CLICK }, // Click on INT2
 
-    { LIS3DH_INT1_THS, 0x20 }, // intertial threshold (MAX 0x7f)
+    { LIS3DH_INT1_THS, 0x20 }, // inertial threshold (MAX 0x7f)
     { LIS3DH_INT1_DURATION, 0x10 }, // interrupt duration (units of 1/(update frequency) [See CTRL_REG1])
     { LIS3DH_INT1_CFG, 0x00 }, // no inertial interrupts
 

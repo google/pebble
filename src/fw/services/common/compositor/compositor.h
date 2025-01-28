@@ -127,7 +127,7 @@ void compositor_set_modal_transition_offset(GPoint modal_offset);
 //! Stops an existing transition in its tracks.
 void compositor_transition_cancel(void);
 
-//! Don't allow new frames to be pushed to the compostor from either the app or the modal.
+//! Don't allow new frames to be pushed to the compositor from either the app or the modal.
 void compositor_freeze(void);
 
 //! Resuming allowing new frames to be pushed to the compositor, undoes the effects of

@@ -303,7 +303,7 @@ T_STATIC void graphics_circle_quadrant_draw_1px_aa(GContext* ctx, GPoint p, uint
   // Note: magic numbers explained in main comment for this function
   int special_case_pixels = 3;
 
-  // Acommpanied by magic number 7 (not 6, we increased radius at beginning of this function)
+  // Accompanied by magic number 7 (not 6, we increased radius at beginning of this function)
   if (radius < 7) {
     // And sometimes magic number 2
     special_case_pixels = 2;

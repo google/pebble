@@ -17,6 +17,6 @@
 #include "mcu/interrupts.h"
 
 bool mcu_state_are_interrupts_enabled(void) {
-  // When this bit is set, all interrupts (of configureable priority) are disabled
+  // When this bit is set, all interrupts (of configurable priority) are disabled
   return ((__get_PRIMASK() & 0x1) == 0x0);
 }

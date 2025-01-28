@@ -115,7 +115,7 @@ static const BoardConfigAccel BOARD_CONFIG_ACCEL = {
     .axes_inverts[AXIS_Y] = true,
     .axes_inverts[AXIS_Z] = true,
 #endif
-    // This is affected by the acceleromter's configured ODR, so this value
+    // This is affected by the accelerometer's configured ODR, so this value
     // will need to be tuned again once we stop locking the BMA255 to an ODR of
     // 125 Hz.
     .shake_thresholds[AccelThresholdHigh] = 64,

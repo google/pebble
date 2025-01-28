@@ -159,7 +159,7 @@ static uint64_t prv_now_ms(void) {
 static void prv_advance_by_ms_no_timers(uint64_t ms_delta) {
   uint64_t target_ms = prv_now_ms() + ms_delta;
 
-  // Comppensate for rounding errors
+  // Compensate for rounding errors
   uint64_t new_ticks = rtc_get_ticks() + (ms_delta * RTC_TICKS_HZ + 500 ) / 1000;
   uint64_t new_ms = (new_ticks * 1000 + RTC_TICKS_HZ / 2) / RTC_TICKS_HZ;
   if (new_ms == target_ms - 1) {

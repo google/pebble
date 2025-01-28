@@ -891,7 +891,7 @@ static void prv_fill_oval_precise(GContext *ctx, GPointPrecise center,
 
   // Adjust to drawing_box offset
   int adjusted_center = center.y.integer + ctx->draw_state.drawing_box.origin.y;
-  // We add one to compenaste in case of odd line needs to be drawn
+  // We add one to compensate in case of odd line needs to be drawn
   int adjusted_top = adjusted_center - radius_outer_y.integer - 1;
   int adjusted_bottom = adjusted_center + radius_outer_y.integer + 1;
 

@@ -102,7 +102,7 @@ void alarm_set_enabled(AlarmId id, bool enable);
 void alarm_delete(AlarmId id);
 
 //! @param id The alarm that is being queried
-//! @return True if the alarm exists and is not disabled, Flase otherwise
+//! @return True if the alarm exists and is not disabled, False otherwise
 bool alarm_get_enabled(AlarmId id);
 
 //! @param id The alarm that should be deleted

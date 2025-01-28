@@ -51,7 +51,7 @@
 //!         have no knowledge of AppInstallId's.
 //!
 //! - PebbleProcessMd: This should only be used when launching an application. No piece of code
-//!                    should ask the app_install_manager for a PebbleProcessMd unlesss it plans on
+//!                    should ask the app_install_manager for a PebbleProcessMd unless it plans on
 //!                    assisting with the launch of the application (event_loop, app_manager, etc.)
 //!
 //! How applications are stored

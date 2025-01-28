@@ -133,7 +133,7 @@ void test_mbuf__iter_modify(void) {
   for (int i = 0; i < 6; i++) {
     cl_assert(!mbuf_iterator_is_finished(&write_iter));
     cl_assert(!mbuf_iterator_is_finished(&read_iter));
-    // check we're on the exected mbuf
+    // check we're on the expected mbuf
     if (i < 3) {
       cl_assert(mbuf_iterator_get_current_mbuf(&write_iter) == &mbuf1);
       cl_assert(mbuf_iterator_get_current_mbuf(&read_iter) == &mbuf1);

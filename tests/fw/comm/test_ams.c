@@ -80,7 +80,7 @@ void launcher_task_add_callback(void (*callback)(void *data), void *data) {
   s_launcher_task_callback_data = data;
 }
 
-// Tests: Disover AMS
+// Tests: Discover AMS
 ///////////////////////////////////////////////////////////
 #define NUM_AMS_INSTANCES 2
 static BLECharacteristic s_characteristics[NUM_AMS_INSTANCES][NumAMSCharacteristic] = {

@@ -20,7 +20,7 @@ payload, as well as events and measurements generated on the mobile device
 itself, and bundle them into its own Payload message to send to the
 Pipeline API
 
-More complex patterns occur when the watch sends mupltiple Payloads, at
+More complex patterns occur when the watch sends multiple Payloads, at
 different times, to the mobile before it gets a chance to send the data on to
 the web, or if multiple devices are connected simultaneously to one mobile
 device.

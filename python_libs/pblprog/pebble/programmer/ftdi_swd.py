@@ -30,7 +30,7 @@ class FTDISerialWireDebug(object):
             self._ftdi = None
             raise
 
-        # get the FTDI FIFO size and increase the chuncksize to match
+        # get the FTDI FIFO size and increase the chunksize to match
         self._ftdi_fifo_size = min(self._ftdi.fifo_sizes)
         self._ftdi.write_data_set_chunksize(self._ftdi_fifo_size)
 

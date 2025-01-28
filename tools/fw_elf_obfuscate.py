@@ -39,7 +39,7 @@ PRESERVE_SYMBOLS = [
     'app_crashed',
 ]
 
-# I have NO idea why we need to preserve `g_default_draw_implementation`, but we do. It's bizzare.
+# I have NO idea why we need to preserve `g_default_draw_implementation`, but we do. It's bizarre.
 # We can at least obfuscate the name.
 OBFUSCATE_SYMBOLS = [
     'g_default_draw_implementation',

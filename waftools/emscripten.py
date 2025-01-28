@@ -159,7 +159,7 @@ def process_emscripten_cprogram_link_args(self):
     for s in get_rule_and_env_values('emx_other_settings'):
         add_emcc_settings('-s', s)
 
-    # Emscripten implicitely regenerates caches (libc.bc, dlmalloc.bc,
+    # Emscripten implicitly regenerates caches (libc.bc, dlmalloc.bc,
     # struct_info.compiled.json and optimizer.exe) as needed.
     # When running multiple instantiations of emcc in parallel, this is
     # problematic because they will each race to generate the caches,

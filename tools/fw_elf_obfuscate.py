@@ -69,7 +69,7 @@ class ELFFileHeader(ELFObjectBase):
     elf_class = None  # The class of the ELF file (whether it's 32-bit or 64-bit)
     data = None  # The format of the data in the ELF file (endianness)
     version = None  # The version of the ELF file format
-    osabi = None  # The OS- or ABI-specific extensios used in this ELF file
+    osabi = None  # The OS- or ABI-specific extensions used in this ELF file
     abi_version = None  # The version of the ABI this file is targeted for
     type = None  # The object file type
     machine = None  # The machine architecture

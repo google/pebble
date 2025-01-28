@@ -53,7 +53,7 @@ bool circular_buffer_write(CircularBuffer* buffer, const void* data, uint16_t le
 
   uint16_t write_index = get_write_index(buffer);
 
-  // Update the data_length member now beforce we muck with the length parameter
+  // Update the data_length member now before we muck with the length parameter
   buffer->data_length += length;
 
   const uint16_t remaining_length = buffer->buffer_size - write_index;

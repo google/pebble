@@ -164,7 +164,7 @@ class JIRASupport(object):
         watch_logs = []
         got_device_logs = False
         for path in sorted(local_attachment_paths):
-            # iOS uses "watch_logs...", Android <2.1 uses "pebble.log", and Androind >=2.1 (Holo)
+            # iOS uses "watch_logs...", Android <2.1 uses "pebble.log", and Android >=2.1 (Holo)
             #  uses "device-logs.log"
             if "watch_logs" not in path and "pebble.log" not in path and "device-logs" not in path:
                 # Not a watch_logs... file

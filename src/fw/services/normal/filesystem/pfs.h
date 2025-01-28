@@ -89,7 +89,7 @@ typedef struct {
 //!    committed until the pfs_close is called. Until this time, pfs_open of the
 //!    'name' will return a hdl to the original file. This way there is always a
 //!    valid version of the file which can be read & the caller can copy parts
-//!    of the orginal file in hunks rather than allocating a lot of RAM.
+//!    of the original file in hunks rather than allocating a lot of RAM.
 //!
 //!   OP_FLAG_SKIP_HDR_CRC_CHECK - For files which are not accessed frequently,
 //!    it is a good idea to sanity check the on-flash header CRCs to make sure

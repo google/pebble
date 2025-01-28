@@ -71,7 +71,7 @@ typedef enum {
 typedef struct {
   //! Describes how to treat the range between .min_x and .max_x
   GDrawMaskRowInfoType type;
-  //! Left-most pixel, 3.0 means that that pixel 3 is fully visible, 3.5 means it's half visible
+  //! Left-most pixel, 3.0 means that pixel 3 is fully visible, 3.5 means it's half visible
   Fixed_S16_3 min_x;
   //! Right-most pixel, 10.7 means that pixel 10 is fully opaque
   Fixed_S16_3 max_x;

@@ -51,7 +51,7 @@
 //! UP and DOWN buttons with scrolling up and down.
 //! * The SELECT button can be configured by installing a click configuration
 //! provider using \ref scroll_layer_set_callbacks().
-//! * To scroll programatically to a certain offset, use
+//! * To scroll programmatically to a certain offset, use
 //! \ref scroll_layer_set_content_offset().
 //! * It is possible to get called back for each scrolling increment, by
 //! installing the `.content_offset_changed_handler` callback using

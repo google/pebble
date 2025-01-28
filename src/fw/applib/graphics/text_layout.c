@@ -791,7 +791,7 @@ static inline void prv_walk_lines_down(Iterator* const line_iter, TextLayout* co
     const Word word_before_rendering = *current_word_ref;
     const OrphanLineState orphan_state = prv_capture_orphan_state(line);
 
-    // When repeating text to prevent orhpans we could run into the situation where repeating text
+    // When repeating text to prevent orphans we could run into the situation where repeating text
     // pushes down the remaining text far enough so it ends up on yet another page. This would
     // enter an infinite loop.
     // To avoid that, we only apply this strategy, when it's "safe" to do so (in theory, there's

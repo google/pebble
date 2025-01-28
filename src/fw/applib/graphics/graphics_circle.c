@@ -912,7 +912,7 @@ static void prv_fill_oval_precise(GContext *ctx, GPointPrecise center,
   int draw_max_top = MAX(center.y.integer - adjusted_top, 0);
   int draw_max_bottom = MAX(adjusted_bottom - center.y.integer, 0);
   int draw_min_top = MAX(center.y.integer - adjusted_bottom, 0);
-  // In case of odd line, center is with half pixel so we have to subtract one more more full line
+  // In case of odd line, center is with half pixel so we have to subtract one more full line
   int draw_min_bottom = MAX(adjusted_top - center.y.integer - 1, 0);
 
   // Apply clipped distances

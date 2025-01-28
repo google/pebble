@@ -930,7 +930,7 @@ void test_pfs__start_page_collides_with_gc_page(void) {
   test_force_recalc_of_gc_region();
   pfs_init(false);
 
-  int expected_remaing_files = pages_per_sector - 1;
+  int expected_remaining_files = pages_per_sector - 1;
 
   // scatter files across two sectors
   for (int i = 0; i < (pages_per_sector + start_page_offset); i++) {
@@ -941,14 +941,14 @@ void test_pfs__start_page_collides_with_gc_page(void) {
     pfs_close(fd);
 
     // delete some files in the region so a garbage collection will do something
-    if (i >= expected_remaing_files) {
+    if (i >= expected_remaining_files) {
       pfs_remove(filename);
     }
   }
 
   test_force_garbage_collection(pages_per_sector);
 
-  for (int i = 0; i < expected_remaing_files; i++) {
+  for (int i = 0; i < expected_remaining_files; i++) {
     char filename[20];
     sprintf(filename, "test%d", i + start_page_offset);
     int fd = pfs_open(filename, OP_FLAG_READ, FILE_TYPE_STATIC, 10);

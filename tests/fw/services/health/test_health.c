@@ -500,7 +500,7 @@ void test_health__range_to_day_id_clamps_values(void) {
 }
 
 void test_health__sum_full_days(void) {
-  // use values structured as binary mask so we can detect if we sum up currect days
+  // use values structured as binary mask so we can detect if we sum up correct days
   s_sys_activity_get_metric_values.out.history[0] = 1000;
   s_sys_activity_get_metric_values.out.history[1] = 2000;
   s_sys_activity_get_metric_values.out.history[2] = 4000;
@@ -606,7 +606,7 @@ void test_health__process_range(void) {
 }
 
 void test_health__sum_fraction_days(void) {
-  // use values structured as binary mask so we can detect if we sum up currect days
+  // use values structured as binary mask so we can detect if we sum up correct days
   s_sys_activity_get_metric_values.out.history[0] = 1000;
   s_sys_activity_get_metric_values.out.history[1] = 2000;
   s_sys_activity_get_metric_values.out.history[2] = 4000;

@@ -101,7 +101,7 @@ static bool prv_force_stop_task_if_unprivileged(ProcessContext *context) {
 
   uint32_t control_reg = ulTaskDebugGetStackedControl((TaskHandle_t) context->task_handle);
   if ((control_reg & 0x1) == 0) {
-    // We're priviledged, it's not safe to just kill the app task.
+    // We're privileged, it's not safe to just kill the app task.
     vTaskResume((TaskHandle_t) context->task_handle);
     return false;
   }

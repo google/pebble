@@ -256,7 +256,7 @@ status_t settings_file_rewrite_filtered(
   settings_file_close(file);
   // We have to close and reopen the new_file so that it's temp flag is cleared.
   // Before the close succeeds, if we reboot, we will just end up reading the
-  // old file. After the close suceeds, we will end up reading the new
+  // old file. After the close succeeds, we will end up reading the new
   // (compacted) file.
   char *name = kernel_strdup(new_file.name);
   settings_file_close(&new_file);
@@ -579,7 +579,7 @@ status_t settings_file_rewrite(SettingsFile *file,
   settings_file_close(file);
   // We have to close and reopen the new_file so that it's temp flag is cleared.
   // Before the close succeeds, if we reboot, we will just end up reading the
-  // old file. After the close suceeds, we will end up reading the new
+  // old file. After the close succeeds, we will end up reading the new
   // (compacted) file.
   char *name = kernel_strdup(new_file.name);
   settings_file_close(&new_file);

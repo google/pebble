@@ -143,7 +143,7 @@ void test_bitblt_palette_1bit__2bit_palette_to_1bit_set(void) {
 //     The left half is semi-transparent and the right half is completely opaque
 //   - Dest is 50x50, white.
 // Result:
-//   - The image desribed will be tiled in each of the four corners
+//   - The image described will be tiled in each of the four corners
 //     The top right half will be alternating between dithered gray and black lines
 //     The bottom right half consists of a diagonal white line  on a black background
 //     The left half will be completely white

@@ -28,7 +28,7 @@
 #define DELETED_LIFETIME (0 * SECONDS_PER_DAY)
 
 //! A SettingsFile is just a simple binary key-value store. Keys can be strings,
-//! uint32_ts, or arbitrary bytes. Values are similarilly flexible. All
+//! uint32_ts, or arbitrary bytes. Values are similarly flexible. All
 //! operations are atomic, so a reboot in the middle of changing the value for a
 //! key will always either complete, returning the new value upon reboot, or
 //! will just return the old value.

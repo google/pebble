@@ -149,7 +149,7 @@ Applications can choose to communicate with either best-effort datagram
 service (like PULSEv1), or reliable datagram service that guarantees
 in-order datagram delivery. Having the reliable transport available
 made it very easy to implement prompt commands over PULSEv2. And it was
-also suprisingly easy to implement a PULSEv2 transport for the Pebble
+also surprisingly easy to implement a PULSEv2 transport for the Pebble
 Protocol, which allows developers and test automation to interact with
 bigboards using libpebble2 and pebble-tool, exactly like they can with
 emulators and sealed watches connected to phones.

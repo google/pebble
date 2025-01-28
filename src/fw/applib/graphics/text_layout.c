@@ -795,7 +795,7 @@ static inline void prv_walk_lines_down(Iterator* const line_iter, TextLayout* co
     // pushes down the remaining text far enough so it ends up on yet another page. This would
     // enter an infinite loop.
     // To avoid that, we only apply this strategy, when it's "safe" to do so (in theory, there's
-    // still the propability to run into this scenario if the perimeter isn't vertically symmetric).
+    // still the probability to run into this scenario if the perimeter isn't vertically symmetric).
     // The chosen number should be large enough for the previous line, the orphan line plus some
     // buffer.
     const int num_safe_lines = 3;

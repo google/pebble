@@ -199,7 +199,7 @@ int version_compare(Version a, Version b);
 // - tintin/waftools/inject_metadata.py
 // - iOS/PebblePrivateKit/PebblePrivateKit/PBBundle.m
 typedef struct __attribute__((__packed__)) {
-  char header[8];                   //!< Sentinal value, should always be 'PBLAPP'
+  char header[8];                   //!< Sentinel value, should always be 'PBLAPP'
   Version struct_version;           //!< version of this structure's format
   Version sdk_version;              //!< version of the SDK used to build this process
   Version process_version;          //!< version of the process
@@ -237,7 +237,7 @@ typedef struct __attribute__((__packed__)) {
 
 //! @internal
 typedef struct __attribute__((__packed__)) {
-  char header[8];                   //!< Sentinal value, should always be 'PBLAPP'
+  char header[8];                   //!< Sentinel value, should always be 'PBLAPP'
   Version struct_version;           //!< version of this structure's format
   Version sdk_version;              //!< version of the SDK used to build this process
   Version process_version;          //!< version of the process

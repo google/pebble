@@ -715,7 +715,7 @@ static status_t find_free_page(uint16_t *free_page, bool use_gc_allocator,
   // we should now be processing on a sector aligned boundary
   PBL_ASSERTN((start_pg % PFS_PAGES_PER_ERASE_SECTOR) == 0);
 
-  // if we could not find a free page in the sector we were previosuly using
+  // if we could not find a free page in the sector we were previously using
   // we need to scan through the erase regions and either perform some garbage
   // collection or find an erased page in another erase region
   if (next_page == INVALID_PAGE) {

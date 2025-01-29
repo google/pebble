@@ -133,7 +133,7 @@ void test_ams__discover_of_ams_should_subscribe_to_entity_update_characteristic(
   // Pass in 2 instances, it should be able to cope with this
   prv_discover_ams(2 /* num_instances */);
 
-  // Assert ams.c can now handle the characteristic reference for the first instance:
+  // Assert ams.c can handle the characteristic reference for the first instance:
   prv_assert_can_handle_characteristics(0, true /* expect_can_handle */);
 
   // Assert ams.c can not handle the characteristic reference for the second instance:

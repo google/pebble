@@ -20,7 +20,7 @@
 
 #include "drivers/flash.h"
 
-//! An address in the flash address spac
+//! An address in the flash address space
 typedef uint32_t FlashAddress;
 
 //! This is the memory mapped region that's mapped to the parallel flash.

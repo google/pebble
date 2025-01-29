@@ -230,7 +230,7 @@ void graphics_context_mask_destroy(GContext *ctx, GDrawMask *mask);
 GSize graphics_context_get_framebuffer_size(GContext *ctx);
 
 //! @internal
-//! Retreives the destination bitmap for the graphics context.
+//! Retrieves the destination bitmap for the graphics context.
 //! @param ctx The graphics context to retrieve the bitmap for.
 GBitmap* graphics_context_get_bitmap(GContext* ctx);
 

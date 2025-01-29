@@ -126,7 +126,7 @@ typedef struct {
 //! Callback used for using settings_file_each.
 //! The bool returned is used to control the iteration.
 //! - If a callback returns true, the iteration continues
-//! - If a callback returns false, the ieration stops.
+//! - If a callback returns false, the iteration stops.
 typedef bool (*SettingsFileEachCallback)(SettingsFile *file,
                                          SettingsRecordInfo *info,
                                          void *context);

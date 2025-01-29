@@ -444,7 +444,7 @@ DataLoggingResult dls_log(DataLoggingSession *session, const void* data, uint32_
   //
   // Some datalogging code holds the dls_list.c:s_list_mutex while taking the
   // bt_lock. Since we are locking the list and then trying to get the bt_lock,
-  // any other thread which holds the bt_lock and then trys to call a log could
+  // any other thread which holds the bt_lock and then tries to call a log could
   // result in a deadlock (since dls_lock_session() uses the list mutex). For non-release
   // builds assert when this happens so we can catch the cases and fix them.
   bt_lock_assert_held(false);

@@ -61,7 +61,7 @@ static inline PropertyAnimationPrivate *prv_find_property_animation(PropertyAnim
 void property_animation_update_int16(PropertyAnimation *property_animation_h,
                                      const uint32_t distance_normalized) {
   if (animation_private_using_legacy_2(NULL)) {
-    // We need to enable other applib modules like sroll_layer, menu_layer, etc. which are
+    // We need to enable other applib modules like scroll_layer, menu_layer, etc. which are
     // compiled to use the 3.0 animation API to work with 2.0 apps.
     property_animation_legacy2_update_int16((PropertyAnimationLegacy2 *)property_animation_h,
                                               distance_normalized);

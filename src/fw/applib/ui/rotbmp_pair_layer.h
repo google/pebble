@@ -32,7 +32,7 @@ typedef struct {
 
 } RotBmpPairLayer;
 
-//! white and black *must* have the same dimensions, and *shouldn't* have any overlapp of eachother
+//! white and black *must* have the same dimensions, and *shouldn't* have any overlap of each other
 void rotbmp_pair_layer_init(RotBmpPairLayer *pair, GBitmap *white, GBitmap *black);
 
 void rotbmp_pair_layer_deinit(RotBmpPairLayer *pair);
@@ -43,4 +43,4 @@ void rotbmp_pair_layer_increment_angle(RotBmpPairLayer *pair, int32_t angle_chan
 void rotbmp_pair_layer_set_src_ic(RotBmpPairLayer *pair, GPoint ic);
 
 //! exchanges black with white
-void rotbmp_pair_layer_inver_colors(RotBmpPairLayer *pair);
+void rotbmp_pair_layer_invert_colors(RotBmpPairLayer *pair);

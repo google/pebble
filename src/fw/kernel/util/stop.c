@@ -74,7 +74,7 @@ void enter_stop_mode(void) {
   //PWR_EnterSTOPMode(PWR_Regulator_LowPower, PWR_STOPEntry_WFI);
   // We don't use ^^ the above function because of a silicon bug which
   // causes the processor to skip some instructions upon wake from STOP
-  // in certain sitations. See the STM32F20x and STM32F21x Errata sheet
+  // in certain situations. See the STM32F20x and STM32F21x Errata sheet
   // section 2.1.3 "Debugging Stop mode with WFE entry", or the erratum
   // of the same name in section 2.1.2 of the STM32F42x and STM32F43x
   // Errata sheet, for (misleading) details.
@@ -93,7 +93,7 @@ void enter_stop_mode(void) {
   temp &= ~PWR_CR_PDDS;
   temp |= PWR_CR_LPDS;
 #if STM32F412xG
-  // STM32F412xG suports a new "low-power regulator low voltage in deep sleep" mode.
+  // STM32F412xG supports a new "low-power regulator low voltage in deep sleep" mode.
   temp |= PWR_CR_LPLVDS;
 #endif
   PWR->CR = temp;
@@ -108,7 +108,7 @@ void enter_stop_mode(void) {
   do_wfi(); // Wait for Interrupt (enter sleep mode). Work around F2/F4 errata.
   __ISB(); // Let the pipeline catch up (force the WFI to activate before moving on).
 
-  // Tell the processor not to emter deepsleep mode for future WFIs.
+  // Tell the processor not to enter deepsleep mode for future WFIs.
   SCB->SCR &= ~SCB_SCR_SLEEPDEEP_Msk;
 
   // Stop mode will change our system clock to the HSI. Move it back to the PLL.

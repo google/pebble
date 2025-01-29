@@ -269,7 +269,7 @@ void sys_process_get_wakeup_info(WakeupInfo *info);
 const PebbleProcessMd* sys_process_manager_get_current_process_md(void);
 
 //! Copy UUID for the current process.
-//! @return True if the UUID was succesfully copied.
+//! @return True if the UUID was successfully copied.
 bool sys_process_manager_get_current_process_uuid(Uuid *uuid_out);
 
 //! Get the AppInstallId for the current process

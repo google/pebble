@@ -33,7 +33,7 @@ void task_watchdog_bit_set(PebbleTask task);
 //! managing their own bits. If you're using this you're probably hacking around something awful.
 void task_watchdog_bit_set_all(void);
 
-//! @return bool Wether this task is being tracked by the task watchdog.
+//! @return bool Whether this task is being tracked by the task watchdog.
 bool task_watchdog_mask_get(PebbleTask task);
 
 //! Starts tracking a particular task using the task watchdog. The task must regularly call

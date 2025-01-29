@@ -68,7 +68,7 @@ void test_nexmo__initialize(void) {
 void test_nexmo__cleanup(void) {
 }
 
-void test_nexmo__is_reuath_sms(void) {
+void test_nexmo__is_reauth_sms(void) {
   uint8_t expected_app_id_buf[128];
   ANCSAttribute *expected_app_id = (ANCSAttribute *)&expected_app_id_buf;
   expected_app_id->length = strlen(IOS_SMS_APP_ID);
@@ -103,7 +103,7 @@ void test_nexmo__is_reuath_sms(void) {
   cl_assert(!nexmo_is_reauth_sms(bad_app_id, bad_message));
 }
 
-void test_nexmo__handle_reuath_sms(void) {
+void test_nexmo__handle_reauth_sms(void) {
   // UID
   const uint32_t uid = 42;
   s_expected_uid = uid;

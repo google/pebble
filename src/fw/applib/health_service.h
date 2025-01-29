@@ -328,7 +328,7 @@ HealthServiceAccessibilityMask health_service_metric_accessible(
 //! @param time_start Earliest UTC time you are interested in.
 //! @param time_end Latest UTC time you are interested in.
 //! @param scope \ref HealthServiceTimeScope value describing how the average should be computed.
-//! @return A \HealthServiceAccessibilityMask value decribing whether averaged data is available.
+//! @return A \HealthServiceAccessibilityMask value describing whether averaged data is available.
 HealthServiceAccessibilityMask health_service_metric_averaged_accessible(
     HealthMetric metric, time_t time_start, time_t time_end, HealthServiceTimeScope scope);
 
@@ -342,7 +342,7 @@ HealthServiceAccessibilityMask health_service_metric_averaged_accessible(
 //! @param time_end Latest UTC time you are interested in.
 //! @param aggregation The aggregation to perform
 //! @param scope \ref HealthServiceTimeScope value describing how the average should be computed.
-//! @return A \HealthServiceAccessibilityMask value decribing whether averaged data is available.
+//! @return A \HealthServiceAccessibilityMask value describing whether averaged data is available.
 HealthServiceAccessibilityMask health_service_metric_aggregate_averaged_accessible(
     HealthMetric metric, time_t time_start, time_t time_end, HealthAggregation aggregation,
     HealthServiceTimeScope scope);
@@ -379,7 +379,7 @@ typedef enum {
 
 //! Developer-supplied event handler, called when a health-related event occurs after subscribing
 //! via \ref health_service_events_subscribe();
-//! @param event The type of health-related event that occured.
+//! @param event The type of health-related event that occurred.
 //! @param context The developer-supplied context pointer.
 typedef void (*HealthEventHandler)(HealthEventType event, void *context);
 
@@ -443,7 +443,7 @@ uint16_t health_service_get_heart_rate_sample_period_expiration_sec(void);
 //! \endcode
 //!
 //! In the current implementation, only one alert per metric can be registered at a time. Future
-//! implementations may support two or more simulataneous alert registrations per metric. To change
+//! implementations may support two or more simultaneous alert registrations per metric. To change
 //! the alert threshold in the current implementation, cancel the original registration
 //! using `health_service_cancel_metric_alert` before registering the new threshold.
 //! @param metric Which \ref HealthMetric to query.
@@ -490,7 +490,7 @@ typedef struct {
 //!      exit, the UTC time of the end of the last record actually returned (i.e. start time of last
 //!      record + 60). If `time_end` on entry is somewhere in the middle of a minute interval, this
 //!      function behaves as if the caller passed in the end of that minute.
-//! @return Actual number of records returned. May be less then the maximum requested.
+//! @return Actual number of records returned. May be less than the maximum requested.
 //! @note If the return value is zero, `time_start` and `time_end` are meaningless.
 //!      It's not guaranteed that all records contain valid data, even if the return value is
 //!      greater than zero. Check `HealthMinuteData.is_invalid` to see if a given record contains

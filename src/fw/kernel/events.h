@@ -637,7 +637,7 @@ typedef struct HRMHRVData { // 3 bytes
 
 typedef struct HRMLEDData { // 4 bytes
   uint16_t current_ua;
-  uint16_t tia; //!< Transimpendance Amplifier value.
+  uint16_t tia; //!< Transimpedance Amplifier value.
                 //!< This is used with thresholds (provided by AMS) to verify the part is
                 //!< functioning within specification.
 
@@ -715,7 +715,7 @@ _Static_assert(sizeof(PebbleTimelinePeekEvent) == 8,
 typedef enum PebbleAppCacheEventType {
   PebbleAppCacheEvent_Removed,
 
-  PebbleAppCacehEventNum
+  PebbleAppCacheEventNum
 } PebbleAppCacheEventType;
 
 typedef struct PACKED PebbleAppCacheEvent {

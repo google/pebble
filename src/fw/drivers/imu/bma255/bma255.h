@@ -60,7 +60,7 @@ typedef enum {
 //! These are the natively supported filter bandwidths of the bma255.
 //! Note that power consumption is tightly tied to the filter bandwidth. In
 //! order to run acceptably, we need to keep a bandwidth up in the 500Hz ~ 1kHz range.
-//! Please see discussion below for more information on Bandwith, TSleep and ODR.
+//! Please see discussion below for more information on Bandwidth, TSleep and ODR.
 typedef enum {
   BMA255Bandwidth_7p81HZ  = 8,
   BMA255Bandwidth_15p63HZ = 9,
@@ -74,7 +74,7 @@ typedef enum {
   BMA255BandwidthCount
 } BMA255Bandwidth;
 
-//! In order to acheive low power consumptions, the BMA255 Output Data Rate (ODR)
+//! In order to achieve low power consumptions, the BMA255 Output Data Rate (ODR)
 //! is determined by a combination of:
 //!    - high-bandwidth operating rate:
 //!        Less filtering is done on the bma255, which has a direct impact on power consumption.

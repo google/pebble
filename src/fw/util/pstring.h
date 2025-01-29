@@ -54,7 +54,7 @@ void pstring_pstring16_to_string(const PascalString16 *pstring, char *string_out
 //!                    Must be at least size (string + 1).
 void pstring_string_to_pstring16(char string[], PascalString16 *pstring_out);
 
-//! Checks if 2 pstrings are euqual and returns true if so.
+//! Checks if 2 pstrings are equal and returns true if so.
 //! @note returns false if either / both pstrings are NULL
 bool pstring_equal(const PascalString16 *ps1, const PascalString16 *ps2);
 

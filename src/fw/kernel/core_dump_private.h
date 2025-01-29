@@ -80,7 +80,7 @@ typedef struct {
   uint32_t    unformatted;          // set of 1 bit flags, bit n set means region n is still unformatted
 } CoreDumpFlashHeader;
 
-// This comes first in the front of each possibe flash region. It is NOT returned as part of the core dump
+// This comes first in the front of each possible flash region. It is NOT returned as part of the core dump
 // image.
 typedef struct {
   uint32_t    magic;                // set to CORE_DUMP_FLASH_HDR_MAGIC

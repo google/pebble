@@ -133,7 +133,7 @@ static bool prv_populate_payload(ProtobufLogConfig *config, size_t buffer_len, u
   const char *version_patch_ptr;
   version_get_major_minor_patch(&v_major, &v_minor, &version_patch_ptr);
 
-  // Sender Id
+  // Sender ID
   const char *watch_serial = mfg_get_serial_number();
 
   pebble_pipeline_Payload payload = {

@@ -532,7 +532,7 @@ void test_window_stack__insert_next(void) {
 
 // Description:
 // During the push of a window, we push another window in the load handler of
-// the window being pushed.  This causes the loading window to disappaer from
+// the window being pushed.  This causes the loading window to disappear from
 // the screen (before it even appeared) and become subverted by the new window.
 void test_window_stack__push_during_window_load(void) {
   Window *window = window_create();

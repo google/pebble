@@ -93,7 +93,7 @@ void test_graphics_colors__equal__deprecated(void) {
 void test_graphics_colors__inverted_readable_color(void) {
   GColor8 (*fun)(GColor8) = gcolor_legible_over;
 
-  // transparent colors result in transparen - who has a better idea?
+  // transparent colors result in transparent - who has a better idea?
   cl_assert_equal_i(GColorClearARGB8, fun(GColorClear).argb);
 
 //  // obvious cases

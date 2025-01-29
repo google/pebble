@@ -20,7 +20,7 @@
 
 #include "process_management/app_install_types.h"
 
-//! This function creates a popup window displaying a missed wakeup events notificatoin
+//! This function creates a popup window displaying a missed wakeup events notification
 //! along with the application names that were missed
 //! Note: missed_apps_ids is free'd by this function
 //! @param missed_apps_count number of app names to display

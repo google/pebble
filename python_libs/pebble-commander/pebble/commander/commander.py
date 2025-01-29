@@ -92,7 +92,7 @@ class PebbleCommander(object):
             `PebbleCommander` as the first argument, and the rest of the argument strings
             as subsequent arguments. For errors, `fn` should throw an exception.
 
-            # TODO: Probably make the return something structured instead of stringly typed.
+            # TODO: Probably make the return something structured instead of strongly typed.
         """
         def decorator(fn):
             # Story time:
@@ -151,7 +151,7 @@ class PebbleCommander(object):
 
     def send_prompt_command(self, cmd):
         """ Send a prompt command string.
-            Unfortunately this is indeed stringly typed, a better solution is necessary.
+            Unfortunately this is indeed strongly typed, a better solution is necessary.
         """
         return self.connection.prompt.command_and_response(cmd)
 

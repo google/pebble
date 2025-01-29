@@ -42,7 +42,7 @@ sizeof(GATTBufferedNotificationHeader)) * 4)
 #endif
 
 //! Data structure representing a subscription of a specific client for
-//! noticications or indications of a GATT characteristic for a specific
+//! notifications or indications of a GATT characteristic for a specific
 //! client (GAPLEClientApp or GAPLEClientKernel). The GAPLEConnection struct has
 //! the head for each BLE connection.
 typedef struct {
@@ -87,7 +87,7 @@ bool gatt_client_subscriptions_get_notification_header(GAPLEClient client,
 //! @param[in,out] value_length_in_out Cannot be NULL. In: the size of the value_out buffer.
 //! Out: the number of bytes copied into the value_out buffer.
 //! @param[out] has_more_out Cannot be NULL. Will be set to true if there are more notifications
-//! in the buffer, or to false if there are no more notifiations in the buffer.
+//! in the buffer, or to false if there are no more notifications in the buffer.
 //! @return The length of the next notification's payload, if there is any (has_more_out is true),
 //! undefined otherwise.
 uint16_t gatt_client_subscriptions_consume_notification(BLECharacteristic *characteristic_ref_out,

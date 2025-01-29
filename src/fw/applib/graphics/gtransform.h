@@ -171,7 +171,7 @@ bool gtransform_is_equal(const GTransform * const t1, const GTransform * const t
 //////////////////////////////////////
 //! Concatenates two transformation matrices and returns the resulting matrix in t1
 //! The operation performed is t_new = t1*t2. This order is not commutative so be careful
-//! when contactenating the matrices.
+//! when concatenating the matrices.
 //! Note t_new can safely be be the same pointer as t1 or t2.
 //! @param t_new Pointer to destination transformation matrix
 //! @param t1 Pointer to transformation matrix to concatenate with t2 where t_new = t1*t2

@@ -50,7 +50,7 @@ typedef struct {
   //! The battery's percentage as a ratio32
   uint32_t charge_percent;
   //! WARNING: This maps to @see battery_charge_controller_thinks_we_are_charging as opposed to
-  //! the user-facing defintion of whether we're charging (100% battery).
+  //! the user-facing definition of whether we're charging (100% battery).
   bool is_charging;
   bool is_plugged;
 } PreciseBatteryChargeState;

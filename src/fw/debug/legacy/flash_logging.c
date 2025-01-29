@@ -33,14 +33,14 @@
 #include <inttypes.h>
 
 //! @file flash_logging.c
-//! Logs messages to SPI flash for later retreival.
+//! Logs messages to SPI flash for later retrieval.
 //!
 //! The different chunks allow us to implement a rolling log, where if we fill up all the chunks, we can erase the oldest
-//! chunk to find us some more space. Each chunk gets it's own header at the top of the chunk to indicate the order in
+//! chunk to find us some more space. Each chunk gets its own header at the top of the chunk to indicate the order in
 //! which the chunks should be reassembled.
 
 //! Make sure chunks are still an even number of flash subsectors. Our log space is 7 subsectors, so our NUM_CHUNKS
-//! makes it so each chunk has it's own subsector.
+//! makes it so each chunk has its own subsector.
 #define NUM_CHUNKS 7
 
 #define CHUNK_SIZE_BYTES (SECTION_LOGS_SIZE_BYTES / NUM_CHUNKS)

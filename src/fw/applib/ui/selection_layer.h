@@ -48,7 +48,7 @@ typedef struct SelectionLayer {
   unsigned cell_padding;
   unsigned selected_cell_idx;
 
-  // If is_active = false the the selected cell will become invalid, and any clicks will be ignored
+  // If is_active = false the selected cell will become invalid, and any clicks will be ignored
   bool is_active;
 
   GFont font;

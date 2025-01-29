@@ -37,7 +37,7 @@ static Uuid test_uuid = (Uuid){0x0, 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7,
                                0x8, 0x9, 0xA, 0xB, 0xC, 0xD, 0xE, 0xF};
 
 // A minimal, basic test that heartbeats don't overwrite adjacent data when
-// fields next to eachother are set. We set UUID first (well, create_app does),
+// fields next to each other are set. We set UUID first (well, create_app does),
 // and then set the fields on either side, and verify that UUID remains
 // unchanged.
 //   struct AppHeartbeat {

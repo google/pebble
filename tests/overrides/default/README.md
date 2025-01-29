@@ -30,7 +30,7 @@ test's `clar()` build rule.
   files `#include`'ing these files always fail to compile unless
   overridden?
 - Is using `#ifdef __ARM__` conditional compilation to replace
-  ARM-specific code with a gneric version insufficient? Would it require
+  ARM-specific code with a generic version insufficient? Would it require
   adding test-harness code to the source tree?
 
 If the answer to any of the above questions is "no", then adding an

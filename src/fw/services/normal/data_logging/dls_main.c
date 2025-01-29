@@ -74,7 +74,7 @@ static void prv_send_all_sessions_system_task_cb(void *empty_all_data) {
 static void prv_check_all_sessions_timer_cb(void *data) {
   // If sends are not enabled, do nothing
   if (!prv_sends_enabled()) {
-    PBL_LOG(LOG_LEVEL_INFO, "Not sending sessions beause sending is disabled");
+    PBL_LOG(LOG_LEVEL_INFO, "Not sending sessions because sending is disabled");
     return;
   }
 
@@ -125,7 +125,7 @@ bool dls_private_send_session(DataLoggingSession *logging_session, bool empty) {
 
   // If sends are not enabled, ignore
   if (!prv_sends_enabled()) {
-    PBL_LOG(LOG_LEVEL_INFO, "Not sending session beause sending is disabled");
+    PBL_LOG(LOG_LEVEL_INFO, "Not sending session because sending is disabled");
     return true;
   }
 
@@ -288,7 +288,7 @@ static bool prv_inactivate_sessions_each_cb(DataLoggingSession *session, void *d
 void dls_send_all_sessions(void) {
   // If sends are not enabled, do nothing
   if (!prv_sends_enabled()) {
-    PBL_LOG(LOG_LEVEL_INFO, "Not sending sessions beause sending is disabled");
+    PBL_LOG(LOG_LEVEL_INFO, "Not sending sessions because sending is disabled");
     return;
   }
   system_task_add_callback(prv_send_all_sessions_system_task_cb, (void*) true);
@@ -444,7 +444,7 @@ DataLoggingResult dls_log(DataLoggingSession *session, const void* data, uint32_
   //
   // Some datalogging code holds the dls_list.c:s_list_mutex while taking the
   // bt_lock. Since we are locking the list and then trying to get the bt_lock,
-  // any other thread which holds the bt_lock and then trys to call a log could
+  // any other thread which holds the bt_lock and then tries to call a log could
   // result in a deadlock (since dls_lock_session() uses the list mutex). For non-release
   // builds assert when this happens so we can catch the cases and fix them.
   bt_lock_assert_held(false);

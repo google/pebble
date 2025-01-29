@@ -296,19 +296,19 @@ void test_music_endpoint__receive_zero_length_now_playing(void) {
   cl_assert_equal_b(music_has_now_playing(), false);
 }
 
-void test_music_endpoint__ignore_malformatted_messages(void) {
+void test_music_endpoint__ignore_malformed_messages(void) {
   // Android app connects:
   prv_receive_app_info_event(true /* is_android */);
-  const uint8_t malformatted_artist[] = {
+  const uint8_t malformed_artist[] = {
     0x10, 14, 'o', 'n', 'e', 3, 't', 'w', 'o', 5, 't', 'h', 'r', 'e', 'e'
   };
-  const uint8_t malformatted_album[] = {
+  const uint8_t malformed_album[] = {
     0x10, 3, 'o', 'n', 'e', 10, 't', 'w', 'o', 5, 't', 'h', 'r', 'e', 'e'
   };
-  const uint8_t malformatted_title[] = {
+  const uint8_t malformed_title[] = {
     0x10, 3, 'o', 'n', 'e', 3, 't', 'w', 'o', 6, 't', 'h', 'r', 'e', 'e'
   };
-  const uint8_t malformatted_player[] = {
+  const uint8_t malformed_player[] = {
     0x13, 17, 'c', 'o', 'm', '.', 's', 'p', 'o', 't', 'i', 'f', 'y', '.', 'm', 'u', 's', 'i', 'c',
     9, 'S', 'p', 'o', 't', 'i', 'f', 'y'
   };
@@ -316,10 +316,10 @@ void test_music_endpoint__ignore_malformatted_messages(void) {
     const uint8_t *data;
     uint16_t length;
   } test_vectors[] = {
-    { malformatted_artist, sizeof(malformatted_artist) },
-    { malformatted_album, sizeof(malformatted_album) },
-    { malformatted_title, sizeof(malformatted_title) },
-    { malformatted_player, sizeof(malformatted_player) }
+    { malformed_artist, sizeof(malformed_artist) },
+    { malformed_album, sizeof(malformed_album) },
+    { malformed_title, sizeof(malformed_title) },
+    { malformed_player, sizeof(malformed_player) }
   };
   for (int i = 0; i < ARRAY_LENGTH(test_vectors); ++i) {
     prv_receive_pp_data(test_vectors[i].data, test_vectors[i].length);

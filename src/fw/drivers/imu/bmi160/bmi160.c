@@ -112,7 +112,7 @@ static void prv_write_reg(uint8_t reg, uint8_t value) {
   // Wait 2 us (active mode) or 450 us (suspend mode)
   // before issuing the next read or write command.
   //
-  // TODO: I'm pretty sure if commands are specifically targetting
+  // TODO: I'm pretty sure if commands are specifically targeting
   // a unit in suspend mode, we will need to delay for 450us even if
   // the other unit is powered up in Normal mode
   if (s_accel_power_mode == BMI160_Accel_Mode_Normal
@@ -262,7 +262,7 @@ static bool prv_new_sample_collected(uint8_t sensor_timestamp_before[3],
 
   uint32_t sample_time_bit = prv_get_sample_collection_bit();
 
-  // see if the upper bits oveflowed
+  // see if the upper bits overflowed
   uint32_t upper_bits_mask = ~((0x1 << sample_time_bit) - 1);
   start_time &= upper_bits_mask;
   end_time &= upper_bits_mask;
@@ -958,8 +958,8 @@ static void prv_enable_shake_detection(void) {
       BMI160_INT_EN_0_ANYMOTION_Y_EN | BMI160_INT_EN_0_ANYMOTION_X_EN);
   prv_read_modify_write(BMI160_REG_INT_EN_0, int_en, int_en);
 
-  // configure the anymotion interrupt to fire after 4 successcive
-  // samples are over the threhold specified
+  // configure the anymotion interrupt to fire after 4 successive
+  // samples are over the threshold specified
   accel_set_shake_sensitivity_high(false /* sensitivity_high */);
   prv_write_reg(BMI160_REG_INT_MOTION_0,
       0x3 << BMI160_INT_MOTION_1_ANYM_DUR_SHIFT);

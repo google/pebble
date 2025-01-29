@@ -266,7 +266,7 @@ void test_reminder_db__delete_parent(void) {
   prv_insert_default_reminders();
 
   const TimelineItemId *parent_id = &item1.header.parent_id;
-  // cnfirm the two are here
+  // confirm the two are here
   cl_assert(reminder_db_get_len((uint8_t *)&item1.header.id, sizeof(Uuid)) > 0);
   cl_assert(reminder_db_get_len((uint8_t *)&item2.header.id, sizeof(Uuid)) > 0);
   // remove the two that share a parent
@@ -283,7 +283,7 @@ void test_reminder_db__bad_item(void) {
   cl_assert(S_SUCCESS != reminder_db_insert((uint8_t *)&bad_item.common.id, UUID_SIZE, (uint8_t *)&bad_item, sizeof(bad_item)));
 }
 
-void test_reminder_db__read_nonexistant(void) {
+void test_reminder_db__read_nonexistent(void) {
   TimelineItem item = {{{0}}};
   cl_assert_equal_i(E_DOES_NOT_EXIST, reminder_db_read_item(&item, &bad_item.common.id));
 }
@@ -301,7 +301,7 @@ void test_reminder_db__find_by_timestamp_title(void) {
   cl_assert_equal_b(reminder_db_find_by_timestamp_title(0, "nonexistent title", NULL, &reminder),
                     false);
 
-  // Test matching timstamp, but not title
+  // Test matching timestamp, but not title
   cl_assert_equal_b(reminder_db_find_by_timestamp_title(title_item1.header.timestamp,
       "nonexistent title", NULL, &reminder), false);
 

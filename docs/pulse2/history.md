@@ -100,7 +100,7 @@ with the target address and data. The receiver performs the write and
 sends an acknowledgement with the address. If the sender doesn't receive
 an acknowledgement within some timeout, it re-sends the write command.
 Any number of write commands and acknowledgements can be in-flight
-simulatneously. If a write completes but the acknowledgement is lost in
+simultaneously. If a write completes but the acknowledgement is lost in
 transit, the sender can re-send the same write command and the receiver
 can naively overwrite the data without issue due to the idempotence of
 flash writes.
@@ -149,7 +149,7 @@ Applications can choose to communicate with either best-effort datagram
 service (like PULSEv1), or reliable datagram service that guarantees
 in-order datagram delivery. Having the reliable transport available
 made it very easy to implement prompt commands over PULSEv2. And it was
-also suprisingly easy to implement a PULSEv2 transport for the Pebble
+also surprisingly easy to implement a PULSEv2 transport for the Pebble
 Protocol, which allows developers and test automation to interact with
 bigboards using libpebble2 and pebble-tool, exactly like they can with
 emulators and sealed watches connected to phones.

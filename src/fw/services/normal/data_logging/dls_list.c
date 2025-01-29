@@ -49,7 +49,7 @@ void dls_assert_own_list_mutex(void) {
 //   * session->data->open_count can only be read/modified while holding the list mutex
 //     and is only available if session->status == DataLoggingStatusActive
 //   * In order to avoid deadlocks,
-//      - s_list_mutex MUST be released befored trying to grab session->data->mutex.
+//      - s_list_mutex MUST be released before trying to grab session->data->mutex.
 //      - session->data->open_count must incremented to be > 0 under s_list_mutex before you can
 //        grab session->data-mutex
 //      - if you already own session->data-mutex, it is OK to grab s_list_mutex

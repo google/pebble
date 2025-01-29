@@ -162,14 +162,14 @@ SECTIONS
     It is one task of the startup to copy the initial values from FLASH to RAM. */
     .data : {
         . = ALIGN(4);
-        /* This is used by the startup in order to initialize the .data secion */
+        /* This is used by the startup in order to initialize the .data section */
         __data_start = .;
 
         *(.data)
         *(.data.*)
 
         . = ALIGN(4);
-        __data_end = .; /* This is used by the startup in order to initialize the .data secion */
+        __data_end = .; /* This is used by the startup in order to initialize the .data section */
     } >RAM AT>FLASH
     __data_load_start = LOADADDR(.data);
 
@@ -177,14 +177,14 @@ SECTIONS
     .bss (NOLOAD) :
     {
         . = ALIGN(4);
-        __bss_start = .; /* This is used by the startup in order to initialize the .bss secion */
+        __bss_start = .; /* This is used by the startup in order to initialize the .bss section */
 
         *(.bss)
         *(.bss.*)
         *(COMMON)
 
         . = ALIGN(4);
-        __bss_end = .; /* This is used by the startup in order to initialize the .bss secion */
+        __bss_end = .; /* This is used by the startup in order to initialize the .bss section */
     } >RAM
 
     .stack (NOLOAD) :

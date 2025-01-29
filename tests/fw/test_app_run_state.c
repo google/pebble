@@ -206,7 +206,7 @@ void test_app_run_state__send_update(void) {
 }
 
 void test_app_run_state__protocol_msg_callback(void) {
-  // Tests app_run_state_procotol_msg_callback which should take data
+  // Tests app_run_state_protocol_msg_callback which should take data
   // from a source and perform the appropriate command
   prv_set_remote_active();
   prv_set_remote_capability(CommSessionRunState);

@@ -142,7 +142,7 @@ void test_ancs_notifications__handle_phone_call_message(void) {
 
   ancs_notifications_handle_message(37, properties, notif_attributes, app_attributes);
 
-  // We just processed an incomming phone call event, there better be a phone event scheduled!
+  // We just processed an incoming phone call event, there better be a phone event scheduled!
   PebbleEvent event = fake_event_get_last();
 
   cl_assert_equal_i(event.type, PEBBLE_PHONE_EVENT);

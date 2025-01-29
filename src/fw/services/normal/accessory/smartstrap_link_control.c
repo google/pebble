@@ -37,7 +37,7 @@
 //! How often we'll go without some valid data from the smartstrap before sending a status message
 //! and disconnecting if the smartstrap doesn't reply. This is in seconds.
 #define STATUS_CHECK_INTERVAL             5
-//! The minimum number of seconds between connnection requests to avoid spamming the smartstrap.
+//! The minimum number of seconds between connection requests to avoid spamming the smartstrap.
 #define MIN_CONNECTION_REQUEST_INTERVAL   1
 //! The minimum number of seconds between status requests to avoid spamming the smartstrap
 #define MIN_STATUS_REQUEST_INTERVAL       5

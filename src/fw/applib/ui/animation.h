@@ -110,7 +110,7 @@ typedef enum {
 } AnimationCurve;
 
 
-//! Creates a new Animation on the heap and initalizes it with the default values.
+//! Creates a new Animation on the heap and initializes it with the default values.
 //!
 //! * Duration: 250ms,
 //! * Curve: \ref AnimationCurveEaseInOut (ease-in-out),

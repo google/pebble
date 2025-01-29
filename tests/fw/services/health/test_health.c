@@ -500,7 +500,7 @@ void test_health__range_to_day_id_clamps_values(void) {
 }
 
 void test_health__sum_full_days(void) {
-  // use values structured as binary mask so we can detect if we sum up currect days
+  // use values structured as binary mask so we can detect if we sum up correct days
   s_sys_activity_get_metric_values.out.history[0] = 1000;
   s_sys_activity_get_metric_values.out.history[1] = 2000;
   s_sys_activity_get_metric_values.out.history[2] = 4000;
@@ -606,7 +606,7 @@ void test_health__process_range(void) {
 }
 
 void test_health__sum_fraction_days(void) {
-  // use values structured as binary mask so we can detect if we sum up currect days
+  // use values structured as binary mask so we can detect if we sum up correct days
   s_sys_activity_get_metric_values.out.history[0] = 1000;
   s_sys_activity_get_metric_values.out.history[1] = 2000;
   s_sys_activity_get_metric_values.out.history[2] = 4000;
@@ -1308,7 +1308,7 @@ void test_health__avg_full_days(void) {
                                        time_util_get_midnight_of(now), HealthServiceTimeScopeDaily);
   cl_assert_equal_i(result, exp_daily);
 
-  // All of our tests set "now" to Mon, 28 Dec 2015 09:12:22 GMT, so yesteday was a Sunday
+  // All of our tests set "now" to Mon, 28 Dec 2015 09:12:22 GMT, so yesterday was a Sunday
   result = health_service_sum_averaged(HealthMetricStepCount,
                                        time_util_get_midnight_of(now) - SECONDS_PER_DAY,
                                        time_util_get_midnight_of(now),
@@ -1434,7 +1434,7 @@ void test_health__avg_partial_days(void) {
 
   // ---
   // Compute weekend HealthMetricActiveSeconds average from 4am to 9am. This should use the
-  // daily totals since we don't havce 15-minute averages maintained for this metric
+  // daily totals since we don't have 15-minute averages maintained for this metric
   exp_value = (k_daily_total * 5 * MINUTES_PER_HOUR) / MINUTES_PER_DAY;
 
   // Since "today" is Monday, going back 24 hours puts us on a weekend
@@ -1532,17 +1532,17 @@ static void prv_update_stats(HealthServiceStats *stats, HealthValue value) {
 // valid aggregation functions. The sum function is only applicable to cumulative metrics and is
 // tested above in test_health__sum_full_days().
 
-// DISBLAED because the firmware doesn't actually store daily history of HRM values.
+// DISABLED because the firmware doesn't actually store daily history of HRM values.
 void DISABLED_test_health__min_max_avg_full_days(void) {
   // Get the current time and day
   const time_t now = rtc_get_time();
-  const time_t yeserday_utc = now - SECONDS_PER_DAY;
+  const time_t yesterday_utc = now - SECONDS_PER_DAY;
 
   struct tm local_tm;
   localtime_r(&now, &local_tm);
   DayInWeek todays_day_in_week = local_tm.tm_wday;
 
-  localtime_r(&yeserday_utc, &local_tm);
+  localtime_r(&yesterday_utc, &local_tm);
   DayInWeek yesterday_day_in_week = local_tm.tm_wday;
   bool yesterday_was_weekend = (yesterday_day_in_week == Sunday)
                                || (yesterday_day_in_week == Saturday);

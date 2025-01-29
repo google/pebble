@@ -20,7 +20,7 @@
 
 #include "drivers/flash.h"
 
-//! An address in the flash address spac
+//! An address in the flash address space
 typedef uint32_t FlashAddress;
 
 //! This is the memory mapped region that's mapped to the parallel flash.
@@ -45,10 +45,10 @@ typedef enum S29VSCommand {
 } S29VSCommand;
 
 //! Arguments to the S29VSCommand_EraseSetup command
-typedef enum S29VSCommandEraseAguments {
-  S29VSCommandEraseAguments_ChipErase = 0x10,
-  S29VSCommandEraseAguments_SectorErase = 0x30
-} S29VSCommandEraseAguments;
+typedef enum S29VSCommandEraseArguments {
+  S29VSCommandEraseArguments_ChipErase = 0x10,
+  S29VSCommandEraseArguments_SectorErase = 0x30
+} S29VSCommandEraseArguments;
 
 //! The bitset stored in the status register, see flash_s29vs_read_status_register
 typedef enum S29VSStatusBit {

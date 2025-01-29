@@ -17,7 +17,7 @@
 //! This file displays the main Quick Launch menu that is found in our settings menu
 //! It allows the feature to be enabled or for an app to be set
 //! The list of apps that the user can choose from is found in settings_quick_launch_app_menu.c
-//! This file is also responsible for saving / storing the uuid of each quichlaunch app as well as
+//! This file is also responsible for saving / storing the uuid of each quicklaunch app as well as
 //! whether or not the quicklaunch app is enabled.
 
 #include "settings_menu.h"

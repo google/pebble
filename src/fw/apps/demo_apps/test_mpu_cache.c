@@ -57,7 +57,7 @@ static void prv_verify_modify_on_app_task(void *data) {
   if (app_data->test != 0x3C3C3C3C) {
     text_layer_set_text(&app_data->text, "FAILED");
   } else {
-    text_layer_set_text(&app_data->text, "PASSSED");
+    text_layer_set_text(&app_data->text, "PASSED");
   }
 }
 

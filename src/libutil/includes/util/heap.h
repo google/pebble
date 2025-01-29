@@ -43,9 +43,9 @@ typedef struct Heap {
   HeapInfo_t *begin;
   HeapInfo_t *end;
 
-  //! Number of allocated bytes, including beginers
+  //! Number of allocated bytes, including headers
   unsigned int current_size;
-  //! Peak number of allocated bytes, including beginers
+  //! Peak number of allocated bytes, including headers
   unsigned int high_water_mark;
 
   HeapLockImpl lock_impl;
@@ -111,7 +111,7 @@ void* heap_realloc(Heap* const heap, void *ptr, unsigned long nbytes, uintptr_t 
 //! are zero'd.
 void* heap_zalloc(Heap* const heap, size_t size, uintptr_t client_pc);
 
-//! Allocate a buffer to hold an array of count elements, each of size size (in bytes)
+//! Allocate a buffer to hold an array of count elements, each of size (in bytes)
 //! and initializes all bits to zero.
 void* heap_calloc(Heap* const heap, size_t count, size_t size, uintptr_t client_pc);
 

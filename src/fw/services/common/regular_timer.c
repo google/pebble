@@ -109,7 +109,7 @@ static void timer_callback(void* data) {
 //! Used only once when we first start up. This should be really close to the 0ms point.
 static void timer_callback_initializing(void* data) {
   // FIXME: FreeRTOS timers are subject to skew if something else is running on the millisecond.
-  // We'll need to continously adjust our timer period in really annoying ways.
+  // We'll need to continuously adjust our timer period in really annoying ways.
   new_timer_start(s_timer_id, 1000, timer_callback, NULL, TIMER_START_FLAG_REPEATING);
 
   timer_callback(data);

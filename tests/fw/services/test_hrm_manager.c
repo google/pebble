@@ -217,7 +217,7 @@ void test_hrm_manager__subscription(void) {
   cl_assert_equal_b(hrm_is_enabled(HRM), false);
 }
 
-// When we cleanup after an app process, its subscription, if any, should get an expriration time
+// When we cleanup after an app process, its subscription, if any, should get an expiration time
 // placed on it
 void test_hrm_manager__app_cleanup(void) {
   stub_pebble_tasks_set_current(PebbleTask_App);

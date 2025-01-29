@@ -92,7 +92,7 @@ typedef struct SystemCertificationData {
 
   GBitmap **regulatory_marks;
   uint8_t regulatory_marks_count;
-  // For buiding up regulatory marks cells when constructing the menu
+  // For building up regulatory marks cells when constructing the menu
   uint8_t current_regulatory_marks_cell_start_idx;
   uint8_t num_regulatory_marks_in_current_cell;
   uint16_t current_regulatory_marks_cell_width;

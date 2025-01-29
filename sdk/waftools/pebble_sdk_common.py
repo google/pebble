@@ -296,7 +296,7 @@ def _get_entry_point(ctx, js_type, waf_js_entry_point):
 def pbl_bundle(self, *k, **kw):
     """
     This method is bound to the build context and is called by specifying `bld.pbl_bundle`. We
-    set the custome features `js` and `bundle` to run when this method is invoked.
+    set the custom features `js` and `bundle` to run when this method is invoked.
     :param self: the BuildContext object
     :param k: none expected
     :param kw:

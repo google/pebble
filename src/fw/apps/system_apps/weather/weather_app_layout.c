@@ -87,7 +87,7 @@ static void prv_fill_high_low_temp_buffer(const int high, const int low, char *b
     /// Shown when only the day's low temperature is known (e.g. "--° / 52°")
     snprintf(buffer, buffer_size, i18n_get("--° / %i°", i18n_owner), low);
   } else {
-    /// A day's high and low temperature, separated by a foward slash (e.g. "68° / 52°")
+    /// A day's high and low temperature, separated by a forward slash (e.g. "68° / 52°")
     snprintf(buffer, buffer_size, i18n_get("%i° / %i°", i18n_owner), high, low);
   }
 }

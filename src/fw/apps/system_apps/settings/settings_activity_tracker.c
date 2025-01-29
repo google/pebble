@@ -144,7 +144,7 @@ static void prv_draw_no_activities_cell_rect(GContext *ctx, const Layer *cell_la
   const GSize text_size = graphics_text_layout_get_max_used_size(ctx, no_activities_string, font,
                                                                  box, overflow, alignment, NULL);
 
-  // We want to position the text in the center of the cell veritically,
+  // We want to position the text in the center of the cell vertically,
   // we divide the height of the cell by two and subtract half of the text size.
   // However, that just puts the TOP of a line vertically aligned.
   // So we also have to subtract half of a single line's width.

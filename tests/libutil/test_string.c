@@ -109,7 +109,7 @@ void test_string__test_itoa_int(void) {
 }
 
 void test_string__test_byte_stream_to_hex_string(void) {
-  char result_buf[256]; // arbitraily large
+  char result_buf[256]; // arbitrarily large
 
   const uint8_t byte_stream[10] = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9};
   const char *expected_result_fwd = "00010203040506070809";

@@ -39,7 +39,7 @@ Record* factory_registry_get(const char* key, const uint8_t key_length, const ui
 
 //! Remove a record from the factory settings registry
 //!
-//! @return 0 on sucess, -1 if record not found
+//! @return 0 on success, -1 if record not found
 int factory_registry_remove(const char* key, const uint8_t key_length, const uint8_t* uuid);
 
 //!  Write the factory settings registry to flash

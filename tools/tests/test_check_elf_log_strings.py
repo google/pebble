@@ -25,7 +25,7 @@ from log_hashing.check_elf_log_strings import check_dict_log_strings
 
 class TestCheckLogStrings(unittest.TestCase):
 
-    def test_some_acceptible_strings(self):
+    def test_some_acceptable_strings(self):
         log_dict = {
                        1: {'file': 'test.c', 'line': '1', 'msg': 'test %s'},
                        2: {'file': 'test.c', 'line': '2', 'msg': 'test %-2hx'},

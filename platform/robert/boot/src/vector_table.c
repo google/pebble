@@ -53,7 +53,7 @@ __attribute__((__noreturn__)) void Default_Handler(void) {
 
 // All these functions are weak references to the Default_Handler,
 // so if we define a handler in elsewhere in the firmware, these
-// will be overriden
+// will be overridden
 #define ALIAS(sym) __attribute__((__weak__, __alias__(sym)))
 ALIAS("Default_Handler") void NMI_Handler(void);
 ALIAS("Default_Handler") void HardFault_Handler(void);

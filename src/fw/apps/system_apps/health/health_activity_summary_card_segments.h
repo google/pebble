@@ -19,7 +19,7 @@
 #include "health_progress.h"
 
 //! 5 main segments + 2 real corners + 2 endcaps implemented as corners (for bw)
-//! Each of the 5 non-corener segments get 20% of the total
+//! Each of the 5 non-corner segments get 20% of the total
 #define AMOUNT_PER_SEGMENT (HEALTH_PROGRESS_BAR_MAX_VALUE * 20 / 100)
 
 // Found through trial and error

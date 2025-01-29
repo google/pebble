@@ -188,7 +188,7 @@ T_STATIC const RockyAPIGraphicsColorDefinition s_color_definitions[] = {
   {"transparent", GColorClearARGB8},
   {"clear", GColorClearARGB8},
 
-  // Pebble colors taken from gcolor_defitions.h
+  // Pebble colors taken from gcolor_definitions.h
   {"black", GColorBlackARGB8},
   {"oxfordblue", GColorOxfordBlueARGB8},
   {"dukeblue", GColorDukeBlueARGB8},

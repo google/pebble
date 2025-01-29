@@ -187,7 +187,7 @@ static uint16_t s_timeline_peek_before_time_m =
 // If changing of the setting requires more than just setting a global, this handler is the
 // place to perform those other actions.
 //
-// If the the handler gets passed a invalid new value, set its s_* global to a default value,
+// If the handler gets passed a invalid new value, set its s_* global to a default value,
 // and return false. This will trigger a rewrite of the s_* global to the backing file.
 //
 // Each of these functions MUST be named using the following pattern because they are called

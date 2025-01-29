@@ -315,7 +315,7 @@ void stuck_callback_menu_cb(int index, void *ctx) {
 }
 
 // =================================================================================
-void invaid_timer_id_menu_cb(int index, void *ctx) {
+void invalid_timer_id_menu_cb(int index, void *ctx) {
   void *cb_data = 0;
   uint32_t zero_flags = 0;
 
@@ -405,7 +405,7 @@ static void prv_window_load(Window *window) {
       .callback = stuck_callback_menu_cb
     }, {
       .title = "invalid timer ID",
-      .callback = invaid_timer_id_menu_cb
+      .callback = invalid_timer_id_menu_cb
     }, {
       .title = "RT: sch 1 sec from cb",
       .callback = reg_timer_schedule_1sec_from_cb_menu_cb

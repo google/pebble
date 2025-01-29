@@ -127,7 +127,7 @@ void test_ancs_filtering__record_app_no_action_needed(void) {
 }
 
 void test_ancs_filtering__record_app_no_prefs_yet(void) {
-  // No existing prefs yet, we should instert all the defaults
+  // No existing prefs yet, we should insert all the defaults
   iOSNotifPrefs *existing_prefs = NULL;
 
   AttributeList attr_list = {

@@ -42,7 +42,7 @@ typedef int AlarmId; //! A unique ID that can be used to refer to each configure
 typedef enum AlarmKind {
   ALARM_KIND_EVERYDAY = 0, // Alarms of this type will happen each day
   ALARM_KIND_WEEKENDS,     // Alarms of this type will happen Monday - Friday
-  ALARM_KIND_WEEKDAYS,     // Alarms of this type happen Saturaday and Sunday
+  ALARM_KIND_WEEKDAYS,     // Alarms of this type happen Saturday and Sunday
   ALARM_KIND_JUST_ONCE,    // Alarms of this type will happen next time the specified time occurs
   ALARM_KIND_CUSTOM,       // Alarms of this type happen on specified days
 } AlarmKind;
@@ -102,7 +102,7 @@ void alarm_set_enabled(AlarmId id, bool enable);
 void alarm_delete(AlarmId id);
 
 //! @param id The alarm that is being queried
-//! @return True if the alarm exists and is not disabled, Flase otherwise
+//! @return True if the alarm exists and is not disabled, False otherwise
 bool alarm_get_enabled(AlarmId id);
 
 //! @param id The alarm that should be deleted

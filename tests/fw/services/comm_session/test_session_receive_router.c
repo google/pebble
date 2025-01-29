@@ -141,7 +141,7 @@ static void prv_set_connection_responsiveness(Transport *transport,
 
 }
 
-// Referenced from protocol_endppints_table.auto.h override header:
+// Referenced from protocol_endpoints_table.auto.h override header:
 ///////////////////////////////////////////////////////////
 
 typedef enum {

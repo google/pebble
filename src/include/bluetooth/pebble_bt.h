@@ -25,7 +25,7 @@
 //! Bluetopia does not contain our Vendor ID, yet.
 //! See Bluetooth Company Identifiers:
 //! http://www.bluetooth.org/Technical/AssignedNumbers/identifiers.htm
-//! Be careful not to use with with BT Classic! See sdp.c why.
+//! Be careful not to use with BT Classic! See sdp.c why.
 #define PEBBLE_BT_VENDOR_ID (0x0154)
 
 //! Our Bluetooth-SIG-Registered 16-bit UUID:

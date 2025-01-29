@@ -27,7 +27,7 @@
   // be changed. Migrations are likely as well.
   //
   // On watches with only 4MB of flash, the region will have a size of zero and be ignored by the
-  // fileystem.
+  // filesystem.
   #if defined(BOARD_V2_0) || defined(BOARD_V1_5) || defined(LARGE_SPI_FLASH)
     #define BOARD_NOR_FLASH_SIZE 0x600000
   #else

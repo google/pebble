@@ -36,7 +36,7 @@ static void dbgserial_interrupt_handler(bool *should_context_switch);
 
 static DbgSerialCharacterCallback s_character_callback;
 static TimerID s_stop_mode_timeout_timer;
-//! Use a seperate variable so it's safe to check from the ISR.
+//! Use a separate variable so it's safe to check from the ISR.
 static bool s_stop_mode_inhibited = false;
 
 //! We DMA into this buffer as a circular buffer
@@ -64,7 +64,7 @@ static bool prv_uart_irq_handler(UARTDevice *dev, uint8_t data, const UARTRXErro
 void dbgserial_input_init(void) {
   exti_configure_pin(BOARD_CONFIG.dbgserial_int, ExtiTrigger_Falling, dbgserial_interrupt_handler);
 
-  // some platforms have a seperate pin for the EXTI int and the USART
+  // some platforms have a separate pin for the EXTI int and the USART
   if (BOARD_CONFIG.dbgserial_int_gpio.gpio != NULL) {
     gpio_input_init(&BOARD_CONFIG.dbgserial_int_gpio);
   }

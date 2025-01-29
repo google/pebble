@@ -90,7 +90,7 @@ void app_run_state_command(CommSession *session, AppRunStateCommand cmd, const U
       // Determine the running application
       uuid = &app_manager_get_current_app_md()->uuid;
       if (session != NULL) {
-        // We check the session here as to be backwards compatibile with the 0x31 endpoint and
+        // We check the session here as to be backwards compatible with the 0x31 endpoint and
         // to avoid repeating code, the endpoint makes use of this function, but since it does
         // not have an active session (it's session is NULL), it will fall to the else case.
         AppRunState *app_run_state = kernel_malloc_check(sizeof(AppRunState));

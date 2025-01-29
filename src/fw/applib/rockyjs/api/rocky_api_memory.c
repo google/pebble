@@ -58,7 +58,7 @@ static bool prv_is_headroom_allocated(const RockyMemoryAPIContext *ctx) {
 }
 
 static void prv_allocate_headroom_or_die(RockyMemoryAPIContext *ctx) {
-  // It's highly likely that while executing a the handler for the 'memorypressure' event,
+  // It's highly likely that while executing the handler for the 'memorypressure' event,
   // new objects have been created on the heap. Therefore, it's unlikely we'll be able to reclaim
   // the desired headroom immediately after returning from the handler. Try to grab as much as we
   // can and resize it later on, see prv_resize_headroom_if_needed().
@@ -153,7 +153,7 @@ static void prv_memory_callback(jmem_free_unused_memory_severity_t severity,
     return;
   }
 
-  // Trigger agressive garbage collection, force property hashmaps to be dropped:
+  // Trigger aggressive garbage collection, force property hashmaps to be dropped:
   prv_collect_all_garbage();
   jmem_heap_stats_t stats = {};
   jmem_heap_get_stats(&stats);

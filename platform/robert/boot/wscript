@@ -24,7 +24,7 @@ def options(opt):
                    help='Which board to build for (robert_bb, robert_bb2, cutts_bb, robert_evt)')
     opt.add_option('--nowatchdog', action='store_true',
                    help='Disable automatic reboots when watchdog fires')
-    opt.add_option('--display_test', action='store_true', help='Enables the diplsay test loop')
+    opt.add_option('--display_test', action='store_true', help='Enables the display test loop')
 
 
 def configure(conf):

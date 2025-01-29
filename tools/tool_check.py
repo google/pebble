@@ -86,7 +86,7 @@ def text_to_req_list(req_list_text):
             req_list.append((line, None, None))
             continue
         if match.group('package').endswith(','):
-            # Muliple requirements
+            # Multiple requirements
             match2 = VERSION_PATTERN.match(match.group('package').strip(','))
             if not match2:
                 Logs.pprint('RED', 'Don\'t understand line \'%s\'' % raw_line)

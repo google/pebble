@@ -337,7 +337,7 @@ void test_bluetooth_persistent_storage__ble_store_and_get(void) {
   cl_assert_equal_m(&irk_out, &pairing_2.irk, sizeof(irk_out));
   cl_assert_equal_m(&device_out, &pairing_2.identity, sizeof(device_out));
 
-  // Add a thrid pairing
+  // Add a third pairing
   SMPairingInfo pairing_3;
   memset(&pairing_3, 0x00, sizeof(pairing_3));
   pairing_3 = (SMPairingInfo) {
@@ -726,7 +726,7 @@ void test_bluetooth_persistent_storage__bt_classic_store_and_get(void) {
   cl_assert_equal_s(name_2, name_out);
   cl_assert_equal_i(platform_bits_2, platform_bits_out);
 
-  // Add a thrid pairing
+  // Add a third pairing
   BTDeviceAddress addr_3 = {{0x31, 0x32, 0x33, 0x34, 0x35, 0x36}};
   SM128BitKey link_key_3 = {{0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30,
                              0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30, 0x30}};

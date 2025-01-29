@@ -214,7 +214,7 @@ typedef void (*MenuLayerDrawSeparatorCallback)(GContext* ctx,
 
 //! Function signature for the callback to handle the event that a user hits
 //! the SELECT button.
-//! @param menu_layer The \ref MenuLayer for which the selection event occured
+//! @param menu_layer The \ref MenuLayer for which the selection event occurred
 //! @param cell_index The MenuIndex of the cell that is selected
 //! @param callback_context The callback context
 //! @see \ref menu_layer_set_callbacks()
@@ -225,7 +225,7 @@ typedef void (*MenuLayerSelectCallback)(struct MenuLayer *menu_layer,
 
 //! Function signature for the callback to handle a change in the current
 //! selected item in the menu.
-//! @param menu_layer The \ref MenuLayer for which the selection event occured
+//! @param menu_layer The \ref MenuLayer for which the selection event occurred
 //! @param new_index The MenuIndex of the new item that is selected now
 //! @param old_index The MenuIndex of the old item that was selected before
 //! @param callback_context The callback context
@@ -239,7 +239,7 @@ typedef void (*MenuLayerSelectionChangedCallback)(struct MenuLayer *menu_layer,
 //! Function signature for the callback which allows or changes selection behavior of the menu.
 //! In order to change the cell that should be selected, modify the passed in new_index.
 //! Preventing the selection from changing, new_index can be assigned the value of old_index.
-//! @param menu_layer The \ref MenuLayer for which the selection event that occured
+//! @param menu_layer The \ref MenuLayer for which the selection event that occurred
 //! @param new_index Pointer to the index that the MenuLayer is going to change selection to.
 //! @param old_index The index that is being unselected.
 //! @param callback_context The callback context
@@ -374,13 +374,13 @@ typedef struct MenuLayer {
     MenuCellSpan cursor;
   } cache;
   //! @internal
-  //! Selected cell index + geometery cache of the selected cell
+  //! Selected cell index + geometry cache of the selected cell
   MenuCellSpan selection;
   MenuLayerCallbacks callbacks;
   void *callback_context;
 
   //! Default colors to be used for \ref MenuLayer.
-  //! Use MenuLayerColorNormal and MenuLayerColorHightlight for indexing.
+  //! Use MenuLayerColorNormal and MenuLayerColorHighlight for indexing.
   GColor normal_colors[MenuLayerColor_Count];
   GColor highlight_colors[MenuLayerColor_Count];
 
@@ -435,10 +435,10 @@ typedef struct MenuLayer {
 //!   will be selected initially.
 //! The layer is marked dirty automatically.
 //! @param menu_layer The \ref MenuLayer to initialize
-//! @param frame The frame with which to initialze the \ref MenuLayer
+//! @param frame The frame with which to initialize the \ref MenuLayer
 void menu_layer_init(MenuLayer *menu_layer, const GRect *frame);
 
-//! Creates a new \ref MenuLayer on the heap and initalizes it with the default values.
+//! Creates a new \ref MenuLayer on the heap and initializes it with the default values.
 //!
 //! * Clips: `true`
 //! * Hidden: `false`
@@ -560,7 +560,7 @@ void menu_layer_set_selected_next(MenuLayer *menu_layer,
 //! @param scroll_align The alignment of the new selection
 //! @param animated Supply `true` to animate changing the selection, or `false`
 //! to change the selection instantly.
-//! @note If the section and/or row index exceeds the avaible number of sections
+//! @note If the section and/or row index exceeds the available number of sections
 //! or resp. rows, the exceeding index/indices will be capped, effectively
 //! selecting the last section and/or row, resp.
 void menu_layer_set_selected_index(MenuLayer *menu_layer,

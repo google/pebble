@@ -22,7 +22,7 @@ NUM_SUBREGIONS = 8
 
 
 def round_up_to_power_of_two(x):
-    """ Find the next power of two that is eqaul to or greater than x
+    """ Find the next power of two that is equal to or greater than x
 
     >>> round_up_to_power_of_two(4)
     4
@@ -63,7 +63,7 @@ def find_subregions_for_region(address, size):
     smallest_block_size = max(round_up_to_power_of_two(size), MIN_REGION_SIZE)
     largest_block_size = min(round_up_to_power_of_two(size * NUM_SUBREGIONS), MAX_REGION_SIZE)
 
-    # Iterate over the potentional candidates from smallest to largest
+    # Iterate over the potential candidates from smallest to largest
     current_block_size = smallest_block_size
     while current_block_size <= largest_block_size:
         subregion_size = current_block_size // NUM_SUBREGIONS
@@ -76,9 +76,9 @@ def find_subregions_for_region(address, size):
                 end_in_block <= current_block_size):
 
             # This region fits in the provided region and both the start and end are aligned with
-            # subregion boundries. This will work!
+            # subregion boundaries. This will work!
 
-            block_start_addresss = address - start_in_block
+            block_start_address = address - start_in_block
 
             start_enabled_subregion = start_in_block / subregion_size
             end_enabled_subregion = end_in_block / subregion_size
@@ -90,7 +90,7 @@ def find_subregions_for_region(address, size):
             disabled_subregions_bytes = disabled_subregions.tobytes()
             disabled_subregions_int, = struct.unpack('B', disabled_subregions_bytes)
 
-            return MpuRegion(block_start_addresss, current_block_size, disabled_subregions_int)
+            return MpuRegion(block_start_address, current_block_size, disabled_subregions_int)
 
         current_block_size *= 2
     else:

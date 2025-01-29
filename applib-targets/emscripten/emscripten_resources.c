@@ -160,7 +160,7 @@ static bool prv_get_resource(uint32_t resource_id, Resource *res) {
   if ((entry.resource_id != resource_id) ||
       (entry.length == 0)) {
     // empty resource
-    printf("%s: Invalid resourcel for %d\n", __FILE__, resource_id);
+    printf("%s: Invalid resource for %d\n", __FILE__, resource_id);
     return false;
   }
 

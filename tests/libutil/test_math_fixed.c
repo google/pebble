@@ -230,7 +230,7 @@ void test_math_fixed__S16_3_rounding(void) {
 
   // This test shows how the in between fractional values evaluate to the fixed representation
   // Positive numbers round down to nearest fraction
-  // Negative numbers round up to neareset fraction
+  // Negative numbers round up to nearest fraction
   test_num = (int16_t)((float)-1.249 * (1 << FIXED_S16_3_PRECISION));
   num = (Fixed_S16_3){ .raw_value = test_num };
   cl_assert(num.integer == -2);
@@ -444,7 +444,7 @@ void test_math_fixed__S32_16_mul(void) {
   Fixed_S32_16 num1, num2;
   Fixed_S32_16 mul, mul_c;
 
-  // Test number muliplication
+  // Test number multiplication
   num1 = FIXED_S32_16_ONE;
   num2 = FIXED_S32_16_ONE;
   mul = Fixed_S32_16_mul(num1, num2);

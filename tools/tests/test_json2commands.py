@@ -481,7 +481,7 @@ class MyTestCase(unittest.TestCase):
         self.assertTrue(open_path_command.open)
 
     def test_parse_json_sequence(self):
-        # Test mix of fills and open paths with mulitple frames
+        # Test mix of fills and open paths with multiple frames
         current_path = os.path.dirname(os.path.realpath(__file__))
         filename = current_path + '/json2commands_test.json'
         

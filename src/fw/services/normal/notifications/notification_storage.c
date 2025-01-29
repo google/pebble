@@ -673,7 +673,7 @@ void notification_storage_rewrite(void (*iter_callback)(TimelineItem *notificati
   // Close the old file
   prv_file_close(fd);
 
-  // We have to close and reopend the new file pointed to by the file descriptor, so
+  // We have to close and reopened the new file pointed to by the file descriptor, so
   // that it's temp flag is cleared.
   pfs_close(new_fd);
   new_fd = prv_file_open(OP_FLAG_READ | OP_FLAG_WRITE);

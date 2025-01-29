@@ -28,7 +28,7 @@ def contains(a, b):
 
 def claim(c, unclaimed_regions, symbol):
     """ Removes region (c_start, c_end) from the set of unclaimed_regions
-        Return True if the region was sucessfully removed, False if it was
+        Return True if the region was successfully removed, False if it was
         already claimed.
 
     """

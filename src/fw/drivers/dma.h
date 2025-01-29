@@ -41,7 +41,7 @@ void dma_request_start_direct(DMARequest *this, void *dst, const void *src, uint
 
 //! Starts a circular DMA transfer which calls the callback for when the transfer is both complete
 //! and half complete. The length should be specified in bytes.
-//! @note The destination address must not be in a cachable region of memory (i.e. SRAM on the F7).
+//! @note The destination address must not be in a cacheable region of memory (i.e. SRAM on the F7).
 //! See the comment within dma.c for more info.
 void dma_request_start_circular(DMARequest *this, void *dst, const void *src, uint32_t length,
                                 DMACircularRequestHandler handler, void *context);

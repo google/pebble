@@ -166,7 +166,7 @@ void test_rocky_api_global__calls_init_and_notifies_about_apis(void) {
   cl_assert(*s_log_internal__expected == NULL);
 }
 
-void test_rocky_api_global__can_unsubsribe_event_handlers(void) {
+void test_rocky_api_global__can_unsubscribe_event_handlers(void) {
   static const RockyGlobalAPI api = {
     .add_handler = prv_api_add,
     .remove_handler = prv_api_remove,

@@ -32,7 +32,7 @@ typedef struct {
 typedef struct __attribute__((packed)) PluginServiceState {
   bool subscribed_to_app_event_service : 1;   // Set on first plugin_service_subscribe by this app
   EventServiceInfo event_service_info;
-  ListNode subscribed_services;               // Linked list of PluginServiceEntrys
+  ListNode subscribed_services;               // Linked list of PluginServiceEntry
 } PluginServiceState;
 
 void plugin_service_state_init(PluginServiceState *state);

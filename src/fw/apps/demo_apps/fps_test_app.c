@@ -164,7 +164,7 @@ static void prv_window_update_proc(struct Layer *layer, GContext *ctx) {
   data->rendered_frames++;
 }
 
-static void prv_window_disapper(Window *window) {
+static void prv_window_disappear(Window *window) {
 }
 
 void prv_syncing_content_offset_changed(struct ScrollLayer *scroll_layer, void *context) {
@@ -183,7 +183,7 @@ static void prv_window_load(Window *window) {
   // one image at the top left .topleft_layer,
   // and two menu layers .action_list1 and .action_list2 that overlay each other
 
-  // some hackery with the two menu layers goes on to keep their scroll offest in sync
+  // some hackery with the two menu layers goes on to keep their scroll offset in sync
   // and to have the inverter layer rendered only once
 
   const int16_t navbar_width = s_fps_topleft_bitmap.bounds.size.w;
@@ -256,7 +256,7 @@ static void s_main(void) {
   window_set_window_handlers(window, &(WindowHandlers) {
     .load = prv_window_load,
     .unload = prv_window_unload,
-    .disappear = prv_window_disapper,
+    .disappear = prv_window_disappear,
   });
 
   app_window_stack_push(window, true);

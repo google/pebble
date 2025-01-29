@@ -32,7 +32,7 @@ void Default_Handler(void) {
 
 // All these functions are weak references to the Default_Handler,
 // so if we define a handler in elsewhere in the firmware, these
-// will be overriden
+// will be overridden
 ALIAS("Default_Handler") void NMI_Handler(void);
 ALIAS("Default_Handler") void HardFault_Handler(void);
 ALIAS("Default_Handler") void MemManage_Handler(void);

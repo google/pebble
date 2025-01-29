@@ -323,7 +323,7 @@ void activity_sessions_prv_send_activity_session_to_data_logging(ActivitySession
 }
 
 
-// This structre holds stats we collected from going through a list of sleep sessions. It is
+// This structure holds stats we collected from going through a list of sleep sessions. It is
 // filled in by prv_compute_sleep_stats
 typedef struct {
   ActivityScalarStore total_minutes;
@@ -501,7 +501,7 @@ void activity_sessions_prv_get_sleep_bounds_utc(time_t now_utc, time_t *enter_ut
   int first_sleep_utc;
   if (minute_of_day < ACTIVITY_LAST_SLEEP_MINUTE_OF_DAY) {
     // It is before the ACTIVITY_LAST_SLEEP_MINUTE_OF_DAY (currently 9pm) cutoff, so use
-    // the previou day's cutoff
+    // the previous day's cutoff
     first_sleep_utc = start_of_today_utc - (SECONDS_PER_DAY - last_sleep_second_of_day);
   } else {
     // It is after 9pm, so use the 9pm cutoff
@@ -583,7 +583,7 @@ static void prv_log_activities(time_t now_utc) {
     }
     PBL_ASSERTN(params);
 
-    // If this is an event we already logged, or it's still onging, don't log it
+    // If this is an event we already logged, or it's still ongoing, don't log it
     if (session->ongoing || (session_exit_utc <= *params->exit_utc)) {
       continue;
     }
@@ -659,7 +659,7 @@ void activity_sessions_prv_init(SettingsFile *file, time_t utc_now) {
       // flash got corrupted, as in PBL-37848
       PBL_HEXDUMP(LOG_LEVEL_INFO, (void *)state->activity_sessions,
                   sizeof(state->activity_sessions));
-      PBL_LOG(LOG_LEVEL_ERROR, "Invalid activity session detected - could be flash corrruption");
+      PBL_LOG(LOG_LEVEL_ERROR, "Invalid activity session detected - could be flash corruption");
 
       // Zero out flash so that we don't get into a reboot loop
       memset(state->activity_sessions, 0, sizeof(state->activity_sessions));
@@ -703,7 +703,7 @@ void NOINLINE activity_sessions_prv_minute_handler(time_t utc_sec) {
   prv_update_sleep_metrics(utc_sec, last_sleep_utc_of_day,
                                              last_sleep_processed_utc);
 
-  // Log any new activites we detected to the phone
+  // Log any new activities we detected to the phone
   prv_log_activities(utc_sec);
 }
 

@@ -169,7 +169,7 @@ void handle_init(void) {
 
   text_layer_set_text(text_layer, "? ? ?");
 
-  // Subscribe to mesages published by the worker
+  // Subscribe to messages published by the worker
   app_worker_message_subscribe(steps_event_handler);
 
   // Subscribe to second ticks

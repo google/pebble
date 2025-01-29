@@ -2017,7 +2017,7 @@ static void prv_feed_activity_minutes(KAlgTestActivityMinute *samples, int sampl
 }
 
 // ---------------------------------------------------------------------------------------
-// Test that we correectly recognize walk and run activities
+// Test that we correctly recognize walk and run activities
 void test_kraepelin_algorithm__walks_and_runs(void) {
   const int k_minute_data_len = 60;
   const int k_minute_data_bytes = k_minute_data_len * sizeof(KAlgTestActivityMinute);

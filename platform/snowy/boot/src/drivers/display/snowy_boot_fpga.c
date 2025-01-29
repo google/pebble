@@ -224,7 +224,7 @@ void display_init(void) {
 
   // Work around an issue which some boards exhibit where the FPGA ring
   // oscillator can start up with higher harmonics, massively overclocking the
-  // design and causing malfunction. When this occurrs, the draw-scene command
+  // design and causing malfunction. When this occurs, the draw-scene command
   // will not work, asserting BUSY indefinitely but never updating the display.
   // Other commands such as display-on and display-off are less affected by the
   // overclocking, so the display can be turned on while the FPGA is in this

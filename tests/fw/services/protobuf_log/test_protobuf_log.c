@@ -690,7 +690,7 @@ void test_protobuf_log__measurements_auto_flush(void) {
     values[i] = i * 3;
   }
 
-  // Create a session with an artifically small buffer size which will cause it to flush
+  // Create a session with an artificially small buffer size which will cause it to flush
   // automatically
   time_t start_time = rtc_get_time();
   ProtobufLogConfig log_config = {

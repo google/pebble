@@ -105,7 +105,7 @@ uint32_t activity_private_compute_distance_mm(uint32_t steps, uint32_t ms) {
 //   active_ml = 0.2 * speed_m_per_min * minutes * weight_kg
 //
 // Converting to calories (5.01 calories per ml) and plugging in distance for speed * time, we get
-// the following. We will define walking as less then 4.5MPH (120 meters/minute)
+// the following. We will define walking as less than 4.5MPH (120 meters/minute)
 // for walking:
 //   active_cal = 0.1 * distance_m * weight_kg * 5.01
 //              = 0.501 * distance_m * weight_kg

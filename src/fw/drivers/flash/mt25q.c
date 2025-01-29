@@ -129,7 +129,7 @@ status_t flash_impl_unprotect(void) {
 
 static void prv_set_high_drive_strength(void) {
   // Match the impedance of the traces (~50 ohms) by configuring the drive strength of the data
-  // output pins on the MT25Q to the 45 ohm setting This avoids signal integreity issues. This is
+  // output pins on the MT25Q to the 45 ohm setting This avoids signal integrity issues. This is
   // done by setting bits 2:0 in the "Enhanced Volatile Configuration Register" to 101b.
   const uint8_t read_instruction = 0x65;
   const uint8_t write_instruction = 0x61;

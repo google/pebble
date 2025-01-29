@@ -260,7 +260,7 @@ void qspi_indirect_read_dma(QSPIPort *dev, uint8_t instruction, uint32_t start_a
   // So this function is broken into 3 parts:
   // 1. Do reads 1 byte at a time until buffer_ptr is word-aligned
   // 2. Do 32-bit DMA transfers for as much as possible
-  // 3. Do reads 1 bytes at a time to deal with non-aligned acceses at the end
+  // 3. Do reads 1 bytes at a time to deal with non-aligned accesses at the end
 
   const uint32_t word_mask = dcache_alignment_mask_minimum(QSPI_DMA_READ_WORD_SIZE);
   const uintptr_t buffer_address = (uintptr_t)buffer;

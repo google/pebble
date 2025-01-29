@@ -18,7 +18,7 @@
 
 #include <stdbool.h>
 
-//! Call this as you're just entering manufacturing mode to do initalial setup.
+//! Call this as you're just entering manufacturing mode to do initial setup.
 void accessory_mfg_mode_start(void);
 
 //! Called on an ISR to handle a character from the accessory connector.

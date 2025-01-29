@@ -114,7 +114,7 @@ static unsigned long s_le_create_connection_callback_param;
 int GAP_LE_Create_Connection(unsigned int BluetoothStackID,
                              unsigned int ScanInterval,
                              unsigned int ScanWindow,
-                             GAP_LE_Filter_Policy_t InitatorFilterPolicy,
+                             GAP_LE_Filter_Policy_t InitiatorFilterPolicy,
                              GAP_LE_Address_Type_t RemoteAddressType,
                              BD_ADDR_t *RemoteDevice,
                              GAP_LE_Address_Type_t LocalAddressType,
@@ -207,7 +207,7 @@ int GAP_LE_Cancel_Create_Connection(unsigned int BluetoothStackID) {
   return 0;
 }
 
-// Puts the event that the BT Controller will emit after a succesfull
+// Puts the event that the BT Controller will emit after a successful
 // GAP_LE_Cancel_Create_Connection call.
 void fake_gap_le_put_cancel_create_event(const BTDeviceInternal *device, bool is_master) {
   fake_gap_put_connection_event(HCI_ERROR_CODE_UNKNOWN_CONNECTION_IDENTIFIER,

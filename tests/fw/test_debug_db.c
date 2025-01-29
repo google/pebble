@@ -39,7 +39,7 @@ void test_debug_db__initialize(void) {
 void test_debug_db__cleanup(void) {
 }
 
-void test_debug_db__unitialized(void) {
+void test_debug_db__uninitialized(void) {
   int index;
   uint8_t id;
 

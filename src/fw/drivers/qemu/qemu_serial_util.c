@@ -50,7 +50,7 @@ void qemu_serial_private_init_state(QemuSerialGlobals *state)
 
 
 // -----------------------------------------------------------------------------------------
-// Helper function triggred by our ISR handler when we detect a high water mark on our receive
+// Helper function triggered by our ISR handler when we detect a high water mark on our receive
 // buffer or a footer signature.
 //
 // Parses the ISR's circular buffer and collects assembled message into a message buffer. If

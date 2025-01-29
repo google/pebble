@@ -584,7 +584,7 @@ static bool NOINLINE prv_prepare_minute_data(uint16_t uncertain_m, time_t sleep_
 
     // See if we need to zero out steps in this record. We check that the start of the minute
     // is within the sleep bounds. The WITHIN macro returns true if the test value is
-    // <= end_value, so we need to subract one minute from the end to see if the start of this
+    // <= end_value, so we need to subtract one minute from the end to see if the start of this
     // test minute is entirely within the sleep range.
     bool was_sleeping =  WITHIN(cbuf_record->utc_sec, sleep_start_utc,
                                 sleep_end_utc - SECONDS_PER_MINUTE);
@@ -747,7 +747,7 @@ void activity_algorithm_post_process_sleep_sessions(uint16_t num_input_sessions,
     const time_t end_utc = session->start_utc + (session->length_min * SECONDS_PER_MINUTE);
     const unsigned end_minute = time_util_get_minute_of_day(end_utc);
 
-    ACTIVITY_LOG_DEBUG("procesing activity %d, start_min: %u, len: %"PRIu16"",
+    ACTIVITY_LOG_DEBUG("processing activity %d, start_min: %u, len: %"PRIu16"",
                        (int)session->type, start_minute, session->length_min);
 
     // Skip if not a sleep session
@@ -864,7 +864,7 @@ static void prv_activity_update_states(time_t utc_sec, AlgMinuteRecord *record_o
 
 // ------------------------------------------------------------------------------------
 // This is called when the activity services is doing down. This tells all of our state machines
-// that are are going to be shut down, and to save off any unsaved data/sleep/step sessions.
+// that are going to be shut down, and to save off any unsaved data/sleep/step sessions.
 void activity_algorithm_early_deinit(void) {
   if (!prv_lock()) {
     return;
@@ -1240,7 +1240,7 @@ bool activity_algorithm_get_minute_history(HealthMinuteData *minute_data, uint32
   // Init for missing records
   memset(minute_data, 0xFF, array_size * sizeof(HealthMinuteData));
 
-  // Figure out the lowest key value for for chunks that go into this buffer
+  // Figure out the lowest key value for chunks that go into this buffer
   time_t utc_now = rtc_get_time();
   const time_t oldest_possible = utc_now
       - ALG_MINUTE_FILE_MAX_ENTRIES * ALG_MINUTES_PER_FILE_RECORD * SECONDS_PER_MINUTE;
@@ -1351,7 +1351,7 @@ bool activity_algorithm_test_fill_minute_file(void) {
   AlgMinuteFileRecord record = { };
   prv_init_minute_record(&record.hdr, utc_sec, true /*for_file*/);
 
-  // Delete old file so this doesn't take forver, in case it's already got a lot of data in it
+  // Delete old file so this doesn't take forever, in case it's already got a lot of data in it
   pfs_remove(ALG_MINUTE_DATA_FILE_NAME);
   s_alg_state->num_minute_records = 0;
 

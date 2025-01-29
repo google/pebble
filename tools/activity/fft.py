@@ -305,7 +305,7 @@ def compute_magnitude(x):
 
 
 ###################################################################################################
-def apply_gausian(x, width=0.1):
+def apply_gaussian(x, width=0.1):
     """ Multiply x by the gaussian function. Width is a fraction, like 0.1
     """
     result = []
@@ -377,8 +377,8 @@ if __name__ == '__main__':
         print "\n############ INPUT ######################"
         print_graph(input)
 
-        print "\n############ GAUSIAN OF INPUT ############"
-        # input = apply_gausian(input, 0.1)
+        print "\n############ GAUSSIAN OF INPUT ############"
+        # input = apply_gaussian(input, 0.1)
         print_graph(input)
 
         result = real_value_fft(input)
@@ -425,7 +425,7 @@ if __name__ == '__main__':
         input = [x - mean_mag for x in input]
 
         print "\n############ INPUT ######################"
-        # input = apply_gausian(input)
+        # input = apply_gaussian(input)
         print_graph(input)
 
         result = real_value_fft(input)

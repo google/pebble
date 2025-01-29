@@ -741,7 +741,7 @@ void test_timeline_peek_event__one_persistent_event_lifecycle(void) {
   CHECK_NO_EVENTS( .count = 6, .is_future_empty = true );
 }
 
-void test_timeline_peek_event__upcoming_priotized_over_persistent_event_lifecycle(void) {
+void test_timeline_peek_event__upcoming_prioritized_over_persistent_event_lifecycle(void) {
   TimelineItem item =
       DEFINE_EVENT( .id = 0x01, .timestamp  = 20 * SECONDS_PER_MINUTE, .duration = 70,
                     .persistent = true );

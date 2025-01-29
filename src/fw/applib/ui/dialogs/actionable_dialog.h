@@ -41,7 +41,7 @@ void actionable_dialog_init(ActionableDialog *actionable_dialog, const char *dia
 Dialog *actionable_dialog_get_dialog(ActionableDialog *actionable_dialog);
 
 //! Sets the type of action bar to used to one of the pre-defined types or a custom one.
-//! @param actionable_dialog Pointer to a \ref ActioanbleDialog whom which to set
+//! @param actionable_dialog Pointer to a \ref ActionableDialog whom which to set
 //! @param action_bar_type The type of action bar to give the passed dialog
 //! @param action_bar Pointer to an \ref ActionBarLayer to assign to the dialog
 //! @note:  The pointer to an \ref ActionBarLayer is optional and only required when the
@@ -53,7 +53,7 @@ void actionable_dialog_set_action_bar_type(ActionableDialog *actionable_dialog,
                                            ActionBarLayer *action_bar);
 
 //! Sets the ClickConfigProvider of the action bar. If the dialog has a custom action bar then
-//! this function has no effect. The action bar is responsible for setting up it's own click
+//! this function has no effect. The action bar is responsible for setting up its own click
 //! config provider
 //! @param actionable_dialog Pointer to a \ref ActionableDialog to which to set the provider on
 //! @param click_config_provider The \ref ClickConfigProvider to set

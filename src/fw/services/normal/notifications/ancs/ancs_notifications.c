@@ -193,7 +193,7 @@ static bool prv_should_ignore_because_stale(time_t timestamp) {
   // workaround for PBL-8400 (ignore notifications older than 2 hours)
   // PBL-9066: Increased to 20 minutes due to Mail.app only fetching emails every 15 minutes
   // PBL-9251: Increased to 2 hours. People have Fetch set to hourly.
-  // PBL-12726: Added a check to see if the timstamp is coming from a location based reminder
+  // PBL-12726: Added a check to see if the timestamp is coming from a location based reminder
   // This work-around is causing more trouble than the problem it was solving...
   if (timestamp < (now - MAXIMUM_NOTIFY_TIME) && timestamp != INVALID_TIME) {
     PBL_LOG(LOG_LEVEL_INFO, "Not presenting stale notif (ts=%ld)", timestamp);

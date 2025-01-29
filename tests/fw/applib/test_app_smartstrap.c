@@ -183,7 +183,7 @@ void test_app_smartstrap__invalid_args(void) {
 }
 
 void test_app_smartstrap__check_ids(void) {
-  // craete an attribute
+  // create an attribute
   SmartstrapAttribute *attr = app_smartstrap_attribute_create(0x1111, 0x2222, 100);
   cl_assert(attr != NULL);
 

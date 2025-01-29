@@ -69,8 +69,8 @@ size_t attributes_address_get_buffer_size(uint8_t num_attributes,
                                           const uint8_t *attributes_per_address,
                                           size_t required_size_for_strings);
 
-//! Initializes an AttrbuteList and AddressList
-//! @param attr_list          The AttrbuteList to initialize
+//! Initializes an AttributeList and AddressList
+//! @param attr_list          The AttributeList to initialize
 //! @param addr_list          The AddressList to initialize
 //! @param buffer             The buffer to hold the list of attributes and address
 //! @param num_attributes     number of attributes
@@ -85,7 +85,7 @@ void attributes_address_init(AttributeList *attr_list,
                              const uint8_t *attributes_per_address);
 
 //! Fills an AttributeList and AddressList from serialized data
-//! @param attr_list          The AttrbuteList to fill
+//! @param attr_list          The AttributeList to fill
 //! @param addr_list          The AddressList to fill
 //! @param buffer             The buffer which holds the list of attributes and address
 //! @param buf_end            A pointer to the end of the buffer
@@ -103,7 +103,7 @@ size_t attributes_address_get_serialized_payload_size(AttributeList *list,
                                                       AddressList *addr_list);
 
 //! Serializes an attribute list and address list into a buffer
-//! @param attr_list          The AttrbuteList to serialize
+//! @param attr_list          The AttributeList to serialize
 //! @param addr_list          The AddressList to serialize
 //! @param buffer a pointer to the buffer to write to
 //! @param buffer_size the size of the buffer in bytes

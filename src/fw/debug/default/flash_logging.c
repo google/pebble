@@ -36,14 +36,14 @@
 //
 // This implements a simple circular logging scheme format.
 //
-// The only assumption it makes is that you have at least two eraseable flash
+// The only assumption it makes is that you have at least two erasable flash
 // units. However, the more units (i.e sectors) that you have, the smaller % of
 // logs that will be erased when the log buffer fills.
 //
 // On each boot, we create a file to hold all the messages for that boot. This
 // file is called a log generation or log.
 //
-// Within each eraseable unit multiple 'pages' exist. A log generation can span
+// Within each erasable unit multiple 'pages' exist. A log generation can span
 // one or more pages. Multiple log generations can be stored at any given
 // time. The oldest pages will be removed as the log buffer wraps around.
 //
@@ -138,7 +138,7 @@ _Static_assert((MAX_POSSIBLE_LOG_GENS >= 4) &&
 _Static_assert(MAX_POSSIBLE_LOG_GENS < MAX_PAGE_CHUNK_ID,
     "Invalid number of chunk ids for serial distance to work");
 _Static_assert((LOG_REGION_SIZE / ERASE_UNIT_SIZE) >= 2,
-    "Need to have at least 2 eraseable units for flash logging to work");
+    "Need to have at least 2 erasable units for flash logging to work");
 _Static_assert((LOG_REGION_SIZE % LOG_PAGE_SIZE) == 0,
     "The log page size must be divisible by the log region size");
 _Static_assert(((FLASH_REGION_DEBUG_DB_END % ERASE_UNIT_SIZE) == 0) &&

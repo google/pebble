@@ -264,7 +264,7 @@ void dma_request_init(DMARequest *this) {
 ////////////////////////////////////////////////////////////////////////////////
 
 static void prv_validate_memory(DMARequest *this, void *dst, const void *src, uint32_t length) {
-  if (mpu_memory_is_cachable(src)) {
+  if (mpu_memory_is_cacheable(src)) {
     // Flush the source buffer from cache so that SRAM has the correct data.
     uintptr_t aligned_src = (uintptr_t)src;
     size_t aligned_length = length;
@@ -273,11 +273,11 @@ static void prv_validate_memory(DMARequest *this, void *dst, const void *src, ui
   }
 
   const uint32_t alignment_mask = prv_get_data_size_bytes(this) - 1;
-  if (mpu_memory_is_cachable(dst)) {
+  if (mpu_memory_is_cacheable(dst)) {
     // If a cache line within the dst gets evicted while we do the transfer, it'll corrupt SRAM, so
     // just invalidate it now.
     dcache_invalidate(dst, length);
-    // since the dst address is cachable, it needs to be aligned to a cache line and
+    // since the dst address is cacheable, it needs to be aligned to a cache line and
     // the length must be an even multiple of cache lines
     const uint32_t dst_alignment_mask = dcache_alignment_mask_minimum(alignment_mask);
     PBL_ASSERTN(((length & dst_alignment_mask) == 0) &&
@@ -377,11 +377,11 @@ void dma_request_start_circular(DMARequest *this, void *dst, const void *src, ui
   PBL_ASSERTN(!this->stream->state->current_request);
   this->stream->state->current_request = this;
 
-  // TODO: We don't currently support DMA'ing into a cachable region of memory (i.e. SRAM) for
+  // TODO: We don't currently support DMA'ing into a cacheable region of memory (i.e. SRAM) for
   // circular transfers. The reason is that it gets complicated because the consumer might be
   // reading from the buffer at any time (as UART does), as opposed to direct transfers where the
   // consumer is always reading only after the transfer has completed.
-  PBL_ASSERTN(!mpu_memory_is_cachable(dst));
+  PBL_ASSERTN(!mpu_memory_is_cacheable(dst));
   prv_request_start(this, dst, src, length, DMARequestTransferType_Circular);
 }
 
@@ -449,7 +449,7 @@ void dma_stream_irq_handler(DMAStream *stream) {
   switch (this->state->transfer_type) {
     case DMARequestTransferType_Direct:
       if (has_tc) {
-        if (mpu_memory_is_cachable(this->state->transfer_dst)) {
+        if (mpu_memory_is_cacheable(this->state->transfer_dst)) {
           dcache_invalidate(this->state->transfer_dst, this->state->transfer_length);
         }
 

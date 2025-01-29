@@ -1033,7 +1033,7 @@ static void prv_debug_cmd_heart_rate_api(int index, void *context) {
     goto exit;
   }
 
-  // Test registring and cancelling a metric alert
+  // Test registering and cancelling a metric alert
   HealthMetricAlert *alert = health_service_register_metric_alert(HealthMetricHeartRateBPM, 10);
   APP_LOG(APP_LOG_LEVEL_DEBUG, "Result from register_metric_alert: %p", alert);
   if (alert == NULL) {

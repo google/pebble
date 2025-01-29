@@ -16,7 +16,7 @@
 
 #include "gtypes.h"
 
-//! This is used for performaing backward-compatibility conversions with 1-bit GColors.
+//! This is used for performing backward-compatibility conversions with 1-bit GColors.
 GColor8 get_native_color(GColor2 color) {
   switch (color) {
     case GColor2Black:

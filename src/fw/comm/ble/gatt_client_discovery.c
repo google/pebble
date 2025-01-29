@@ -440,7 +440,7 @@ unlock:
   return ret_val;
 }
 
-//! extern for gap_le_connnection.c
+//! extern for gap_le_connection.c
 //! Cleans up any state and frees the associated memory of all the things this module might have
 //! created for a given connection.
 //! bt_lock() is assumed to be taken by the caller

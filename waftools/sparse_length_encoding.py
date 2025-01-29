@@ -58,8 +58,8 @@ def encode(source):
     frequency.update(source)
     # most_common() doesn't define what happens if there's a tie in frequency. Let's always pick
     # the lowest value of that frequency to make the encoding predictable.
-    occurences = frequency.most_common()
-    escape = min(x[0] for x in occurences if x[1] == occurences[-1][1])
+    occurrences = frequency.most_common()
+    escape = min(x[0] for x in occurrences if x[1] == occurrences[-1][1])
     yield escape
     for b, g in groupby(source):
         if b == b'\0':

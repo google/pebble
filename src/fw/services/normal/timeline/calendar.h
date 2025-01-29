@@ -22,7 +22,7 @@
 //! The states are:
 //! - "no calendar events ongoing"
 //! - "one or more calendar events ongoing"
-//! Not every calendar event start / stop produces an event, but every transition is guarenteed
+//! Not every calendar event start / stop produces an event, but every transition is guaranteed
 //! to put an event.
 
 

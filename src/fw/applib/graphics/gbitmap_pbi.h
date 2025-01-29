@@ -43,7 +43,7 @@
 //!   (width by height) and the first bit of image data is the pixel at (0, 0),
 //!   then the bounds.size would be `GSize(29, 5)` and bounds.origin would be `GPoint(0, 0)`.
 //!   ![](gbitmap.png)
-//!   In the illustration each pixel is a representated as a square. The white
+//!   In the illustration each pixel is a represented as a square. The white
 //!   squares are the bits that are used, the gray squares are the padding bits, because
 //!   each row of image data has to be a multiple of 4 bytes (32 bits).
 //!   The numbers in the column in the left are the offsets (in bytes) from the `*addr`
@@ -54,7 +54,7 @@
 //!   ![](pixel_bit_values.png)
 //!
 //! - \ref GBitmapFormat8Bit:
-//!   Each pixel in the bitmap is represented by 1 byte. The color value of that byte correspends to
+//!   Each pixel in the bitmap is represented by 1 byte. The color value of that byte corresponds to
 //!   a GColor.argb value.
 //!   There is no restriction on row_size_bytes / stride.
 //!

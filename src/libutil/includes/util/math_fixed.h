@@ -158,7 +158,7 @@ static __inline__ Fixed_S64_32 Fixed_S64_32_sub(Fixed_S64_32 a, Fixed_S64_32 b) 
 ////////////////////////////////////////////////////////////////
 /// Mixed operations
 ////////////////////////////////////////////////////////////////
-// This function muliples a Fixed_S16_3 and Fixed_S32_16 and returns result in Fixed_S16_3 format
+// This function multiplies a Fixed_S16_3 and Fixed_S32_16 and returns result in Fixed_S16_3 format
 static __inline__ Fixed_S16_3 Fixed_S16_3_S32_16_mul(Fixed_S16_3 a, Fixed_S32_16 b) {
   return Fixed_S16_3( a.raw_value * b.raw_value >> FIXED_S32_16_PRECISION );
 }

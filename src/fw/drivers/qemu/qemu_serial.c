@@ -173,8 +173,8 @@ static const QemuMessageHandler s_qemu_endpoints[] = {
   { QemuProtocol_Tap, prv_tap_msg_callback },
   { QemuProtocol_BluetoothConnection, prv_bluetooth_connection_msg_callback },
   { QemuProtocol_Compass, prv_compass_msg_callback },
-  { QemuProtocol_Battery, qemu_battery_msg_callack },
-  { QemuProtocol_Accel, qemu_accel_msg_callack },
+  { QemuProtocol_Battery, qemu_battery_msg_callback },
+  { QemuProtocol_Accel, qemu_accel_msg_callback },
   { QemuProtocol_TimeFormat, prv_time_format_msg_callback },
   { QemuProtocol_TimelinePeek, prv_timeline_peek_msg_callback },
   { QemuProtocol_ContentSize, prv_content_size_msg_callback },
@@ -216,7 +216,7 @@ void qemu_serial_init(void) {
 
 
 // -----------------------------------------------------------------------------------------
-// KernelMain callback triggred by our ISR handler when we detect a high water mark on our
+// KernelMain callback triggered by our ISR handler when we detect a high water mark on our
 //  receive buffer or a footer signature
 static void prv_process_receive_buffer(void *context) {
   uint32_t msg_bytes;

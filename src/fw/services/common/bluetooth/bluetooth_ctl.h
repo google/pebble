@@ -48,5 +48,5 @@ void bt_ctl_set_enabled(bool enabled);
 //! Sets the override mode used to stop and start the bluetooth independent of the airplane mode.
 void bt_ctl_set_override_mode(BtCtlModeOverride override);
 
-//! Reset bluetoosh using sequential calls to comm_stop() and comm_start()
+//! Reset bluetooth using sequential calls to comm_stop() and comm_start()
 void bt_ctl_reset_bluetooth(void);

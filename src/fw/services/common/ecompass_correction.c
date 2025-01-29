@@ -192,7 +192,7 @@ cleanup:
 // Conceptually, it makes sense that the farther points are from one another (>
 // t), the less that errors due to noise, fixed point mathematics, & motion
 // render bad solutions. (empirically, this seems to be the behavior as
-// well). However, the greater the the threshold, the more orientations one
+// well). However, the greater the threshold, the more orientations one
 // must put their watch through in order to get solution sets
 //
 // For now, select a distance metric that should work out of the box for a

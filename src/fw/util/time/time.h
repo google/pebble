@@ -47,7 +47,7 @@
 #define TZ_LEN 6
 
 // DST special cases. These map to indexes in the tools/timezones.py script that handles parsing
-// the olsen database into a compressed form. Don't change these without changing the script.
+// the olson database into a compressed form. Don't change these without changing the script.
 //
 // Note that we don't correctly handle Morroco's DST rules, they're incredibly complex due to them
 // suspending DST each year for Ramadan, resulting in 4 DST transitions each year.

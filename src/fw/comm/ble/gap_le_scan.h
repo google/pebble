@@ -22,7 +22,7 @@
 
 //! @internal
 //! The number of reports that the circular reports buffer can contain.
-//! Accomodate for 4 reports with advertisment and scan reponse data:
+//! Accomodate for 4 reports with advertisement and scan response data:
 #define GAP_LE_SCAN_REPORTS_BUFFER_SIZE (4 * (sizeof(GAPLERawAdReport) + \
 (2 * GAP_LE_AD_REPORT_DATA_MAX_LENGTH)))
 
@@ -52,12 +52,12 @@ typedef struct {
 //! reports and scan responses will be buffered. A PEBBLE_BLE_SCAN_EVENT will
 //! be generated when there is data to be collected.
 //! @see gap_le_consume_scan_results
-//! @return 0 if scanning started succesfully or an error code otherwise.
+//! @return 0 if scanning started successfully or an error code otherwise.
 bool gap_le_start_scan(void);
 
 //! @internal
 //! Stops scanning.
-//! @return 0 if scanning stopped succesfully or an error code otherwise.
+//! @return 0 if scanning stopped successfully or an error code otherwise.
 bool gap_le_stop_scan(void);
 
 //! @internal
@@ -79,6 +79,6 @@ bool gap_le_consume_scan_results(uint8_t *buffer, uint16_t *size_in_out);
 void gap_le_scan_init(void);
 
 //! @internal
-//! Stops any ongoing scanning and related activitie and cleans up anything that
+//! Stops any ongoing scanning and related activities and cleans up anything that
 //! had been created by gap_le_scan_init()
 void gap_le_scan_deinit(void);

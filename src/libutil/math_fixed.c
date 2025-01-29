@@ -35,7 +35,7 @@ Fixed_S64_32 math_fixed_recursive_filter(Fixed_S64_32 x,
     ytmp = Fixed_S64_32_add(ytmp, Fixed_S64_32_mul(cb[i], state_x[i]));
   }
 
-  // Factor in the y * a coeficients
+  // Factor in the y * a coefficients
   for (int i = 0; i < num_output_coefficients; i++) {
     ytmp = Fixed_S64_32_sub(ytmp, Fixed_S64_32_mul(ca[i], state_y[i]));
   }

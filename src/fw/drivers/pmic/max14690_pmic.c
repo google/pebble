@@ -359,7 +359,7 @@ bool pmic_enable_battery_measure(void) {
 bool pmic_disable_battery_measure(void) {
   bool result = prv_set_mon_config_register(0);
 
-  // Releases the lock that was previously aquired in pmic_enable_battery_measure.
+  // Releases the lock that was previously acquired in pmic_enable_battery_measure.
   prv_mon_config_unlock();
 
   return result;
@@ -519,7 +519,7 @@ static bool prv_is_alive(void) {
     return true;
   } else {
     PBL_LOG(LOG_LEVEL_DEBUG,
-            "Error: read max14690 whomai byte 0x%x, expecting 0x%x", val, 0x01);
+            "Error: read max14690 whoami byte 0x%x, expecting 0x%x", val, 0x01);
     return false;
   }
 }

@@ -38,7 +38,7 @@ typedef enum {
   //! Use to hide the process, unless there is ongoing communication with
   //! the companion smartphone application.
   PROCESS_INFO_VISIBILITY_SHOWN_ON_COMMUNICATION = 1 << 2,
-  //! Use to indicate the process allows Javascript API access
+  //! Use to indicate the process allows JavaScript API access
   PROCESS_INFO_ALLOW_JS = 1 << 3,
   //! Use to indicate the process should have a worker.bin installed as well.
   PROCESS_INFO_HAS_WORKER = 1 << 4,
@@ -199,7 +199,7 @@ int version_compare(Version a, Version b);
 // - tintin/waftools/inject_metadata.py
 // - iOS/PebblePrivateKit/PebblePrivateKit/PBBundle.m
 typedef struct __attribute__((__packed__)) {
-  char header[8];                   //!< Sentinal value, should always be 'PBLAPP'
+  char header[8];                   //!< Sentinel value, should always be 'PBLAPP'
   Version struct_version;           //!< version of this structure's format
   Version sdk_version;              //!< version of the SDK used to build this process
   Version process_version;          //!< version of the process
@@ -237,7 +237,7 @@ typedef struct __attribute__((__packed__)) {
 
 //! @internal
 typedef struct __attribute__((__packed__)) {
-  char header[8];                   //!< Sentinal value, should always be 'PBLAPP'
+  char header[8];                   //!< Sentinel value, should always be 'PBLAPP'
   Version struct_version;           //!< version of this structure's format
   Version sdk_version;              //!< version of the SDK used to build this process
   Version process_version;          //!< version of the process

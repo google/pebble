@@ -2671,7 +2671,7 @@ AlgDlsMinuteData *activity_sample_sleep_v1_3(int *len) {
 
 // ----------------------------------------------------------------
 // Sample captured at: 2015-08-22 19:57:00 local, 2015-08-23 02:57:00 GMT
-// Accroding to misfit:
+// According to misfit:
 //  total sleep: 374 min
 //  deep: 200 min
 //  light: 174 min

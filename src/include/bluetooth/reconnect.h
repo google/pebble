@@ -29,7 +29,7 @@ void bt_driver_reconnect_resume(void);
 
 //! Attempt to reconnect to the last connected remote device and restore
 //! connections to the Bluetooth Classic profile (iSPP).
-//! This is an asynchonous operation. A call to this function returns quickly.
+//! This is an asynchronous operation. A call to this function returns quickly.
 //! If the last connected remote device and services are already connected, or
 //! if the device is not an iOS device, this function does not do much.
 //! @param ignore_paused If true, this call will attempt to reconnect,

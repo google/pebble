@@ -321,7 +321,7 @@ void test_do_not_disturb__disabling_manual_dnd_should_override_scheduled(void) {
   active = do_not_disturb_is_active();
   cl_assert(active == true); // Both OFF
 
-  do_not_disturb_set_manually_enabled(false); // turned Manual OFF, scheduled should be overriden
+  do_not_disturb_set_manually_enabled(false); // turned Manual OFF, scheduled should be overridden
   cl_assert(do_not_disturb_is_manually_enabled() == false);
   cl_assert(do_not_disturb_is_schedule_enabled(WeekdaySchedule) == true);
   active = do_not_disturb_is_active();

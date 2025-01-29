@@ -570,7 +570,7 @@ bool accel_is_idle(void) {
     return false;
   }
 
-  // It was idle recently, see if it's still idle. Note we are avoiding reading the accel hardwware again here
+  // It was idle recently, see if it's still idle. Note we are avoiding reading the accel hardware again here
   // to keep this call as lightweight as possible. Instead we are just comparing the last read value with
   // the value last captured by analytics (which does so on an hourly heartbeat).
   AccelRawData accel_data;

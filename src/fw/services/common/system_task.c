@@ -57,7 +57,7 @@ static void system_task_idle_timer_callback(void* data) {
   }
 }
 
-static void system_task_main(void* paramater) {
+static void system_task_main(void* parameter) {
   task_watchdog_mask_set(PebbleTask_KernelBackground);
   task_init();
 

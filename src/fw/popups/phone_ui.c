@@ -803,7 +803,7 @@ static const char *prv_get_app_id(const char *number, PhoneCallSource source) {
   return NULL;
 }
 
-// Checks for the existance of a call reply action in the notif pref db and loads it into
+// Checks for the existence of a call reply action in the notif pref db and loads it into
 // a timeline item
 static bool prv_load_sms_reply_action(const char *number, PhoneCallSource source) {
   const char *app_id = prv_get_app_id(number, source);
@@ -982,7 +982,7 @@ static void prv_window_pop(void) {
   // The window_stack_remove() call should run the unload handler (which deinits the ui),
   // but in the rare case that the window never loaded (i.e. a higher priority modal was up)
   // then we could leak the phone_ui data and assert on the next phone call.
-  // Deinit again to cover this case (will be a no-op) if the window was alredy deinited.
+  // Deinit again to cover this case (will be a no-op) if the window was already deinited.
   prv_phone_ui_deinit();
 }
 

@@ -57,10 +57,10 @@ typedef enum S29VSCommand {
 } S29VSCommand;
 
 //! Arguments to the S29VSCommand_EraseSetup command
-typedef enum S29VSCommandEraseAguments {
-  S29VSCommandEraseAguments_ChipErase = 0x10,
-  S29VSCommandEraseAguments_SectorErase = 0x30
-} S29VSCommandEraseAguments;
+typedef enum S29VSCommandEraseArguments {
+  S29VSCommandEraseArguments_ChipErase = 0x10,
+  S29VSCommandEraseArguments_SectorErase = 0x30
+} S29VSCommandEraseArguments;
 
 //! The bitset stored in the status register, see prv_read_status_register
 typedef enum S29VSStatusBit {
@@ -422,7 +422,7 @@ status_t flash_impl_erase_sector_begin(FlashAddress sector_addr) {
 
   prv_issue_command(sector_addr, S29VSCommand_EraseSetup);
   prv_issue_command_argument(sector_addr,
-                             S29VSCommandEraseAguments_SectorErase);
+                             S29VSCommandEraseArguments_SectorErase);
   prv_allow_write_if_sector_is_not_protected(true, sector_addr);
 
   // Check the status register to make sure that the erase has started.
@@ -508,7 +508,7 @@ status_t flash_impl_erase_bulk_begin(void) {
   flash_s29vs_use();
 
   prv_issue_command(0, S29VSCommand_EraseSetup);
-  prv_issue_command_argument(0, S29VSCommandEraseAguments_ChipErase);
+  prv_issue_command_argument(0, S29VSCommandEraseArguments_ChipErase);
 
   flash_s29vs_release();
 }

@@ -35,7 +35,7 @@ def _generate_sdk_waf(ctx):
     for tool in sdk_waftools + shared_waftools:
         path = ctx.path.parent.find_node(tool)
         if path is None:
-            ctx.fatal("Trying to bundle non existent resource in pb-waf ({})".format(tool))
+            ctx.fatal("Trying to bundle nonexistent resource in pb-waf ({})".format(tool))
         pebble_waf_tools.append(path)
 
     # We cannot run this as a sub-wscript because we use a specific vendor-provided

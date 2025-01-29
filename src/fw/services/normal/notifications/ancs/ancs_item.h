@@ -27,7 +27,7 @@
 //! @param app_attributes ANCS App attributes (namely, the display name)
 //! @param app_metadata The icon and color associated with the app
 //! @param notif_prefs iOS notification prefs for this notification
-//! @param timestamp Time the notification occured
+//! @param timestamp Time the notification occurred
 //! @param properties Additional ANCS properties (category, flags, etc)
 //! @return The newly created timeline item
 TimelineItem *ancs_item_create_and_populate(ANCSAttribute *notif_attributes[],

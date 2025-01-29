@@ -322,7 +322,7 @@ Tuple * dict_read_first(DictionaryIterator *iter);
 //! See also \ref Tuple, with is the header of a serialized key/value pair.
 typedef struct Tuplet {
   //! The type of the Tuplet. This determines which of the struct fields in the
-  //! anonymomous union are valid.
+  //! anonymous union are valid.
   TupleType type;
   //! The key.
   uint32_t key;
@@ -460,7 +460,7 @@ typedef void (*DictionaryKeyUpdatedCallback)(const uint32_t key, const Tuple *ne
 
 //! Merges entries from another "source" dictionary into a "destination" dictionary.
 //! All Tuples from the source are written into the destination dictionary, while
-//! updating the exsting Tuples with matching keys.
+//! updating the existing Tuples with matching keys.
 //! @param dest The destination dictionary to update
 //! @param [in,out] dest_max_size_in_out In: the maximum size of buffer backing `dest`. Out: the final size of the updated dictionary.
 //! @param source The source dictionary of which its Tuples will be used to update dest.

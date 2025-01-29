@@ -37,7 +37,7 @@ status_t reminders_insert(Reminder *reminder);
 status_t reminders_init(void);
 
 //! Delete a reminder
-//! @param reminder_id pointer to an Id of the reminder to be deleted
+//! @param reminder_id pointer to an ID of the reminder to be deleted
 //! @return S_SUCCESS or appropriate error
 status_t reminders_delete(ReminderId *reminder_id);
 

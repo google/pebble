@@ -373,7 +373,7 @@ void test_resource__read_past_last_byte_resource(void) {
   size_t image_size = resource_size(resource_bank, no_litter_res_id);
   uint8_t image_buf[image_size];
 
-  // read the last byte, and make sure it returns a a failure 0 byte return value
+  // read the last byte, and make sure it returns a failure 0 byte return value
   cl_assert_equal_i( resource_load_byte_range_system(resource_bank, no_litter_res_id, image_size,
     image_buf, 1), 0);
 

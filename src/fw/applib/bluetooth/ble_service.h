@@ -39,7 +39,7 @@ uint8_t ble_service_get_characteristics(BLEService service,
 //! @return The 128-bit Service UUID, or UUID_INVALID if the service reference
 //! was invalid.
 //! @note The returned UUID is always a 128-bit UUID, even if the device
-//! its interal GATT service database uses 16-bit or 32-bit Service UUIDs.
+//! its internal GATT service database uses 16-bit or 32-bit Service UUIDs.
 //! @see bt_uuid_expand_16bit for a macro that converts 16-bit UUIDs to 128-bit
 //! equivalents.
 //! @see bt_uuid_expand_32bit for a macro that converts 32-bit UUIDs to 128-bit

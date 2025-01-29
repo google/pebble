@@ -108,7 +108,7 @@ void test_phone_formatting__overflowing_first_name(void) {
   char dest[NAME_LENGTH];
   memset(dest, GUARD_CHAR, NAME_LENGTH);
 
-  phone_format_caller_name("Pankajavalli Balamarugan", dest, buffer_length);
+  phone_format_caller_name("Pankajavalli Balamurugan", dest, buffer_length);
 
   cl_assert_equal_s(dest, "Pankajava");
   cl_assert_equal_m(dest + buffer_length, GUARD_REFERENCE, NAME_LENGTH - buffer_length);

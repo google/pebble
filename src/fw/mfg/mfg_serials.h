@@ -50,7 +50,7 @@ typedef enum MfgSerialsResult {
 //! zero. Must be 13.
 //! @param[out] out_index Will contain the OTP index that was used to write the
 //! serial number, if the return value was OtpWriteSuccess.
-//! @return OtpWriteSuccess if the write was successfull or
+//! @return OtpWriteSuccess if the write was successful or
 //! MfgSerialsResultFailNoMoreSpace if all 3 slots were taken already, or
 //! MfgSerialsResultFailIncorrectLength if the serial_size was not 13.
 MfgSerialsResult mfg_write_serial_number(const char* serial, size_t serial_size, uint8_t *out_index);

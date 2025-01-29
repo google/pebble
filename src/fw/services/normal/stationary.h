@@ -21,7 +21,7 @@
 #include "kernel/event_loop.h"
 
 //! Set up a timer that will check the position of the watch every minute to see
-//! if any motion has occured
+//! if any motion has occurred
 void stationary_init(void);
 
 //! Stationary mode should only be enabled when the user settings allow for it and when

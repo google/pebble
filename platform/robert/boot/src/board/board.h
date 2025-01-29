@@ -28,7 +28,7 @@
 #define GPIO_Port_NULL ((GPIO_TypeDef *) 0)
 #define GPIO_Pin_NULL ((uint16_t)0x0000)
 
-// This is generated in order to faciliate the check within the IRQ_MAP macro below
+// This is generated in order to facilitate the check within the IRQ_MAP macro below
 enum {
 #define IRQ_DEF(num, irq) IS_VALID_IRQ__##irq,
 #include "irq_stm32f7.def"

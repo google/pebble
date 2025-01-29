@@ -56,7 +56,7 @@
 
 //! Error values which may be returned from the smartstrap APIs.
 typedef enum {
-  //! No error occured.
+  //! No error occurred.
   SmartstrapResultOk = 0,
   //! Invalid function arguments were supplied.
   SmartstrapResultInvalidArgs,
@@ -69,7 +69,7 @@ typedef enum {
   SmartstrapResultServiceUnavailable,
   //! The smartstrap reported that it does not support the requested attribute.
   SmartstrapResultAttributeUnsupported,
-  //! A time-out occured during the request.
+  //! A time-out occurred during the request.
   SmartstrapResultTimeOut,
 } SmartstrapResult;
 
@@ -153,7 +153,7 @@ void app_smartstrap_set_timeout(uint16_t timeout_ms);
 //! @param attribute_id The AttributeId to create the attribute for.
 //! @param buffer_length The length of the internal buffer which will be used to store the read
 //! and write requests for this attribute.
-//! @returns The newly created SmartstrapAttribute or NULL if an internal error occured or if the
+//! @returns The newly created SmartstrapAttribute or NULL if an internal error occurred or if the
 //! specified length is greater than SMARTSTRAP_ATTRIBUTE_LENGTH_MAXIMUM.
 SmartstrapAttribute *app_smartstrap_attribute_create(SmartstrapServiceId service_id,
                                                      SmartstrapAttributeId attribute_id,

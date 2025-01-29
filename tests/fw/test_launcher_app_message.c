@@ -138,7 +138,7 @@ void test_launcher_app_message__cleanup(void) {
   fake_system_task_callbacks_cleanup();
 }
 
-void test_launcher_app_message__ingore_too_short_message(void) {
+void test_launcher_app_message__ignore_too_short_message(void) {
   uint8_t too_short = 0;
   launcher_app_message_protocol_msg_callback_deprecated(s_session, &too_short, sizeof(too_short));
   fake_comm_session_process_send_next();

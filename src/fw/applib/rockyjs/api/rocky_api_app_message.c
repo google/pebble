@@ -73,7 +73,7 @@ typedef struct {
 typedef struct OutgoingObject {
   ListNode node;
 
-  //! Working buffer containing the JSON string respresentation of the object.
+  //! Working buffer containing the JSON string representation of the object.
   char *data_buffer;
 
   //! The next offset in bytes, into the JSON string (excluding the PostMessageChunkPayload

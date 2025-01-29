@@ -118,7 +118,7 @@ bool process_manager_check_SDK_compatible(const AppInstallId id);
 //! @param id The app to launch. Note that this app may not be cached
 //! @param args The args to the app
 //! @param animation The animation that should be used to show the app
-//! @prama launch_reason The launch reason for the app starting
+//! @param launch_reason The launch reason for the app starting
 void process_manager_launch_process(const ProcessLaunchConfig *config);
 
 //! Close the given process. This is the highest level call which transfers control to the manager of that type of

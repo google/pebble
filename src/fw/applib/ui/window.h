@@ -178,7 +178,7 @@ typedef struct Window {
 //! @param debug_name The window's debug name
 void window_init(Window *window, const char* debug_name);
 
-//! Creates a new Window on the heap and initalizes it with the default values.
+//! Creates a new Window on the heap and initializes it with the default values.
 //!
 //! * Background color : `GColorWhite`
 //! * Root layer's `update_proc` : function that fills the window's background using `background_color`.
@@ -328,14 +328,14 @@ struct Layer* window_get_root_layer(const Window *window);
 void window_set_background_color(Window *window, GColor background_color);
 void window_set_background_color_2bit(Window *window, GColor2 background_color);
 
-//! Sets whether or not the window is fullscreen, consequently hiding the sytem status bar.
+//! Sets whether or not the window is fullscreen, consequently hiding the system status bar.
 //! @note This needs to be called before pushing a window to the window stack.
 //! @param window The window for which to set its full-screen property
 //! @param enabled True to make the window full-screen or false to leave space for the system status bar.
 //! @see \ref window_get_fullscreen()
 void window_set_fullscreen(Window *window, bool enabled);
 
-//! Gets whether the window is full-screen, consequently hiding the sytem status bar.
+//! Gets whether the window is full-screen, consequently hiding the system status bar.
 //! @param window The window for which to get its full-screen property
 //! @return True if the window is marked as fullscreen, false if it is not marked as fullscreen.
 bool window_get_fullscreen(const Window *window);

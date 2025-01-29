@@ -93,7 +93,7 @@ void rtc_calibration_init_timer(void) {
   periph_config_enable(TIM7, RCC_APB1Periph_TIM7);
 
   NVIC_InitTypeDef NVIC_InitStructure;
-  /* Enable the TIM7 gloabal Interrupt */
+  /* Enable the TIM7 global Interrupt */
   TIM_ClearITPendingBit(TIM7, TIM_IT_Update);
   NVIC_InitStructure.NVIC_IRQChannel = TIM7_IRQn;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x0b;

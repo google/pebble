@@ -249,7 +249,7 @@ void conn_mgr_set_ble_conn_response_time_ext(
     uint16_t max_period_secs, ResponsivenessGrantedHandler granted_handler) {
   ConnectionMgrInfo *conn_mgr_info;
   if (!hdl || !((conn_mgr_info = hdl->conn_mgr_info))) {
-    PBL_LOG(LOG_LEVEL_ERROR, "GAP Handle not properly intialized");
+    PBL_LOG(LOG_LEVEL_ERROR, "GAP Handle not properly initialized");
     return;
   }
 

@@ -46,7 +46,7 @@ void test_timezone_database__get_region_count(void) {
 }
 
 void test_timezone_database__find_region_by_name_simple(void) {
-  // Unforunately we don't really care what the resulting region ids are, we should
+  // Unfortunately we don't really care what the resulting region ids are, we should
   // just make sure the ones that exist are there and they're unique from each other.
 
   const int america_new_york_region = FIND_REGION("America/New_York");

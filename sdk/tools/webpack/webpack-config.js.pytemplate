@@ -1,5 +1,5 @@
 ////////////////////////////////////////////////////////////////////////////////
-// Template vars injected by projess_js.py:
+// Template vars injected by process_js.py:
 
 // boolean
 const isSandbox = ${IS_SANDBOX};

@@ -350,7 +350,7 @@ void gpoint_sort(GPoint *points, size_t num_points, GPointComparator comparator,
 #define GPOINT_PRECISE_PRECISION  FIXED_S16_3_PRECISION
 #define GPOINT_PRECISE_FACTOR     FIXED_S16_3_FACTOR
 
-//! Internal respresentation of a point
+//! Internal representation of a point
 //! 1 bit for sign, 12 bits represent the coordinate, 3 bits represent the precision
 //! Supports -4096.000 px to 4095.875 px resolution
 typedef struct __attribute__ ((__packed__)) GPointPrecise {
@@ -673,7 +673,7 @@ typedef struct {
 #define GEdgeInsets(...) \
   GEdgeInsetsN(__VA_ARGS__, GEdgeInsets4, GEdgeInsets3, GEdgeInsets2, GEdgeInsets1)(__VA_ARGS__)
 
-//! Returns a rectangle that is shrinked or expanded by the given edge insets.
+//! Returns a rectangle that is shrunk or expanded by the given edge insets.
 //! @note The rectangle is standardized and then the inset parameters are applied.
 //! If the resulting rectangle would have a negative height or width, a GRectZero is returned.
 //! @param rect The rectangle that will be inset
@@ -1065,7 +1065,7 @@ GBitmap *gbitmap_create_with_resource_system(ResAppNum app_num, uint32_t resourc
 //! @internal
 //! @see gbitmap_init_with_resource
 //! @param app_num The app's resource bank number
-//! @return true if we were sucessful, false otherwise
+//! @return true if we were successful, false otherwise
 bool gbitmap_init_with_resource_system(GBitmap* bitmap, ResAppNum app_num, uint32_t resource_id);
 
 //! @internal
@@ -1352,7 +1352,7 @@ typedef struct PACKED {
 typedef Fixed_S32_16 GTransformNumber;
 
 //! @internal
-//! Data structure that contains the internal representation of a 3x3 tranformation matrix
+//! Data structure that contains the internal representation of a 3x3 transformation matrix
 //! The transformation matrix will be expressed as follows:
 //! [ a  b  0 ]
 //! [ c  d  0 ]

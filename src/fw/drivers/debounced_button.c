@@ -58,7 +58,7 @@ static void initialize_button_timer(void) {
   periph_config_enable(TIM4, RCC_APB1Periph_TIM4);
 
   NVIC_InitTypeDef NVIC_InitStructure;
-  /* Enable the TIM4 gloabal Interrupt */
+  /* Enable the TIM4 global Interrupt */
   TIM_ClearITPendingBit(TIM4, TIM_IT_Update);
   NVIC_InitStructure.NVIC_IRQChannel = TIM4_IRQn;
   NVIC_InitStructure.NVIC_IRQChannelPreemptionPriority = 0x0b;

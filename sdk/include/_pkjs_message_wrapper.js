@@ -351,7 +351,7 @@
       if (this._getNextMessageType() !== "object") {
         // This is no longer our highest priority outgoing message.
         // Send that message instead, and this message will be left in the queue
-        // andrestarted when appropriate.
+        // and restarted when appropriate.
         this._resetCurrent();
         this._sendNext();
         return;

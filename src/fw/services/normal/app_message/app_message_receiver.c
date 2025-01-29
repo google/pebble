@@ -103,7 +103,7 @@ static Receiver *prv_app_message_receiver_prepare(CommSession *session,
   rcv->header_bytes_remaining = header_bytes_remaining;
 
   // Always forward the header to default system receiver as well, we'll cancel it later on if the
-  // message was written succesfully to the app inbox.
+  // message was written successfully to the app inbox.
   if (!prv_fwd_prepare(rcv, session, header_bytes_remaining)) {
     kernel_free(rcv);
     return NULL;

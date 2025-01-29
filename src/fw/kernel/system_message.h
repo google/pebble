@@ -28,7 +28,7 @@ typedef enum SystemMessageType {
   SysMsgFirmwareComplete = 0x02,
   SysMsgFirmwareFail = 0x03,
   SysMsgFirmwareUpToDate = 0x04,
-  // SysMsgFirmarewOutOfDate = 0x05, DEPRECATED
+  // SysMsgFirmwareOutOfDate = 0x05, DEPRECATED
   SysMsgReconnectRequestStop = 0x06,
   SysMsgReconnectRequestStart = 0x07,
   SysMsgMAPRetry = 0x08,  // MAP is no longer used

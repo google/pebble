@@ -250,7 +250,7 @@ void test_health_db__movement_data(void) {
 
   cl_assert_equal_i(s_metric_updated_count, NUM_CURRENT_MOVEMENT_METRICS);
 
-  // check typicals (not stored)
+  // check typical (not stored)
   int32_t val_out;
 
   cl_assert(!health_db_get_typical_value(ActivityMetricStepCount, Monday, &val_out));
@@ -272,7 +272,7 @@ void test_health_db__sleep_data(void) {
 
   cl_assert_equal_i(s_metric_updated_count, NUM_CURRENT_SLEEP_METRICS);
 
-  // check typicals
+  // check typical
   int32_t val_out;
 
   cl_assert(health_db_get_typical_value(ActivityMetricSleepTotalSeconds, Monday, &val_out));
@@ -296,7 +296,7 @@ void test_health_db__hr_zone_data(void) {
 
   cl_assert_equal_i(s_metric_updated_count, NUM_CURRENT_HR_ZONE_METRICS);
 
-  // check typicals (not stored)
+  // check typical (not stored)
   int32_t val_out;
 
   cl_assert(!health_db_get_typical_value(ActivityMetricHeartRateZone1Minutes, Monday, &val_out));

@@ -286,8 +286,8 @@ static void canvas_update_proc(Layer *layer, GContext* ctx) {
     uint16_t now_ms = time_ms(&now, NULL);
 
     uint32_t seconds = pbl_override_localtime(&now)->tm_sec;
-    uint32_t miliseconds = seconds * 1000 + now_ms;
-    uint32_t rotation = miliseconds * TRIG_MAX_ANGLE / (60 * 1000);
+    uint32_t milliseconds = seconds * 1000 + now_ms;
+    uint32_t rotation = milliseconds * TRIG_MAX_ANGLE / (60 * 1000);
 
     GPointPrecise p0;
     GPointPrecise p1;
@@ -317,8 +317,8 @@ static void canvas_update_proc(Layer *layer, GContext* ctx) {
     uint16_t now_ms = time_ms(&now, NULL);
 
     uint32_t seconds = pbl_override_localtime(&now)->tm_sec;
-    uint32_t miliseconds = seconds * 1000 + now_ms;
-    uint32_t rotation = miliseconds * TRIG_MAX_ANGLE / (60 * 1000);
+    uint32_t milliseconds = seconds * 1000 + now_ms;
+    uint32_t rotation = milliseconds * TRIG_MAX_ANGLE / (60 * 1000);
 
     GPointPrecise p0;
     GPointPrecise p1;

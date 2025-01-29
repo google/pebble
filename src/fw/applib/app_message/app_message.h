@@ -344,7 +344,7 @@ void app_message_deregister_callbacks(void);
 
 // -------- AppMessage Lifecycle ----------------------------------------------------------------------------------- //
 
-//! Programatically determine the inbox size maximum in the current configuration.
+//! Programmatically determine the inbox size maximum in the current configuration.
 //!
 //! \return The inbox size maximum on this firmware.
 //!
@@ -353,7 +353,7 @@ void app_message_deregister_callbacks(void);
 //!
 uint32_t app_message_inbox_size_maximum(void);
 
-//! Programatically determine the outbox size maximum in the current configuration.
+//! Programmatically determine the outbox size maximum in the current configuration.
 //!
 //! \return The outbox size maximum on this firmware.
 //!

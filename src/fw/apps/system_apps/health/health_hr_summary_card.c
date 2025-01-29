@@ -134,7 +134,7 @@ static void prv_render_bpm(GContext *ctx, Layer *base_layer) {
   graphics_text_node_destroy(&container->node);
 }
 
-static void prv_render_timstamp(GContext *ctx, Layer *base_layer) {
+static void prv_render_timestamp(GContext *ctx, Layer *base_layer) {
   HealthHrSummaryCardData *data = layer_get_data(base_layer);
 
   if (data->last_updated <= 0 || data->now_bpm == 0) {
@@ -189,7 +189,7 @@ static void prv_base_layer_update_proc(Layer *base_layer, GContext *ctx) {
 
   prv_render_bpm(ctx, base_layer);
 
-  prv_render_timstamp(ctx, base_layer);
+  prv_render_timestamp(ctx, base_layer);
 }
 
 static void prv_hr_detail_card_unload_callback(Window *window) {

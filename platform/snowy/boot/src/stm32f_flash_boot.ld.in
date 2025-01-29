@@ -16,7 +16,7 @@ PROVIDE ( _Stack_Size = __Stack_Size ) ;
 
 __Stack_Init = _estack  - __Stack_Size ;
 
-/*"PROVIDE" allows to easily override these values from an object file or the commmand line.*/
+/*"PROVIDE" allows to easily override these values from an object file or the command line.*/
 PROVIDE ( _Stack_Init = __Stack_Init ) ;
 
 /*
@@ -96,28 +96,28 @@ SECTIONS
     .data  : AT ( _sidata )
     {
         . = ALIGN(4);
-        /* This is used by the startup in order to initialize the .data secion */
+        /* This is used by the startup in order to initialize the .data section */
         _sdata = .;
 
         *(.data)
         *(.data.*)
 
         . = ALIGN(4);
-        _edata = .; /* This is used by the startup in order to initialize the .data secion */
+        _edata = .; /* This is used by the startup in order to initialize the .data section */
     } >RAM
 
     /* This is the uninitialized data section */
     .bss :
     {
         . = ALIGN(4);
-        _sbss = .; /* This is used by the startup in order to initialize the .bss secion */
+        _sbss = .; /* This is used by the startup in order to initialize the .bss section */
 
         *(.bss)
         *(.bss.*)
         *(COMMON)
 
         . = ALIGN(4);
-        _ebss = .; /* This is used by the startup in order to initialize the .bss secion */
+        _ebss = .; /* This is used by the startup in order to initialize the .bss section */
     } >RAM
 
     .stack :

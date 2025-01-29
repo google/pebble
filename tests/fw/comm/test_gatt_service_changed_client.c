@@ -222,7 +222,7 @@ void test_gatt_service_changed_client__handle_indication_service_changed(void) {
                     fake_gatt_is_service_discovery_start_count());
 }
 
-void test_gatt_service_changed_client__handle_indication_service_changed_malformatted(void) {
+void test_gatt_service_changed_client__handle_indication_service_changed_malformed(void) {
   fake_gatt_put_discovery_indication_gatt_profile_service(TEST_GATT_CONNECTION_ID,
                                                      true /* has_service_changed_characteristic */);
   const uint16_t att_handle = fake_gatt_gatt_profile_service_service_changed_att_handle();

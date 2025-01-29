@@ -35,7 +35,7 @@
 //! Actually, property animations do more than just moving a Layer around over time.
 //! PropertyAnimationLegacy2 is a concrete class of animations and is built around the Animation
 //! subsystem, which covers anything timing related, but does not move anything around.
-//! A ProperyAnimation animates a "property" of a "subject".
+//! A PropertyAnimation animates a "property" of a "subject".
 //!
 //! <h3>Animating a Layer's frame property</h3>
 //! Currently there is only one specific type of property animation offered off-the-shelf, namely
@@ -68,7 +68,7 @@
 //! __type__ value);`
 //! See \ref Int16Getter, \ref Int16Setter, \ref GPointGetter, \ref GPointSetter, \ref GRectGetter,
 //! \ref GRectSetter
-//! for the typedefs that accompany the update fuctions.
+//! for the typedefs that accompany the update functions.
 //!
 //! \code{.c}
 //! static const PropertyAnimationLegacy2Implementation my_implementation = {
@@ -127,7 +127,7 @@ void property_animation_legacy2_init(struct PropertyAnimationLegacy2 *property_a
       const struct PropertyAnimationLegacy2Implementation *implementation, void *subject,
       void *from_value, void *to_value);
 
-//! Creates a new PropertyAnimationLegacy2 on the heap and and initializes it with the specified
+//! Creates a new PropertyAnimationLegacy2 on the heap and initializes it with the specified
 //! values. The same defaults are used as with \ref animation_create().
 //! If the `from_value` or the `to_value` is `NULL`, the getter accessor will be called to get the
 //! current value of the property and be used instead.

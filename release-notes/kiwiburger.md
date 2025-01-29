@@ -8,7 +8,7 @@ What's New
 * Improved Notification UI
   - Allows multiple notifications to be viewed if they arrive within a short time frame
 * Improved Set Time UI
-* Added the option of showing your current speed (as oppossed to your pace) in the RunKeeper application.
+* Added the option of showing your current speed (as opposed to your pace) in the RunKeeper application.
 * Swapped next and previous track buttons in the music application.
 * Added the Simplicity watchface.
 * Removed the Fuzzy Time watchface (it is available through the watchapp library).

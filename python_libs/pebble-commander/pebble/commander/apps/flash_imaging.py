@@ -50,7 +50,7 @@ class EraseCommand(object):
         if unpacked.address != self.address or unpacked.length != self.length:
             raise exceptions.ResponseParseError(
                 'Response does not match command: '
-                'address=%#.08x legnth=%d (expected %#.08x, %d)' % (
+                'address=%#.08x length=%d (expected %#.08x, %d)' % (
                     unpacked.address, unpacked.length, self.address,
                     self.length))
         return unpacked
@@ -113,7 +113,7 @@ class CrcCommand(object):
         if unpacked.address != self.address or unpacked.length != self.length:
             raise exceptions.ResponseParseError(
                     'Response does not match command: '
-                    'address=%#.08x legnth=%d (expected %#.08x, %d)' % (
+                    'address=%#.08x length=%d (expected %#.08x, %d)' % (
                         unpacked.address, unpacked.length, self.address,
                         self.length))
         return unpacked

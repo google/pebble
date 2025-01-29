@@ -214,7 +214,7 @@ static size_t prv_get_app_segment_size(const PebbleProcessMd *app_md) {
 #if CAPABILITY_HAS_JAVASCRIPT
       if (app_md->is_rocky_app) {
         // on Spalding, we didn't have enough applib padding to guarantee both,
-        // 4.x native app heap + JerryScript statis + increased stack for Rocky.
+        // 4.x native app heap + JerryScript status + increased stack for Rocky.
         // For now, we just decrease the amount of available heap as we don't use it.
         // In the future, we will move the JS stack to the heap PBL-35783,
         // make byte code swappable PBL-37937,and remove JerryScript's static PBL-40400.
@@ -540,7 +540,7 @@ static void prv_app_show_crash_ui(AppInstallId install_id) {
 //! Switch to the app stored in the s_next_app global. The gracefully flag tells us whether to attempt a graceful
 //! exit or not.
 //!
-//! For a graceful exit, if the app has not alreeady finished it's de-init, we post a de_init event to the app, set
+//! For a graceful exit, if the app has not already finished it's de-init, we post a de_init event to the app, set
 //! a 3 second timer, and return immediately to the caller. If/when the app finally finishes deinit, it will post a
 //! PEBBLE_PROCESS_KILL_EVENT (graceful=true), which results in this method being again with graceful=true. We will then
 //! see that the de_init already finished in that second invocation.

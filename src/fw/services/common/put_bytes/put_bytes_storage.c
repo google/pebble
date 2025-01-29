@@ -114,7 +114,7 @@ bool pb_storage_get_status(PutBytesObjectType obj_type, PbInstallStatus *status)
     case ObjectRecovery:
     case ObjectSysResources:
       return pb_storage_raw_get_status(obj_type, status);
-    default: // Partial installs not supported for othe object types today
+    default: // Partial installs not supported for other object types today
       return false;
   }
 }

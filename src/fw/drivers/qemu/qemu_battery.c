@@ -55,7 +55,7 @@ void battery_set_fast_charge(bool fast_charge_enabled) {
 }
 
 
-void qemu_battery_msg_callack(const uint8_t *data, uint32_t len) {
+void qemu_battery_msg_callback(const uint8_t *data, uint32_t len) {
   QemuProtocolBatteryHeader *hdr = (QemuProtocolBatteryHeader *)data;
   if (len != sizeof(*hdr)) {
     PBL_LOG(LOG_LEVEL_ERROR, "Invalid packet length");

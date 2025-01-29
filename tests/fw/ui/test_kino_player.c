@@ -115,7 +115,7 @@ void test_kino_player__cleanup(void) {
 
 extern void prv_play_animation_update(Animation *animation, const AnimationProgress normalized);
 
-void test_kino_player__finite_animation_finite_reel_foward(void) {
+void test_kino_player__finite_animation_finite_reel_forward(void) {
   // Choose duration and elapsed to have clean division for
   // ANIMATION_NORMALIZED_MAX * elapsed / duration = whole_number
   test_reel_data->duration_ms = 300;
@@ -127,7 +127,7 @@ void test_kino_player__finite_animation_finite_reel_foward(void) {
   cl_assert_equal_i(kino_reel_get_elapsed(test_reel), 20);
 }
 
-void test_kino_player__create_finite_animation_finite_reel_foward(void) {
+void test_kino_player__create_finite_animation_finite_reel_forward(void) {
   // Choose duration and elapsed to have clean division for
   // ANIMATION_NORMALIZED_MAX * elapsed / duration = whole_number
   test_reel_data->duration_ms = 300;

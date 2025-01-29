@@ -71,7 +71,7 @@ typedef struct TextLayerLegacy2 {
 //!
 //! The text layer is automatically marked dirty after this operation.
 //! @param text_layer The TextLayerLegacy2 to initialize
-//! @param frame The frame with which to initialze the TextLayerLegacy2
+//! @param frame The frame with which to initialize the TextLayerLegacy2
 void text_layer_legacy2_init(TextLayerLegacy2 *text_layer, const GRect *frame);
 
 //! Creates a new TextLayerLegacy2 on the heap and initializes it with the default values.
@@ -85,7 +85,7 @@ void text_layer_legacy2_init(TextLayerLegacy2 *text_layer, const GRect *frame);
 //! * Caching: `false`
 //!
 //! The text layer is automatically marked dirty after this operation.
-//! @param frame The frame with which to initialze the TextLayerLegacy2
+//! @param frame The frame with which to initialize the TextLayerLegacy2
 //! @return A pointer to the TextLayerLegacy2. `NULL` if the TextLayerLegacy2 could not
 //! be created
 TextLayerLegacy2* text_layer_legacy2_create(GRect frame);
@@ -161,7 +161,7 @@ void text_layer_legacy2_set_text_alignment(TextLayerLegacy2 *text_layer,
 //! By default, layout caching is off (false). Layout caches store the max used
 //! height and width of a text layer.
 //! NOTE: when using cached layouts, text_layer_legacy2_deinit() MUST be called at some
-//! point in time to prevent memory leaks from occuring.
+//! point in time to prevent memory leaks from occurring.
 void text_layer_legacy2_set_should_cache_layout(TextLayerLegacy2 *text_layer,
                                                 bool should_cache_layout);
 

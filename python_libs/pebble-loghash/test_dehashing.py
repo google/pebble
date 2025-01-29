@@ -108,7 +108,7 @@ def test_parse_args():
     """
     Test for parse_args()
     """
-    # No `` delimted strings
+    # No `` delimited strings
     assert ["foo", "bar", "baz"] == parse_args("foo bar baz")
 
     # `` delimited strings

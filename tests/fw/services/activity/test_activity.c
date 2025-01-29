@@ -89,7 +89,7 @@ static const  struct tm s_init_time_tm = {
 
 #define ACTIVITY_FIXTURE_PATH "activity"
 
-// The expected resting kcalories is determined empirically from a known good commmit and
+// The expected resting kcalories is determined empirically from a known good commit and
 // is based on the current time of day and the user's weight, age etc.
 const int s_exp_5pm_resting_kcalories = 1031;
 const int s_exp_full_day_resting_kcalories = 1455;
@@ -496,7 +496,7 @@ bool activity_algorithm_deinit(void) {
 }
 
 void activity_algorithm_handle_accel(AccelRawData *data, uint32_t num_samples, uint64_t timestamp) {
-  // For testing purposes, we'll use the x movment as the steps and y as the sleep state
+  // For testing purposes, we'll use the x movement as the steps and y as the sleep state
   ActivitySleepState prior_state = s_test_alg_state.minute_data.sleep_state;
   time_t now_secs = rtc_get_time();
   s_test_alg_state.minute_data.last_captured_utc = now_secs;
@@ -744,7 +744,7 @@ bool activity_algorithm_test_send_fake_minute_data_dls_record(void) {
 // .x : the number of steps to increment by (either 0 or 1)
 // .y : the current sleep state
 // .z : 0
-static void prv_feed_cannned_accel_data(uint32_t num_sec, uint32_t steps_per_minute,
+static void prv_feed_canned_accel_data(uint32_t num_sec, uint32_t steps_per_minute,
                                 ActivitySleepState sleep_state) {
   uint32_t num_steps = (steps_per_minute * num_sec + 30) / 60;
   uint32_t num_samples = num_sec * ALGORITHM_SAMPLING_RATE;
@@ -1069,9 +1069,9 @@ void test_activity__init_history(void) {
   fake_system_task_callbacks_invoke_pending();
 
   // Feed in 100 steps/min over 1 min, 1 minute of deep and 1 minute of light sleep
-  prv_feed_cannned_accel_data(60, 100, ActivitySleepStateAwake);
-  prv_feed_cannned_accel_data(60, 0, ActivitySleepStateLightSleep);
-  prv_feed_cannned_accel_data(60, 0, ActivitySleepStateRestfulSleep);
+  prv_feed_canned_accel_data(60, 100, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(60, 0, ActivitySleepStateLightSleep);
+  prv_feed_canned_accel_data(60, 0, ActivitySleepStateRestfulSleep);
 
   // Put in a stepping activity
   time_t day_start = time_util_get_midnight_of(rtc_get_time());
@@ -1095,7 +1095,7 @@ void test_activity__init_history(void) {
 
   // Wait long enough for our recompute sleep and periodic update logic to run.
   uint32_t wait_min = MAX(ACTIVITY_SESSION_UPDATE_MIN, ACTIVITY_SETTINGS_UPDATE_MIN);
-  prv_feed_cannned_accel_data(SECONDS_PER_MINUTE * wait_min, 0, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(SECONDS_PER_MINUTE * wait_min, 0, ActivitySleepStateAwake);
   ASSERT_EQUAL_METRIC_HISTORY(ActivityMetricStepCount,
                               ((const uint32_t [ACTIVITY_HISTORY_DAYS]){100, 0, 0, 0, 0, 0, 0}));
   ASSERT_EQUAL_METRIC_HISTORY(ActivityMetricSleepTotalSeconds,
@@ -1251,12 +1251,12 @@ void test_activity__day_rollover(void) {
   fake_system_task_callbacks_invoke_pending();
 
   // Feed in 100 steps/min over 1 min, 1 minute of deep and 1 minute of light sleep
-  prv_feed_cannned_accel_data(60, 100, ActivitySleepStateAwake);
-  prv_feed_cannned_accel_data(60, 0, ActivitySleepStateLightSleep);
-  prv_feed_cannned_accel_data(60, 0, ActivitySleepStateRestfulSleep);
+  prv_feed_canned_accel_data(60, 100, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(60, 0, ActivitySleepStateLightSleep);
+  prv_feed_canned_accel_data(60, 0, ActivitySleepStateRestfulSleep);
 
   // Wait long enough for our recompute sleep logic to run.
-  prv_feed_cannned_accel_data(SECONDS_PER_MINUTE * ACTIVITY_SESSION_UPDATE_MIN, 0,
+  prv_feed_canned_accel_data(SECONDS_PER_MINUTE * ACTIVITY_SESSION_UPDATE_MIN, 0,
                               ActivitySleepStateAwake);
   ASSERT_EQUAL_METRIC_HISTORY(ActivityMetricStepCount,
       ((const uint32_t [ACTIVITY_HISTORY_DAYS]){100, 0, 0, 0, 0, 0, 0}));
@@ -1313,7 +1313,7 @@ void test_activity__day_rollover(void) {
   // Wait long enough for our midnight rollover to occur. We init time at 5pm, so we need to wait
   // for at least 7 hours.
   const int minutes_till_midnight = (7 * MINUTES_PER_HOUR) - ACTIVITY_SESSION_UPDATE_MIN - 3;
-  prv_feed_cannned_accel_data(SECONDS_PER_MINUTE * (minutes_till_midnight + 1), 0,
+  prv_feed_canned_accel_data(SECONDS_PER_MINUTE * (minutes_till_midnight + 1), 0,
                               ActivitySleepStateAwake);
   ASSERT_EQUAL_METRIC_HISTORY(ActivityMetricStepCount,
       ((const uint32_t [ACTIVITY_HISTORY_DAYS]){0, 100, 0, 0, 0, 0, 0}));
@@ -1389,7 +1389,7 @@ void test_activity__step_derived_metrics(void) {
   cl_assert_equal_i(health_service_sum_today(HealthMetricRestingKCalories), value);
 
   // Feed in 100 steps/minute over 1 hour (walking rate)
-  prv_feed_cannned_accel_data(SECONDS_PER_HOUR, 100, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(SECONDS_PER_HOUR, 100, ActivitySleepStateAwake);
   const int k_exp_steps = 100 * MINUTES_PER_HOUR;
 
   // Test the derived metrics
@@ -1415,10 +1415,10 @@ void test_activity__step_derived_metrics(void) {
 
 
   // Test that ActivityMetricStepMinutes responds correctly
-  prv_feed_cannned_accel_data(1 * SECONDS_PER_MINUTE, 100, ActivitySleepStateAwake);
-  prv_feed_cannned_accel_data(1 * SECONDS_PER_MINUTE, 10, ActivitySleepStateAwake);
-  prv_feed_cannned_accel_data(1 * SECONDS_PER_MINUTE, 100, ActivitySleepStateAwake);
-  prv_feed_cannned_accel_data(1 * SECONDS_PER_MINUTE, 10, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(1 * SECONDS_PER_MINUTE, 100, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(1 * SECONDS_PER_MINUTE, 10, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(1 * SECONDS_PER_MINUTE, 100, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(1 * SECONDS_PER_MINUTE, 10, ActivitySleepStateAwake);
   activity_get_metric(ActivityMetricActiveSeconds, 1, &value);
   cl_assert_equal_i(value, SECONDS_PER_HOUR + (2 * SECONDS_PER_MINUTE));
   cl_assert_equal_i(health_service_sum_today(HealthMetricActiveSeconds),
@@ -1455,7 +1455,7 @@ void test_activity__step_derived_metrics(void) {
                                  ACTIVITY_CALORIES_PER_KCAL));
 
   // Feed in 125 steps/minute over 60 minutes
-  prv_feed_cannned_accel_data(60 * SECONDS_PER_MINUTE, 125, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(60 * SECONDS_PER_MINUTE, 125, ActivitySleepStateAwake);
   const int k_exp_steps_2 = 125 * MINUTES_PER_HOUR;
 
   // Test the derived metrics
@@ -1492,27 +1492,27 @@ void test_activity__sleep_derived_metrics(void) {
   // at 10pm, takes 30 minutes to fall asleep, and wakes up at 6am.
 
   // Light walking, 50 steps/minute, until 10pm
-  prv_feed_cannned_accel_data(5 * SECONDS_PER_HOUR, 50, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(5 * SECONDS_PER_HOUR, 50, ActivitySleepStateAwake);
 
   // Falling asleep for 30 minutes
-  prv_feed_cannned_accel_data(30 * SECONDS_PER_MINUTE, 5, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(30 * SECONDS_PER_MINUTE, 5, ActivitySleepStateAwake);
 
   // Starting at 10:30pm: 2 Cycles of light (60 min), deep (50 min), awake (10 min)
   for (int i = 0; i < 2; i++) {
 
-    prv_feed_cannned_accel_data(60 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
+    prv_feed_canned_accel_data(60 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
     activity_get_metric(ActivityMetricSleepState, 1, &value);
     cl_assert_equal_i(value, ActivitySleepStateLightSleep);
 
-    prv_feed_cannned_accel_data(50 * SECONDS_PER_MINUTE, 0, ActivitySleepStateRestfulSleep);
+    prv_feed_canned_accel_data(50 * SECONDS_PER_MINUTE, 0, ActivitySleepStateRestfulSleep);
     activity_get_metric(ActivityMetricSleepState, 1, &value);
     cl_assert_equal_i(value, ActivitySleepStateRestfulSleep);
 
-    prv_feed_cannned_accel_data(10 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
+    prv_feed_canned_accel_data(10 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
   }
 
   // 30 minute "morning walk" 4 hours later at 2:30am
-  prv_feed_cannned_accel_data(30 * SECONDS_PER_MINUTE, 50, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(30 * SECONDS_PER_MINUTE, 50, ActivitySleepStateAwake);
   activity_get_metric(ActivityMetricSleepState, 1, &value);
   cl_assert_equal_i(value, ActivitySleepStateAwake);
   cl_assert_equal_i(health_service_peek_current_activities(), HealthActivityNone);
@@ -1555,22 +1555,22 @@ void test_activity__sleep_history(void) {
   // All of our tests start at 5pm. Let's enter a sleep cycle where the user has a sleep session
   // before the cut-off for the new day
   // Light walking, 50 steps/minute, until 6pm
-  prv_feed_cannned_accel_data(1 * SECONDS_PER_HOUR, 50, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(1 * SECONDS_PER_HOUR, 50, ActivitySleepStateAwake);
 
   // 2.5 hours of sleep, put's us at 8:30pm. The cut-off for the next day is
   // ACTIVITY_LAST_SLEEP_MINUTE_OF_DAY, currently set for 9pm so this session should be
   // registered for today
-  prv_feed_cannned_accel_data(150 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
+  prv_feed_canned_accel_data(150 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
 
   // Awake for 30 minutes which puts us at 9pm.
-  prv_feed_cannned_accel_data(30 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(30 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
 
   // Another 2 hour sleep session starting at 9pm. This will leave us at 11pm. Since this
-  // session ends after the the cutoff, it should be registered for the next day
-  prv_feed_cannned_accel_data(120 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
+  // session ends after the cutoff, it should be registered for the next day
+  prv_feed_canned_accel_data(120 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
 
   // Awake for 2 hours which puts us at 1am
-  prv_feed_cannned_accel_data(120 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(120 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
 
   // Now if we get sleep history, we should have 2.5 hours yesterday, and 2 hours today
   ASSERT_EQUAL_METRIC_HISTORY(ActivityMetricSleepTotalSeconds,
@@ -1578,10 +1578,10 @@ void test_activity__sleep_history(void) {
                                                 150 * SECONDS_PER_MINUTE}));
 
   // Another 2 hour sleep session starting at 1am. This will leave us at 3am.
-  prv_feed_cannned_accel_data(120 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
+  prv_feed_canned_accel_data(120 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
 
   // Awake for 1 hour which puts us at 4am
-  prv_feed_cannned_accel_data(60 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(60 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
 
   ASSERT_EQUAL_METRIC_HISTORY(ActivityMetricSleepTotalSeconds,
       ((const uint32_t [ACTIVITY_HISTORY_DAYS]){240 * SECONDS_PER_MINUTE,
@@ -1684,22 +1684,22 @@ void test_activity__get_sleep_sessions(void) {
   fake_system_task_callbacks_invoke_pending();
 
   // Light walking, 50 steps/minute, until 10pm
-  prv_feed_cannned_accel_data(5 * SECONDS_PER_HOUR, 50, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(5 * SECONDS_PER_HOUR, 50, ActivitySleepStateAwake);
 
   // Falling asleep for 30 minutes
-  prv_feed_cannned_accel_data(30 * SECONDS_PER_MINUTE, 5, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(30 * SECONDS_PER_MINUTE, 5, ActivitySleepStateAwake);
 
   // Starting at 10:30pm: 2 Cycles of light (60 min), deep (50 min), awake (10 min)
   for (int i = 0; i < 2; i++) {
-    prv_feed_cannned_accel_data(60 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
+    prv_feed_canned_accel_data(60 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
 
-    prv_feed_cannned_accel_data(50 * SECONDS_PER_MINUTE, 0, ActivitySleepStateRestfulSleep);
+    prv_feed_canned_accel_data(50 * SECONDS_PER_MINUTE, 0, ActivitySleepStateRestfulSleep);
 
-    prv_feed_cannned_accel_data(10 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
+    prv_feed_canned_accel_data(10 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
   }
 
   // 30 minute "morning walk" 4 hours later at 2:30am
-  prv_feed_cannned_accel_data(30 * SECONDS_PER_MINUTE, 50, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(30 * SECONDS_PER_MINUTE, 50, ActivitySleepStateAwake);
   activity_get_metric(ActivityMetricSleepState, 1, &value);
   cl_assert_equal_i(value, ActivitySleepStateAwake);
 
@@ -1793,10 +1793,10 @@ static uint16_t prv_step_avg_slot(int hour, int min) {
 // feed in for the given 15-minute time slot
 int prv_expected_steps_per_min(int slot, int multiplier) {
   if (multiplier == 1) {
-    // The slot % 50 was chosen so that the total # of steps per day does not exceeed 2^16
+    // The slot % 50 was chosen so that the total # of steps per day does not exceed 2^16
     return ((slot % 50) + 1);
   } else if (multiplier == 2) {
-    // The slot % 30 was chosen so that the total # of steps per day does not exceeed 2^16
+    // The slot % 30 was chosen so that the total # of steps per day does not exceed 2^16
     return 2 * ((slot % 30) + 1);
   } else {
     cl_assert(false);
@@ -1842,36 +1842,36 @@ static void prv_save_known_settings_file(const char *filename) {
   fake_system_task_callbacks_invoke_pending();
 
   // Feed in 100 steps/min over 1 min, 1 minute of deep and 1 minute of light sleep
-  prv_feed_cannned_accel_data(60, 100, ActivitySleepStateAwake);
-  prv_feed_cannned_accel_data(60, 0, ActivitySleepStateRestfulSleep);
-  prv_feed_cannned_accel_data(60, 0, ActivitySleepStateLightSleep);
+  prv_feed_canned_accel_data(60, 100, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(60, 0, ActivitySleepStateRestfulSleep);
+  prv_feed_canned_accel_data(60, 0, ActivitySleepStateLightSleep);
 
   // Wait long enough for our recompute sleep logic to run.
-  prv_feed_cannned_accel_data(SECONDS_PER_MINUTE * ACTIVITY_SESSION_UPDATE_MIN, 0,
+  prv_feed_canned_accel_data(SECONDS_PER_MINUTE * ACTIVITY_SESSION_UPDATE_MIN, 0,
                               ActivitySleepStateAwake);
 
   // Advance to next day
-  prv_feed_cannned_accel_data(SECONDS_PER_HOUR * 24, 0, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(SECONDS_PER_HOUR * 24, 0, ActivitySleepStateAwake);
 
   // Feed in 100 steps/min over 2 min, 2 minute of deep and 2 minute of light sleep
-  prv_feed_cannned_accel_data(120, 100, ActivitySleepStateAwake);
-  prv_feed_cannned_accel_data(120, 0, ActivitySleepStateRestfulSleep);
-  prv_feed_cannned_accel_data(120, 0, ActivitySleepStateLightSleep);
+  prv_feed_canned_accel_data(120, 100, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(120, 0, ActivitySleepStateRestfulSleep);
+  prv_feed_canned_accel_data(120, 0, ActivitySleepStateLightSleep);
 
   // Wait long enough for our recompute sleep logic to run.
-  prv_feed_cannned_accel_data(SECONDS_PER_MINUTE * ACTIVITY_SESSION_UPDATE_MIN, 0,
+  prv_feed_canned_accel_data(SECONDS_PER_MINUTE * ACTIVITY_SESSION_UPDATE_MIN, 0,
                               ActivitySleepStateAwake);
 
   // Advance to next day
-  prv_feed_cannned_accel_data(SECONDS_PER_HOUR * 24, 0, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(SECONDS_PER_HOUR * 24, 0, ActivitySleepStateAwake);
 
   // Feed in 100 steps/min over 3 min, 3 minute of deep and 3 minute of light sleep
-  prv_feed_cannned_accel_data(180, 100, ActivitySleepStateAwake);
-  prv_feed_cannned_accel_data(180, 0, ActivitySleepStateRestfulSleep);
-  prv_feed_cannned_accel_data(180, 0, ActivitySleepStateLightSleep);
+  prv_feed_canned_accel_data(180, 100, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(180, 0, ActivitySleepStateRestfulSleep);
+  prv_feed_canned_accel_data(180, 0, ActivitySleepStateLightSleep);
 
   // Wait long enough for our recompute sleep logic to run.
-  prv_feed_cannned_accel_data(SECONDS_PER_MINUTE * ACTIVITY_SESSION_UPDATE_MIN, 0,
+  prv_feed_canned_accel_data(SECONDS_PER_MINUTE * ACTIVITY_SESSION_UPDATE_MIN, 0,
                               ActivitySleepStateAwake);
 
   // Make sure they are what we expected
@@ -1985,7 +1985,7 @@ void test_activity__health_events(void) {
   // Test that we receive step update events
   fake_event_reset_count();
   // Feed in 100 steps/minute over 1 minute. We should get some step update events
-  prv_feed_cannned_accel_data(1 * SECONDS_PER_MINUTE, 100, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(1 * SECONDS_PER_MINUTE, 100, ActivitySleepStateAwake);
 
   uint32_t event_count = fake_event_get_count();
   // Our fake algorithm generates a step update once a second
@@ -2000,23 +2000,23 @@ void test_activity__health_events(void) {
   prv_reset_captured_dls_data();
 
   // Falling asleep for 30 minutes
-  prv_feed_cannned_accel_data(30 * SECONDS_PER_MINUTE, 5, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(30 * SECONDS_PER_MINUTE, 5, ActivitySleepStateAwake);
 
   // Starting at 10:31pm: 1 Cycle of light (60 min), deep (50 min)
   fake_event_reset_count();
   fake_event_set_callback(prv_fake_sleep_event_cb);
   s_captured_sleep_event = (PebbleEvent) { };
   s_num_captured_sleep_events = 0;
-  prv_feed_cannned_accel_data(60 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
-  prv_feed_cannned_accel_data(50 * SECONDS_PER_MINUTE, 0, ActivitySleepStateRestfulSleep);
+  prv_feed_canned_accel_data(60 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
+  prv_feed_canned_accel_data(50 * SECONDS_PER_MINUTE, 0, ActivitySleepStateRestfulSleep);
 
-  prv_feed_cannned_accel_data(15 * SECONDS_PER_MINUTE, 0, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(15 * SECONDS_PER_MINUTE, 0, ActivitySleepStateAwake);
 
-  prv_feed_cannned_accel_data(60 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
-  prv_feed_cannned_accel_data(50 * SECONDS_PER_MINUTE, 0, ActivitySleepStateRestfulSleep);
+  prv_feed_canned_accel_data(60 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
+  prv_feed_canned_accel_data(50 * SECONDS_PER_MINUTE, 0, ActivitySleepStateRestfulSleep);
 
   // Wait long enough for our recompute sleep logic to run.
-  prv_feed_cannned_accel_data(SECONDS_PER_MINUTE * ACTIVITY_SESSION_UPDATE_MIN, 60,
+  prv_feed_canned_accel_data(SECONDS_PER_MINUTE * ACTIVITY_SESSION_UPDATE_MIN, 60,
                               ActivitySleepStateAwake);
 
   // See if we got the expected sleep events
@@ -2039,7 +2039,7 @@ void test_activity__health_events(void) {
 
   // Wait long enough for a midnight rollover. All tests start at 5pm, so if we wait
   // 7 hours, we should get a midnight rollover
-  prv_feed_cannned_accel_data(7 * SECONDS_PER_HOUR, 0, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(7 * SECONDS_PER_HOUR, 0, ActivitySleepStateAwake);
 
   // See if we got the expected history events
   cl_assert_equal_i(s_num_captured_history_events, 1);
@@ -2071,7 +2071,7 @@ void test_activity__sleep_after_timezone_change(void) {
   fake_system_task_callbacks_invoke_pending();
 
   // Advance to 6pm EST
-  prv_feed_cannned_accel_data(6 * SECONDS_PER_HOUR, 50, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(6 * SECONDS_PER_HOUR, 50, ActivitySleepStateAwake);
 
   // switch into PST (which would be 3pm)
   tz_info = (TimezoneInfo) {
@@ -2081,13 +2081,13 @@ void test_activity__sleep_after_timezone_change(void) {
   time_util_update_timezone(&tz_info);
 
   // Walk some more until 11pm PST
-  prv_feed_cannned_accel_data(8 * SECONDS_PER_HOUR, 50, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(8 * SECONDS_PER_HOUR, 50, ActivitySleepStateAwake);
 
   // Starting at 11pm: 2 Cycles of 3 hrs each light (165 min), awake (15 min)
   for (int i = 0; i < 2; i++) {
-    prv_feed_cannned_accel_data(165 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
+    prv_feed_canned_accel_data(165 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
 
-    prv_feed_cannned_accel_data(15 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
+    prv_feed_canned_accel_data(15 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
   }
 
   activity_get_metric(ActivityMetricSleepEnterAtSeconds, 1, &value);
@@ -2107,7 +2107,7 @@ void test_activity__sleep_after_timezone_change(void) {
   // The previous test left us at 5am PST. Let's try going the other way and switch from PST to
   // EST right before we fall asleep
   // Advance to 11pm PST
-  prv_feed_cannned_accel_data(18 * SECONDS_PER_HOUR, 50, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(18 * SECONDS_PER_HOUR, 50, ActivitySleepStateAwake);
 
   // It is now 11pm PST. Switch to EST, which would be 2am
   tz_info = (TimezoneInfo) {
@@ -2118,9 +2118,9 @@ void test_activity__sleep_after_timezone_change(void) {
 
   // Starting at 2am EST: 2 Cycles of 3 hrs each light (165 min), awake (15 min)
   for (int i = 0; i < 2; i++) {
-    prv_feed_cannned_accel_data(165 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
+    prv_feed_canned_accel_data(165 * SECONDS_PER_MINUTE, 0, ActivitySleepStateLightSleep);
 
-    prv_feed_cannned_accel_data(15 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
+    prv_feed_canned_accel_data(15 * SECONDS_PER_MINUTE, 20, ActivitySleepStateAwake);
   }
 
   activity_get_metric(ActivityMetricSleepEnterAtSeconds, 1, &value);
@@ -2155,17 +2155,17 @@ void test_activity__health_service_interpolation(void) {
   fake_system_task_callbacks_invoke_pending();
 
   // Feed in 100 steps/min over 10 minutes, for a total of 1000 steps for today
-  prv_feed_cannned_accel_data(10 * SECONDS_PER_MINUTE, 100, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(10 * SECONDS_PER_MINUTE, 100, ActivitySleepStateAwake);
 
   // Wait long enough until we start the next day (15 hours)
-  prv_feed_cannned_accel_data(SECONDS_PER_HOUR * 15, 0,
+  prv_feed_canned_accel_data(SECONDS_PER_HOUR * 15, 0,
                               ActivitySleepStateAwake);
   ASSERT_EQUAL_METRIC_HISTORY(ActivityMetricStepCount,
                               ((const uint32_t [ACTIVITY_HISTORY_DAYS]){0, 1000, 0, 0, 0, 0, 0}));
 
 
   // Feed in 100 steps/min over 20 minutes, for a total of 2000 steps for today
-  prv_feed_cannned_accel_data(20 * SECONDS_PER_MINUTE, 100, ActivitySleepStateAwake);
+  prv_feed_canned_accel_data(20 * SECONDS_PER_MINUTE, 100, ActivitySleepStateAwake);
 
   ASSERT_EQUAL_METRIC_HISTORY(ActivityMetricStepCount,
       ((const uint32_t [ACTIVITY_HISTORY_DAYS]){2000, 1000, 0, 0, 0, 0, 0}));
@@ -2265,7 +2265,7 @@ void test_activity__distance(void) {
     int exp_distance_m = ROUND(params->exp_distance_m * k_elapsed_sec, params->seconds);
 
     // Feed in the test cadence for the given amount of time
-    prv_feed_cannned_accel_data(k_elapsed_sec, steps_per_minute, ActivitySleepStateAwake);
+    prv_feed_canned_accel_data(k_elapsed_sec, steps_per_minute, ActivitySleepStateAwake);
 
     activity_get_metric(ActivityMetricStepCount, 1, &value);
     cl_assert_near(value, ROUND(steps_per_minute * k_elapsed_sec, SECONDS_PER_MINUTE), 5);

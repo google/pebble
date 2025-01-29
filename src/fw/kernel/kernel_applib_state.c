@@ -128,7 +128,7 @@ void kernel_applib_release_log_state(LogState *state) {
     mutex_unlock_recursive(s_log_state_mutex);
   }
 
-  // Clear the re-entrancy flag for this task
+  // Clear the reentrancy flag for this task
   PebbleTask task = prv_get_current_task();
   s_log_state_task_entered[task] = false;
 }

@@ -17,7 +17,7 @@ device is started.
 
 Once the firmware has loaded, a new screen will appear with a small
 picture of a watch and the text "Please Connect to Phone". Please note
-that the watch will not respond respond to button inputs while this
+that the watch will not respond to button inputs while this
 screen is being displayed.
 
 Please contact ajw@getpebble.com with any questions.

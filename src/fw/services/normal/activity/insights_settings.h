@@ -54,7 +54,7 @@ typedef struct PACKED ActivitySummarySettings {
   int8_t below_avg_threshold;           //!< Values less than this are counted as above avg
                                         //!< In relation to 100% (eg 93% would be -7)
   int8_t fail_threshold;                //!< Values less than this are counted as fail
-                                        //!< In releastion to 100% (e.g. 55% would be -45)
+                                        //!< In relation to 100% (e.g. 55% would be -45)
 
   union {
     struct PACKED {

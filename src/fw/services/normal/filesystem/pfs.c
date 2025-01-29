@@ -715,7 +715,7 @@ static status_t find_free_page(uint16_t *free_page, bool use_gc_allocator,
   // we should now be processing on a sector aligned boundary
   PBL_ASSERTN((start_pg % PFS_PAGES_PER_ERASE_SECTOR) == 0);
 
-  // if we could not find a free page in the sector we were previosuly using
+  // if we could not find a free page in the sector we were previously using
   // we need to scan through the erase regions and either perform some garbage
   // collection or find an erased page in another erase region
   if (next_page == INVALID_PAGE) {
@@ -757,7 +757,7 @@ static status_t find_free_page(uint16_t *free_page, bool use_gc_allocator,
 
 //! Note: expects that the caller does _not_ hold the pfs mutex
 //! Note: If pages are already pre-erased on the FS, this routine will return
-//!  very quickly. If we need to do erases, it will take longer becauses this
+//!  very quickly. If we need to do erases, it will take longer because this
 //!  operation can take seconds to complete on certain flash parts
 //!
 //! @param file_size - The amount of file space to erase
@@ -899,7 +899,7 @@ static status_t create_flash_file(File *f) {
     }
   }
 
-  // we have succesfully allocated space for the file, so add file specific info
+  // we have successfully allocated space for the file, so add file specific info
   f->start_page = f->curr_page = start_page;
 
   FileHeader file_hdr;

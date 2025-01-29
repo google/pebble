@@ -91,7 +91,7 @@ typedef struct {
 typedef struct {
   ClockFace face;
   char buffer[4];
-  int32_t utc_offest;
+  int32_t utc_offset;
   GColor text_color;
 } NonLocalClockFace;
 

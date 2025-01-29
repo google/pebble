@@ -171,7 +171,7 @@ static void prv_read_complete_system_task_cb(void *context_ptr) {
     }
     PBL_ASSERTN(s_read_info.length >= FRAME_MIN_LENGTH);
     read_length = s_read_info.length - FRAME_MIN_LENGTH;
-    // don't care if the timeout is alreay queued as the FSM state will make it a noop
+    // don't care if the timeout is already queued as the FSM state will make it a noop
     new_timer_stop(s_read_timer);
   }
 
@@ -230,7 +230,7 @@ static void prv_handle_complete_frame(bool *should_context_switch) {
   bool is_notify = header->flags.is_notify;
   if ((is_notify && (smartstrap_fsm_state_get() != SmartstrapStateNotifyInProgress)) ||
       (!is_notify && (s_read_consumer.profile != header->profile))) {
-    // We weither got a notify frame in response to a normal read, or we got a response for a
+    // We either got a notify frame in response to a normal read, or we got a response for a
     // different frame than we requested.
     s_read_info.should_drop = true;
   }

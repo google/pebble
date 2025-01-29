@@ -29,7 +29,7 @@
 //!   @addtogroup Animation
 //!   @{
 //!     @addtogroup PropertyAnimation
-//! \brief A ProperyAnimation animates the value of a "property" of a "subject" over time.
+//! \brief A PropertyAnimation animates the value of a "property" of a "subject" over time.
 //!
 //! <h3>Animating a Layer's frame property</h3>
 //! Currently there is only one specific type of property animation offered off-the-shelf, namely
@@ -57,7 +57,7 @@
 //! Any setter needs to have to following function signature: `void setter(void *subject,
 //! __type__ value);`
 //! See \ref Int16Getter, \ref Int16Setter, \ref GPointGetter, \ref GPointSetter,
-//! \ref GRectGetter, \ref GRectSetter for the typedefs that accompany the update fuctions.
+//! \ref GRectGetter, \ref GRectSetter for the typedefs that accompany the update functions.
 //!
 //! \code{.c}
 //! static const PropertyAnimationImplementation my_implementation = {
@@ -534,7 +534,7 @@ bool property_animation_to(PropertyAnimation *property_animation, void *to, size
 // Implementing custom Property Animations
 //
 
-//! Creates a new PropertyAnimation on the heap and and initializes it with the specified values.
+//! Creates a new PropertyAnimation on the heap and initializes it with the specified values.
 //! The same defaults are used as with \ref animation_create().
 //! If the `from_value` or the `to_value` is `NULL`, the getter accessor will be called to get the
 //! current value of the property and be used instead.

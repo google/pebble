@@ -27,7 +27,7 @@ typedef enum {
   //! The operation was successful.
   BTErrnoOK = 0,
 
-  //! Connection established succesfully.
+  //! Connection established successfully.
   BTErrnoConnected = BTErrnoOK,
 
   //! One or more parameters were invalid.
@@ -109,7 +109,7 @@ typedef enum {
   BLEGATTErrorPrepareQueueFull = 0x09,
   BLEGATTErrorAttributeNotFound = 0x0A,
   BLEGATTErrorAttributeNotLong = 0x0B,
-  BLEGATTErrorInsufficientEncrpytionKeySize = 0x0C,
+  BLEGATTErrorInsufficientEncryptionKeySize = 0x0C,
   BLEGATTErrorInvalidAttributeValueLength = 0x0D,
   BLEGATTErrorUnlikelyError = 0x0E,
   BLEGATTErrorInsufficientEncryption = 0x0F,
@@ -237,7 +237,7 @@ typedef struct __attribute__((__packed__)) BTDeviceInternal {
 _Static_assert(sizeof(BTDeviceInternal) == sizeof(BTDevice),
                "BTDeviceInternal should be equal in size to BTDevice");
 
-//! Opaque data structure representing an advertisment report and optional
+//! Opaque data structure representing an advertisement report and optional
 //! scan response. Use the ble_ad... functions to query its contents.
 struct BLEAdData;
 
@@ -257,10 +257,10 @@ struct BLEAdData;
 #define LL_CONN_INTV_MAX_SLOTS (3200) // 1.25ms / slot
 #define LL_SUPERVISION_TIMEOUT_MIN_MS (100)
 
-//! Advertisment and scan response data
+//! Advertisement and scan response data
 //! @internal Exported as forward struct
 typedef struct BLEAdData {
-  //! Lengths of the raw advertisment data
+  //! Lengths of the raw advertisement data
   uint8_t ad_data_length;
 
   //! Lengths of the raw scan response data

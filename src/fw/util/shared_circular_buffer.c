@@ -24,7 +24,7 @@
 
 
 // -------------------------------------------------------------------------------------------------
-// Returns the amount of data available for the given clien
+// Returns the amount of data available for the given client
 static uint32_t prv_get_data_length(const SharedCircularBuffer* buffer, SharedCircularBufferClient *client) {
 
   uint32_t  len;
@@ -238,7 +238,7 @@ void subsampled_shared_circular_buffer_client_set_ratio(
   PBL_ASSERTN(numerator > 0 && denominator >= numerator);
   if (client->numerator != numerator || client->denominator != denominator) {
     // The subsampling algorithm does not need the subsampling ratio to
-    // be normalied to reduced form.
+    // be normalized to reduced form.
     client->numerator = numerator;
     client->denominator = denominator;
     // Initialize the state so that the next item in the buffer is copied,

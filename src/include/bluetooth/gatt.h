@@ -96,15 +96,15 @@ typedef struct GattClientOpResponseHdr {
   void *context;
 } GattClientOpResponseHdr;
 
-typedef struct GattClientOpReadReponse {
+typedef struct GattClientOpReadResponse {
   GattClientOpResponseHdr hdr;
   uint16_t value_length;
   uint8_t *value;
-} GattClientOpReadReponse;
+} GattClientOpReadResponse;
 
-typedef struct GattClientOpWriteReponse {
+typedef struct GattClientOpWriteResponse {
   GattClientOpResponseHdr hdr;
-} GattClientOpWriteReponse;
+} GattClientOpWriteResponse;
 
 // -- Gatt Data Structures
 

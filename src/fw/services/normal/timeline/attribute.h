@@ -300,7 +300,7 @@ Uint32List *attribute_get_uint32_list(const AttributeList *attr_list, AttributeI
 //! @param attr_list a pointer to the list of attributes to serialize
 //! @param buffer a pointer to the buffer to write to
 //! @param buf_end the end of buffer
-//! @retuns the number of serialized bytes
+//! @returns the number of serialized bytes
 size_t attribute_list_serialize(const AttributeList *attr_list, uint8_t *buffer, uint8_t *buf_end);
 
 //! Calculate the required size for a buffer to store a list of attributes

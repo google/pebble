@@ -74,7 +74,7 @@ static Animation *prv_create_custom_animation(void) {
 
 
 static void click_handler(ClickRecognizerRef recognizer, Window *window) {
-  // If the animation is still running, fast-foward to 300ms from the end
+  // If the animation is still running, fast-forward to 300ms from the end
   if (animation_is_scheduled(s_animation)) {
     uint32_t duration = animation_get_duration(s_animation, true, true);
     animation_set_elapsed(s_animation, duration - 300);
@@ -142,7 +142,7 @@ static void click_handler(ClickRecognizerRef recognizer, Window *window) {
   }
 
   /*
-   // Exmple animation parameters:
+   // Example animation parameters:
 
    // Duration defaults to 250 ms
    animation_set_duration(&prop_animation->animation, 1000);

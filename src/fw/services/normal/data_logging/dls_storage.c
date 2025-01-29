@@ -348,7 +348,7 @@ static bool prv_get_session_file(DataLoggingSession *session, uint32_t space_nee
   }
 
   // Add a minium buffer to needed. This gives us a little insurance and also allows for the
-  // extra space needed for the chunk header byte that occurs at least once evvery
+  // extra space needed for the chunk header byte that occurs at least once every
   // DLS_MAX_CHUNK_SIZE_BYTES bytes.
   space_needed += DLS_MIN_FREE_BYTES;
   uint32_t space_avail = file_size - session->storage.write_offset;

@@ -78,8 +78,8 @@ static inline GSize timeline_resources_get_gsize(TimelineResourceSize size) {
   }
 }
 
-//! Tests if a given timeline resource id is a system resource
-//! @param timeline_id Id of the timeline resource to test
+//! Tests if a given timeline resource ID is a system resource
+//! @param timeline_id ID of the timeline resource to test
 //! @return `true` if system resource, `false` if not
 bool timeline_resources_is_system(TimelineResourceId timeline_id);
 

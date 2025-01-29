@@ -308,7 +308,7 @@ VoiceSessionId voice_start_dictation(VoiceEndpointSessionType session_type) {
   return s_session_id;
 }
 
-// Calling this will end the recording, disable the mic and and stop the audio transfer session. We
+// Calling this will end the recording, disable the mic and stop the audio transfer session. We
 // expect voice_handle_dictation_result to be called next with a dictation response
 void voice_stop_dictation(VoiceSessionId session_id) {
   mutex_lock(s_lock);

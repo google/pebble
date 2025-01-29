@@ -156,8 +156,8 @@ static const GAPLERole s_current_role = GAPLERoleSlave;
 // Function prototypes
 
 typedef void (*IntentApply)(GAPLEConnectionIntent *intent, void *data);
-static void prv_apply_fuction_to_intents_matching_connection(const GAPLEConnection *connection,
-                                                             IntentApply fp, void *data);
+static void prv_apply_function_to_intents_matching_connection(const GAPLEConnection *connection,
+                                                              IntentApply fp, void *data);
 
 static bool prv_intent_matches_connection(const GAPLEConnectionIntent *intent,
                                           const GAPLEConnection *connection);
@@ -238,7 +238,7 @@ static void prv_build_task_mask_cb(GAPLEConnectionIntent *intent, void *data) {
 PebbleTaskBitset gap_le_connect_task_mask_for_connection(const GAPLEConnection *connection) {
   const PebbleTaskBitset task_mask_none = ~0;
   PebbleTaskBitset task_mask = task_mask_none;
-  prv_apply_fuction_to_intents_matching_connection(connection, prv_build_task_mask_cb, &task_mask);
+  prv_apply_function_to_intents_matching_connection(connection, prv_build_task_mask_cb, &task_mask);
   return task_mask;
 }
 
@@ -317,7 +317,7 @@ void bt_driver_handle_le_connection_handle_update_address_and_irk(const BleAddre
     GAPLEConnection *connection = gap_le_connection_by_device(&e->device);
     if (!connection) {
       PBL_LOG(LOG_LEVEL_ERROR,
-              "Got address & IRK update for non-existent connection. "
+              "Got address & IRK update for nonexistent connection. "
               "Old addr:"BT_DEVICE_ADDRESS_FMT, BT_DEVICE_ADDRESS_XPLODE(e->device.address));
       goto unlock;
     }
@@ -542,8 +542,8 @@ void bt_driver_handle_le_disconnection_complete_event(const BleDisconnectionComp
 // -------------------------------------------------------------------------------------------------
 //! Convenience function to apply a function to each intent matching or resolving to a device
 //! bt_lock is assumed to be taken before calling this function.
-static void prv_apply_fuction_to_intents_matching_connection(const GAPLEConnection *connection,
-                                                             IntentApply fp, void *data) {
+static void prv_apply_function_to_intents_matching_connection(const GAPLEConnection *connection,
+                                                              IntentApply fp, void *data) {
   GAPLEConnectionIntent *intent = s_intents;
   while (intent) {
     GAPLEConnectionIntent *next = (GAPLEConnectionIntent *) intent->node.next;
@@ -590,8 +590,8 @@ void bt_driver_handle_le_encryption_change_event(const BleEncryptionChange *even
     bt_driver_pebble_pairing_service_handle_status_change(connection);
   }
 
-  prv_apply_fuction_to_intents_matching_connection(connection,
-                                                   prv_send_clients_encrypted_event, NULL);
+  prv_apply_function_to_intents_matching_connection(connection,
+                                                    prv_send_clients_encrypted_event, NULL);
 unlock:
   bt_unlock();
 }

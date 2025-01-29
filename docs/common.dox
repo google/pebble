@@ -191,11 +191,11 @@ This function affects subsequent calls to \ref rand() to produce a sequence of n
 `setlocale` can be used to:
   - set the app's locale to a specific locale: `setlocale(LC_ALL, "en_CA")`
   - set the app's locale to the system locale: `setlocale(LC_ALL, "")`
-  - get the app's curent locale: `setlocale(LC_ALL, NULL)`
+  - get the app's current locale: `setlocale(LC_ALL, NULL)`
 
 \param category The category of routines for which to set the locale
 \param locale The ISO formatted locale to use, or "" for the system locale
-\return the locale after the change is applied, NULL on failure (e.g. unsuported category)
+\return the locale after the change is applied, NULL on failure (e.g. unsupported category)
 \note Currently, we only support two categories: LC_ALL and LC_TIME
 
 @}
@@ -421,7 +421,7 @@ original allocation or the new size into the newly allocated buffer.
 \return The destination buffer dest
 
 \fn char *strncat(char *dest, const char *src, size_t n)
-\brief Concatenates up to n bytes from the string in src to the end of the string pointed by dest and null terminates dest. There should be no overlap of dest and src in memeory.
+\brief Concatenates up to n bytes from the string in src to the end of the string pointed by dest and null terminates dest. There should be no overlap of dest and src in memory.
 \param dest The destination buffer with enough space for src beyond the null character
 \param src The source string
 \param n The maximum number of bytes to copy

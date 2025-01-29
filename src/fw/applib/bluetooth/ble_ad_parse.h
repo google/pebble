@@ -19,7 +19,7 @@
 #include <bluetooth/bluetooth_types.h>
 
 //! @file ble_ad_parse.h
-//! API to serialize and deserialize advertisment and scan response payloads.
+//! API to serialize and deserialize advertisement and scan response payloads.
 //!
 //! Inbound payloads, as received using the ble_scan.h public API, can be
 //! consumed/deserialized using the functions below.
@@ -81,7 +81,7 @@ bool ble_ad_get_tx_power_level(const BLEAdData *ad, int8_t *tx_power_level_out);
 size_t ble_ad_copy_local_name(const BLEAdData *ad,
                               char *buffer, size_t size);
 
-//! If the Local Name is present in the advertisment data, returns the number
+//! If the Local Name is present in the advertisement data, returns the number
 //! of bytes a C-string needs to be to hold the full name.
 //! @param ad The advertisement data
 //! @return The size of the Local Name in bytes, *including* zero terminator.
@@ -108,7 +108,7 @@ size_t ble_ad_copy_manufacturer_specific_data(const BLEAdData *ad,
                                               uint16_t *company_id_out,
                                               uint8_t *buffer, size_t size);
 
-//! Gets the size in bytes of Manufacturer Specific data in the advertisment.
+//! Gets the size in bytes of Manufacturer Specific data in the advertisement.
 //! @param ad The advertisement data
 //! @return The size of the data, in bytes. If the Manufacturer Specific data is
 //! not present, zero is returned.

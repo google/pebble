@@ -27,7 +27,7 @@
 //!
 //! A UI component that is a window that contains a progress bar. The state of the progress bar
 //! is updated using progress_window_set_progress. When the window is first pushed, the progress
-//! bar will fill on it's own, faking progress until the max_fake_progress_percent threshold is
+//! bar will fill on its own, faking progress until the max_fake_progress_percent threshold is
 //! hit. Once the client wishes to indicate success or failure, calling
 //! progress_window_set_progress_success or progress_window_set_progress_failure will cause the
 //! UI to animate out to indicate the result, followed by calling the .finished callback if
@@ -107,7 +107,7 @@ void progress_window_set_max_fake_progress(ProgressWindow *window,
 
 //! Update the progress to a given percentage. This will stop any further fake progress being shown
 //! the first time this is called. Note that setting progress to 100 is not the same as calling
-//! one of the progress_windw_set_result_* methods.
+//! one of the progress_window_set_result_* methods.
 void progress_window_set_progress(ProgressWindow *window, int16_t progress);
 
 //! Tell the ProgressWindow it should animate in a way to show success. When the animation is

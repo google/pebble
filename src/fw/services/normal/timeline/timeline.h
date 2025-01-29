@@ -59,7 +59,7 @@ bool timeline_exists(Uuid *id);
 //! Enables bulk action mode for ancs actions to avoid filling the event queue
 void timeline_enable_ancs_bulk_action_mode(bool enable);
 
-//! Returns whether or not bulk actoin mode is enabled for ancs actions
+//! Returns whether or not bulk action mode is enabled for ancs actions
 bool timeline_is_bulk_ancs_action_mode_enabled(void);
 
 //! invokes a timelineitem's action. This can end up triggering a bluetooth message.

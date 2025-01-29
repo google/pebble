@@ -74,7 +74,7 @@ static void prv_queue_dump(QueueHandle_t queue) {
 void events_init(void) {
   PBL_ASSERTN(s_system_event_queue_set == NULL);
 
-  // This assert is to make sure we don't accidentally bloat our PebbleEvent unecessarily. If you hit this
+  // This assert is to make sure we don't accidentally bloat our PebbleEvent unnecessarily. If you hit this
   // assert and you have a good reason for making the event bigger, feel free to relax the restriction.
   //PBL_LOG(LOG_LEVEL_DEBUG, "PebbleEvent size is %u", sizeof(PebbleEvent));
   // FIXME:

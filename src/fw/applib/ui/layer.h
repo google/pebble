@@ -172,7 +172,7 @@ void layer_init(Layer *layer, const GRect *frame);
 //! be created
 Layer* layer_create(GRect frame);
 
-//! Creates a layer on the heap with extra space for callback data, and set its frame andbounds.
+//! Creates a layer on the heap with extra space for callback data, and set its frame and bounds.
 //! Default values:
 //! * `bounds` : origin (0, 0) and a size equal to the frame that is passed in.
 //! * `clips` : `true`

@@ -102,7 +102,7 @@ class TestDeployPbzToPebbleFw(unittest.TestCase):
 
         def boto_key_func(boto_bucket, key):
             if key == 'pebble/bb2/porksmoothie/latest.json':
-                # Only validate us uploading to latest.json and return unamed mocks for the other
+                # Only validate us uploading to latest.json and return unnamed mocks for the other
                 # paths.
                 return mock_latest_key
 

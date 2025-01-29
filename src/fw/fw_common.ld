@@ -133,7 +133,7 @@ SECTIONS {
     } >APP_RAM
 
     .kernel_data : ALIGN(8) {
-        __data_start = .; /* This is used by the startup in order to initialize the .data secion */
+        __data_start = .; /* This is used by the startup in order to initialize the .data section */
 
         *(.data)
         *(.data.*)
@@ -144,7 +144,7 @@ SECTIONS {
     __data_load_start = LOADADDR(.kernel_data);
 
     .kernel_ro_bss (NOLOAD) : {
-        __bss_start = .; /* This is used by the startup in order to initialize the .bss secion */
+        __bss_start = .; /* This is used by the startup in order to initialize the .bss section */
 
         . = ALIGN(__unpriv_ro_bss_size__);
         __unpriv_ro_bss_start__ = .;

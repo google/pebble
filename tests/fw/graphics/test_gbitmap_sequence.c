@@ -88,7 +88,7 @@ static const char *prv_get_image_name(const char* func_name, int index, const ch
 // Result:
 //   - gbitmaps matches platform decoded APNG
 void test_gbitmap_sequence__color_2bit_bouncing_ball(void) {
-#if PLATFROM_SPALDING
+#if PLATFORM_SPALDING
   uint32_t resource_id = sys_resource_load_file_as_resource(TEST_IMAGES_PATH, GET_APNG_NAME);
   cl_assert(resource_id != UINT32_MAX);
 

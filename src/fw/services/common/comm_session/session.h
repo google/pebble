@@ -75,7 +75,7 @@ CommSessionCapability comm_session_get_capabilities(CommSession *session);
 //! @note It is possible that the session becomes disconnected at any point in time.
 CommSession *comm_session_get_system_session(void);
 
-//! @return a reference to the the third party app communication session for the *currently running*
+//! @return a reference to the third party app communication session for the *currently running*
 //! watch app, or NULL if the session does not exist (is not connected).
 //! @note It is possible that the session becomes disconnected at any point in time.
 CommSession *comm_session_get_current_app_session(void);

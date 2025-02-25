@@ -183,7 +183,7 @@ static void prv_handle_accel_data(void * data) {
 //     be ignored. We ignore any reading where the BPM is below HRM_SENSOR_MIN_VALID_BPM_READING.
 // 3.) Once the quality is "Good", we have to ignore all other quality readings (except off-wrist)
 //     because they don't mean anything in this version of the sensor FW.
-// 4.) If we suddently go "off-wrist", wait for another "Good" or better.
+// 4.) If we suddenly go "off-wrist", wait for another "Good" or better.
 //
 // So, for the first 0 to HRM_SENSOR_SPIN_UP_SEC seconds after turning the sensor on or first
 // contacting the wrist after being off-wrist, the readings can be unstable and this method will
@@ -237,9 +237,9 @@ static bool prv_is_sensor_stable(const HRMData *data) {
     s_manager_state.off_wrist_when_stable = false;
   } else {
     // We haven't yet received a good reading yet. Wait for a timeout...
-    RtcTicks elapased_ticks = rtc_get_ticks() - s_manager_state.sensor_start_ticks;
+    RtcTicks elapsed_ticks = rtc_get_ticks() - s_manager_state.sensor_start_ticks;
     RtcTicks max_startup_time = milliseconds_to_ticks(HRM_SENSOR_SPIN_UP_SEC * MS_PER_SECOND);
-    if (elapased_ticks >= max_startup_time) {
+    if (elapsed_ticks >= max_startup_time) {
       // If it's been past the tolerable startup time, we have a valid reading - even though it
       // may indicate off-wrist.
       s_manager_state.sensor_stable = true;

@@ -79,7 +79,7 @@ echo "${README_TEXT}" > ${OUT_DIR}/README.txt
 # Create the requirements.txt file
 echo "${REQUIREMENTS_TEXT}" > ${OUT_DIR}/requirements.txt
 
-# Copy the scripts we're interested into the ouput directory
+# Copy the scripts we're interested into the output directory
 mkdir -p ${OUT_DIR}/scripts
 cp tools/hdlc.py                       ${OUT_DIR}/scripts/
 cp tools/binutils.py                   ${OUT_DIR}/scripts/

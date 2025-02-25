@@ -148,7 +148,7 @@ void test_flash_region__erase_optimal_range_96k_app_banks(void) {
 
   s_command_list_index = 0;
 
-  // App that's in an aligned bank but larger than than 64k
+  // App that's in an aligned bank but larger than 64k
   flash_region_erase_optimal_range(0, 0, 69 * 1024, 96 * 1024);
 
   cl_assert_equal_i(s_command_list_index, 3);
@@ -185,7 +185,7 @@ void test_flash_region__erase_optimal_range_96k_app_banks(void) {
 
   s_command_list_index = 0;
 
-  // App that's in an unaligned bank but larger than than 64k
+  // App that's in an unaligned bank but larger than 64k
   flash_region_erase_optimal_range(32 * 1024, 32 * 1024, (32 + 71) * 1024, (32 + 96) * 1024);
 
   cl_assert_equal_i(s_command_list_index, 9);

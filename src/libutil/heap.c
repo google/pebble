@@ -33,7 +33,7 @@ typedef unsigned long Alignment_t;
 /* specified size if the alignment data.                             */
 #define ALIGNMENT_SIZE          sizeof(Alignment_t)
 
-/* The following structure is used to allign data fragments on a     */
+/* The following structure is used to align data fragments on a     */
 /* specified memory boundary.                                        */
 typedef union _tagAlignmentStruct_t
 {
@@ -53,7 +53,7 @@ typedef union _tagAlignmentStruct_t
 /* The following defines the minimum size (in alignment units) of a  */
 /* fragment that is considered useful.  The value is used when trying*/
 /* to determine if a fragment that is larger than the requested size */
-/* can be broken into 2 framents leaving a fragment that is of the   */
+/* can be broken into 2 fragments leaving a fragment that is of the   */
 /* requested size and one that is at least as larger as the          */
 /* MINIMUM_MEMORY_SIZE.                                              */
 #define MINIMUM_MEMORY_SIZE     1
@@ -62,13 +62,13 @@ typedef union _tagAlignmentStruct_t
 /* fragment.                                                         */
 typedef struct _tagHeapInfo_t
 {
-  //! Size of the preceding segment, measured in units of ALIGNMENT_SIZE, including the size of this beginer
+  //! Size of the preceding segment, measured in units of ALIGNMENT_SIZE, including the size of this header
   uint16_t PrevSize;
 
   //! Whether or not this block is currently allocated (vs being free).
   bool is_allocated:1;
 
-  //! Size of this segment, measured in units of ALIGNMENT_SIZE, including this size of this beginer
+  //! Size of this segment, measured in units of ALIGNMENT_SIZE, including this size of this header
   uint16_t Size:15;
 
 #ifdef MALLOC_INSTRUMENTATION
@@ -81,10 +81,10 @@ typedef struct _tagHeapInfo_t
 } HeapInfo_t;
 
 
-//! The size of a block in units of Alignment_t, including the beginer and including _x words of data.
+//! The size of a block in units of Alignment_t, including the header and including _x words of data.
 #define HEAP_INFO_BLOCK_SIZE(_x) ((offsetof(HeapInfo_t, Data) / ALIGNMENT_SIZE) + (_x))
 
-//! Convert a pointer to the Data member to a pointer to the HeapInfo_t beginer
+//! Convert a pointer to the Data member to a pointer to the HeapInfo_t header
 #define HEAP_INFO_FOR_PTR(ptr) (HeapInfo_t *)(((Alignment_t *)ptr) - HEAP_INFO_BLOCK_SIZE(0))
 
 _Static_assert((offsetof(HeapInfo_t, Data) % ALIGNMENT_SIZE) == 0, "Heap not properly aligned.");
@@ -241,7 +241,7 @@ void *heap_malloc(Heap* const heap, unsigned long nbytes, uintptr_t client_pc) {
   /* size.                                                             */
   unsigned long allocation_size = (nbytes + (ALIGNMENT_SIZE - 1)) / ALIGNMENT_SIZE;
 
-  /* Add the beginer size to the requested size.                        */
+  /* Add the header size to the requested size.                        */
   allocation_size += HEAP_INFO_BLOCK_SIZE(0);
 
   /* Verify that the requested size is valid                           */
@@ -336,7 +336,7 @@ void heap_free(Heap* const heap, void *ptr, uintptr_t client_pc) {
 
       /* Check to see if the previous segment can be combined. */
       if(!previous_block->is_allocated) {
-        /* Add the segment to be freed to the new beginer.     */
+        /* Add the segment to be freed to the new header.     */
         previous_block->Size += heap_info_ptr->Size;
 
         /* Set the pointer to the beginning of the previous   */
@@ -369,11 +369,11 @@ void heap_free(Heap* const heap, void *ptr, uintptr_t client_pc) {
         heap_info_ptr->Size += next_block->Size;
 
         /* Since we merged the next segment, we have to update*/
-        /* the next next segment's PrevSize field.            */
+        /* the next segment's PrevSize field.                 */
         HeapInfo_t *next_next_block = get_next_block(heap, heap_info_ptr);
 
         /* If we are pointing at the end of the heap, then use*/
-        /* the begin as the next next segment.                 */
+        /* the begin as the next segment.                     */
         if(next_next_block == heap->end) {
           heap->begin->PrevSize = heap_info_ptr->Size;
         }
@@ -449,7 +449,7 @@ static HeapInfo_t *find_segment(Heap* const heap, unsigned long n_units) {
       /* If the requested size is larger than the limit then*/
       /* search backwards for an available buffer, else go  */
       /* forward.  This will hopefully help to reduce       */
-      /* fragmentataion problems.                           */
+      /* fragmentation problems.                           */
       if (n_units >= LARGE_SIZE) {
         heap_info_ptr = get_previous_block(heap, heap_info_ptr);
       } else {
@@ -470,7 +470,7 @@ static HeapInfo_t *find_segment(Heap* const heap, unsigned long n_units) {
 //! Split a block into two smaller blocks, returning a pointer to the new second block.
 //! The first block will be available at the same location as before, but with a smaller size.
 //! Assumes the block is big enough to be split and is unallocated.
-//! @param first_part_size the size of the new block, in ALIGNMENT_SIZE units, including the beginer
+//! @param first_part_size the size of the new block, in ALIGNMENT_SIZE units, including the header
 static HeapInfo_t* split_block(Heap *heap, HeapInfo_t* block, size_t first_part_size) {
   HeapInfo_t* second_block = (HeapInfo_t*) (((Alignment_t*) block) + first_part_size);
 
@@ -495,7 +495,7 @@ static HeapInfo_t* split_block(Heap *heap, HeapInfo_t* block, size_t first_part_
 }
 
 //! Allocated the block in the given HeapInfo_t segment.
-//!     @param n_units number of ALIGNMENT_SIZE units this segment requires (including space for the beginer).
+//!     @param n_units number of ALIGNMENT_SIZE units this segment requires (including space for the header).
 //!     @param heap_info_ptr the segment where the block should be allocated.
 static HeapInfo_t *allocate_block(Heap* const heap, unsigned long n_units, HeapInfo_t* heap_info_ptr) {
   // Make sure we can use all or part of this block for this allocation.

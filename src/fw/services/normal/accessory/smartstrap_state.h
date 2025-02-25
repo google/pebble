@@ -62,7 +62,7 @@ bool smartstrap_fsm_state_test_and_set(SmartstrapState expected_state, Smartstra
 
 //! Sets the FSM state, regardless of what the current state is.
 //! @note The caller must ensure that there can be no other task or an ISR trying to access or
-//! change the state at the same time. If there is a posiblity for contention, the caller should use
+//! change the state at the same time. If there is a possibility for contention, the caller should use
 //! prv_fsm_state_test_and_set instead or enter a critical region.
 void smartstrap_fsm_state_set(SmartstrapState next_state);
 

@@ -71,7 +71,7 @@ typedef struct TextLayer {
 //!
 //! The text layer is automatically marked dirty after this operation.
 //! @param text_layer The TextLayer to initialize
-//! @param frame The frame with which to initialze the TextLayer
+//! @param frame The frame with which to initialize the TextLayer
 void text_layer_init(TextLayer *text_layer, const GRect *frame);
 
 //! Creates a new TextLayer on the heap and initializes it with the default values.
@@ -85,7 +85,7 @@ void text_layer_init(TextLayer *text_layer, const GRect *frame);
 //! * Caching: `false`
 //!
 //! The text layer is automatically marked dirty after this operation.
-//! @param frame The frame with which to initialze the TextLayer
+//! @param frame The frame with which to initialize the TextLayer
 //! @return A pointer to the TextLayer. `NULL` if the TextLayer could not
 //! be created
 TextLayer* text_layer_create(GRect frame);
@@ -158,7 +158,7 @@ void text_layer_set_text_alignment(TextLayer *text_layer, GTextAlignment text_al
 //! By default, layout caching is off (false). Layout caches store the max used
 //! height and width of a text layer.
 //! NOTE: when using cached layouts, text_layer_deinit() MUST be called at some
-//! point in time to prevent memory leaks from occuring.
+//! point in time to prevent memory leaks from occurring.
 void text_layer_set_should_cache_layout(TextLayer *text_layer, bool should_cache_layout);
 
 //! @internal

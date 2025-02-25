@@ -40,7 +40,7 @@ typedef struct PromptContext {
   //! Function to call when the command has completed.
   PromptCommandCompleteCallback command_complete_callback;
 
-  //! Which index we were currently writing to, should never be higher than
+  //! Which index we were currently writing to, should never be greater than
   //! PROMPT_BUFFER_SIZE_BYTES - 1.
   unsigned int write_index;
 

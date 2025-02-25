@@ -28,7 +28,7 @@ typedef struct ListNode {
 typedef bool (*ListFilterCallback)(ListNode *found_node, void *data);
 
 //! - If a callback returns true, the iteration continues
-//! - If a callback returns false, the ieration stops.
+//! - If a callback returns false, the iteration stops.
 typedef bool (*ListForEachCallback)(ListNode *node, void *context);
 
 #define LIST_NODE_NULL { .next = NULL, .prev = NULL }

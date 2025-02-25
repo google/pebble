@@ -67,7 +67,7 @@ void uart_set_baud_rate(UARTDevice *dev, uint32_t baud_rate);
 //! @note This cannot be set at the same time as a raw interrupt handler
 void uart_set_rx_interrupt_handler(UARTDevice *dev, UARTRXInterruptHandler irq_handler);
 
-//! Sets a transmit IRQ handler for the device which is called whenenver we send a byte (within an
+//! Sets a transmit IRQ handler for the device which is called whenever we send a byte (within an
 //! ISR)
 //! @note This cannot be set at the same time as a raw interrupt handler
 void uart_set_tx_interrupt_handler(UARTDevice *dev, UARTTXInterruptHandler irq_handler);

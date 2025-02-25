@@ -367,7 +367,7 @@ static void window_load(Window *window) {
 
   layer_add_child(window_layer, menu_layer_get_layer(s_menu_layer));
 
-  // Start scanning. Advertisments will be delivered in the callback.
+  // Start scanning. Advertisements will be delivered in the callback.
   toggle_scan();
 }
 

@@ -448,7 +448,7 @@ void test_graphics_gpath_8bit__clipping_aa(void) {
   // NOTE: Expected result of this test is to have an antialiased stripe go through the screen,
   //         where antialiased edges are being nicely cut off on top and bottom of the stripe
   //         (antialiased gradient would dive into the stripe near screen edges), also top
-  //         left corner is intentinally ending just before screen cuts it out to verify that
+  //         left corner is intentionally ending just before screen cuts it out to verify that
   //         fractional anti-aliasing is not bleeding into row before (would occur as pixels on
   //         right side of the screen)
   cl_check(gbitmap_pbi_eq(&ctx.dest_bitmap,

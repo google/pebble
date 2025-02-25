@@ -589,7 +589,7 @@ static void prv_draw_separator_cb(GContext *ctx, const Layer *cell_layer,
         system_theme_get_default_content_size_for_runtime_platform();
     const ActionMenuSeparatorConfig *config = &s_separator_configs[runtime_platform_default_size];
 
-    // If this index is the seperator index, we want to draw the separator line
+    // If this index is the separator index, we want to draw the separator line
     // in the vertical center of the separator
     const int16_t nudge_down = PBL_IF_RECT_ELSE(3, 0);
     const int16_t nudge_right = menu_cell_basic_horizontal_inset() + 1;

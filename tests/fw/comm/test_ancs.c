@@ -187,7 +187,7 @@ BTErrno gatt_client_op_write(BLECharacteristic characteristic,
     return BTErrnoInvalidParameter;
   }
 
-  const uint32_t comple_dict_uid = ((GetNotificationAttributesMsg*)s_complete_dict)->notification_uid;
+  const uint32_t complete_dict_uid = ((GetNotificationAttributesMsg*)s_complete_dict)->notification_uid;
   const uint32_t chunked_dict_uid = ((GetNotificationAttributesMsg*)s_chunked_dict_part_one)->notification_uid;
   const uint32_t message_size_attr_dict_uid = ((GetNotificationAttributesMsg*)s_message_size_attr_dict)->notification_uid;
   const uint32_t invalid_dict_uid = ((GetNotificationAttributesMsg*)s_invalid_attribute_length)->notification_uid;
@@ -221,7 +221,7 @@ BTErrno gatt_client_op_write(BLECharacteristic characteristic,
   uint32_t uid = ((GetNotificationAttributesMsg *)buffer)->notification_uid;
   s_num_requested_notif_attributes++;
 
-  if (uid == comple_dict_uid) {
+  if (uid == complete_dict_uid) {
     prv_fake_receiving_ds_notification(ARRAY_LENGTH(s_complete_dict), (uint8_t*) s_complete_dict);
     s_num_ds_notifications_received++;
   } else if (uid == chunked_dict_uid) {
@@ -353,7 +353,7 @@ void test_ancs__should_handle_small_and_large_messages(void) {
   cl_assert_equal_i(fake_kernel_services_notifications_ancs_notifications_count(), 4 + 4 + 4);
 }
 
-void test_ancs__should_handle_message_size_attribtue(void) {
+void test_ancs__should_handle_message_size_attribute(void) {
   prv_send_notification((uint8_t *)&s_message_size_attr_dict);
   cl_assert_equal_i(s_num_requested_notif_attributes, 1);
   cl_assert_equal_i(s_num_ds_notifications_received, 1);
@@ -437,7 +437,7 @@ void test_ancs__ancs_invalid_param(void) {
     .uid = 0,
   };
 
-  const uint32_t comple_dict_uid = ((GetNotificationAttributesMsg*)s_complete_dict)->notification_uid;
+  const uint32_t complete_dict_uid = ((GetNotificationAttributesMsg*)s_complete_dict)->notification_uid;
 
   ns_notification.uid = s_invalid_param_uid;
   // This will return with an error ANCS_INVALID_PARAM
@@ -446,7 +446,7 @@ void test_ancs__ancs_invalid_param(void) {
   cl_assert_equal_i(s_num_requested_notif_attributes, 1 );
   cl_assert_equal_i(s_num_ds_notifications_received, 1);
 
-  ns_notification.uid = comple_dict_uid;
+  ns_notification.uid = complete_dict_uid;
   prv_fake_receiving_ns_notification(sizeof(ns_notification), (uint8_t*) &ns_notification);
   cl_assert_equal_i(s_num_requested_notif_attributes, 2);
   cl_assert_equal_i(s_num_ds_notifications_received, 2);
@@ -465,7 +465,7 @@ void test_ancs__ancs_invalid_param(void) {
   cl_assert_equal_i(s_num_requested_notif_attributes, 4);
   cl_assert_equal_i(s_num_ds_notifications_received, 4);
 
-  ns_notification.uid = comple_dict_uid;
+  ns_notification.uid = complete_dict_uid;
   prv_fake_receiving_ns_notification(sizeof(ns_notification), (uint8_t*) &ns_notification);
   cl_assert_equal_i(s_num_requested_notif_attributes, 5);
   cl_assert_equal_i(s_num_ds_notifications_received, 5);

@@ -51,7 +51,7 @@
 //! UP and DOWN buttons with scrolling up and down.
 //! * The SELECT button can be configured by installing a click configuration
 //! provider using \ref scroll_layer_set_callbacks().
-//! * To scroll programatically to a certain offset, use
+//! * To scroll programmatically to a certain offset, use
 //! \ref scroll_layer_set_content_offset().
 //! * It is possible to get called back for each scrolling increment, by
 //! installing the `.content_offset_changed_handler` callback using
@@ -76,7 +76,7 @@ typedef struct ScrollLayerCallbacks {
   //! scrolling behavior.
   ClickConfigProvider click_config_provider;
 
-  //! Called every time the the content offset changes. During a scrolling
+  //! Called every time the content offset changes. During a scrolling
   //! animation, it will be called for each intermediary offset as well
   ScrollLayerCallback content_offset_changed_handler;
 
@@ -156,10 +156,10 @@ _Static_assert(offsetof(struct ScrollPaging, flags) == offsetof(Layer, flags),
 //! * Callback context: `NULL`
 //! The layer is marked dirty automatically.
 //! @param scroll_layer The ScrollLayer to initialize
-//! @param frame The frame with which to initialze the ScrollLayer
+//! @param frame The frame with which to initialize the ScrollLayer
 void scroll_layer_init(ScrollLayer *scroll_layer, const GRect *frame);
 
-//! Creates a new ScrollLayer on the heap and initalizes it with the default values:
+//! Creates a new ScrollLayer on the heap and initializes it with the default values:
 //! * Clips: `true`
 //! * Hidden: `false`
 //! * Content size: `frame.size`

@@ -53,7 +53,7 @@ bool circular_buffer_write(CircularBuffer* buffer, const void* data, uint16_t le
 
   uint16_t write_index = get_write_index(buffer);
 
-  // Update the data_length member now beforce we muck with the length parameter
+  // Update the data_length member now before we muck with the length parameter
   buffer->data_length += length;
 
   const uint16_t remaining_length = buffer->buffer_size - write_index;
@@ -143,8 +143,8 @@ bool circular_buffer_read_or_copy(const CircularBuffer* buffer, uint8_t **data_o
   if (buffer->data_length < length) {
     return false;
   }
-  const uint16_t continguous_length = (buffer->buffer_size - buffer->read_index);
-  const bool should_malloc_and_copy = (length > continguous_length);
+  const uint16_t contiguous_length = (buffer->buffer_size - buffer->read_index);
+  const bool should_malloc_and_copy = (length > contiguous_length);
   *caller_should_free = should_malloc_and_copy;
   if (should_malloc_and_copy) {
     *data_out = (uint8_t *) malloc_imp(length);

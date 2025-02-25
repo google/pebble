@@ -53,7 +53,7 @@ typedef enum {
   GTextOverflowModeFill
 } GTextOverflowMode;
 
-//! Text aligment controls the way the text is aligned inside the box the text is drawn into.
+//! Text alignment controls the way the text is aligned inside the box the text is drawn into.
 //! @see graphics_draw_text
 //! @see text_layer_set_text_alignment
 typedef enum {
@@ -138,7 +138,7 @@ void graphics_text_init(void);
 
 //! Draw text into the current graphics context, using the context's current text color.
 //! The text will be drawn inside a box with the specified dimensions and
-//! configuration, with clipping occuring automatically.
+//! configuration, with clipping occurring automatically.
 //! @param ctx The destination graphics context in which to draw
 //! @param text The zero terminated UTF-8 string to draw
 //! @param font The font in which the text should be set

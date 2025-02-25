@@ -1,4 +1,4 @@
-// Registery for Smartstrap Profiles
+// Registry for Smartstrap Profiles
 
 // Syntax: REGISTER_SMARTSTRAP_PROFILE(func)
 //  where func is a function of the following type:

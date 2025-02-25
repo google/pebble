@@ -48,7 +48,7 @@ unsigned int base64_decode_inplace(char* buffer, unsigned int length) {
 
     // Handle the padding if we broke out the loop early (0-2 '=' characters).
     const unsigned int padding_amount = 4 - quad_index;
-    if (padding_amount > 2) return 0; // Mades no sense to pad an entire triplet.
+    if (padding_amount > 2) return 0; // Makes no sense to pad an entire triplet.
     if (memcmp(buffer + read_index + quad_index, "==", padding_amount) != 0) return 0; // There are characters after our padding?
 
     // Chop off extra unused low bits if we're padded.

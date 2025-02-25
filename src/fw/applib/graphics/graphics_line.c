@@ -380,7 +380,7 @@ static bool prv_calc_far_points(GPointPrecise *p0, GPointPrecise *p1, Fixed_S16_
   }
 
   // Since we already rotated the vector by 90 degrees, delta x is actually delta y
-  // therefore if x is bigger than y we have have vertical dominance
+  // therefore if x is bigger than y we have vertical dominance
   if (ABS(dx_fixed) > ABS(dy_fixed)) {
     return true;
   }
@@ -411,13 +411,13 @@ void prv_draw_stroked_line_precise(GContext* ctx, GPointPrecise p0, GPointPrecis
 
     ctx->draw_state.fill_color = ctx->draw_state.stroke_color;
 
-    // If so, draw a circle with corrseponding radius
+    // If so, draw a circle with corresponding radius
     graphics_fill_circle(ctx, GPoint(p0.x.integer, p0.y.integer), radius.integer);
 
     // Finish color hack
     ctx->draw_state.fill_color = temp_color;
 
-    // Return without drawing the line since its not neccessary
+    // Return without drawing the line since its not necessary
     return;
   }
 
@@ -459,7 +459,7 @@ void prv_draw_stroked_line_precise(GContext* ctx, GPointPrecise p0, GPointPrecis
 
     // Drawing loop: Iterates over horizontal lines
     // As part of optimisation, this algorithm is moving between drawing boundaries,
-    // so drawing box has to be substracted from its clipping extremes
+    // so drawing box has to be subtracted from its clipping extremes
     const int16_t clip_min_y = ctx->draw_state.clip_box.origin.y
                                - ctx->draw_state.drawing_box.origin.y;
     const int16_t clip_max_y = clip_min_y + ctx->draw_state.clip_box.size.h;
@@ -517,7 +517,7 @@ void prv_draw_stroked_line_precise(GContext* ctx, GPointPrecise p0, GPointPrecis
       Fixed_S16_3 left_margin = {.raw_value = INT16_MAX};
       Fixed_S16_3 right_margin = {.raw_value = INT16_MIN};
 
-      // Find edges of the line's straigth part
+      // Find edges of the line's straight part
       if (y >= far_top.y.integer && y <= far_bottom.y.integer) {
         // TODO: possible performance optimization: PBL-14744
         // TODO: ^^ also possible avoid of following logic to avoid division by zero
@@ -585,7 +585,7 @@ void prv_draw_stroked_line_precise(GContext* ctx, GPointPrecise p0, GPointPrecis
 
     // Drawing loop: Iterates over vertical lines from left to right
     // As part of optimisation, this algorithm is moving between drawing boundaries,
-    // so drawing box has to be substracted from its clipping extremes
+    // so drawing box has to be subtracted from its clipping extremes
     const int16_t clip_min_x = ctx->draw_state.clip_box.origin.x
                                - ctx->draw_state.drawing_box.origin.x;
     const int16_t clip_max_x = clip_min_x + ctx->draw_state.clip_box.size.w;
@@ -645,7 +645,7 @@ void prv_draw_stroked_line_precise(GContext* ctx, GPointPrecise p0, GPointPrecis
       Fixed_S16_3 top_margin = {.raw_value = INT16_MAX};
       Fixed_S16_3 bottom_margin = {.raw_value = INT16_MIN};
 
-      // Find edges of the line's straigth part
+      // Find edges of the line's straight part
       if (x >= far_left.x.integer && x <= far_right.x.integer) {
         // Main part of the stroked line
         if (tm_p1.x.raw_value != tm_p0.x.raw_value) {
@@ -774,7 +774,7 @@ void graphics_draw_line(GContext* ctx, GPoint p0, GPoint p1) {
       graphics_line_draw_stroked_aa(ctx, p0, p1, ctx->draw_state.stroke_width);
       return;
     } else {
-      // Antialiased and Stroke Width == 1 (not suppported on 1-bit color)
+      // Antialiased and Stroke Width == 1 (not supported on 1-bit color)
       graphics_line_draw_1px_aa(ctx, p0, p1);
       return;
     }

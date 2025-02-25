@@ -56,7 +56,7 @@ void alarm_pin_add(time_t alarm_time, AlarmId id, AlarmType type, AlarmKind kind
   AttributeList edit_attr_list = {0};
   prv_set_edit_action_attributes(&edit_attr_list);
   action_group.actions[0] = (TimelineItemAction) {
-    .id = (uint8_t) id, // id is guarenteed to be valid here, and we only support 10 alarms
+    .id = (uint8_t) id, // id is guaranteed to be valid here, and we only support 10 alarms
     .type = TimelineItemActionTypeOpenWatchApp,
     .attr_list = edit_attr_list,
   };

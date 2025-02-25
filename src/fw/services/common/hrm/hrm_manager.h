@@ -90,7 +90,7 @@ void hrm_manager_handle_prefs_changed(void);
 //! This should not be used by KernelBG or KernelMain clients. For KernelBG client subscriptions,
 //! please see \ref hrm_manager_subscribe_with_callback. KernelMain clients are not yet supported.
 //! If the app/worker is already subscribed, this will update the subscription based on the passed
-//! in arguments and return the pre-existing HRMSessionRef.
+//! in arguments and return the preexisting HRMSessionRef.
 //! @param app_id the application's AppInstallId
 //! @param update_interval_s requested update interval
 //! @param expire_s after this many seconds, this subscription will automatically expire
@@ -99,7 +99,7 @@ void hrm_manager_handle_prefs_changed(void);
 HRMSessionRef sys_hrm_manager_app_subscribe(AppInstallId app_id, uint32_t update_interval_s,
                                             uint16_t expire_s, HRMFeature features);
 
-//! Return the HRMSessionRef for an app or worker subscription, if it exists. This call can not
+//! Return the HRMSessionRef for an app or worker subscription, if it exists. This call cannot
 //! be used for KernelBG subscriptions
 //! @param app_id the application's AppInstallId
 //! @return the HRMSessionRef for this subscription, or NULL if no subscription exists
@@ -128,8 +128,8 @@ bool sys_hrm_manager_set_update_interval(HRMSessionRef session, uint32_t update_
 //! @param[in] session the HRMSessionRef returned by sys_hrm_manager_app_subscribe
 //! @param[out] app_id if not NULL, the app_id belonging to this subscription is returned here
 //! @param[out] update_interval_s if not NULL, the requested update interval is returned here
-//! @param[out] expire_s if not NULL, the number of seconds that this subcription will expire in
-//! @return true if succss, false if subscription was not found
+//! @param[out] expire_s if not NULL, the number of seconds that this subscription will expire in
+//! @return true if success, false if subscription was not found
 bool sys_hrm_manager_get_subscription_info(HRMSessionRef session, AppInstallId *app_id,
                                            uint32_t *update_interval_s, uint16_t *expire_s,
                                            HRMFeature *features);

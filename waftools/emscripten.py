@@ -41,7 +41,7 @@ import os
 from waflib import Logs, Task, TaskGen
 
 
-# Insipred on https://github.com/waf-project/waf/blob/4ff5b8b7a74dd2ad23600ed7af6a505b90235387/playground/strip/strip.py
+# Inspired by https://github.com/waf-project/waf/blob/4ff5b8b7a74dd2ad23600ed7af6a505b90235387/playground/strip/strip.py
 def wrap_cprogram_task_class():
     classname = 'cprogram'
     orig_cls = Task.classes[classname]
@@ -66,7 +66,7 @@ def wrap_cprogram_task_class():
         self.env.env = {}
         self.env.env.update(os.environ)
         for key in ['EMCC_DEBUG', 'EMCC_CORES', 'EM_CACHE']:
-            if self.env[key]:  # If not explicitely set, empty list is returned
+            if self.env[key]:  # If not explicitly set, empty list is returned
                 self.env.env[key] = str(self.env[key])
     emx_cls.__init__ = init
 
@@ -159,7 +159,7 @@ def process_emscripten_cprogram_link_args(self):
     for s in get_rule_and_env_values('emx_other_settings'):
         add_emcc_settings('-s', s)
 
-    # Emscripten implicitely regenerates caches (libc.bc, dlmalloc.bc,
+    # Emscripten implicitly regenerates caches (libc.bc, dlmalloc.bc,
     # struct_info.compiled.json and optimizer.exe) as needed.
     # When running multiple instantiations of emcc in parallel, this is
     # problematic because they will each race to generate the caches,

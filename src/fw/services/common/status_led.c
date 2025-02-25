@@ -43,11 +43,11 @@ void status_led_set(StatusLedState state) {
   s_led_color = new_color;
 
   // Tell the battery curve service to account for the updated LED state.
-  int compenstation_mv = 0;
+  int compensation_mv = 0;
   if (s_led_color != LED_BLACK) {
-    compenstation_mv = BOARD_CONFIG_POWER.charging_status_led_voltage_compensation;
+    compensation_mv = BOARD_CONFIG_POWER.charging_status_led_voltage_compensation;
   }
-  battery_curve_set_compensation(BATTERY_CURVE_COMPENSATE_STATUS_LED, compenstation_mv);
+  battery_curve_set_compensation(BATTERY_CURVE_COMPENSATE_STATUS_LED, compensation_mv);
 
   led_controller_rgb_set_color(s_led_color);
 }

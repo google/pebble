@@ -53,7 +53,7 @@
 #define FLASH_REGION_SYSTEM_RESOURCES_BEGIN 0x380000
 #define FLASH_REGION_SYSTEM_RESOURCES_END   0x400000 // 512k
 
-// FIXME: The addresses below here are hacky work arounds and hopefully not the final place
+// FIXME: The addresses below here are hacky workarounds and hopefully not the final place
 // for these things. Hopefully many of them can move to the filesystem. Everything above here
 // should be pretty stable.
 

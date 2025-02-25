@@ -24,7 +24,7 @@
 //
 // The set of runlevels for which a service should be enabled is defined by
 // bitwise-OR-ing the RunLevelBit constants for every runlevel that the service
-// should be enabled in to form an enable-mask. Testing whether a service should
+// should be enabled to form an enable-mask. Testing whether a service should
 // be enabled for a given runlevel is simply
 // (enable_mask & (1 << runlevel) != 0).
 //

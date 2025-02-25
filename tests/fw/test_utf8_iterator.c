@@ -197,7 +197,7 @@ void test_utf8_iterator__each_codepoint_invalid(void) {
   cl_assert_equal_i(s_each_count, 0);
 }
 
-void test_utf8_iterator__each_codepoint_emptry_string(void) {
+void test_utf8_iterator__each_codepoint_empty_string(void) {
   void *context = (void *)(uintptr_t)0x42;
   const char *str = "";
   s_each_count = 0;

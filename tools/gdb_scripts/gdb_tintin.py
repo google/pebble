@@ -441,7 +441,7 @@ class StackRecover(gdb.Command):
 
     def __init__(self):
         super(StackRecover, self).__init__('pbl stackwizard', gdb.COMMAND_USER)
-        desc = "Attempts to recover a backtrace from a corrupted stack (i.e stack oveflow)"
+        desc = "Attempts to recover a backtrace from a corrupted stack (i.e stack overflow)"
         self.parser = gdb_utils.GdbArgumentParser(prog='pbl stackwizard', description=desc)
 
     def print_usage(self):

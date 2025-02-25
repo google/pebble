@@ -95,8 +95,8 @@ void test_gap_le_advert__initialize(void) {
   s_unscheduled_job = NULL;
   s_unscheduled_completed = false;
 
-  // This bypasses the work-around for the CC2564 advertising bug, that pauses the round-robinning
-  // through scheduled advertisment jobs:
+  // This bypasses the workaround for the CC2564 advertising bug, that pauses the round-robining
+  // through scheduled advertisement jobs:
   s_is_connected_as_slave = true;
 
   regular_timer_init();
@@ -827,7 +827,7 @@ void test_gap_le_advert__invalid_params(void) {
 }
 
 void test_gap_le_advert__unschedule_non_existent(void) {
-  // Unscheduling non-existent job should be fine, should not crash:
+  // Unscheduling nonexistent job should be fine, should not crash:
   gap_le_advert_unschedule((GAPLEAdvertisingJobRef)(uintptr_t) 0x1234);
 
   // Unschedule callback should not have been called:

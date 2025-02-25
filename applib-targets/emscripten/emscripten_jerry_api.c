@@ -558,7 +558,7 @@ jerry_size_t jerry_object_to_string_to_utf8_char_buffer(const jerry_value_t obje
   return len;
 }
 
-// FIXME: PBL-43551 Propery CESU-8 => UTF-8 conversion.
+// FIXME: PBL-43551 Property CESU-8 => UTF-8 conversion.
 jerry_size_t jerry_object_to_string_to_char_buffer(const jerry_value_t object,
                                                    jerry_char_t *buffer_p,
                                                    jerry_size_t buffer_size) {

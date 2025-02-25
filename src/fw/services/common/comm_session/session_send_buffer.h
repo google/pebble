@@ -34,11 +34,11 @@ size_t comm_session_send_buffer_get_max_payload_length(const CommSession *sessio
 //! is fine if bt_lock() is held.
 //! @param session The session to which the message should be sent.
 //! @param endpoint_id The Pebble Protocol endpoint ID to send the message to.
-//! @param required_free_length The number of bytes of free space the caller needs at minumum. Once
+//! @param required_free_length The number of bytes of free space the caller needs at minimum. Once
 //! the function returns with `true`, the amount of space (or more) is guaranteed to be available.
 //! @param timeout_ms The maximum duration to wait for the send buffer to become available with the
 //! required number of bytes of free space.
-//! @return True if the "writer access" was sucessfully acquired, false otherwise.
+//! @return True if the "writer access" was successfully acquired, false otherwise.
 SendBuffer * comm_session_send_buffer_begin_write(CommSession *session, uint16_t endpoint_id,
                                                   size_t required_free_length,
                                                   uint32_t timeout_ms);

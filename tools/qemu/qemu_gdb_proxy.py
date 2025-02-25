@@ -23,7 +23,7 @@ created in the Pebble.
 This proxy talks to the QEMU gdb server using primitive gdb remote commands and inspects the 
 FreeRTOS task structures to figure out which threads have been created, their saved registers, etc. 
 and then returns that information to gdb when it asks for thread info from the target system. For 
-most other requests recevied from gdb, this proxy simply acts as a passive pass thru to the QEMU gdb
+most other requests received from gdb, this proxy simply acts as a passive pass thru to the QEMU gdb
 server.
 
 This module is designed to be run as a separate process from both QEMU and gdb. It connects to the
@@ -694,7 +694,7 @@ if __name__ == '__main__':
     # Collect our command line arguments
     parser = argparse.ArgumentParser(formatter_class=argparse.ArgumentDefaultsHelpFormatter)
     parser.add_argument('--port', type=int, default=1233,
-            help="Port to accept incomming connections on")
+            help="Port to accept incoming connections on")
     parser.add_argument('--target', default='localhost:1234',
             help="target to connect to ")
     parser.add_argument('--connect_timeout', type=float, default=1.0,

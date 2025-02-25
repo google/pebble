@@ -122,7 +122,7 @@ static void battery_state_put_change_event(PreciseBatteryChargeState state) {
 
 void battery_state_reset_filter(void) {
   s_last_battery_state.voltage = battery_get_millivolts();
-  // Reset the stablization timer in case we encountered a current spike during the reset
+  // Reset the stabilization timer in case we encountered a current spike during the reset
   s_last_battery_state.init_time = rtc_get_ticks();
 }
 
@@ -213,7 +213,7 @@ static void prv_update_state(void *force_update) {
   // - We are charging
   // - We are discharging and:
   //    - The readings have stabilized and the battery percent did not go up
-  //    - The readings have not yet stablized
+  //    - The readings have not yet stabilized
   // TL;DR: Allow updates unless we're stable and discharging but the % went up.
   if (!charging && likely_stable &&
       new_charge_percent > s_last_battery_state.percent) {

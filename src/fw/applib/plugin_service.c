@@ -49,7 +49,7 @@ static uint16_t prv_get_service_index(Uuid *uuid) {
 
 
 // ---------------------------------------------------------------------------------------------------------------
-// Used by list_find to locate the handler for a specfic service index.
+// Used by list_find to locate the handler for a specific service index.
 static bool prv_service_filter(ListNode *node, void *tp) {
   PluginServiceEntry *info = (PluginServiceEntry *)node;
   uint16_t service_idx = (uint16_t)(uintptr_t)tp;

@@ -145,7 +145,7 @@ def options(opt):
     opt.add_option('--file', action='store', help='Specify a file to use with the flash_fw command')
     opt.add_option('--tty',
         help='Selects a tty to use for serial imaging. Must be specified for all image commands')
-    opt.add_option('--baudrate', action='store', type=int, help='Optional: specifies the baudrate to run the targetted uart at')
+    opt.add_option('--baudrate', action='store', type=int, help='Optional: specifies the baudrate to run the targeted uart at')
     opt.add_option('--onlysdk', action='store_true', help="only build the sdk")
     opt.add_option('--qemu_host', default='localhost:12345',
         help='host:port for the emulator console connection')
@@ -419,7 +419,7 @@ def configure(conf):
     conf.env.NOJS = conf.options.nojs
 
     # The BT controller is the only thing different between robert_es and robert_evt, so just
-    # retend robert_es is robert_evt. We'll be removing robert_es fairly soon anyways.
+    # pretend robert_es is robert_evt. We'll be removing robert_es fairly soon anyways.
     bt_board = None
     if conf.options.board == 'robert_es':
         bt_board = 'robert_es'
@@ -1129,7 +1129,7 @@ def _create_qemu_image_micro(ctx, path_to_firmware_hex):
     img = IntelHex(ctx.env.BOOTLOADER_HEX)
     img.merge(IntelHex(path_to_firmware_hex), overlap='replace')
 
-    # Write firwmare image and pad up to next 512 byte multiple. This is because QEMU
+    # Write firmware image and pad up to next 512 byte multiple. This is because QEMU
     # assumes all block devices are multiples of 512 byte sectors
     img.padding = 0xff
     flash_end = ((img.maxaddr() + 511) // 512) * 512
@@ -1186,7 +1186,7 @@ def mfg_image_spi(ctx):
         prf_begin = 0x200000
         image_size = 0x800000
     else:
-        ctx.fatal("MFG Image not suppored for board: {}".format(ctx.env.BOARD))
+        ctx.fatal("MFG Image not supported for board: {}".format(ctx.env.BOARD))
 
     spi_flash_path = _create_spi_flash_image(ctx, 'mfg_prf_image.bin')
     mfg_spi_img_file = open(spi_flash_path, 'wb')
@@ -1252,7 +1252,7 @@ def ble_console(ctx):
     """Starts miniterm with the serial console for the BLE chip."""
     ctx.recurse('platform', mandatory=False)
 
-    # FIXME: We have the ability to progam PIDs into the new round of Big Boards. TTY
+    # FIXME: We have the ability to program PIDs into the new round of Big Boards. TTY
     # path discovery should be able to use that (PBL-31111). For now, just make a best
     # guess at what the path should be
 
@@ -1429,7 +1429,7 @@ class gdb_prf(BuildContext):
 
 def openocd(ctx):
     """ Starts openocd and leaves it running. It will reset the board to
-        increase the chances of attaching succesfully. """
+        increase the chances of attaching successfully. """
     waftools.openocd.run_command(ctx, 'init; reset', shutdown=False)
 
 

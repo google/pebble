@@ -45,7 +45,7 @@ typedef struct {
 
   //! The calibrated power of the iBeacon. This is the RSSI measured at 1 meter
   //! distance from the iBeacon. The iBeacon transmits this information in its
-  //! advertisment. Using this and the actual RSSI, the distance is estimated.
+  //! advertisement. Using this and the actual RSSI, the distance is estimated.
   int8_t calibrated_tx_power;
 } BLEiBeacon;
 
@@ -90,7 +90,7 @@ void ble_ibeacon_destroy(BLEiBeacon *ibeacon);
 //! @param rssi The RSSI of the advertisement
 //! @param[out] ibeacon_out Will contain the parsed iBeacon data if the call
 //! returns true.
-//! @return true if the data element was succesfully parsed as iBeacon,
+//! @return true if the data element was successfully parsed as iBeacon,
 //! false if the data element could not be parsed as iBeacon.
 bool ble_ibeacon_parse(const BLEAdData *ad, int8_t rssi,
                        BLEiBeacon *ibeacon_out);

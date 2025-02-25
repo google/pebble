@@ -393,7 +393,7 @@ static void prv_menu_layer_walk_downward_from_iterator(MenuIterator *it) {
       it->cursor.sep = prv_menu_layer_get_separator_height(it->menu_layer, &it->cursor.index);
       it->cursor.y = it->cell_bottom_y; // Bottom of previous cell is y of the next cell
 
-      // Don't leave space for the seperator for the (non-existent) row after the last row.
+      // Don't leave space for the separator for the (nonexistent) row after the last row.
       // This doesn't impact cell drawing in this loop (this condition will only trip on the last run).
       // But, other parts of the system rely on the cursor being set properly at the end of this iteration.
       if (it->cursor.index.row < num_rows_in_section - 1 || it->cursor.index.section < num_sections - 1) {
@@ -471,7 +471,7 @@ static void prv_menu_layer_walk_upward_from_iterator(MenuIterator *it) {
         const int16_t total_height = it->cursor.h + it->cursor.sep;
         if (total_height > it->cursor.y) {
           // If the total height is greater than the cursor y, don't
-          // add in space to accodomate the separator as the downwards callback
+          // add in space to accommodate the separator as the downwards callback
           // will add it for us.
           it->cursor.y -= it->cursor.h;
         } else {
@@ -1055,7 +1055,7 @@ void prv_center_focus_animation_update_in_and_out(Animation *animation,
 
 void prv_center_focus_animation_update_out_only(Animation *animation,
                                                 const AnimationProgress progress) {
-  // anwalys only render the bounce back
+  // anyways only render the bounce back
   prv_center_focus_animation_update_impl(animation, true, progress);
 }
 

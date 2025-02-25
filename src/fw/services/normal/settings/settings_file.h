@@ -20,19 +20,19 @@
 
 // Deleted records have their key stick around for at least DELETED_LIFETIME
 // before they can be garbage collected from the file in which they are
-// contained, that way they have time to propegate to all devices we end up
-// syncronizing with. For more information, refer to the sync protocol proposal:
+// contained, that way they have time to propagate to all devices we end up
+// synchronizing with. For more information, refer to the sync protocol proposal:
 // https://pebbletechnology.atlassian.net/wiki/pages/viewpage.action?pageId=26837564
 //
 // FIXME: See PBL-18945
 #define DELETED_LIFETIME (0 * SECONDS_PER_DAY)
 
 //! A SettingsFile is just a simple binary key-value store. Keys can be strings,
-//! uint32_ts, or arbitrary bytes. Values are similarilly flexible. All
+//! uint32_ts, or arbitrary bytes. Values are similarly flexible. All
 //! operations are atomic, so a reboot in the middle of changing the value for a
 //! key will always either complete, returning the new value upon reboot, or
 //! will just return the old value.
-//! It also supports bidirection syncronization between the phone & watch,
+//! It also supports bidirectional synchronization between the phone & watch,
 //! using timestamps to resolve conflicts.
 //! Note that although all operations are atomic, they are not thread-safe. If
 //! you will be accessing a SettingsFile from multiple threads, make sure you
@@ -126,7 +126,7 @@ typedef struct {
 //! Callback used for using settings_file_each.
 //! The bool returned is used to control the iteration.
 //! - If a callback returns true, the iteration continues
-//! - If a callback returns false, the ieration stops.
+//! - If a callback returns false, the iteration stops.
 typedef bool (*SettingsFileEachCallback)(SettingsFile *file,
                                          SettingsRecordInfo *info,
                                          void *context);

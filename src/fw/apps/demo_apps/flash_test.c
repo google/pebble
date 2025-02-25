@@ -179,7 +179,7 @@ void flash_test_dismiss_window(void) {
   window_stack_remove(&data->test_window, animated);
 }
 
-static void up_click_handler(ClickRecognizerRef recognizer, void *unusued) {
+static void up_click_handler(ClickRecognizerRef recognizer, void *unused) {
   struct FlashTestData *data = app_state_get_user_data();
 
   if (data->test_case_status != FLASH_TEST_STATUS_RUNNING) {
@@ -187,7 +187,7 @@ static void up_click_handler(ClickRecognizerRef recognizer, void *unusued) {
   }
 }
 
-static void down_click_handler(ClickRecognizerRef recognizer, void *unusued) {
+static void down_click_handler(ClickRecognizerRef recognizer, void *unused) {
   struct FlashTestData *data = app_state_get_user_data();
 
   // Only stop stress test
@@ -216,7 +216,7 @@ static void run_test(void* context) {
   update_test_case_status(data);
 }
 
-static void select_click_handler(ClickRecognizerRef recognizer, void *unusued) {
+static void select_click_handler(ClickRecognizerRef recognizer, void *unused) {
   struct FlashTestData *data = app_state_get_user_data();
 
   if ((data->test_case == FLASH_TEST_CASE_RUN_STRESS_ADDR_TEST) && (data->test_case_status == FLASH_TEST_STATUS_RUNNING)) {

@@ -30,7 +30,7 @@
 //! callback to send an event to another thread with evented_timer.h. In the future these other
 //! threads will probably use their own TaskTimerManager instances instead and this thread will
 //! will get a whole lot less busy and reserved for only high priority work. At that time this
-//! thread will probably get renamed something like KernelHighPriortity.
+//! thread will probably get renamed something like KernelHighPriority.
 
 typedef void (*NewTimerCallback)(void *data);
 

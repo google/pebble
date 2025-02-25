@@ -303,7 +303,7 @@ void qspi_flash_set_lower_power_mode(QSPIFlash *dev, bool active) {
 }
 
 #if TARGET_QEMU
-// While this works with normal hardware, it has a large stack requirment and I can't
+// While this works with normal hardware, it has a large stack requirement and I can't
 // see a compelling reason to use it over the mmap blank check variant
 static bool prv_blank_check_poll(QSPIFlash *dev, uint32_t addr, bool is_subsector) {
   const uint32_t size_bytes = is_subsector ? SUBSECTOR_SIZE_BYTES : SECTOR_SIZE_BYTES;
@@ -656,7 +656,7 @@ void command_flash_apicheck(const char *len_str) {
   }
 
   if (failures == 0) {
-    prompt_send_response_fmt(buf, buf_size, "SUCCESS: run %d tests and all passeed", passes);
+    prompt_send_response_fmt(buf, buf_size, "SUCCESS: run %d tests and all passed", passes);
   }
   else {
     prompt_send_response_fmt(buf, buf_size, "FAILED: run %d tests and %d failed",

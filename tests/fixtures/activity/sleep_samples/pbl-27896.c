@@ -46,7 +46,7 @@ AlgDlsMinuteData *activity_sample_2015_10_08_18_58_01(int *len) {
   //> TEST_IN_DEEP_SLEEP_MAX 0
   //> TEST_WEIGHT 1.0
 
-  // list of: {steps, orientation, vmc, ligh}
+  // list of: {steps, orientation, vmc, light}
   static AlgDlsMinuteData samples[] = {
     { 0, 0x55, 148, 0x0},
     { 8, 0x55, 374, 0x0},

@@ -94,7 +94,7 @@ def options(opt):
                    help='Build in release mode'
                         ' (--beta and --release are mutually exclusive)')
     opt.add_option('--fat_firmware', action='store_true',
-                   help='build in GDB mode WITH logs; requires 1M of onbaord flash')
+                   help='build in GDB mode WITH logs; requires 1M of onboard flash')
     opt.add_option('--gdb', action='store_true',
                    help='build in GDB mode (no optimization, no logs)')
     opt.add_option('--lto', action='store_true', help='Enable link-time optimization')

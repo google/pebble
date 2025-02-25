@@ -143,7 +143,7 @@ void check_update_fw(void) {
   if (boot_bit_test(BOOT_BIT_NEW_FW_UPDATE_IN_PROGRESS)) {
     dbgserial_putstr("Our previous firmware update failed, aborting update.");
 
-    // Pretend like the new firmware bit wasn't set afterall. We'll just run the
+    // Pretend like the new firmware bit wasn't set after all. We'll just run the
     // previous code, whether that was normal firmware or the recovery firmware.
     boot_bit_clear(BOOT_BIT_NEW_FW_UPDATE_IN_PROGRESS);
     boot_bit_clear(BOOT_BIT_NEW_FW_AVAILABLE);
@@ -170,7 +170,7 @@ void check_update_fw(void) {
     break;
   case UPDATE_FW_ERROR_MICRO_FLASH_MANGLED:
     // We've broken our internal flash when trying to update our normal
-    // firmware. Fall back immediately to the recovery firmare.
+    // firmware. Fall back immediately to the recovery firmware.
     boot_bit_set(BOOT_BIT_FW_START_FAIL_STRIKE_ONE);
     boot_bit_set(BOOT_BIT_FW_START_FAIL_STRIKE_TWO);
     system_reset();

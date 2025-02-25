@@ -59,6 +59,6 @@ void mpu_get_register_settings(const MpuRegion* region, uint32_t *base_address_r
 void mpu_set_task_configurable_regions(MemoryRegion_t *memory_regions,
                                        const MpuRegion **region_ptrs);
 
-bool mpu_memory_is_cachable(const void *addr);
+bool mpu_memory_is_cacheable(const void *addr);
 
 void mpu_init_region_from_region(MpuRegion *copy, const MpuRegion *from, bool allow_user_access);

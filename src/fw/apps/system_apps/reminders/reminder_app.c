@@ -166,7 +166,7 @@ static void prv_build_transcription_dialog_text(ReminderAppData *data) {
 
   int buf_space_remaining = required_buf_size - 1 /*for the final \0 */;
   strncpy(data->dialog_text, data->reminder_str, sentence_len);
-  // Having to call MAX everytime is a bit silly, but the strn function expect a size_t (unsigned).
+  // Having to call MAX every time is a bit silly, but the strn function expect a size_t (unsigned).
   // Calling MAX ensures that a negative value isn't passed in which gets cast to something positive
   buf_space_remaining = MAX(buf_space_remaining - sentence_len, 0);
 

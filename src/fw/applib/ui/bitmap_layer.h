@@ -75,10 +75,10 @@ typedef struct BitmapLayer {
 //!
 //! The bitmap layer is automatically marked dirty after this operation.
 //! @param bitmap_layer The BitmapLayer to initialize
-//! @param frame The frame with which to initialze the BitmapLayer
+//! @param frame The frame with which to initialize the BitmapLayer
 void bitmap_layer_init(BitmapLayer *bitmap_layer, const GRect *frame);
 
-//! Creates a new bitmap layer on the heap and initalizes it the default values.
+//! Creates a new bitmap layer on the heap and initializes it the default values.
 //!
 //! * Bitmap: `NULL` (none)
 //! * Background color: \ref GColorClear
@@ -120,13 +120,13 @@ const GBitmap* bitmap_layer_get_bitmap(BitmapLayer *bitmap_layer);
 void bitmap_layer_set_bitmap(BitmapLayer *bitmap_layer, const GBitmap *bitmap);
 
 //! Sets the alignment of the image to draw with in frame of the BitmapLayer.
-//! The aligment parameter specifies which edges of the bitmap should overlap
+//! The alignment parameter specifies which edges of the bitmap should overlap
 //! with the frame of the BitmapLayer.
 //! If the bitmap is smaller than the frame of the BitmapLayer, the background
 //! is filled with the background color.
 //!
 //! The bitmap layer is automatically marked dirty after this operation.
-//! @param bitmap_layer The BitmapLayer for which to set the aligment
+//! @param bitmap_layer The BitmapLayer for which to set the alignment
 //! @param alignment The new alignment for the image inside the BitmapLayer
 void bitmap_layer_set_alignment(BitmapLayer *bitmap_layer, GAlign alignment);
 

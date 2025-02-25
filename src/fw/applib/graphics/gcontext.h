@@ -71,7 +71,7 @@ typedef enum {
 typedef struct {
   //! Describes how to treat the range between .min_x and .max_x
   GDrawMaskRowInfoType type;
-  //! Left-most pixel, 3.0 means that that pixel 3 is fully visible, 3.5 means it's half visible
+  //! Left-most pixel, 3.0 means that pixel 3 is fully visible, 3.5 means it's half visible
   Fixed_S16_3 min_x;
   //! Right-most pixel, 10.7 means that pixel 10 is fully opaque
   Fixed_S16_3 max_x;
@@ -230,8 +230,8 @@ void graphics_context_mask_destroy(GContext *ctx, GDrawMask *mask);
 GSize graphics_context_get_framebuffer_size(GContext *ctx);
 
 //! @internal
-//! Retreives the destination bitmap for the graphics context.
-//! @param ctx The graphics context to retreive the bitmap for.
+//! Retrieves the destination bitmap for the graphics context.
+//! @param ctx The graphics context to retrieve the bitmap for.
 GBitmap* graphics_context_get_bitmap(GContext* ctx);
 
 //! @internal

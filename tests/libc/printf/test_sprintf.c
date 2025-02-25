@@ -601,7 +601,7 @@ void test_sprintf__percent_n(void) {
   snprintf(dstbuf, 256, "%n", &val);
   cl_assert_equal_i(val, 0);
 
-  snprintf(dstbuf, 256, "Incredible mechanical monster%n comming soon%n!!", &val, &val2);
+  snprintf(dstbuf, 256, "Incredible mechanical monster%n coming soon%n!!", &val, &val2);
   cl_assert_equal_i(val, 29);
   cl_assert_equal_i(val2, 42);
 

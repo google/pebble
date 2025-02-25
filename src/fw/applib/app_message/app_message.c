@@ -204,7 +204,7 @@ AppMessageResult app_message_open(const uint32_t size_inbound, const uint32_t si
 void app_message_close(void) {
   AppMessageCtx *app_message_ctx = app_state_get_app_message_ctx();
 
-  // TODO PBL-1634: handle the the return status when this function returns status.
+  // TODO PBL-1634: handle the return status when this function returns status.
   // For now, continue to ignore failure.
   app_message_outbox_close(&app_message_ctx->outbox);
   app_message_inbox_close(&app_message_ctx->inbox);

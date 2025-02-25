@@ -101,7 +101,7 @@ static bool prv_force_stop_task_if_unprivileged(ProcessContext *context) {
 
   uint32_t control_reg = ulTaskDebugGetStackedControl((TaskHandle_t) context->task_handle);
   if ((control_reg & 0x1) == 0) {
-    // We're priviledged, it's not safe to just kill the app task.
+    // We're privileged, it's not safe to just kill the app task.
     vTaskResume((TaskHandle_t) context->task_handle);
     return false;
   }
@@ -391,7 +391,7 @@ static void prv_handle_app_stop_analytics(const ProcessContext *const context,
 //! this time it will see the safe to kill is set and return true
 //!
 //! If the task does not exit by itself before the timer expires, then the timer will post another KILL event
-//! with graceful set to false. This will result in this method being alled again with gracefully = false. When
+//! with graceful set to false. This will result in this method being called again with gracefully = false. When
 //! we see this, we just try and make sure the app is not stuck in privilege code. If it's not, we return true
 //! and allow the caller to kill the task.
 //!
@@ -519,7 +519,7 @@ void process_manager_process_setup(PebbleTask task) {
 
 
 // ---------------------------------------------------------------------------------------------
-//! Kills the process, giving it no chance to clean things up or exit gracefully. The proces must already be in a
+//! Kills the process, giving it no chance to clean things up or exit gracefully. The process must already be in a
 //! state where it's safe to exit, so the caller must call process_manager_make_process_safe_to_kill() first and only
 //! call this method if process_manager_make_process_safe_to_kill() returns true;
 void process_manager_process_cleanup(PebbleTask task) {
@@ -530,7 +530,7 @@ void process_manager_process_cleanup(PebbleTask task) {
 
   PBL_LOG(LOG_LEVEL_DEBUG, "%s is getting cleaned up", pebble_task_get_name(task));
 
-  // Shutdown services that may be running. Do this before we destory the task and clear the queue
+  // Shutdown services that may be running. Do this before we destroy the task and clear the queue
   // just in case other services are still in flight.
   accel_service_cleanup_task_session(task);
   animation_service_cleanup(task);
@@ -575,7 +575,7 @@ void process_manager_process_cleanup(PebbleTask task) {
 
   if (context->to_process_event_queue &&
       pdFAIL == event_queue_cleanup_and_reset(context->to_process_event_queue)) {
-    PBL_LOG(LOG_LEVEL_ERROR, "The to processs queue could not be reset!");
+    PBL_LOG(LOG_LEVEL_ERROR, "The to process queue could not be reset!");
   }
   context->to_process_event_queue = NULL;
 }

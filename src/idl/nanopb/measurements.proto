@@ -60,9 +60,9 @@ message MeasurementSet {
       Good = 6;
       Excellent = 7;
   }
-  enum Type { /// types of measuremetn samples we can take. minor changes to SI units to encode efficiently
+  enum Type { /// types of measurement samples we can take. minor changes to SI units to encode efficiently
     UnknownEvent = 0; /// Protocol Buffers uses the first enum as the default
-    TimeMS = 1; /// more percise time, in milliseconds
+    TimeMS = 1; /// more precise time, in milliseconds
     VMC = 2; /// Vector Magnitude Counts. Rough measure of total activity. Unitless
     Steps = 3; /// Accumulated steps. Unitless
     DistanceCM = 4; /// Distance traveled. In centimeters

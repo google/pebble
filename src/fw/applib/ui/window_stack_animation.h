@@ -36,7 +36,7 @@ typedef void (*WindowTransitionImplementationRenderFunc)(WindowTransitioningCont
 // needs to
 //   create an animation that drives the visible transition
 //   (e.g. by moving context.window_to.layer.frame)
-//   call context.window_from.handlers.disappear and context.window_to.handers.appear et al.
+//   call context.window_from.handlers.disappear and context.window_to.handlers.appear et al.
 // doesn't need to
 //   restore context.window_from.layer.frame (framework will do that)
 // if no animation is returned by .create_animation, the windows will be replaced immediately

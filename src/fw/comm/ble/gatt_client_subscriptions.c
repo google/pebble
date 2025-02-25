@@ -86,7 +86,7 @@ extern BLECharacteristic gatt_client_descriptor_get_characteristic_and_connectio
 // Function implemented by the gatt_client_operations module to write the CCCD (to alter the remote
 // subscription state). The big difference with gatt_client_op_write_descriptor() is that this
 // function calls back to the gatt_client_subscriptions module when the result of the write is
-// received, so that that module can take care of sending the appropriate events to the clients.
+// received, so that module can take care of sending the appropriate events to the clients.
 extern BTErrno gatt_client_op_write_descriptor_cccd(BLEDescriptor cccd_ref,
                                                     const uint16_t *cccd_value);
 

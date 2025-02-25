@@ -338,7 +338,7 @@ static void prv_exit(TimelineAppData *data) {
 #endif
 }
 
-static void prv_inactive_timer_callack(void *data) {
+static void prv_inactive_timer_callback(void *data) {
   prv_set_state(data, TimelineAppStateInactive);
   prv_exit(data);
 }
@@ -346,7 +346,7 @@ static void prv_inactive_timer_callack(void *data) {
 static void prv_inactive_timer_refresh(TimelineAppData *data) {
   static const uint32_t INACTIVITY_TIMEOUT_MS = 30 * 1000;
   s_app_data->inactive_timer_id = evented_timer_register_or_reschedule(
-      s_app_data->inactive_timer_id, INACTIVITY_TIMEOUT_MS, prv_inactive_timer_callack, data);
+      s_app_data->inactive_timer_id, INACTIVITY_TIMEOUT_MS, prv_inactive_timer_callback, data);
 }
 
 /////////////////////////////////////

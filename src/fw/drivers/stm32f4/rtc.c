@@ -46,7 +46,7 @@ void rtc_init(void) {
 
   clocksource_lse_configure();
 
-  // Only initialize the RTC periphieral if it's not already enabled.
+  // Only initialize the RTC peripheral if it's not already enabled.
   if (!(RCC->BDCR & RCC_BDCR_RTCEN)) {
     RCC_RTCCLKConfig(RCC_RTCCLKSource_LSE);
     RCC_RTCCLKCmd(ENABLE);
@@ -213,7 +213,7 @@ void rtc_alarm_init(void) {
   RTC_WakeUpCmd(DISABLE);
 
   // Make sure this in in sync with the definition of LSE_FREQUENCY_HZ. This is the lowest setting
-  // for the highest frequency and therefore the highest accurracy. However, it limits us to only
+  // for the highest frequency and therefore the highest accuracy. However, it limits us to only
   // setting wakeup timers for up to 4s~ (2^16 max counter value / (32768 / 2)) in the future.
   // This is fine for now as we have a regular timer register each second, so we'll never want to
   // stop for more than a single second.

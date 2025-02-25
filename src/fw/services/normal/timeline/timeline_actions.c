@@ -550,7 +550,7 @@ static ActionResultData *prv_invoke_remote_action(ActionMenu *action_menu,
       // To give the iOS app some context (let it do lookups), give it all the
       // info about the notification
 
-      // Copy every attribtue from the notification and add:
+      // Copy every attribute from the notification and add:
       // - Timestamp attribute
       const int num_extra_attributes = 1;
       const int num_attributes = pin->attr_list.num_attributes + num_extra_attributes;

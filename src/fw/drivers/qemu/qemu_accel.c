@@ -161,7 +161,7 @@ static void prv_reschedule_timer(void) {
 // Called by the qemu_serial driver when we receive an accel packet from the
 // remote side. This copies the received data into our s_rcv_buffer buffer. It
 // will gradually be pulled out of that and replayed by the timer callback.
-void qemu_accel_msg_callack(const uint8_t *data, uint32_t len) {
+void qemu_accel_msg_callback(const uint8_t *data, uint32_t len) {
   QemuProtocolAccelHeader *hdr = (QemuProtocolAccelHeader *)data;
 
   // Validate the packet

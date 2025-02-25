@@ -50,11 +50,11 @@ NORETURN system_reset(void) {
   // if we're in a critical section, interrupt or if the scheduler has been suspended
   if (!already_failed && !mcu_state_is_isr() && !portIN_CRITICAL() &&
       (xTaskGetSchedulerState() == taskSCHEDULER_RUNNING)) {
-    system_reset_prepare(failure_occurred /* skip BT teardown if failure occured */);
+    system_reset_prepare(failure_occurred /* skip BT teardown if failure occurred */);
     reboot_reason_set_restarted_safely();
   }
 
-  // If a software failure occcured, do a core dump before resetting
+  // If a software failure occurred, do a core dump before resetting
   if (failure_occurred) {
     core_dump_reset(false /* don't force overwrite */);
   }

@@ -30,7 +30,7 @@ This archive contains the EV2-4 software for the Pebble E-Paper Watch.
     included in the directory. For more information, please refer to
     the 'Flash imaging tools' section.
   - docs/spi_flash_imaging.txt: A document describing the protocol
-    used to load load data onto Pebble's SPI flash via
+    used to load data onto Pebble's SPI flash via
     the Serial UART
 
 

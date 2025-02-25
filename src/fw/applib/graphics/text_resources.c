@@ -225,7 +225,7 @@ static GlyphData *prv_decompress_glyph_data(GlyphData *g, uint8_t *src) {
   // *src is a pointer to the beginning of <encoded glyph>
   //
   // Once decompressed, Glyph Data will be formatted like this:
-  //  [ <header> | <decoded glyph> | <free space & remenants of encoded glyph data> ]
+  //  [ <header> | <decoded glyph> | <free space & remnants of encoded glyph data> ]
   //
   // The glyph is decoded in-place, so obviously, it's imperative that <decoded glyph> and
   // <encoded glyph> not overlap at any time. This is checked by fontgen.py and confirmed

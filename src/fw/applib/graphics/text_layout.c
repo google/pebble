@@ -267,7 +267,7 @@ static bool prv_line_iter_is_vertical_overflow(const LineIterState* const line_i
   // if we're not rendering the first line.
   //    - This, because the user does not expect to see more text drawn below, after the '...'.
   //    - The first-line exception means that text, and therefore the telltale
-  //      ellipsis, will always be visisble.
+  //      ellipsis, will always be visible.
   if ((text_box_params->overflow_mode == GTextOverflowModeTrailingEllipsis ||
        text_box_params->overflow_mode == GTextOverflowModeFill) &&
       line_iter_state->current->origin.y != text_box_params->box.origin.y) {
@@ -791,11 +791,11 @@ static inline void prv_walk_lines_down(Iterator* const line_iter, TextLayout* co
     const Word word_before_rendering = *current_word_ref;
     const OrphanLineState orphan_state = prv_capture_orphan_state(line);
 
-    // When repeating text to prevent orhpans we could run into the situation where repeating text
+    // When repeating text to prevent orphans we could run into the situation where repeating text
     // pushes down the remaining text far enough so it ends up on yet another page. This would
     // enter an infinite loop.
     // To avoid that, we only apply this strategy, when it's "safe" to do so (in theory, there's
-    // still the propability to run into this scenario if the perimeter isn't vertically symmetric).
+    // still the probability to run into this scenario if the perimeter isn't vertically symmetric).
     // The chosen number should be large enough for the previous line, the orphan line plus some
     // buffer.
     const int num_safe_lines = 3;
@@ -823,7 +823,7 @@ render_line: {} // this {} is just an empty statement that both C and our linter
         if (is_orphan) {
           *current_word_ref = prev_line_word;
           prv_apply_orphan_state(&orphan_state, line);
-          avoiding_orphans = false; // prevent infinte loops
+          avoiding_orphans = false; // prevent infinite loops
           goto render_line;
         }
       }

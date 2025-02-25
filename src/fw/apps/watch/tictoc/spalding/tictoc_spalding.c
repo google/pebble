@@ -146,7 +146,7 @@ static void prv_draw_clock_face(GContext *ctx, ClockFace *face) {
   const GPointPrecise center = prv_get_clock_center_point(face->location, bounds);
 
   // Draw hands.
-  // TODO: Need to do something about the static GPaths used for watchands. This is very inflexible.
+  // TODO: Need to do something about the static GPaths used for watchbands. This is very inflexible.
   prv_draw_watch_hand(ctx, &face->hour_hand, center, data->hour_path);
   prv_draw_watch_hand(ctx, &face->minute_hand, center, data->minute_path);
 

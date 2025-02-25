@@ -34,13 +34,13 @@ typedef enum {
 //! LayoutLayers depart from traditional Layers in a few meaningful way.
 //! 1) LayoutLayers are modulated by a "mode", which is the context in which the LayoutLayer
 //! is displayed. Examples of modes are the "card" mode which displays detailed pin info
-//! and the "minimzed" mode which is used to display a "toast" like mode of a pin.
+//! and the "minimized" mode which is used to display a "toast" like mode of a pin.
 //! 2) LayoutLayers expose three more generic APIs:
 //! \ref layout_get_size which returns the size of the
 //! content within the layout as well as a generic constructor/destructor:
 //!  \ref layout_create / \ref layout_destroy.
 //! 3) LayoutLayers are constructed from a set of Attributes which they are meant to display.
-//! 4) Sub-types of LayoutLayer are instanciated by summoning the correct type ID rather than by
+//! 4) Sub-types of LayoutLayer are instantiated by summoning the correct type ID rather than by
 //! calling a specialized constructor / destructor as per the Layer API.
 
 //! LayoutIds identify the type of a LayoutLayer. They are passed to the constructor to
@@ -102,7 +102,7 @@ typedef struct LayoutLayer *(*LayoutLayerConstructor)(const LayoutLayerConfig *c
 typedef bool (*LayoutVerifier)(bool existing_attributes[]);
 
 #pragma push_macro("GSize")
-#undef GSize // [FBO] ugly work around for rogue macro
+#undef GSize // [FBO] ugly workaround for rogue macro
 //! Get the size of the content of a layout. This is defined by the length of the text and
 //! the size of the icons contained within the attributes.
 //! @param ctx a pointer to the GContext in which the layout is rendered

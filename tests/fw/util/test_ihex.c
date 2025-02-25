@@ -32,7 +32,7 @@ void test_ihex__initialize(void) {
 
 static void prv_assert_ihex(const char *expected) {
   int len = strlen(expected);
-  // Cehck that bytes aren't touched past the end of the record.
+  // Check that bytes aren't touched past the end of the record.
   for (int i=len; i < sizeof(s_result); ++i) {
     cl_assert_equal_i(0x20, s_result[i]);
   }

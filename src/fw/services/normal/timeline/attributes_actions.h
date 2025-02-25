@@ -56,8 +56,8 @@ size_t attributes_actions_get_required_buffer_size(uint8_t num_attributes,
 size_t attributes_actions_get_buffer_size(AttributeList *attr_list,
                                           TimelineItemActionGroup *action_group);
 
-//! Initializes an AttrbuteList and ActionGroup
-//! @param attr_list          The AttrbuteList to initialize
+//! Initializes an AttributeList and ActionGroup
+//! @param attr_list          The AttributeList to initialize
 //! @param action_group       The ActionGroup to initialize
 //! @param buffer             The buffer to hold the list of attributes and actions
 //! @param num_attributes     number of attributes
@@ -72,7 +72,7 @@ void attributes_actions_init(AttributeList *attr_list,
                              const uint8_t *attributes_per_action);
 
 //! Fills an AttributeList and ActionGroup from serialized data
-//! @param attr_list          The AttrbuteList to fill
+//! @param attr_list          The AttributeList to fill
 //! @param action_group       The ActionGroup to fill
 //! @param buffer             The buffer which holds the list of attributes and actions
 //! @param buf_end            A pointer to the end of the buffer
@@ -90,7 +90,7 @@ size_t attributes_actions_get_serialized_payload_size(AttributeList *list,
                                                       TimelineItemActionGroup *action_group);
 
 //! Serializes an attribute list and action group into a buffer
-//! @param attr_list          The AttrbuteList to serialize
+//! @param attr_list          The AttributeList to serialize
 //! @param action_group       The ActionGroup to serialize
 //! @param buffer a pointer to the buffer to write to
 //! @param buffer_size the size of the buffer in bytes

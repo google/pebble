@@ -175,8 +175,8 @@ void test_workout_active__cleanup(void) {
 //////////////////////
 
 static void prv_create_window_and_render(WorkoutActiveWindow *active_window,
-                                         int seconday_metric_idx) {
-  for (int i = 0; i < seconday_metric_idx; i++) {
+                                         int secondary_metric_idx) {
+  for (int i = 0; i < secondary_metric_idx; i++) {
     prv_cycle_scrollable_metrics(active_window);
   }
 

@@ -155,7 +155,7 @@ static void prv_txrx_menu_update(AppData *data);
 // and use that to know how to proceed through.
 //
 // A BTLE test gets started, and needs to be manually stopped.
-// This means that setup setup goes like this:
+// This means that setup goes like this:
 //
 // 1. User Signals "RUN"
 // 2. bt_test_start()
@@ -174,7 +174,7 @@ static void prv_response_cb(HciStatusCode status, const uint8_t *payload) {
     // RX Test, need to keep track of received packets
     // Payload is as follows:
     // | 1 byte  | 2 bytes          |
-    // | success | recieved packets |
+    // | success | received packets |
     // So we want grab a uint16_t from 1 byte into the payload
     const uint16_t *received_packets = (uint16_t *)(payload + 1);
     data->rx_test_received_packets = *received_packets;
@@ -459,7 +459,7 @@ static void prv_status_window_init(AppData *data) {
 //--------------------------------------------------------------------------------
 // TX/RX Menus & Windows
 //--------------------------------------------------------------------------------
-// The same menu layer is reused for TX / RX, we just handle it differentely
+// The same menu layer is reused for TX / RX, we just handle it differently
 // based on whether we are currently executing a TX or RX test.
 
 #define TX_MENU_NUM_PAYLOAD_ROWS (2)

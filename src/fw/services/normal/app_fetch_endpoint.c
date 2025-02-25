@@ -160,7 +160,7 @@ static void prv_cleanup(AppFetchResult result) {
 }
 
 //! System task callback triggered by app_fetch_put_bytes_event_handler() when we are receiving
-//! put_bytes messages in reponse to a fetch request to the phone.
+//! put_bytes messages in response to a fetch request to the phone.
 void prv_put_bytes_event_system_task_cb(void *data) {
   PebblePutBytesEvent *pb_event = (PebblePutBytesEvent *)data;
 

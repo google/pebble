@@ -17,7 +17,7 @@
 
 """
 Support for converting linked targets to ihex, srec or binary files using
-objcopy. Use the 'objcopy' feature in conjuction with the 'cc' or 'cxx'
+objcopy. Use the 'objcopy' feature in conjunction with the 'cc' or 'cxx'
 feature. The 'objcopy' feature uses the following attributes:
 
 objcopy_bfdname		Target object format name (eg. ihex, srec, binary).

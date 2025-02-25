@@ -58,7 +58,7 @@
 
 #define LAYOUT_MAX_HEIGHT 2500
 #define CARD_MARGIN PBL_IF_ROUND_ELSE(12, 10)
-// All paddings relate to padding above the object unless othersize noted
+// All paddings relate to padding above the object unless another size is noted
 #define CARD_BOTTOM_PADDING 18
 // The y-position of a layout frame when its banner is peeking
 #define BANNER_PEEK_STATIC_Y (DISP_ROWS - STATUS_BAR_LAYER_HEIGHT)

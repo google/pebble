@@ -18,9 +18,9 @@
 
 #include <bluetooth/bluetooth_types.h>
 
-//! Callback that is called for each advertisment that is found while scanning
+//! Callback that is called for each advertisement that is found while scanning
 //! using ble_scan_start().
-//! @param device The device from which the advertisment originated.
+//! @param device The device from which the advertisement originated.
 //! @param rssi The RSSI (Received Signal Strength Indication) of the
 //! advertisement.
 //! @param advertisement_data The payload of the advertisement. When there was
@@ -38,7 +38,7 @@ typedef void (*BLEScanHandler)(BTDevice device,
 
 //! Start scanning for advertisements. Pebble will scan actively, meaning it
 //! will perform scan requests whenever the advertisement is scannable.
-//! @param handler The callback to handle the found advertisments. It must not
+//! @param handler The callback to handle the found advertisements. It must not
 //! be NULL.
 //! @return BTErrnoOK if scanning started successfully, BTErrnoInvalidParameter
 //! if the handler was invalid or BTErrnoInvalidState if scanning had already

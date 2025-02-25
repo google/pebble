@@ -181,7 +181,7 @@ bool debug_db_is_generation_valid(int file_generation) {
   }
 
   if (file_header.file_id != (s_current_file_id - file_generation)) {
-    PBL_LOG(LOG_LEVEL_DEBUG, "Id: %"PRIu8" Expected: %u", file_header.file_id, (s_current_file_id - file_generation));
+    PBL_LOG(LOG_LEVEL_DEBUG, "ID: %"PRIu8" Expected: %u", file_header.file_id, (s_current_file_id - file_generation));
     return false;
   }
 

@@ -18,7 +18,7 @@
  * This module contains the core dump logic which writes the core dump to SPI flash. It operates
  *  under a very limited set of constraints:
  *   1.) It can NOT use most FreeRTOS functions
- *   2.) It can not use the regular flash driver (because that uses FreeRTOS mutexes)
+ *   2.) It can NOT use the regular flash driver (because that uses FreeRTOS mutexes)
  *
  * There is a separate module, core_dump_protocol.c which implements the session endpoint logic for
  * fetching the core dump over bluetooth. That module is free to use FreeRTOS, regular flash
@@ -63,7 +63,7 @@
 #define STM32F7_COMPATIBLE
 #include <mcu.h>
 
-#include "FreeRTOS.h"       /* FreeRTOS Kernal Prototypes/Constants.          */
+#include "FreeRTOS.h"       /* FreeRTOS Kernel Prototypes/Constants.          */
 #include "task.h"           /* FreeRTOS Task Prototypes/Constants.            */
 
 #include <inttypes.h>
@@ -780,7 +780,7 @@ cleanup:
 }
 
 // --------------------------------------------------------------------------------------------------
-// Used by unit tests in to cause fw/apps/demo_apps/test_core_dump_app to encounter a bus fault during the core dump
+// Used by unit tests to cause fw/apps/demo_apps/test_core_dump_app to encounter a bus fault during the core dump
 void core_dump_test_force_bus_fault(void) {
   s_test_force_bus_fault = true;
 }

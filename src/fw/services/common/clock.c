@@ -246,7 +246,7 @@ static TimezoneInfo prv_get_timezone_info_from_data(TimezoneCBData *tz_data) {
     return tz_info;
   }
 
-  // Else, we couldn't find find the specified timezone.
+  // Else, we couldn't find the specified timezone.
 #ifndef RECOVERY_FW
   TimezoneInfo tz_info = {
     .dst_id = 0,

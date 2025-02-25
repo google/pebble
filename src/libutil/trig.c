@@ -548,7 +548,7 @@ static const uint16_t ATAN_LOOKUP[] = {
 int32_t sin_lookup(int32_t angle) {
   int32_t mult = 1;
 
-  // modify the input angle and output multiplier for use in a first quadrent sine lookup
+  // modify the input angle and output multiplier for use in a first quadrant sine lookup
   if (angle < 0) {
     angle = -angle;
     mult = -mult;

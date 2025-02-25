@@ -543,7 +543,7 @@ void test_graphics_fill_circle_${BIT_DEPTH_NAME}__radial(void){
 #endif
 
   uint16_t outer_radius = 30;
-  int32_t twelveth_of_angle = TRIG_MAX_ANGLE / 12;
+  int32_t twelfth_of_angle = TRIG_MAX_ANGLE / 12;
   int32_t quarter_of_angle = TRIG_MAX_ANGLE / 4;
   GPoint center = GPoint(72, 84);
 
@@ -564,9 +564,9 @@ void test_graphics_fill_circle_${BIT_DEPTH_NAME}__radial(void){
 
         graphics_fill_radial_internal(&ctx, pt, test_radiuses[i].radius, outer_radius,
                                       test_quadrants[j].angle_start + offset_angle -
-                                      twelveth_of_angle,
+                                      twelfth_of_angle,
                                       test_quadrants[j].angle_end + offset_angle +
-                                      twelveth_of_angle);
+                                      twelfth_of_angle);
 
         offset_angle += quarter_of_angle;
       }
@@ -605,7 +605,7 @@ void test_graphics_fill_circle_${BIT_DEPTH_NAME}__radial_precise(void){
   // Drawing
   setup_test_aa_sw(&ctx, fb, ORIGIN_RECT_NO_CLIP, ORIGIN_RECT_NO_CLIP, true, 1);
   graphics_fill_radial_precise_internal(&ctx, center, radius_inner, radius_outer, angle_start, angle_end);
-  cl_check(gbitmap_pbi_eq(&ctx.dest_bitmap, "fill_radial_origin_aa_precise_halfs_letter_c.${BIT_DEPTH_NAME}.pbi"));
+  cl_check(gbitmap_pbi_eq(&ctx.dest_bitmap, "fill_radial_origin_aa_precise_halves_letter_c.${BIT_DEPTH_NAME}.pbi"));
 }
 
 typedef struct {
@@ -719,7 +719,7 @@ void prv_draw_radial_in_rect_debugged(GContext *ctx, int16_t width, int16_t heig
                                       int32_t angle_start, int32_t angle_end){
 
   int offset_angle = 0;
-  int32_t twelveth_of_angle = TRIG_MAX_ANGLE / 12;
+  int32_t twelfth_of_angle = TRIG_MAX_ANGLE / 12;
   GPoint center = GPoint(72, 84);
 
   for (int i=0; i<4; i++) {
@@ -739,8 +739,8 @@ void prv_draw_radial_in_rect_debugged(GContext *ctx, int16_t width, int16_t heig
     graphics_context_set_stroke_color(ctx, GColorBlack);
 
     graphics_fill_radial(ctx, rect, scale_mode, inset,
-                         angle_start + offset_angle - twelveth_of_angle,
-                         angle_end + offset_angle + twelveth_of_angle);
+                         angle_start + offset_angle - twelfth_of_angle,
+                         angle_end + offset_angle + twelfth_of_angle);
 
     offset_angle += TRIG_MAX_ANGLE / 4;
   }

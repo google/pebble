@@ -64,7 +64,7 @@ int ceil_log_two(uint32_t n);
 )
 
 /**
- * Compute the next backoff interval using a bounded binary expoential backoff formula.
+ * Compute the next backoff interval using a bounded binary exponential backoff formula.
  *
  * @param[in,out] attempt The number of retries performed so far. This count will be incremented
  * by the function.

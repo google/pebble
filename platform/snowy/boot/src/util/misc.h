@@ -79,7 +79,7 @@ const char *bool_to_str(bool b);
 bool convert_bt_addr_hex_str_to_bd_addr(const char *hex_str, uint8_t *bd_addr, const unsigned int bd_addr_size);
 
 /**
- * Compute the next backoff interval using a bounded binary expoential backoff formula.
+ * Compute the next backoff interval using a bounded binary exponential backoff formula.
  *
  * @param[in,out] attempt The number of retries performed so far. This count will be incremented by
  *   the function.

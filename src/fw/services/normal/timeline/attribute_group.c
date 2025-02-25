@@ -235,19 +235,19 @@ static bool prv_deserialize_group_element(AttributeGroupType type,
   }
 
   for (int i = 0; i < num_group_type_elements; i++) {
-    AttributeList *group_type_element_attribtue_list;
+    AttributeList *group_type_element_attribute_list;
     if (type == AttributeGroupType_Action) {
-      group_type_element_attribtue_list = prv_deserialize_action(
+      group_type_element_attribute_list = prv_deserialize_action(
           &((TimelineItemActionGroup *)group_ptr)->actions[i], &cursor, payload_end,
           buffer, buf_end);
     } else {
-      group_type_element_attribtue_list = prv_deserialize_address(
+      group_type_element_attribute_list = prv_deserialize_address(
           &((AddressList *)group_ptr)->addresses[i], &cursor, payload_end,
           buffer, buf_end);
     }
 
     if (!attribute_deserialize_list((char**)&buffer, (char *)buf_end, &cursor,
-                                    payload_end, *group_type_element_attribtue_list)) {
+                                    payload_end, *group_type_element_attribute_list)) {
       return false;
     }
   }
@@ -354,17 +354,17 @@ static uint8_t* prv_serialize_group_element(AttributeGroupType type,
   }
 
   for (int i = 0; i < num_group_type_elements; i++) {
-    AttributeList *group_type_element_attribtue_list;
+    AttributeList *group_type_element_attribute_list;
     if (type == AttributeGroupType_Action) {
-      group_type_element_attribtue_list = prv_serialize_action(
+      group_type_element_attribute_list = prv_serialize_action(
           &((TimelineItemActionGroup *)group_ptr)->actions[i], &buffer);
     } else {
-      group_type_element_attribtue_list = prv_serialize_address(
+      group_type_element_attribute_list = prv_serialize_address(
           &((AddressList *)group_ptr)->addresses[i], &buffer);
     }
     PBL_ASSERTN(buffer <= buf_end);
 
-    buffer += attribute_list_serialize(group_type_element_attribtue_list,
+    buffer += attribute_list_serialize(group_type_element_attribute_list,
                                        buffer, buf_end);
   }
 

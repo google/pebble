@@ -67,7 +67,7 @@ static bool prv_matches_system_locale(jerry_value_t locale) {
     return true;
   }
 
-  // in the future, we could run a case-insenstive compare against app_get_system_locale()
+  // in the future, we could run a case-insensitive compare against app_get_system_locale()
   // but as we want apps to encourage to be i18n, there's no real point to
   // receive strings such as 'en-us'. We will ask them to always pass undefined instead
   return false;

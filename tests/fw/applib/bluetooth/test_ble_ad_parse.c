@@ -91,7 +91,7 @@ void test_ble_ad_parse__16_bit_uuid_and_device_name(void) {
   Uuid missing_uuid = bt_uuid_expand_16bit(0xabcd);
   cl_assert(!ble_ad_includes_service(s_ad_data, &missing_uuid));
 
-  // Test ble_ad_copy_service_uuids, destination array sized larged enough:
+  // Test ble_ad_copy_service_uuids, destination array sized large enough:
   const uint8_t count = 4;
   Uuid copied_uuids[count];
   uint8_t found = ble_ad_copy_service_uuids(s_ad_data, copied_uuids, count);

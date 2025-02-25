@@ -114,7 +114,7 @@ static int s_current_day = 0;
 static const int s_thursday = 1426118400;
 // Friday March 13, 2015, 00:00 UTC
 static const int s_friday = 1426204800;
-// Saturaday March 14, 2015, 00:00 UTC
+// Saturday March 14, 2015, 00:00 UTC
 static const int s_saturday = 1426291200;
 // Sunday March 15, 2015, 00:00 UTC
 static const int s_sunday = 1426377600;

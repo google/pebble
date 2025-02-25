@@ -73,10 +73,10 @@
 // to zero). It can be calculated using the formula:
 // Effective Connection Interval = (Connection Interval) * (1+(Slave Latency))
 
-//! This module contains a work-around for parameter update requests not being applied by
+//! This module contains a workaround for parameter update requests not being applied by
 //! iOS / Apple's BT controller, even though they get "accepted" by the host.
 //! @see gap_le_connect_params_handle_connection_parameter_update_response below for more
-//! commentary about the erronous behavior.
+//! commentary about the erroneous behavior.
 //! Apple bugs / shortcomings: http://www.openradar.me/21400278 and http://www.openradar.me/21400457
 //! It seems that if we start hammering the iOS device with more change requests, things don't get
 //! better. This timeout value is empirically established using the "ble mode_monkey" prompt

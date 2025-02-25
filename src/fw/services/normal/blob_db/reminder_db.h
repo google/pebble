@@ -30,7 +30,7 @@
 //! @return \ref S_SUCCESS if the function succeeds, error code otherwise
 status_t reminder_db_read_item(TimelineItem *item_out, TimelineItemId *id);
 
-//! Get the header of the earliest earliest \ref TimelineItem in the reminderdb
+//! Get the header of the earliest \ref TimelineItem in the reminderdb
 //! @param next_item_out pointer to a \ref TimelineItem (header only, no attributes or actions)
 //! which will be set to the earliest item in reminderdb
 //! @return \ref S_NO_MORE_ITEMS if there are no items in reminderdb, S_SUCCESS on success,

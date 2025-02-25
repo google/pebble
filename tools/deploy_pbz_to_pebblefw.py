@@ -85,7 +85,7 @@ def deploy_bundle(bundle_path, bucket, stage, notes_path, layouts_path=None, dry
     with open(notes_path, 'r') as f:
         deploy_manifest['notes'] = f.read().strip()
 
-    # Fetch the current lastest.json
+    # Fetch the current latest.json
     latest_key = _build_s3_path(board, stage, 'latest.json')
     r = requests.get(_build_s3_url(bucket, latest_key))
     if r.status_code == 403:

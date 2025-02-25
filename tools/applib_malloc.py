@@ -36,7 +36,7 @@ class ApplibType(object):
     def get_total_3x_padding(self, all_types):
         """ Return the amount of padding to use for the 3x version of the struct including both
             the direct padding we add for this struct in particular as well as all padding needed
-            for all dependenant structs.
+            for all dependent structs.
         """
 
         if self.total_3x_padding is not None:

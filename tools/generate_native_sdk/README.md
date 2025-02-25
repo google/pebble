@@ -75,6 +75,6 @@ Each exported symbol in the `exports` table is formatted as follows:
 When adding new functions, make sure to bump up the `revision` field, and use that value as the new functions' `addedRevision` field. This guarantees that new versions of TintinOS are backwards compatible when compiled against older `libpebble.a`. Seriously, ***make sure to do this***!!.
 
 ## Bugs
-+ The script doesn't check the the resulting `pebble.h` file will compile, that is left as an exercise to the reader.
++ The script doesn't check the resulting `pebble.h` file will compile, that is left as an exercise to the reader.
 + The script's error reporting is a little funky/unfriendly in places
 + The script does not do any checking of the function revision numbers, beyond a simple check that the file's revision is not lower than any function's.

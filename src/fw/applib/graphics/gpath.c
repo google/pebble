@@ -48,7 +48,7 @@ void gpath_init(GPath *path, const GPathInfo *init) {
 
 GPath* gpath_create(const GPathInfo *init) {
   // Can't pad this out because the definition itself is exported. Even if we did pad it out so
-  // we can theoretically add members to the end of the struct, we'll still have to add compatibilty
+  // we can theoretically add members to the end of the struct, we'll still have to add compatibility
   // flags throughout here to check which size of struct the app is going to pass us through these
   // APIs.
   GPath* path = applib_malloc(sizeof(GPath));

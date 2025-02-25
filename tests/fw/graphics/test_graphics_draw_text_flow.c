@@ -426,7 +426,7 @@ void test_graphics_draw_text_flow__no_infinite_loop(void) {
       .perimeter.impl = &(GPerimeter){.callback = perimeter_for_display_rect},
     },
   };
-  char text[] = "Prevent orhpans for tall-enough pages.";
+  char text[] = "Prevent orphans for tall-enough pages.";
   const int16_t line_height = 22;
   // some more pixels to show that orphan prevention really only applies if there's enough space
   // for enough *full* lines
@@ -471,7 +471,7 @@ void test_graphics_draw_text_flow__no_infinite_loop2(void) {
       }
     },
   };
-  char text[] = "Late again? Can you be on time ever? Seriosly? Dude!!!";
+  char text[] = "Late again? Can you be on time ever? Seriously? Dude!!!";
   prv_prepare_fb_steps_xy(GSize(180, 360), 1, 1);
   ctx.draw_state.avoid_text_orphans = true;
 

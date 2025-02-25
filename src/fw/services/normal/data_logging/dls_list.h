@@ -40,7 +40,7 @@ void dls_list_insert_session(DataLoggingSession *logging_session);
 
 //! Creates a new DataLoggingSession object that is only initialized with the parameters given. The
 //! session will only be initialized with the given parameters. The .storage and .comm members must
-//! be seperately initialized. Also, the resulting object will need to be added to the list of
+//! be separately initialized. Also, the resulting object will need to be added to the list of
 //! sessions using one of dls_list_add_new_session and dls_list_insert_session. May return NULL if
 //! we've created too many sessions.
 DataLoggingSession *dls_list_create_session(uint32_t tag, DataLoggingItemType type, uint16_t size,

@@ -101,5 +101,5 @@ static bool prv_add_handler(const char *event_name, jerry_value_t handler) {
 const RockyGlobalAPI TICKSERVICE_APIS = {
   .init = prv_init,
   .add_handler = prv_add_handler,
-  // TODO: PBL-43380 apparently, we never unsubsrcibed from tick events…
+  // TODO: PBL-43380 apparently, we never unsubscribed from tick events…
 };

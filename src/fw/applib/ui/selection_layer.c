@@ -228,7 +228,7 @@ static void prv_draw_slider_slide(SelectionLayer *selection_layer, GContext *ctx
 
   // It then morphs to the size of the next cell + padding causing the illusion that the selector
   // overshoot it's mark (it will settle back to the correct size in a different animation).
-  // This means the the width change is the width difference between the two cells plus padding
+  // This means the width change is the width difference between the two cells plus padding
   int total_cell_width_change = next_cell_width - cur_cell_width + selection_layer->cell_padding;
 
   // The current width change depends on how far we are through the animation
@@ -293,7 +293,7 @@ static void prv_draw_text(SelectionLayer *selection_layer, GContext *ctx) {
           height += prv_get_pixels_for_bump_settle(selection_layer->bump_settle_anim_progress);
         }
         // The text should be be vertically centered, unless we are performing an increment /
-        // decrment animation.
+        // decrement animation.
         int y_offset =
             prv_get_y_offset_which_vertically_centers_font(selection_layer->font, height);
 
@@ -341,7 +341,7 @@ static void prv_draw_selection_layer(SelectionLayer *selection_layer, GContext *
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 //! Increment / Decrement Animation
 
-//! This animation causes a the active cell to "bump" when the user presses the up button.
+//! This animation causes the active cell to "bump" when the user presses the up button.
 //! This animation has two parts:
 //! 1) The "text to cell edge"
 //! 2) The "background settle"

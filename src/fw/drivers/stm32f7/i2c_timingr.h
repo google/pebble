@@ -18,7 +18,7 @@
 
 #include <stdint.h>
 
-// This is always invalid because it inclues a value being set in the reserved field.
+// This is always invalid because it includes a value being set in the reserved field.
 #define I2C_TIMINGR_INVALID_VALUE (0xffffffff)
 
 typedef enum I2CBusMode {

@@ -17,7 +17,7 @@
 
   // DESCRIPTION:
   // This test stops towards the end of a regular sleep session.
-  // - Test that we have an orarching Sleep session that starts around 75-90 and lasts
+  // - Test that we have an overarching Sleep session that starts around 75-90 and lasts
   //   until we shut activity down
   // - Test that we have 3 full deep sleep sessions.
   // ----------------------------------------------------------------
@@ -897,7 +897,7 @@
 
   // DESCRIPTION:
   // This test stops towards the end of a deep sleep session.
-  // - Test that we have an orarching Sleep session that starts around 75-90 and lasts
+  // - Test that we have an overarching Sleep session that starts around 75-90 and lasts
   //   until we shut activity down
   // - Test that we have 2 full deep sleep sessions, and cut off the one in progress at
   //   18-19 minutes into it. It should not be saved. We judge this based on total time
@@ -1779,8 +1779,8 @@
 
   // DESCRIPTION:
   // This test stops in the middle of a deep sleep session.
-  // - Test that we have an orarching Sleep session that starts around 75-90 and lasts
-  //   until we shuwn activity down
+  // - Test that we have an overarching Sleep session that starts around 75-90 and lasts
+  //   until we shut activity down
   // - Test that we have 2 full deep sleep sessions, and cut off the one in progress at
   //   ~22 minutes into it. It should be saved. We judge this based on total time
   //   in deep sleep

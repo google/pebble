@@ -20,7 +20,7 @@
 
 typedef struct HealthData {
   //!< Current step / activity info
-  int32_t step_data[DAYS_PER_WEEK]; //!< Step histroy for today and the previous 6 days
+  int32_t step_data[DAYS_PER_WEEK]; //!< Step history for today and the previous 6 days
   int32_t current_distance_meters;
   int32_t current_calories;
 

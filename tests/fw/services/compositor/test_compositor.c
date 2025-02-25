@@ -276,7 +276,7 @@ void test_compositor__app_render_busy(void) {
   compositor_app_render_ready();
   cl_assert_equal_i(s_count_display_update, 0);
 
-  // Now fake the display update completeing. The app should know draw.
+  // Now fake the display update completing. The app should know draw.
   s_display_update_in_progress = false;
   prv_handle_display_update_complete();
   cl_assert_equal_i(s_count_display_update, 1);

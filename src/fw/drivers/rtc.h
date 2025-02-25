@@ -30,11 +30,11 @@ typedef uint64_t RtcTicks;
 void rtc_init(void);
 
 //! Calibrate the RTC driver using the given crystal frequency (in mHz).
-//! This is a seperate step because rtc_init needs to run incredibly early in the startup process
+//! This is a separate step because rtc_init needs to run incredibly early in the startup process
 //! and the manufacturing registry won't be initialized yet.
 void rtc_calibrate_frequency(uint32_t frequency);
 
-//! Initialize any timers the RTC driver may need. This is a seperate step than rtc_init because
+//! Initialize any timers the RTC driver may need. This is a separate step than rtc_init because
 //! rtc_init needs to run incredibly early in the startup process and at that time the timer
 //! system won't be initialized yet.
 void rtc_init_timers(void);

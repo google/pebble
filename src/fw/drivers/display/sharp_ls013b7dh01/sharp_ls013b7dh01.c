@@ -304,7 +304,7 @@ static void prv_memcpy_backwards(uint32_t* dst, uint32_t* src, int length) {
 
 //!
 //! Write a single byte synchronously to the display. Use this
-//! sparingly, as it will tie up the micro duing the write.
+//! sparingly, as it will tie up the micro during the write.
 //!
 static void prv_display_write_byte(uint8_t d) {
   // Block until the tx buffer is empty

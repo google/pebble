@@ -20,7 +20,7 @@
  * chip_id.h
  *
  * This file specifies IDs for the different processors on our multi-processor devices.
- * The IDs are used to differenetiate the source of system logs, core dumps, etc.
+ * The IDs are used to differentiate the source of system logs, core dumps, etc.
  *
  * The IDs must be unique within a platform and must fit in 2 bits.
  * If we build a device with more than 4 log/core dump producing processors, this will need to be

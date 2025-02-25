@@ -42,7 +42,7 @@ typedef struct {
   char ds_label;
   //! Which day of the week this rule is observed.
   //! 0-indexed, starting with Sunday (ie Monday is 1, Tuesday is 2...).
-  //! A value of 255 indiciates that this rule applies to any day of the week.
+  //! A value of 255 indicates that this rule applies to any day of the week.
   uint8_t wday;
   //! A bitset of flags, see DSTRuleFlags.
   uint8_t flag;
@@ -69,7 +69,7 @@ int timezone_database_get_region_count(void);
 //! the .dst_start and .dst_end members in tz_info uninitialized.
 //!
 //! @param The region ID to look up
-//! @param tz_info[out] The TimezoneInfo strcuture to populate with the region
+//! @param tz_info[out] The TimezoneInfo structure to populate with the region
 bool timezone_database_load_region_info(uint16_t region_id, TimezoneInfo *tz_info);
 
 //! Load a timezone name for a given region ID.

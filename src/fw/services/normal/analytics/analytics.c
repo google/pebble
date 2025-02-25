@@ -91,7 +91,7 @@ void analytics_set_entire_array(AnalyticsMetric metric, const void *value, Analy
   AnalyticsHeartbeat *heartbeat = analytics_storage_find(metric, NULL, client);
   if (heartbeat) {
     // We allow only a limited number of app heartbeats to accumulate. A NULL means we reached the
-    // limite
+    // limit
     analytics_heartbeat_set_entire_array(heartbeat, metric, value);
   }
 
@@ -184,7 +184,7 @@ void analytics_stopwatch_stop(AnalyticsMetric metric) {
 
   AnalyticsStopwatchNode *stopwatch = prv_find_stopwatch(metric);
   if (!stopwatch) {
-    // TODO: Incerement this back up to LOG_LEVEL_WARNING when it doesn't happen
+    // TODO: Increment this back up to LOG_LEVEL_WARNING when it doesn't happen
     // on every bootup (PBL-5393)
     PBL_LOG(LOG_LEVEL_DEBUG, "Analytics stopwatch for metric %d already stopped!", metric);
     goto unlock;

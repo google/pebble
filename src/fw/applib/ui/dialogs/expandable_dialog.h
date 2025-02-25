@@ -78,7 +78,7 @@ ExpandableDialog *expandable_dialog_create_with_params(const char *dialog_name, 
 //! Simple callback which closes the dialog when called
 void expandable_dialog_close_cb(ClickRecognizerRef recognizer, void *e_dialog);
 
-//! Intializes an ExpandableDialog
+//! Initializes an ExpandableDialog
 //! @param expandable_dialog Pointer to an \ref ExpandableDialog
 //! param dialog_name The name to give the \ref ExpandableDialog
 void expandable_dialog_init(ExpandableDialog *expandable_dialog, const char *dialog_name);
@@ -88,7 +88,7 @@ void expandable_dialog_init(ExpandableDialog *expandable_dialog, const char *dia
 //! @return \ref Dialog
 Dialog *expandable_dialog_get_dialog(ExpandableDialog *expandable_dialog);
 
-//! Sets whether or not the expandable dialog should should show its action bar.
+//! Sets whether or not the expandable dialog should show its action bar.
 //! @param expandable_dialog Pointer to the \ref ExpandableDialog to set on
 //! @param show_action_bar Boolean indicating whether to show the action bar
 void expandable_dialog_show_action_bar(ExpandableDialog *expandable_dialog,

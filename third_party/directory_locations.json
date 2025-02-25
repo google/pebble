@@ -167,138 +167,138 @@
     },
     {
         "source": "cookiesjs/cookies.js",
-        "destination": "devsite/source/assets/js/libs/cookies.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
-        "source": "cookiesjs/cookies.js",
-        "destination": "devsite/source/_js/libs/cookies.min.js"
+        "source": "cookiesjs/cookies.min.js",
+        "destination": "devsite/source/_js/libs/"
     },
     {
         "source": "bourbon/",
-        "destination": "devsite/source/_sass/"
+        "destination": "devsite/source/_sass/bourbon/"
     },
     {
         "source": "font-awesome/sass/font-awesome/",
-        "destination": "devsite/source/_sass/"
+        "destination": "devsite/source/_sass/font-awesome/"
     },
     {
         "source": "font-awesome/fonts/fontawesome-webfont.eot",
-        "destination": "devsite/source/assets/fonts/fontawesome-webfont.eot"
+        "destination": "devsite/source/assets/fonts/"
     },
     {
         "source": "font-awesome/fonts/fontawesome-webfont.svg",
-        "destination": "devsite/source/assets/fonts/fontawesome-webfont.svg"
+        "destination": "devsite/source/assets/fonts/"
     },
     {
         "source": "font-awesome/fonts/fontawesome-webfont.ttf",
-        "destination": "devsite/source/assets/fonts/fontawesome-webfont.ttf"
+        "destination": "devsite/source/assets/fonts/"
     },
     {
         "source": "font-awesome/fonts/fontawesome-webfont.woff",
-        "destination": "devsite/source/assets/fonts/fontawesome-webfont.woff"
+        "destination": "devsite/source/assets/fonts/"
     },
     {
         "source": "slick/slick.scss",
-        "destination": "devsite/source/_sass/libs/slick.scss"
+        "destination": "devsite/source/_sass/libs/"
     },
     {
         "source": "slick/slick.eot",
-        "destination": "devsite/source/assets/fonts/slick.eot"
+        "destination": "devsite/source/assets/fonts/"
     },
     {
         "source": "slick/slick.svg",
-        "destination": "devsite/source/assets/fonts/slick.svg"
+        "destination": "devsite/source/assets/fonts/"
     },
     {
         "source": "slick/slick.ttf",
-        "destination": "devsite/source/assets/fonts/slick.ttf"
+        "destination": "devsite/source/assets/fonts/"
     },
     {
         "source": "slick/slick.woff",
-        "destination": "devsite/source/assets/fonts/slick.woff"
+        "destination": "devsite/source/assets/fonts/"
     },
     {
         "source": "slick/slick.js",
-        "destination": "devsite/source/assets/js/libs/slick.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "jquery-mmenu/sass/mmenu",
-        "destination": "devsite/source/_sass/"
+        "destination": "devsite/source/_sass/mmenu/"
     },
     {
         "source": "jquery-mmenu/js/jquery.mmenu.footer.js",
-        "destination": "devsite/source/assets/js/libs/jquery.mmenu.footer.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "jquery-mmenu/js/jquery.mmenu.offcanvas.js",
-        "destination": "devsite/source/assets/js/libs/jquery.mmenu.offcanvas.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "jquery-mmenu/js/jquery.mmenu.oncanvas.js",
-        "destination": "devsite/source/assets/js/libs/jquery.mmenu.oncanvas.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "responsive/sass/responsive/",
-        "destination": "devsite/source/_sass/"
+        "destination": "devsite/source/_sass/responsive/"
     },
     {
         "source": "responsive/js/responsive.js",
-        "destination": "devsite/source/js/libs/responsive.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "handlebars/handlebars.runtime-v2.0.0.js",
-        "destination": "devsite/source/js/libs/handlebars.runtime-v2.0.0.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "algolia/algoliasearch.js",
-        "destination": "devsite/source/js/libs/algoliasearch.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "oliver-caldwell/heir.js",
-        "destination": "devsite/source/js/libs/heir.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "oliver-caldwell/EventEmitter.js",
-        "destination": "devsite/source/js/libs/EventEmitter.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "jquery/jquery-1.11.2.js",
-        "destination": "devsite/source/js/libs/jquery-1.11.2.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "jquery-fitvids/jquery.fitvids.js",
-        "destination": "devsite/source/js/libs/jquery.fitvids.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "jquery-scrollto/jquery.scrollTo.js",
-        "destination": "devsite/source/js/libs/jquery.scrollTo.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "jquery-vide/jquery.vide.js",
-        "destination": "devsite/source/js/libs/jquery.vide.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "moment/moment.js",
-        "destination": "devsite/source/js/libs/moment.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "query-string/query-string.js",
-        "destination": "devsite/source/js/libs/query-string.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "hubspot/select.js",
-        "destination": "devsite/source/js/libs/select.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "hubspot/select-theme-default.css",
-        "destination": "devsite/source/css/libs/select-theme-default.css"
+        "destination": "devsite/source/assets/css/libs/"
     },
     {
         "source": "hubspot/tether.js",
-        "destination": "devsite/source/js/libs/tether.js"
+        "destination": "devsite/source/assets/js/libs/"
     },
     {
         "source": "hubspot/utils.js",
-        "destination": "devsite/source/js/libs/utils.js"
+        "destination": "devsite/source/assets/js/libs/"
     }
 ]

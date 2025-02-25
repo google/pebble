@@ -1,5 +1,5 @@
 #--extra-index-url https://pebble:W9Ngyc3ohHFvLKfUUxmVruCmBaHQxNBCpfDCXyoAwLJgncZmAw@pypi.pbl.io/
-Pillow==2.0.0
+Pillow==10.3.0
 freetype-py==1.0
 ply==3.4
 pyusb==1.0.0b2
@@ -10,7 +10,7 @@ pexpect
 cobs<1.2.0
 svg.path<5
 requests
-GitPython==1.0.1
+GitPython==3.1.41
 pyelftools==0.23
 pycrypto==2.6.1
 mock
